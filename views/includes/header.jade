@@ -1,0 +1,47 @@
+// Fixed navbar
+.navbar.navbar-custom(role='navigation')
+  .container
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='/') PT University
+    .navbar-collapse.collapse
+      ul.nav.navbar-nav.ij-effect-1
+        li.active
+          a(href='/') Home
+        li
+          a(href='/about') About
+        li
+          a(href='/faq') FAQ
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown')
+            | Certifications 
+            span.caret
+          ul.dropdown-menu(role='menu')
+            li
+              a(href='/certifications') Certified Personal Trainer
+            li
+              a(href='/certifications') Certified Master Trainer
+            li
+              a(href='/certifications') Certified Nutrition Specialist
+      ul.nav.navbar-nav.navbar-right.ij-effect-1
+        li
+          if (!user)
+            a(href='/users/login') Login
+          if (user)
+            a(href='/users/dashboard/:id').UN #{user.username}
+        li
+          if (!user)
+            a(href='/users/signup') Sign Up
+          if (user)
+            a(href='/users/logout') Logout
+        li.active
+          if (user)
+            a(href='/users/dashboard/:id') Dashboard
+          if (!user)
+            a(href='/users/login') Dashboard
+          
+    // /.nav-collapse

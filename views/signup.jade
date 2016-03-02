@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  include ./includes/header.jade
+  .container-fluid.bg-navy-gradient(ng-controller="authController")
+    h1 Signup Page
+    p.lead Enter your email and a password to create a new account.
+    br
+    form(class='form-auth', ng-submit="signup()")
+      .form-group
+        input.form-control(type='username', ng-model="user.username", placeholder="Username")
+      .form-group
+        input.form-control(type='password', ng-model="user.password", placeholder='Password')
+      input(type='submit', value='Signup', class='btn btn-primary')
+      br
+      p.text-warning {{error_message}}
+            
+  include ./includes/footer.jade      

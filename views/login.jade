@@ -1,0 +1,21 @@
+extends layout
+block content
+  include ./includes/header.jade
+  //include ./includes/loginModal.jade
+  .container-fluid.bg-navy-gradient
+    h1 Login Page
+    p.lead Say something worthwhile here..
+    br
+    form(role='form', action='/login', method='post', style='max-width: 300px;')
+      .form-group
+        input.form-control(type='text', name='username', placeholder='Enter Username')
+      .form-group
+        input.form-control(type='password', name='password', placeholder='Enter Password')
+      button.btn.btn-default(type='submit') Submit
+      &nbsp;
+      a(href='/')
+        button.btn.btn-primary(type='button') Cancel
+      br
+      h4.text-danger= info
+    
+  include ./includes/footer.jade
