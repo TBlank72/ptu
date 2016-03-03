@@ -1,0 +1,17 @@
+[
+  {
+    "id": "cpt001",
+    "imgUrl": "public/images/cpt.jpg",
+    "name": "Certified Personal Trainer"
+  },
+  {
+    "id": "cmt001",
+    "imgUrl": "public/images/cmt.jpg",
+    "name": "Certified Master Trainer" 
+  },
+  {
+    "id": "cns001",
+    "imgUrl": "public/images/cns.jpg",
+    "name": "Certified Nutrition Specialist"
+  }
+]

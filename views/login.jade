@@ -1,21 +1,20 @@
 extends layout
 block content
   include ./includes/header.jade
-  //include ./includes/loginModal.jade
   .container-fluid.bg-navy-gradient
-    h1 Login Page
-    p.lead Say something worthwhile here..
-    br
-    form(role='form', action='/login', method='post', style='max-width: 300px;')
-      .form-group
-        input.form-control(type='text', name='username', placeholder='Enter Username')
-      .form-group
-        input.form-control(type='password', name='password', placeholder='Enter Password')
-      button.btn.btn-default(type='submit') Submit
-      &nbsp;
-      a(href='/')
-        button.btn.btn-primary(type='button') Cancel
-      br
-      h4.text-danger= info
+    if (message.length > 0)
+      .msg-container
+        .alert.alert-danger #{message}
+    .form-container
+      h1 #[span(class='fa fa-sign-in')] Secure Login
+      form(action='/login', method='post')
+        .form-group
+          input.form-control.bg-navy-gradient(type='text', name='email', placeholder='Email')
+        .form-group
+          input.form-control.bg-navy-gradient(type='password', name='password', placeholder='Password')
+        button.btn.btn-custom(type='submit') Login
+        br
+        p Need an account? #[a(href='/signup') Signup]
+        
     
   include ./includes/footer.jade

@@ -1,0 +1,24 @@
+extends layout
+block content
+  include ./includes/header.jade
+  .container-fluid.bg-navy-gradient(ng-controller="dashboardCtrl")
+    .dashboard-container
+      .row
+        .col-sm-4
+          h3 #[span(class='fa fa-user')] Dashboard
+          ul.nav.nav-pills.nav-stacked.nav-stacked-extended
+            li.active
+              a(href='#/contact-info', target='_self') Contact Info
+            li
+              a(href='#/password', target='_self') Password
+            li
+              a(href='#/my-certs', target='_self') My Certifications
+          
+        .col-sm-4
+          p #[strong() user id:] #{user._id}
+          p #[strong() email:] #{user.local.email}
+          p #[strong() password:]
+        .col-sm-4.view-frame(ng-view)
+          p add ng-view here
+  include ./includes/footer.jade
+  

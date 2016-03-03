@@ -13,7 +13,7 @@ footer.footer
       .col-sm-3
         ul.footer-links
           li
-            a(href='/') Certifications
+            a(href='/certifications') Certifications
           li
             a(href='/certifications') CPT
           li
@@ -23,18 +23,18 @@ footer.footer
       .col-sm-3
         ul.footer-links
           li
-            a(href='/users/signup') Signup
+            a(href='/signup') Signup
           li
-            a(href='/users/login') Login
+            a(href='/login') Login
           li
-            a(href='/users/logout') Logout
+            a(href='/logout') Logout
       .col-sm-3
         ul.footer-links
           li
             if (user)
-              a(href='/users/dashboard/:id') My Dashboard
+              a(href='/dashboard') My Dashboard
             if (!user)
-              a(href='/users/login') My Dashboard
+              a(href='/login') My Dashboard
           li
-            a(href='/') Support
+            a(href='/support') Support
     

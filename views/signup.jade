@@ -2,17 +2,19 @@ extends layout
 
 block content
   include ./includes/header.jade
-  .container-fluid.bg-navy-gradient(ng-controller="authController")
-    h1 Signup Page
-    p.lead Enter your email and a password to create a new account.
-    br
-    form(class='form-auth', ng-submit="signup()")
-      .form-group
-        input.form-control(type='username', ng-model="user.username", placeholder="Username")
-      .form-group
-        input.form-control(type='password', ng-model="user.password", placeholder='Password')
-      input(type='submit', value='Signup', class='btn btn-primary')
-      br
-      p.text-warning {{error_message}}
+  .container-fluid.bg-navy-gradient
+    if (message.length > 0)
+      .msg-container
+        .alert.alert-danger #{message}
+    .form-container
+      h1 #[span(class='fa fa-lock')] Secure Signup
+      form(action='/signup', method='post')
+        .form-group
+          input.form-control.bg-navy-gradient(type='text', name='email', placeholder='Email')
+        .form-group
+          input.form-control.bg-navy-gradient(type='password', name='password', placeholder='Password')
+        button.btn.btn-custom(type='submit') Signup
+        br
+        p Already have an account? #[a(href='/login') Login]
             
   include ./includes/footer.jade      

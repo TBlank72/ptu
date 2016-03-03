@@ -30,18 +30,18 @@
       ul.nav.navbar-nav.navbar-right.ij-effect-1
         li
           if (!user)
-            a(href='/users/login') Login
+            a(href='/login') #[span(class='fa fa-sign-in')] Login
           if (user)
-            a(href='/users/dashboard/:id').UN #{user.username}
+            a(href='/dashboard').UN #[span(class='fa fa-envelope')] #{user.local.email}
         li
           if (!user)
-            a(href='/users/signup') Sign Up
+            a(href='/signup') #[span(class='fa fa-lock')] Sign Up
           if (user)
-            a(href='/users/logout') Logout
+            a(href='/logout') Logout
         li.active
           if (user)
-            a(href='/users/dashboard/:id') Dashboard
+            a(href='/dashboard') Dashboard
           if (!user)
-            a(href='/users/login') Dashboard
+            a(href='/login') Dashboard
           
     // /.nav-collapse
