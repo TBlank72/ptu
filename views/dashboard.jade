@@ -1,4 +1,5 @@
 extends layout
+
 block content
   include ./includes/header.jade
   .container-fluid.bg-navy-gradient(ng-controller="dashboardCtrl")
@@ -7,7 +8,7 @@ block content
         .col-sm-4
           h3 #[span(class='fa fa-user')] Dashboard
           ul.nav.nav-pills.nav-stacked.nav-stacked-extended
-            li.active
+            li
               a(href='#/contact-info', target='_self') Contact Info
             li
               a(href='#/password', target='_self') Password
@@ -18,7 +19,8 @@ block content
           p #[strong() user id:] #{user._id}
           p #[strong() email:] #{user.local.email}
           p #[strong() password:]
-        .col-sm-4.view-frame(ng-view)
-          p add ng-view here
+        .col-sm-4
+          div(ng-view)
+            
   include ./includes/footer.jade
   

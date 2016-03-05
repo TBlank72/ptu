@@ -54,6 +54,13 @@ teal: rgba(57,204,204,1)
   border-radius: 20px;
   padding: 10px;
 }
+.dashboard-container label {
+  color: white;
+}
+.dash-part-container {
+  width: 90%;
+}
+
 /* user name */
 .UN {
   font-weight: bold;

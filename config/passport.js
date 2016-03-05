@@ -83,7 +83,7 @@ module.exports = function(passport) {
 
       if (!user.validPassword(password))
         return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'));
-
+      //user below returned to router if success
       return done(null, user);
     }); // end User.findOne
 

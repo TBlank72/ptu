@@ -1,6 +1,8 @@
-extends layout
-block content
-  .container
-    p show contact info here
-    p show contact info here
-    p show contact info here
+.form-group
+  label Name:
+  input.form-control(type="text", placeholder="Full Name", ng-model="user.local.name")
+  label Email:
+  input.form-control(type="text", placeholder="Email", name="user.local.email", ng-model="user.local.email")
+
+  p #{user.local.email}
+    

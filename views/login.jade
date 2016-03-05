@@ -1,7 +1,7 @@
 extends layout
 block content
   include ./includes/header.jade
-  .container-fluid.bg-navy-gradient
+  .container-fluid.bg-navy-gradient(ng-controller="loginCtrl")
     if (message.length > 0)
       .msg-container
         .alert.alert-danger #{message}
@@ -9,10 +9,10 @@ block content
       h1 #[span(class='fa fa-sign-in')] Secure Login
       form(action='/login', method='post')
         .form-group
-          input.form-control.bg-navy-gradient(type='text', name='email', placeholder='Email')
+          input.form-control.bg-navy-gradient(type='text', name='email', placeholder='Email', ng-model="user.local.email")
         .form-group
-          input.form-control.bg-navy-gradient(type='password', name='password', placeholder='Password')
-        button.btn.btn-custom(type='submit') Login
+          input.form-control.bg-navy-gradient(type='password', name='password', placeholder='Password', ng-model="user.local.password")
+        button.btn.btn-custom(type='submit' ng-click="login(user.local)") Login
         br
         p Need an account? #[a(href='/signup') Signup]
         

@@ -1,4 +1,6 @@
+
 module.exports = function(app, passport) {
+
   //---- NON PRROTECTED PAGES------
   app.get('/', function(req, res) {
     res.render('index.jade', { user: req.user });
@@ -30,12 +32,20 @@ module.exports = function(app, passport) {
 
   // ============Authorized Routes====================
   // process the login form
-  app.post('/login', passport.authenticate('local-login', {
+  /*app.post('/login', passport.authenticate('local-login', {
     successRedirect : '/dashboard',
     failureRedirect : '/login',
     failureFlash : true
   }));
-
+  */
+  app.post('/login', passport.authenticate('local-login', {
+    //success should send user info to angular
+    // then redirect to /dashboard
+    // look at previous examples
+    successRedirect: '/dashboard',
+    failureRedirect: '/login',
+    failureFlash: true
+  }));
 
 
   // process the signup form
@@ -51,6 +61,11 @@ module.exports = function(app, passport) {
     //get user from session and pass to template
     res.render('dashboard.jade', { user: req.user });
   });
+  ///route partials request
+  app.get('/partials/:name', function(req, res) {
+    var name = req.params.name;
+    res.render('partials/' + name, { user: req.user });
+  })
 
   //logout
   app.get('/logout', function(req, res) {
@@ -68,4 +83,10 @@ function isLoggedIn(req, res, next) {
 
   // if user isn't authenticated, redirect to home page
   res.redirect('/login');
-}
+};
+/*
+exports.partials = function(req, res) {
+  var name = req.params.name;
+  res.render('partials/' + name);
+};
+*/
