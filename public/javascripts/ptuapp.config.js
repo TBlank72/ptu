@@ -20,6 +20,15 @@ app.config(function($routeProvider) {
       templateUrl: 'partials/my-certs.jade',
       controller: 'dashboardCtrl'
     })
+    .when('/cpt', {
+      controller: 'cptCtrl'
+    })
+    .when('/cmt', {
+      controller: 'cmtCtrl'
+    })
+    .when('/cns', {
+      controller: 'cnsCtrl'
+    })
     .when('/password', {
       templateUrl: 'partials/password.jade',
       controller: 'dashboardCtrl'

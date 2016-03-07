@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  include ./includes/header.jade
+  .container-fluid.bg-navy-gradient(ng-controller="cnsCtrl")
+    p cns should be below
+    h1 {{ message }}
+    p #{user}
+  include ./includes/footer.jade

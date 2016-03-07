@@ -1,44 +1,46 @@
+var express = require('express');
+var passport = require('passport');
+var router = express.Router();
 
-module.exports = function(app, passport) {
 
   //---- NON PRROTECTED PAGES------
-  app.get('/', function(req, res) {
+  router.get('/', function(req, res) {
     res.render('index.jade', { user: req.user });
   });
 
-  app.get('/about', function(req, res) {
+  router.get('/about', function(req, res) {
     res.render('about.jade', { user: req.user });
   });
 
-  app.get('/certifications', function(req, res) {
+  router.get('/certifications', function(req, res) {
     res.render('certs.jade', { user: req.user });
   });
 
-  app.get('/faq', function(req, res) {
+  router.get('/faq', function(req, res) {
     res.render('faq.jade', { user: req.user });
   });
 
-  app.get('/support', function(req, res) {
+  router.get('/support', function(req, res) {
     res.render('support.jade', { user: req.user });
   });
 
-  app.get('/login', function(req, res) {
+  router.get('/login', function(req, res) {
     res.render('login.jade', {message: req.flash('loginMessage')});
   });
 
-  app.get('/signup', function(req, res) {
+  router.get('/signup', function(req, res) {
     res.render('signup.jade', {message: req.flash('signupMessage')});
   });
 
   // ============Authorized Routes====================
   // process the login form
-  /*app.post('/login', passport.authenticate('local-login', {
+  router.post('/login', passport.authenticate('local-login', {
     successRedirect : '/dashboard',
     failureRedirect : '/login',
     failureFlash : true
   }));
-  */
-  app.post('/login', passport.authenticate('local-login', {
+
+  router.post('/login', passport.authenticate('local-login', {
     //success should send user info to angular
     // then redirect to /dashboard
     // look at previous examples
@@ -49,7 +51,7 @@ module.exports = function(app, passport) {
 
 
   // process the signup form
-  app.post('/signup', passport.authenticate('local-signup', {
+  router.post('/signup', passport.authenticate('local-signup', {
     successRedirect: '/dashboard', // redirect to secure profile
     failureRedirect: '/signup', // redirect to signup page
     failureFlash: true // allow flash message
@@ -57,36 +59,33 @@ module.exports = function(app, passport) {
 
   // DASHBOARD SECTION =====================
   // THIS WILL BE PROTECTED.  MUST BE LOGGED IN
-  app.get('/dashboard', isLoggedIn, function(req, res) {
+  router.get('/dashboard', isLoggedIn, function(req, res) {
     //get user from session and pass to template
     res.render('dashboard.jade', { user: req.user });
   });
   ///route partials request
-  app.get('/partials/:name', function(req, res) {
+  router.get('/partials/:name', function(req, res) {
     var name = req.params.name;
     res.render('partials/' + name, { user: req.user });
-  })
+  });
 
   //logout
-  app.get('/logout', function(req, res) {
+  router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
   });
-};
 
-// route middleware to make sure the user is logged in
+
+// route middleware to make sure the user is logged in...Add this to AuthSevice factory
 function isLoggedIn(req, res, next) {
 
   // if user is logged in, continue
   if (req.isAuthenticated())
+    console.log("user isLoggedIn");
     return next();
 
   // if user isn't authenticated, redirect to home page
   res.redirect('/login');
 };
-/*
-exports.partials = function(req, res) {
-  var name = req.params.name;
-  res.render('partials/' + name);
-};
-*/
+
+module.exports = router;

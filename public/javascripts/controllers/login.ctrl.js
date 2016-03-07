@@ -1,16 +1,16 @@
 // loginCtrl
-app.controller('loginCtrl', function($scope, $http, $log) {
-  $scope.login = function(userLocal) {
-    //// ----Move login and signup into an
-    //// ---AuthService that can pass info to
-    ///// ---- different controllers
-    /// this is just an example below
-    $http.post("/login", userLocal)
+angular.module('ptuApp').controller('loginCtrl', function($scope, $http, $log, AuthService) {
+
+  $scope.login = function(user) {
+
+    console.log(user);
+    //AuthService.login(user);
+    /*$http.post("/login", user)
       .success(function(response) {
         $scope.data = response.data;
         $log.info(response.data);
         //response.data should contain user info
-      });
+      });*/
 
-  }
+  } // end login function
 })
