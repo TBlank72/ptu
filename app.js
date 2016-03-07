@@ -1,9 +1,9 @@
-// server.js
+// app.js
 // set up =============================
 var express  = require('express');
 var path     = require('path');
 var app      = express();
-var port     = process.env.PORT || 3000;
+//var port     = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
@@ -15,15 +15,13 @@ var session      = require('express-session');
 
 // db configuration
 var configDB = require('./config/database');
+// passpassport configuration + initialization
+var passportConfig = require('./config/passport');
+passportConfig(passport);
 
-// configuration ===============
  // connect to our database
 mongoose.connect(configDB.url);
 
-
- // passpassport configuration + initialization
-var passportConfig = require('./config/passport');
-passportConfig(passport);
 
 //------- set up our express application-------
  // log every request to the console
@@ -33,11 +31,13 @@ app.use(cookieParser());
 // body parser - get info from html forms
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-// set path for static assets in public dir
+
+// set path for client files in public folder
 app.use(express.static(path.join('public')));
 app.use("/user", express.static(__dirname + '/public'));
 app.use('/cert_files', express.static('cert_files'));
-//app.use('/views', express.static('views'))
+
+// set jade view engin
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade'); // set up jade
 
@@ -49,11 +49,10 @@ app.use(session({
 }));// express-session needs to be configed before passport.session
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+app.use(flash());// flash message stored in session
 
 
-// load our routes and pass in our app and fully configured passport
-//var index = require('./routes/index')(app, passport);
+// Configuer routes
 var index = require('./routes/index');
 var user = require('./routes/user');
 app.use('/', index);
@@ -61,7 +60,40 @@ app.use('/user', user);
 
 
 // launch ==========================
-app.listen(port);
-console.log('The magic happens on port ' + port);
+//app.listen(port);
+//console.log('The magic happens on port ' + port);
+
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+// error handlers
+
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
+    });
+  });
+}
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
+});
+
 
 module.exports = app;
