@@ -13,15 +13,20 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
-// db configuration
-var configDB = require('./config/database');
 // passpassport configuration + initialization
 var passportConfig = require('./config/passport');
 passportConfig(passport);
-
- // connect to our database
+// db configuration
+var configDB = require('./config/database');
+ // db connection
 mongoose.connect(configDB.url);
-
+var db = mongoose.connection;
+db.on('error', function(msg) {
+  console.log('db connection failed');
+});
+db.once('open', function() {
+  console.log('db connection on: ' + configDB.url);
+});
 
 //------- set up our express application-------
  // log every request to the console
@@ -35,6 +40,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // set path for client files in public folder
 app.use(express.static(path.join('public')));
 app.use("/user", express.static(__dirname + '/public'));
+app.use("/admin", express.static(__dirname + '/public'));
 app.use('/cert_files', express.static('cert_files'));
 
 // set jade view engin
@@ -55,8 +61,10 @@ app.use(flash());// flash message stored in session
 // Configuer routes
 var index = require('./routes/index');
 var user = require('./routes/user');
+var admin = require('./routes/admin');
 app.use('/', index);
 app.use('/user', user);
+app.use('/admin', admin);
 
 
 // launch ==========================

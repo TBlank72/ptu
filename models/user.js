@@ -57,9 +57,15 @@ userSchema.methods.generateHash = function(password) {
 };
 //********may need to change to synchronous
 // checking if password is valid
-userSchema.methods.validPassword = function(password) {
+userSchema.methods.isValidPassword = function(password) {
   return bcrypt.compareSync(password, this.local.password);
 };
-
+/* For accepting username or email for logins
+userSchema.statics.isValidUserPassword = function(username, password, done) {
+    var criteria = (username.indexOf('@') === -1) ? {username: username} : {email: username};
+    this.findOne(criteria, function(err, user){
+        // All the same...
+    });
+};*/
 // create model for users and expose to app
 module.exports = mongoose.model('User', userSchema);

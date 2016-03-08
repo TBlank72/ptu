@@ -32,7 +32,7 @@
           if (!user)
             a(href='/login') #[span(class='fa fa-sign-in')] Login
           if (user)
-            a(href='/dashboard').UN #[span(class='fa fa-envelope')] #{user.local.email}
+            a(href='/dashboard').UN #[span(class='fa fa-user')] #{user.local.name}
         li
           if (!user)
             a(href='/signup') #[span(class='fa fa-lock')] Sign Up

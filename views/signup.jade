@@ -10,6 +10,8 @@ block content
       h1 #[span(class='fa fa-lock')] Secure Signup
       form(action='/signup', method='post')
         .form-group
+          input.form-control.bg-navy-gradient(type='text', name='name', placeholder='Full Name (for Certificate)')
+        .form-group
           input.form-control.bg-navy-gradient(type='text', name='email', placeholder='Email')
         .form-group
           input.form-control.bg-navy-gradient(type='password', name='password', placeholder='Password')

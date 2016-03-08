@@ -16,14 +16,19 @@ router.get('/cns', isLoggedIn, function(req, res) {
 
 
 // route middleware to make sure the user is logged in...Add this to AuthSevice factory
+
 function isLoggedIn(req, res, next) {
 
   // if user is logged in, continue
-  if (req.isAuthenticated())
+  if (req.isAuthenticated()) {
     console.log("user isLoggedIn");
     return next();
-
+  }
+  else {
   // if user isn't authenticated, redirect to home page
-  res.redirect('/login');
-};
+    console.log('user NOT logged in');
+    res.redirect('/login');
+    };
+}; // end isLoggedIn
+
 module.exports = router;

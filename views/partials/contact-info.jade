@@ -1,8 +1,13 @@
-.form-group
-  label Name:
-  input.form-control(type="text", placeholder="Full Name", ng-model="user.local.name")
-  label Email:
-  input.form-control(type="text", placeholder="Email", name="user.local.email", ng-model="user.local.email")
+form(method="put", action="/updateuser", ng-controller="dashboardCtrl")
+  .form-group
+    label Name:
+    input.form-control(type="text", name="name", placeholder="Full Name", ng-model="user.local.name")
+    label Username:
+    input.form-control(type="text", name="username", placeholder="Username", ng-model="user.local.username")
+    label Email:
+    input.form-control(type="text", name="email", placeholder="Email", ng-model="user.local.email") 
+    br
+    button.btn.btn-default(type="submit", ng-click="updateUser(user.local)") Update Info
 
-  p #{user.local.email}
+    p #{user.local.email}
     

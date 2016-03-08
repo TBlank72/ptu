@@ -1,6 +1,7 @@
 var express = require('express');
 var passport = require('passport');
 var router = express.Router();
+var User = require('../models/user');
 
 
   //---- NON PRROTECTED PAGES------
@@ -33,17 +34,19 @@ var router = express.Router();
   });
 
   // ============Authorized Routes====================
+  /*  --UNCOMMENT TO USE ANGULAR LOGIN--
+      -- FLASH MESSAGE WON'T WORK THOUGH
+      -- WILL NEED TO ADD FLASH MESSAGES TO LOGINCTRL
+  // Send success state to ang loginCtrl
+  router.get('/success', function(req, res) {
+    res.send({ state: 'success', user: req.user ? req.user : null });
+  });
+  //sends failure login state back to angular
+	router.get('/failure', function(req, res){
+		res.send({state: 'failure', user: null, message: "Invalid username or password"});
+	});*/
   // process the login form
   router.post('/login', passport.authenticate('local-login', {
-    successRedirect : '/dashboard',
-    failureRedirect : '/login',
-    failureFlash : true
-  }));
-
-  router.post('/login', passport.authenticate('local-login', {
-    //success should send user info to angular
-    // then redirect to /dashboard
-    // look at previous examples
     successRedirect: '/dashboard',
     failureRedirect: '/login',
     failureFlash: true
@@ -69,6 +72,15 @@ var router = express.Router();
     res.render('partials/' + name, { user: req.user });
   });
 
+  // update user info
+  router.put('/updateuser', isLoggedIn, function(req, res) {
+    User.update({'local.email': email}, {
+      username: username,
+      password: password,
+      email: email
+    })
+  });
+
   //logout
   router.get('/logout', function(req, res) {
     req.logout();
@@ -80,12 +92,15 @@ var router = express.Router();
 function isLoggedIn(req, res, next) {
 
   // if user is logged in, continue
-  if (req.isAuthenticated())
+  if (req.isAuthenticated()) {
     console.log("user isLoggedIn");
     return next();
-
+  }
+  else {
   // if user isn't authenticated, redirect to home page
-  res.redirect('/login');
-};
+    console.log('user NOT logged in');
+    res.redirect('/login');
+    };
+}; // end isLoggedIn
 
 module.exports = router;

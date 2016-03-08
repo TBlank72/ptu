@@ -12,7 +12,7 @@ module.exports = function(passport) {
 
   // serialize user for the session
   passport.serializeUser(function(user, done) {
-    done(null, user._id);
+    done(null, user.id);
   });
   // deserialize user from the session
   passport.deserializeUser(function(id, done) {
@@ -25,8 +25,7 @@ module.exports = function(passport) {
   // We're using named strategies since we have one for login and
   // one for signup.  By default, it would be called 'local'
   passport.use('local-signup', new LocalStrategy({
-    // by default, local strategy uses username.  we override this
-    // with email
+    // override username field with email
     usernameField: 'email',
     passwordField: 'password',
     passReqToCallback: true // allows us to pass req to callback
@@ -51,6 +50,7 @@ module.exports = function(passport) {
           // below may need to be req.body.email...
           newUser.local.email = email;
           newUser.local.password = newUser.generateHash(password);
+          newUser.local.name = req.body.name;
           // save the user
           newUser.save(function(err) {
             if (err)
@@ -81,7 +81,7 @@ module.exports = function(passport) {
       if (!user)
         return done(null, false, req.flash('loginMessage', 'User not found with email: ' + email));
 
-      if (!user.validPassword(password))
+      if (!user.isValidPassword(password))
         return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'));
       //user below returned to router if success
       return done(null, user);
