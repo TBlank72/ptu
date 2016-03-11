@@ -27,6 +27,6 @@ html(ng-app="ptuApp", lang='en')
     script(src='javascripts/services/auth.service.js')
     script(src='javascripts/controllers/certs.ctrl.js')
     script(src='javascripts/controllers/admin.ctrl.js')
-    script(src='javascripts/controllers/quiz.ctrl.js')
+    script(src='javascripts/controllers/quiz.js')
     script(src='javascripts/quiz.data.json')
       

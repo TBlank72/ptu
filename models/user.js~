@@ -1,6 +1,3 @@
-// Relating 2 databases:
-//  add a userId field with the ObjectId of the user on the cert schema.
-
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 
@@ -72,5 +69,3 @@ userSchema.statics.isValidUserPassword = function(username, password, done) {
 };*/
 // create model for users and expose to app
 module.exports = mongoose.model('User', userSchema);
-
-
