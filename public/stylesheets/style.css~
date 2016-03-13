@@ -290,7 +290,7 @@ button.navbar-toggle {
   left: 40px;
 }
 .myQuiz .intro.inactive,
-.myQuiz.inactive.answered {
+.myQuiz .inactive.answered {
   left: -1350px;
 }
 

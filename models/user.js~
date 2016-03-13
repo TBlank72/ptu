@@ -1,3 +1,6 @@
+// Relating 2 databases:
+//  add a userId field with the ObjectId of the user on the cert schema.
+
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 
@@ -11,18 +14,21 @@ var userSchema = mongoose.Schema({
   },
   certs         : {
     cpt         : {
+      verify_id : String,
       attempts  : Number,
       score     : Number,
       passed    : Boolean,
       passed_on : Date,
     },
     cmt         : {
+      verify_id : String,
       attempts  : Number,
       score     : Number,
       passed    : Boolean,
       passed_on : Date,
     },
     cns         : {
+      verify_id : String,
       attempts  : Number,
       score     : Number,
       passed    : Boolean,
@@ -69,3 +75,5 @@ userSchema.statics.isValidUserPassword = function(username, password, done) {
 };*/
 // create model for users and expose to app
 module.exports = mongoose.model('User', userSchema);
+
+

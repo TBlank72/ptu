@@ -14,7 +14,7 @@ router.get('/cmt', isLoggedIn, function(req, res) {
 router.get('/cns', isLoggedIn, function(req, res) {
   res.render('cns_exam.jade', { user: req.user })
 });
-/*
+
 // Submit Exam Scores
 router.post('/cpt', isLoggedIn, function(req, res) {
   User.findOne('user.local.email') {
@@ -34,7 +34,7 @@ router.post('/cns', isLoggedIn, function(req, res) {
     //user.cpt.
   }
 });
-*/
+
 // route middleware to make sure the user is logged in...Add this to AuthSevice factory
 
 function isLoggedIn(req, res, next) {

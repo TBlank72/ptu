@@ -1,14 +1,15 @@
-// quiz.ctrl.js 
-console.log('quizCtrl loaded');
+// cmt.ctrl.js 
+console.log('cmtCtrl loaded');
 
-angular.module('ptuApp').controller('quizCtrl', ['$scope', '$http', '$rootScope', '$sce', '$window', 'AuthService', function($scope, $http, $rootScope, $sce, $window, AuthService) {
+angular.module('ptuApp').controller('cmtCtrl', ['$scope', '$http', '$rootScope', '$sce', '$window', 'AuthService', function($scope, $http, $rootScope, $sce, $window, AuthService) {
   
   $scope.score = 0;
   $scope.activeQuestion = -1;
   $scope.activeQuestionAnswered = 0;
   $scope.percentage = 0; 
-
-  $http.get('javascripts/quiz.data.json').then(function(quizData){
+  $scope.resultsMsg = '';
+  
+  $http.get('json/cmt_final.json').then(function(quizData){
     $scope.myQuestions = quizData.data;
     $scope.totalQuestions = $scope.myQuestions.length;
   });
@@ -32,15 +33,35 @@ angular.module('ptuApp').controller('quizCtrl', ['$scope', '$http', '$rootScope'
         $scope.myQuestions[qIndex].correctness = 'incorrect';
       } // end else condition
     $scope.myQuestions[qIndex].questionState = 'answered';
-    } // end if (questionState != 'answered') 
+    } // end if (questionState != 'answered')
+    
+    // Results panel
+    $scope.percentage = (($scope.score / $scope.totalQuestions)*100).toFixed(2);
+    if ($scope.percentage < 70) {
+      $scope.resultsMsg = "Sorry, you did not pass the CMT exam. Please review the\
+                           study material and try again. After you submit your score\
+                           below, you will receive 50% off the cost of your next attempt.";
+    }
+    else if ($scope.percentage >= 70) {
+      $scope.resultsMsg = "Congratulations, you passed the CMT exam.  Please submit\
+                           your score below to receive your certificate and\
+                           verfification ID!";
+    }
+
   } // end selectAnswer function
-  
+
+  //highlight the user selected answer
   $scope.isSelected = function(qIndex, aIndex) {
     return $scope.myQuestions[qIndex].selectedAnswer === aIndex;
   }
+  //highlight correct answer
   $scope.isCorrect = function(qIndex, aIndex) {
     return $scope.myQuestions[qIndex].correctAnswer === aIndex;
   }
-
+  //increment activeQuestion
+  $scope.selectContinue = function() {
+    return $scope.activeQuestion += 1;
+  }
 
 }]);
+

@@ -1,0 +1,70 @@
+// cpt.ctrl.js 
+console.log('cptCtrl loaded');
+
+angular.module('ptuApp').controller('cptCtrl', ['$scope', '$http', '$rootScope', '$sce', '$window', 'AuthService', function($scope, $http, $rootScope, $sce, $window, AuthService) {
+  
+  $scope.score = 0;
+  $scope.activeQuestion = -1;
+  $scope.activeQuestionAnswered = 0;
+  $scope.percentage = 0; 
+
+  $http.get('json/cpt_final.json').then(function(quizData){
+    $scope.myQuestions = quizData.data;
+    $scope.totalQuestions = $scope.myQuestions.length;
+  });
+  // selectAnswer function begin
+  $scope.selectAnswer = function(qIndex, aIndex) {
+
+    var questionState = $scope.myQuestions[qIndex].questionState;
+    
+    if (questionState != 'answered') {
+      $scope.myQuestions[qIndex].selectedAnswer = aIndex;
+      // correct answer from json file
+      var correctAnswer = $scope.myQuestions[qIndex].correct;
+      // passes correct answer to the $scope
+      $scope.myQuestions[qIndex].correctAnswer = correctAnswer;
+
+      if (aIndex === correctAnswer) {
+        $scope.myQuestions[qIndex].correctness = 'correct';
+        $scope.score += 1;
+      } // end if (answer index === correctAnswer)
+      else {
+        $scope.myQuestions[qIndex].correctness = 'incorrect';
+      } // end else condition
+    $scope.myQuestions[qIndex].questionState = 'answered';
+    } // end if (questionState != 'answered')
+    
+    // Results panel
+    $scope.percentage = (($scope.score / $scope.totalQuestions)*100).toFixed(2);
+
+  } // end selectAnswer function
+
+  //highlight the user selected answer
+  $scope.isSelected = function(qIndex, aIndex) {
+    return $scope.myQuestions[qIndex].selectedAnswer === aIndex;
+  }
+  //highlight correct answer
+  $scope.isCorrect = function(qIndex, aIndex) {
+    return $scope.myQuestions[qIndex].correctAnswer === aIndex;
+  }
+  //increment activeQuestion
+  $scope.selectContinue = function() {
+    return $scope.activeQuestion += 1;
+  }
+  //create Share Links
+  $scope.createShareLinks = function(percentage) {
+    var url = 'http://ptuniversity.com'
+    // Search how to create a mail form and DO NOT use the mailto:
+    var emailLink = '<a class="btn-quiz email" href="mailto:?subject=Try to beat my by score!&amp;body=I scored '+percentage+'% on my PT exam at '+url+'"> <i class="fa fa-envelope"></i> Email a friend</a>';
+
+    var twitterLink = "<a class='btn-quiz twitter' href='http://twitter.com/share?text=I scored "+percentage+"% on my PT exam. Try to beat my score at&amp;hashtags=PTUniversity&amp;"+url+"'> <i class='fa fa-twitter'></i> Tweet your score</a>";
+    var newMarkup = emailLink + twitterLink;
+
+    return $sce.trustAsHtml(newMarkup);
+  }
+
+}]);
+
+          /* Original share linkes in jade file under share links
+           #[a(href="#", class="btn-quiz email") #[span(class="fa fa-envelope")] Email] 
+          #[a(href="#", class="btn-quiz twitter") #[span(class="fa fa-twitter")] Tweet] */

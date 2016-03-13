@@ -9,6 +9,7 @@ html(ng-app="ptuApp", lang='en')
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css", rel="stylesheet")
     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/quiz.css')
     
   body
     block content
@@ -27,6 +28,9 @@ html(ng-app="ptuApp", lang='en')
     script(src='javascripts/services/auth.service.js')
     script(src='javascripts/controllers/certs.ctrl.js')
     script(src='javascripts/controllers/admin.ctrl.js')
-    script(src='javascripts/controllers/quiz.js')
-    script(src='javascripts/quiz.data.json')
+    script(src='javascripts/controllers/quiz.ctrl.js')
+    script(src='json/quiz.data.json')
+    script(src='json/cpt_final.json')
+    script(src='json/cmt_final.json')
+    script(src='json/cns_final.json')
       

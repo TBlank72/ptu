@@ -3,8 +3,8 @@ extends layout
 block content
   include ./includes/header.jade
   .container-fluid.bg-navy-gradient
-    .myQuiz(ng-controller="quizCtrl")
-      h1 Personal Training Exam: CPT 
+    .myQuiz(ng-controller="cptCtrl")
+      h1 Certified Personal Trainer (CPT)
       .progress-quiz
         div(class="\
           {{ ($index === activeQuestion) ? 'on' : 'off' }}\
@@ -13,8 +13,13 @@ block content
           ng-repeat="myQuestion in myQuestions")
       div(class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active' }}")
         h2 Welcome
-        p Click to start your CPT Exam.
-        p.btn-quiz(ng-click="activeQuestion = 0") Begin
+        p This is the PT University CPT exam.
+        p Your selections will be recorded when you
+        p click on the answers. DO NOT use any browser
+        p navigation methods, as this will terminate your exam.
+        hr
+        p Click to start your exam when you are ready. 
+        p.btn-quiz(ng-click="activeQuestion = 0") Start CPT Exam
 
 
       .question(class="\
@@ -32,13 +37,22 @@ block content
           p(ng-show="myQuestion.correctness === 'incorrect'") Oops! That is not correct
           p {{ myQuestion.feedback }}
           .btn-quiz(ng-click="selectContinue()") Continue
-      .results
-        h3 Results
-        p You scored X% by correctly answering X of the total X questions.
-        p Use the links below to challenge your friends
-        .share
-          #[a(href="#", class="btn-quiz email") #[span(class="fa fa-envelope")] Email] 
-          #[a(href="#", class="btn-quiz twitter") #[span(class="fa fa-twitter")] Tweet]
+      .results( class=" {{ (totalQuestions === activeQuestion) ?\
+        'active' : 'inactive' }} ")
+        p {{ resultsMsg }}
+        .form-container
+          h2 Results
+          form(action='/user/cpt', method='post')
+            .form-group
+              label Score
+              input.form-control.bg-navy-gradient(type='text', name='score', value="\
+              {{percentage}}", placeholder="{{percentage}}%", ng-model="user.cpt.score")
+              br
+              label Correct / Total
+              input.form-control.bg-navy-gradient(type='text', name='ratio', value="\
+              {{score}} / {{totalQuestions}}", placeholder="{{score}} / {{totalQuestions}}")
+              br
+            button.btn-quiz(type='submit' ng-click="submitScore(user.cpt.score)") Submit CPT Score
 
       
   include ./includes/footer.jade

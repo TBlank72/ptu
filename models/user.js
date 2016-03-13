@@ -7,25 +7,28 @@ var bcrypt = require('bcrypt');
 var userSchema = mongoose.Schema({
 
   local         : {
-    email       : String,
+    email       : { type: String, set: toLower },
     password    : String,
     username    : String,
     name        : String
   },
   certs         : {
     cpt         : {
+      verify_id : String,
       attempts  : Number,
       score     : Number,
       passed    : Boolean,
       passed_on : Date,
     },
     cmt         : {
+      verify_id : String,
       attempts  : Number,
       score     : Number,
       passed    : Boolean,
       passed_on : Date,
     },
     cns         : {
+      verify_id : String,
       attempts  : Number,
       score     : Number,
       passed    : Boolean,
@@ -52,6 +55,11 @@ var userSchema = mongoose.Schema({
   }
 
 }); // End userSchema
+
+// toLowerCase function
+function toLower(v) {
+  return v.toLowerCase();
+}
 
 // methods ==================
 // generating a hash ========
