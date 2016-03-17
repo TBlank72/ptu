@@ -2,7 +2,7 @@ var express = require('express');
 var passport = require('passport');
 var router = express.Router();
 var User = require('../models/user');
-
+var index = require('./index.js');
 
 // GET Exam pages
 router.get('/cpt', isLoggedIn, function(req, res) {
@@ -15,26 +15,47 @@ router.get('/cns', isLoggedIn, function(req, res) {
   res.render('cns_exam.jade', { user: req.user })
 });
 /*
-// Submit Exam Scores
+
+// Submit Exam Scores Update Score
 router.post('/cpt', isLoggedIn, function(req, res) {
-  User.findOne('user.local.email') {
-    user.cpt.score = score;
-    user.cpt.passed = (score >= 70) ? true : false;
-    //user.cpt.
-  }
+  res.redirect('/dashboard', index, { user: req.user })
 });
+
 router.post('/cmt', isLoggedIn, function(req, res) {
-  res.render('cmt_exam.jade', { user: req.user })
+  res.redirect('/dashboard', index, { user: req.user })
 });
-router.post('/cns', isLoggedIn, function(req, res) {
-  User.findOne('user.local.email') {
-    res.send( req.user );
-    user.cns.score = score;
-    user.cns.passed = (score >= 70) ? true : false;
-    //user.cpt.
-  }
-});
+
 */
+
+router.post('/cns', function(req, res) {
+  var Cuser = req.user;
+  var Cu_id = req.user._id;
+  var Cuemail = Cuser.local.email;
+  var hScore = Cuser.certs.cns.score;
+  var newScore = req.body.score;
+  var Cpassed_on = (Cuser.certs.cns.passed_on == null) ? null : Cuser.certs.cns.passed_on;
+  var today = new Date();
+  User.findOneAndUpdate(
+    {'local.email': Cuemail},
+    { $set: { 'certs.cns.verify_id': Cu_id + 'cns',
+              'certs.cns.score' : (newScore > hScore) ? newScore : hScore,
+              'certs.cns.passed' : (newScore > 69 | hScore > 69) ? true : false,
+              'certs.cns.passed_on' : 
+                (newScore > 69 && Cpassed_on == null) ? today : Cpassed_on 
+      },
+      $push: { 'certs.cns.attempts': today }
+    },
+    {new: true, runValidators: true},
+    function(err, updated_user) {
+      if (err) console.log(err);
+      //res.json(updated_user);
+      res.redirect('/dashboard#/my-certs', index, { user: req.user })
+    } 
+  ); // End findOneAndUpdate()
+});
+
+
+
 // route middleware to make sure the user is logged in...Add this to AuthSevice factory
 
 function isLoggedIn(req, res, next) {
@@ -52,3 +73,4 @@ function isLoggedIn(req, res, next) {
 }; // end isLoggedIn
 
 module.exports = router;
+

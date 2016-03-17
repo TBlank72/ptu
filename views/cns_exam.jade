@@ -46,14 +46,15 @@ block content
             .form-group
               label Score
               input.form-control.bg-navy-gradient(type='text', name='score', value="\
-              {{percentage}}", placeholder="{{percentage}}%", ng-model="user.cns.score")
+              {{percentage}}", placeholder="{{percentage}}%", readonly)
               br
               label Correct / Total
               input.form-control.bg-navy-gradient(type='text', name='ratio', value="\
-              {{score}} / {{totalQuestions}}", placeholder="{{score}} / {{totalQuestions}}")
+              {{score}} / {{totalQuestions}}", placeholder="{{score}} / {{totalQuestions}}",
+              readonly)
               br
-            button.btn-quiz(type='submit' ng-click="submitScore(user.cns.score)") Submit CNS Score
+            button.btn-quiz(type='submit') Submit CNS Score
 
-      
+
   include ./includes/footer.jade
 

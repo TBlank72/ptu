@@ -1,16 +1,18 @@
 // cns.ctrl.js 
-angular.module('ptuApp').controller('cnsCtrl', ['$scope', '$http', '$rootScope', '$sce', '$window', 'AuthService', function($scope, $http, $rootScope, $sce, $window,  AuthService) {
+angular.module('ptuApp').controller('cnsCtrl', ['$scope', '$http', '$rootScope', '$q', '$window', function($scope, $http, $rootScope, $q, $window) {
   
   $scope.score = 0;
   $scope.activeQuestion = -1;
   $scope.activeQuestionAnswered = 0;
   $scope.percentage = 0;
   $scope.resultsMsg = ''; 
-
+  
+  // GET quiz data
   $http.get('json/cns_final.json').then(function(quizData){
     $scope.myQuestions = quizData.data;
     $scope.totalQuestions = $scope.myQuestions.length;
   });
+
   // selectAnswer function begin
   $scope.selectAnswer = function(qIndex, aIndex) {
 
@@ -62,9 +64,16 @@ angular.module('ptuApp').controller('cnsCtrl', ['$scope', '$http', '$rootScope',
     return $scope.activeQuestion += 1;
   }
 
-}]);
 
-  /*
+}]); //====== END CONTROLLER cnsCtrl ======
+
+//
+//
+//
+//
+//
+//
+  /* old shar links ---maybe good twitter example
   //create Share Links
   $scope.createShareLinks = function(percentage) {
     var url = 'http://ptuniversity.com'
@@ -76,3 +85,4 @@ angular.module('ptuApp').controller('cnsCtrl', ['$scope', '$http', '$rootScope',
 
     return $sce.trustAsHtml(newMarkup);
   }*/
+

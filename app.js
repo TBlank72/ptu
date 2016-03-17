@@ -3,7 +3,7 @@
 var express  = require('express');
 var path     = require('path');
 var app      = express();
-//var port     = process.env.PORT || 3000;
+
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
@@ -18,12 +18,12 @@ var passportConfig = require('./config/passport');
 passportConfig(passport);
 // db configuration
 var configDB = require('./config/database');
- // db connection
+// db connection
 mongoose.connect(configDB.url);
+// db logs
 var db = mongoose.connection;
-db.on('error', function(msg) {
-  console.log('db connection failed');
-});
+db.on('error', console.error.bind(console,
+     'connection error:')); 
 db.once('open', function() {
   console.log('db connection on: ' + configDB.url);
 });
@@ -66,12 +66,6 @@ app.use('/', index);
 app.use('/user', user);
 app.use('/admin', admin);
 
-
-// launch ==========================
-//app.listen(port);
-//console.log('The magic happens on port ' + port);
-
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -92,6 +86,7 @@ if (app.get('env') === 'development') {
     });
   });
 }
+
 
 // production error handler
 // no stacktraces leaked to user

@@ -47,7 +47,7 @@ var User = require('../models/user');
 	});*/
   // process the login form
   router.post('/login', passport.authenticate('local-login', {
-    successRedirect: '/dashboard',
+    successRedirect: '/dashboard#/my-certs',
     failureRedirect: '/login',
     failureFlash: true
   }));
@@ -56,15 +56,13 @@ var User = require('../models/user');
 
   // process the signup form
   router.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/dashboard', // redirect to secure profile
+    successRedirect: '/dashboard#/my-certs', // redirect to secure profile
     failureRedirect: '/signup', // redirect to signup page
     failureFlash: true // allow flash message
   }));
 
   // DASHBOARD SECTION =====================
-  // THIS WILL BE PROTECTED.  MUST BE LOGGED IN
   router.get('/dashboard', isLoggedIn, function(req, res) {
-    //get user from session and pass to template
     res.render('dashboard.jade', { user: req.user });
   });
   ///route partials request
@@ -73,8 +71,8 @@ var User = require('../models/user');
     res.render('partials/' + name, { user: req.user });
   });
 
-  // update user info
-  router.put('/updateuser', isLoggedIn, function(req, res) {
+  // update user info *****use same method as submit score****
+  router.put('/updatecontact', isLoggedIn, function(req, res) {
     User.update({'local.email': email}, {
       username: username,
       password: password,
@@ -89,7 +87,7 @@ var User = require('../models/user');
   });
 
 
-// route middleware to make sure the user is logged in...Add this to AuthSevice factory
+// route middleware to make sure the user is logged in
 function isLoggedIn(req, res, next) {
 
   // if user is logged in, continue

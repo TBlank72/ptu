@@ -1,5 +1,4 @@
 extends layout
-
 block content
   include ./includes/header.jade
   .container-fluid.bg-navy-gradient

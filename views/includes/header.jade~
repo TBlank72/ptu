@@ -30,8 +30,7 @@
               a(href='/certifications#cns-section') Certified Nutrition Specialist
 
         li
-          a(href='#', data-toggle='modal',
-            data-target='#verifyModal') Verify Certification 
+          a(href='/about') Verify Certification 
 
       ul.nav.navbar-nav.navbar-right.ij-effect-1
         li

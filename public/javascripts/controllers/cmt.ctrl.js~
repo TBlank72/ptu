@@ -7,7 +7,8 @@ angular.module('ptuApp').controller('cmtCtrl', ['$scope', '$http', '$rootScope',
   $scope.activeQuestion = -1;
   $scope.activeQuestionAnswered = 0;
   $scope.percentage = 0; 
-
+  $scope.resultsMsg = '';
+  
   $http.get('json/cmt_final.json').then(function(quizData){
     $scope.myQuestions = quizData.data;
     $scope.totalQuestions = $scope.myQuestions.length;
@@ -36,6 +37,16 @@ angular.module('ptuApp').controller('cmtCtrl', ['$scope', '$http', '$rootScope',
     
     // Results panel
     $scope.percentage = (($scope.score / $scope.totalQuestions)*100).toFixed(2);
+    if ($scope.percentage < 70) {
+      $scope.resultsMsg = "Sorry, you did not pass the CMT exam. Please review the\
+                           study material and try again. After you submit your score\
+                           below, you will receive 50% off the cost of your next attempt.";
+    }
+    else if ($scope.percentage >= 70) {
+      $scope.resultsMsg = "Congratulations, you passed the CMT exam.  Please submit\
+                           your score below to receive your certificate and\
+                           verfification ID!";
+    }
 
   } // end selectAnswer function
 
@@ -51,20 +62,6 @@ angular.module('ptuApp').controller('cmtCtrl', ['$scope', '$http', '$rootScope',
   $scope.selectContinue = function() {
     return $scope.activeQuestion += 1;
   }
-  //create Share Links
-  $scope.createShareLinks = function(percentage) {
-    var url = 'http://ptuniversity.com'
-    // Search how to create a mail form and DO NOT use the mailto:
-    var emailLink = '<a class="btn-quiz email" href="mailto:?subject=Try to beat my by score!&amp;body=I scored '+percentage+'% on my PT exam at '+url+'"> <i class="fa fa-envelope"></i> Email a friend</a>';
-
-    var twitterLink = "<a class='btn-quiz twitter' href='http://twitter.com/share?text=I scored "+percentage+"% on my PT exam. Try to beat my score at&amp;hashtags=PTUniversity&amp;"+url+"'> <i class='fa fa-twitter'></i> Tweet your score</a>";
-    var newMarkup = emailLink + twitterLink;
-
-    return $sce.trustAsHtml(newMarkup);
-  }
 
 }]);
 
-          /* Original share linkes in jade file under share links
-           #[a(href="#", class="btn-quiz email") #[span(class="fa fa-envelope")] Email] 
-          #[a(href="#", class="btn-quiz twitter") #[span(class="fa fa-twitter")] Tweet] */

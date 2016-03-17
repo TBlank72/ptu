@@ -57,7 +57,7 @@ module.exports = function(passport) {
               throw err;
             return done(null, newUser);
           }); // end newUser.save
-        } // end else { successfull newUser created }
+        } // end else { successfull create newUser }
 
       }); // end User.findOne
 

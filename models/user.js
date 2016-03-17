@@ -1,5 +1,4 @@
-// Relating 2 databases:
-//  add a userId field with the ObjectId of the user on the cert schema.
+// models/user.js
 
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
@@ -9,30 +8,32 @@ var userSchema = mongoose.Schema({
   local         : {
     email       : { type: String, set: toLower },
     password    : String,
-    username    : String,
     name        : String
   },
   certs         : {
     cpt         : {
       verify_id : String,
-      attempts  : Number,
-      score     : Number,
-      passed    : Boolean,
-      passed_on : Date,
+      attempts  : Array,
+      score     : { type: Number, default: 0 },
+      passed    : { type: Boolean, default: false },
+      passed_on : { type: Date, default: null },
+      paid      : { type: Boolean, default: false }
     },
     cmt         : {
       verify_id : String,
-      attempts  : Number,
-      score     : Number,
-      passed    : Boolean,
-      passed_on : Date,
+      attempts  : Array,
+      score     : { type: Number, default: 0 },
+      passed    : { type: Boolean, default: false },
+      passed_on : { type: Date, default: null },
+      paid      : { type: Boolean, default: false }
     },
     cns         : {
       verify_id : String,
-      attempts  : Number,
-      score     : Number,
-      passed    : Boolean,
-      passed_on : Date,
+      attempts  : Array,
+      score     : { type: Number, default: 0 },
+      passed    : { type: Boolean, default: false },
+      passed_on : { type: Date, default: null },
+      paid      : { type: Boolean, default: false }
     }
   },
   facebook      : {
@@ -78,7 +79,11 @@ userSchema.statics.isValidUserPassword = function(username, password, done) {
         // All the same...
     });
 };*/
-// create model for users and expose to app
-module.exports = mongoose.model('User', userSchema);
 
+
+// create model for users and expose to app
+var User = mongoose.model('User', userSchema);
+module.exports = User; 
+
+//-------------------------------------------------
 

@@ -1,6 +1,6 @@
 .form-container-db
   form(method="put", action="/updatecontact")
-    h1 Update Contact Info
+
     .form-group
       label Name:
       input.form-control.bg-navy-gradient(type="text", name="name",

@@ -39,10 +39,20 @@ block content
           .btn-quiz(ng-click="selectContinue()") Continue
       .results( class=" {{ (totalQuestions === activeQuestion) ?\
         'active' : 'inactive' }} ")
-        h3 Results
-        p You scored {{percentage}}% by correctly answering {{score}} of the total {{totalQuestions}} questions.
-        p Use the links below to challenge your friends
-        .share(ng-bind-html="createShareLinks(percentage)")
+        p {{ resultsMsg }}
+        .form-container
+          h2 Results
+          form(action='/user/cpt', method='post')
+            .form-group
+              label Score
+              input.form-control.bg-navy-gradient(type='text', name='score', value="\
+              {{percentage}}", placeholder="{{percentage}}%", ng-model="user.cpt.score")
+              br
+              label Correct / Total
+              input.form-control.bg-navy-gradient(type='text', name='ratio', value="\
+              {{score}} / {{totalQuestions}}", placeholder="{{score}} / {{totalQuestions}}")
+              br
+            button.btn-quiz(type='submit' ng-click="submitScore(user.cpt.score)") Submit CPT Score
 
       
   include ./includes/footer.jade

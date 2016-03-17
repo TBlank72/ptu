@@ -1,7 +1,5 @@
 // cpt.ctrl.js 
-console.log('cptCtrl loaded');
-
-angular.module('ptuApp').controller('cptCtrl', ['$scope', '$http', '$rootScope', '$sce', '$window', 'AuthService', function($scope, $http, $rootScope, $sce, $window, AuthService) {
+angular.module('ptuApp').controller('cptCtrl', ['$scope', '$http', '$rootScope', '$sce', '$window', function($scope, $http, $rootScope, $sce, $window) {
   
   $scope.score = 0;
   $scope.activeQuestion = -1;

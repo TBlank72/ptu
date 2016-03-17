@@ -2,4 +2,5 @@
 
 module.exports = {
   'url' : 'mongodb://localhost/ptu',
+  'urlN' : './env/' + process.env.NODE_ENV + '.js'
 };

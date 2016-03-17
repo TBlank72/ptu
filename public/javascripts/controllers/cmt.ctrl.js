@@ -1,7 +1,5 @@
 // cmt.ctrl.js 
-console.log('cmtCtrl loaded');
-
-angular.module('ptuApp').controller('cmtCtrl', ['$scope', '$http', '$rootScope', '$sce', '$window', 'AuthService', function($scope, $http, $rootScope, $sce, $window, AuthService) {
+angular.module('ptuApp').controller('cmtCtrl', ['$scope', '$http', '$rootScope', '$sce', '$window', function($scope, $http, $rootScope, $sce, $window, AuthService) {
   
   $scope.score = 0;
   $scope.activeQuestion = -1;

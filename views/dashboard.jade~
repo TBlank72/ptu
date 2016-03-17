@@ -6,7 +6,7 @@ block content
     .dashboard-container
       .row
         .col-sm-2
-          h3 #[span(class='fa fa-user')] My Dashboard
+          h3 #[span(class='fa fa-user')] MyDashboard
           ul.nav.nav-pills.nav-stacked.nav-stacked-extended
             li
               a(href='#/contact-info', target='_self') Contact Info

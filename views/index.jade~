@@ -2,6 +2,6 @@ extends layout
 
 block content
   include ./includes/header.jade
-  include ./includes/verifyModal.jade
+  //include ./includes/loginModal.jade
   include ./includes/carousel.jade
   include ./includes/footer.jade
