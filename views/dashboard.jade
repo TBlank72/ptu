@@ -15,6 +15,9 @@ block content
             li
               a(href='#/my-certs', target='_self') My Certifications
         .col-sm-8
+          if (message.length > 0)
+            .msg-container
+              .alert.alert-danger #{message}
           div(ng-view)
         .col-sm-2
           p some other links or something

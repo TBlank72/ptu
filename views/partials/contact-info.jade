@@ -1,14 +1,14 @@
 .form-container-db
-  form(method="put", action="/updatecontact")
-    h1 Update Contact Info
+  form(method="post", action="/updatecontact")
+    h2 Update Contact Info
     .form-group
       label Name:
-      input.form-control.bg-navy-gradient(type="text", name="name",
+      input.form-control.bg-navy-gradient(type="text", name="newName",
         placeholder="#{user.local.name}")
 
     .form-group
       label Email:
-      input.form-control.bg-navy-gradient(type="text", name="email",
+      input.form-control.bg-navy-gradient(type="text", name="newEmail",
         placeholder="#{user.local.email}") 
 
     .form-group 

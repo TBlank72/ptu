@@ -22,8 +22,6 @@ module.exports = function(passport) {
   });
 
   // ==========LOCAL SIGNUP================
-  // We're using named strategies since we have one for login and
-  // one for signup.  By default, it would be called 'local'
   passport.use('local-signup', new LocalStrategy({
     // override username field with email
     usernameField: 'email',
@@ -31,7 +29,6 @@ module.exports = function(passport) {
     passReqToCallback: true // allows us to pass req to callback
   },
   function(req, email, password, done) {
-    // asynchronous
     // User.findOne won't fire unless data is sent back
     process.nextTick(function() {
       //find user whose email matches the form's email
@@ -63,9 +60,8 @@ module.exports = function(passport) {
 
     }); // end process.nextTick
   })); // end passport.use('local-signup')
+
   // ==========LOCAL LOGIN================
-  // We're using named strategies since we have one for login and
-  // one for signup.  By default, it would be called 'local'
   passport.use('local-login', new LocalStrategy({
     // default is username.  we change it to email
     usernameField : 'email',
@@ -89,4 +85,5 @@ module.exports = function(passport) {
 
   })); // end passport.use('local-login')
 
+  
 }; // end module.exports

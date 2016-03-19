@@ -2,6 +2,7 @@ var express = require('express');
 var passport = require('passport');
 var router = express.Router();
 var User = require('../models/user');
+var flash = ('connect-flash');
 
 
   //---- NON PRROTECTED PAGES------
@@ -63,24 +64,78 @@ var User = require('../models/user');
 
   // DASHBOARD SECTION =====================
   router.get('/dashboard', isLoggedIn, function(req, res) {
-    res.render('dashboard.jade', { user: req.user });
+    res.render('dashboard.jade', 
+               { user: req.user, message: req.flash('message') });
   });
+
   ///route partials request
   router.get('/partials/:name', function(req, res) {
     var name = req.params.name;
     res.render('partials/' + name, { user: req.user });
   });
 
-  // update user info *****use same method as submit score****
-  router.put('/updatecontact', isLoggedIn, function(req, res) {
-    User.update({'local.email': email}, {
-      username: username,
-      password: password,
-      email: email
-    })
+  /// email exists flash redirect 
+  router.get('/eflash', function(req, res) {
+    req.flash('message', 'email already exists')
+    res.redirect('/dashboard');
   });
+  // ------------ update contact-info ------------ 
+  router.post('/updatecontact', function(req, res) {
+    var Cuser = req.user;
+    var Cuemail = Cuser.local.email;
+    var newEmail = req.body.newEmail;
+    var newName = req.body.newName;
+    User.findOne({'local.email': newEmail}, function(err, user) {
+      if (err) console.log(err);
+      if (user) {
+        res.redirect('/eflash');
+      }
+      else {
 
-  //logout
+        User.findOneAndUpdate(
+          {'local.email': Cuemail },
+          { $set: {
+            'local.email' : (newEmail == "") ? Cuser.local.email : newEmail,
+             'local.name' : (newName == "") ? Cuser.local.name : newName
+          }}, // end $set:
+          { new: true, runValidators: true },
+          function(err, updated_user) {
+            res.redirect('/dashboard#/contact-info');
+          }// End res function
+        ); // End findOneAndUpdate()
+      }
+    }
+    ); // End User.findOne
+  }); // End router.post(/updatecontact...
+
+  // ------------ update password ------------ 
+  router.post('/updatepassword', function(req, res) {
+    var Cuser = req.user;
+    var Cuemail = Cuser.local.email;
+    var oldPassword = req.body.oldPassword;
+    var newPassword = req.body.newPassword;
+    User.findOne({'local.email': Cuemail}, function(err, user) { 
+      if (err) console.log(err);
+      if (!user.isValidPassword(oldPassword)) {
+        res.send("Old Password doesn't match");
+      }
+      else {
+        User.findOneAndUpdate(
+          {'local.email': Cuemail },
+          { $set: {
+            'local.password' : (newPassword == "") ? Cuser.local.password : Cuser.generateHash(newPassword),
+          }}, // end $set:
+          { new: true, runValidators: true },
+          function(err, updated_user) {
+            res.redirect('/dashboard#/password');
+          }
+        ); // End findOneAndUpdate()
+      }
+    }
+    ); // End User.findOne
+  }); // End post request
+
+  //logout user
   router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
