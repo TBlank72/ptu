@@ -7,6 +7,7 @@ navy: rgba(0,32,63,1)
 teal: rgba(57,204,204,1)
 red: rgba(246,46,36,1)
 green: rgba(46,204,64,1)
+blue: rgba(0,116,217,1)
 */
 
 .container-fluid {
@@ -538,7 +539,26 @@ nav a:focus {
   color: rgba(255,255,255,1);
 }
 
-
+/*---------------- cert image -----------------*/
+.cert-img-container {
+  position: relative;
+  background: none;
+  width: 80%;
+  margin: 20px auto 50px auto;
+  text-align: center;
+}
+.cert-img {
+  margin: auto;
+  position: relative;
+}
+#nameOnCert {
+  background-color: none;
+  color: black;
+  display: inline;
+  position: absolute;
+  top: 300px;
+  left: 400px;
+}
 /*----------------span classes-----------------*/
 
 span.green {

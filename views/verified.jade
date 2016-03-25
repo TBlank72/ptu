@@ -16,18 +16,15 @@ block content
     //else
       h4.red #{username}'s account is not current.
       h4 Please contact #[a(href='/support') support] for more information.
-
-
-
-////
-  .cert-container
-    if (cert_info.certs.cns.attempts.length > 0)
-      p #[span(class='fa fa-arrow-circle-up')]  High Score: #{cert_info.certs.cns.score}
-      if (cert_info.certs.cns.passed == true)
-        p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o')]
-      else
-        p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times')]
-      p #[span(class='fa fa-calendar-check-o')] Date Passed: #{cert_info.certs.cns.passed_on}
-      p #[span(class='fa fa-repeat')] Attempts: #{cert_info.certs.cns.attempts.length}
-      p #[span(class='fa fa-key')] Verification_ID: #{cert_info.certs.cns.verify_id}
-
+  if (certImg == 'cpt' && cert.passed == true && cert.paid == true)
+    .cert-img-container
+      img.cert-img(src='/images/cpt_cert.png')
+      #nameOnCert #{username}
+  if (certImg == 'cmt' && cert.passed == true && cert.paid == true)
+    .cert-img-container
+      img.cert-img(src='/images/cmt_cert.png')
+      #nameOnCert #{username}
+  if (certImg == 'cns' && cert.passed == true && cert.paid == true)
+    .cert-img-container
+      img.cert-img(src='/images/cns_cert.png')
+      #nameOnCert #{username}

@@ -16,6 +16,11 @@
       else
         p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
         p Pay for your certification to receive your Certification and Verification ID
+        form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+          input(type='hidden', name='cmd', value='_s-xclick')
+          input(type='hidden', name='hosted_button_id', value='BDS43QBCALSZ4')
+          input(type='image', src='https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif', border='0', name='submit', alt='PayPal - The safer, easier way to pay online!')
+          img(alt='', border='0', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width='1', height='1') 
         form(action='/user/payment', method='get')
           input(type='submit', value='Pay for CPT Certification', class='btn-custom bg-green-gradient')
     else
@@ -39,6 +44,11 @@
       else
         p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
         p Pay for your certification to receive your Certification and Verification ID
+        form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+          input(type='hidden', name='cmd', value='_s-xclick')
+          input(type='hidden', name='hosted_button_id', value='Y793FFVBKX8HU')
+          input(type='image', src='https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif', border='0', name='submit', alt='PayPal - The safer, easier way to pay online!')
+          img(alt='', border='0', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width='1', height='1')
         form(action='/user/payment', method='get')
           input(type='submit', value='Pay for CMT Certification', class='btn-custom bg-red-gradient')
     else
@@ -62,6 +72,11 @@
       else
         p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
         p Pay for your certification to receive your Certification and Verification ID
+        form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+          input(type='hidden', name='cmd', value='_s-xclick')
+          input(type='hidden', name='hosted_button_id', value='LSL5CLD3SPMLC')
+          input(type='image', src='https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif', border='0', name='submit', alt='PayPal - The safer, easier way to pay online!')
+          img(alt='', border='0', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width='1', height='1')
         form(action='/user/payment', method='get')
           input(type='submit', value='Pay for CNS Certification', class='btn-custom bg-blue-gradient')
     else

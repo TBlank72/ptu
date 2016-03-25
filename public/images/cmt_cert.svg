@@ -15,8 +15,8 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="cns_cert.svg"
-   inkscape:export-filename="C:\Users\Todd\Projects\ptuM\public\images\cns_cert.png"
+   sodipodi:docname="cmt_cert.svg"
+   inkscape:export-filename="C:\Users\Todd\Projects\ptuM\public\images\cpt_cert.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -71,7 +71,7 @@
            x="-862.85712"
            y="172.3622" /></flowRegion><flowPara
          id="flowPara4142"></flowPara></flowRoot>    <rect
-       style="opacity:1;fill:#0074d9;fill-opacity:1"
+       style="opacity:1;fill:#f62e24;fill-opacity:1"
        id="rect4144"
        width="990"
        height="765"
@@ -81,7 +81,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4146"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(-602.85718,95.219337)"><flowRegion
          id="flowRegion4148"><rect
            id="rect4150"
@@ -89,6 +89,6 @@
            height="133.47548"
            x="70.074623"
            y="50.906185"
-           style="fill:#ffffff;" /></flowRegion><flowPara
-         id="flowPara4152">Certified Nutrition Specialist</flowPara></flowRoot>  </g>
+           style="fill:#ffffff" /></flowRegion><flowPara
+         id="flowPara4152">Certified Master Trainer</flowPara></flowRoot>  </g>
 </svg>

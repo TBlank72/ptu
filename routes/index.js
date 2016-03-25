@@ -179,10 +179,10 @@ var flash = ('connect-flash');
                  function (err, user_info) {
         if (err) console.log(err);
         if (user_info) {
-          console.log(justCert);
           res.render('verified.jade',
                      { username: user_info.local.name,
-                       cert: user_info.certs[justCert]
+                       cert: user_info.certs[justCert],
+                       certImg: justCert
                      });
         }
         else {
