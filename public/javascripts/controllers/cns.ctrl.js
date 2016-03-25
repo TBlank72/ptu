@@ -67,22 +67,3 @@ angular.module('ptuApp').controller('cnsCtrl', ['$scope', '$http', '$rootScope',
 
 }]); //====== END CONTROLLER cnsCtrl ======
 
-//
-//
-//
-//
-//
-//
-  /* old shar links ---maybe good twitter example
-  //create Share Links
-  $scope.createShareLinks = function(percentage) {
-    var url = 'http://ptuniversity.com'
-    // Search how to create a mail form and DO NOT use the mailto:
-    var emailLink = '<a class="btn-quiz email" href="mailto:?subject=Try to beat my by score!&amp;body=I scored '+percentage+'% on my PT exam at '+url+'"> <i class="fa fa-envelope"></i> Email a friend</a>';
-
-    var twitterLink = "<a class='btn-quiz twitter' href='http://twitter.com/share?text=I scored "+percentage+"% on my PT exam. Try to beat my score at&amp;hashtags=PTUniversity&amp;"+url+"'> <i class='fa fa-twitter'></i> Tweet your score</a>";
-    var newMarkup = emailLink + twitterLink;
-
-    return $sce.trustAsHtml(newMarkup);
-  }*/
-

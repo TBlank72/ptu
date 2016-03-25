@@ -11,28 +11,25 @@
           |  Certification Verification Form
 
       .modal-body
-        form(role='form')
+        form(role='form', action='/verify', method='post', target='_blank')
           .form-group
-            label(for='cert') What certification are you verifying? 
+            label(for='certType') What certification are you verifying? 
             br
-            select.bg-navy-gradient(name='certs')
-              option(value="cpt") Certified Personal Trainer
-              option(value="cmt") Certified Master Trainer
-              option(value="cns") Certified Nutrition Specialist
+            select.bg-navy-gradient(name="certType")
+              option(value="certs.cpt") Certified Personal Trainer
+              option(value="certs.cmt") Certified Master Trainer
+              option(value="certs.cns") Certified Nutrition Specialist
 
           .form-group
-            label(for='verify_id')
+            label(for='req_verify_id')
               span.fa.fa-key
               | Verification ID 
-            input.form-control.bg-navy-gradient(type='text',
+            input.form-control.bg-navy-gradient(type='text', name='req_verify_id',
               placeholder='Enter Verification ID')
           button.btn.btn-block.btn-custom-N(type='submit')
             span.fa.fa-key
             |  Verify Certification
       .modal-footer
-        button.btn.btn-danger.pull-left(type='submit', data-dismiss='modal')
-          span.glyphicon.glyphicon-remove
-          |  Cancel  
         p
           | Not a member? 
           a(href='/signup', style="color:white") Sign Up 

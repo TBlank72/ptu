@@ -2,6 +2,7 @@ extends layout
 
 block content
   include ./includes/header.jade
+  include ./includes/verifyModal.jade
   .container-fluid.bg-navy-gradient
     .myQuiz(ng-controller="cnsCtrl")
       h1 Certified Nutrition Specialist (CNS)
@@ -54,7 +55,6 @@ block content
               readonly)
               br
             button.btn-quiz(type='submit') Submit CNS Score
-
 
   include ./includes/footer.jade
 

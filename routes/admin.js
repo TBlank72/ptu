@@ -4,7 +4,6 @@ var router = express.Router();
 var User = require('../models/user');
 
 
-  //---- NON PRROTECTED PAGES------
   router.get('/', function(req, res) {
     res.render('admin.jade');
   });
@@ -12,9 +11,14 @@ var User = require('../models/user');
   // Get all users
   router.get('/users', function(req, res) {
     User.find({}).exec(function(err, users) {
-      res.json({users: users})
+      res.render('admin', {users: users})
     });
   });
 
+  ///route partials request
+  router.get('/partials/:name', function(req, res) {
+    var name = req.params.name;
+    res.render('partials/' + name, { user: req.user });
+  });
 
 module.exports = router;

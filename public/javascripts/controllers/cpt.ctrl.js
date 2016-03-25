@@ -1,16 +1,18 @@
 // cpt.ctrl.js 
-angular.module('ptuApp').controller('cptCtrl', ['$scope', '$http', '$rootScope', '$sce', '$window', function($scope, $http, $rootScope, $sce, $window) {
+angular.module('ptuApp').controller('cptCtrl', ['$scope', '$http', '$rootScope', '$q', '$window', function($scope, $http, $rootScope, $q, $window) {
   
   $scope.score = 0;
   $scope.activeQuestion = -1;
   $scope.activeQuestionAnswered = 0;
-  $scope.percentage = 0; 
-  $scope.resultsMsg = '';
-
+  $scope.percentage = 0;
+  $scope.resultsMsg = ''; 
+  
+  // GET quiz data
   $http.get('json/cpt_final.json').then(function(quizData){
     $scope.myQuestions = quizData.data;
     $scope.totalQuestions = $scope.myQuestions.length;
   });
+
   // selectAnswer function begin
   $scope.selectAnswer = function(qIndex, aIndex) {
 
@@ -58,8 +60,10 @@ angular.module('ptuApp').controller('cptCtrl', ['$scope', '$http', '$rootScope',
   }
   //increment activeQuestion
   $scope.selectContinue = function() {
+    $scope.percentage = (($scope.score / $scope.totalQuestions)*100).toFixed(2);
     return $scope.activeQuestion += 1;
   }
 
-}]);
+
+}]); //====== END CONTROLLER cptCtrl ======
 

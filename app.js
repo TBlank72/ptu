@@ -4,6 +4,8 @@ var express  = require('express');
 var path     = require('path');
 var app      = express();
 
+var favicon = require('serve-favicon');
+
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
@@ -29,9 +31,10 @@ db.once('open', function() {
 });
 
 //------- set up our express application-------
- // log every request to the console
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// log every request to the console
 app.use(morgan('dev'));
- // read cookies (needed for auth)
+// read cookies (needed for auth)
 app.use(cookieParser());
 // body parser - get info from html forms
 app.use(bodyParser.json());

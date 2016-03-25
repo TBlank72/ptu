@@ -5,12 +5,21 @@ lime green: rgba(1,255,111,1)
 orange: rgba(255,133,27,1)
 navy: rgba(0,32,63,1)
 teal: rgba(57,204,204,1)
+red: rgba(246,46,36,1)
+green: rgba(46,204,64,1)
 */
 
 .container-fluid {
   min-height: 100vh;
 }
 
+.red {
+  color: rgba(246,46,36,1);
+}
+
+.green {
+  color: rgba(46,204,64,1);
+}
 .container-fluid h1,
 .container-fluid h2,
 .container-fluid h3,
@@ -75,10 +84,13 @@ teal: rgba(57,204,204,1)
 
 .msg-container {
   max-width: 400px;
-  margin: 5px auto 5px auto;
+  margin: 3px auto 3px auto;
   text-align: center;
 }
 
+.alert {
+  padding: 2px;
+}
 /*------------------------Dashboard-------------------*/
 
 .dashboard-container {
@@ -108,7 +120,7 @@ teal: rgba(57,204,204,1)
 
 
 .form-container-db {
-  margin: 30px auto;
+  margin: 0px auto;
   padding: 20px;
   max-width: 400px;
   background: rgba(255,255,255,0.1);
@@ -144,6 +156,37 @@ teal: rgba(57,204,204,1)
   font-size: 1.2em;
 }
 
+/*----------------- payment ------------------------*/
+
+.form-container-pay {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 450px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  border: 2px solid rgba(255,133,27,1);
+  text-align: left;
+}
+
+.form-container-pay label {
+  color: rgba(255,133,27,1);
+}
+
+.form-container-pay h1 {
+  text-align: center;
+}
+
+.form-container-pay input,
+.form-container-pay input::-webkit-input-placeholder {
+  color: rgba(255,133,27,1);
+  text-align: center;
+  font-family: Raleway;
+}
+.form-container-pay select,
+.form-container-pay option {
+  color:  rgba(255,133,27,1);
+  background-color:  rgba(0,32,63,1);
+}
 /*---------------Navbar-----------------------------*/
 a.navbar-brand.logo-img {
   background: url(../images/ptulogo.png) no-repeat center;
@@ -495,25 +538,6 @@ nav a:focus {
   color: rgba(255,255,255,1);
 }
 
-/*----reference delete later---------Form Containers--------------
-
-.form-container {
-  margin: 30px auto;
-  padding: 20px;
-  max-width: 350px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 20px;
-  border: 2px solid rgba(255,133,27,1);
-  text-align: center;
-}
-
-.form-container input,
-.form-container input::-webkit-input-placeholder {
-  color: rgba(255,133,27,1);
-  text-align: center;
-  font-family: Raleway;
-}
-*/
 
 /*----------------span classes-----------------*/
 
@@ -576,6 +600,13 @@ span.lg {
   color: rgba(255,133,27,1);
   text-align: left;
   font-family: Raleway;
+}
+
+/*----------------- verified.jade -----------------------*/
+.verified-container {
+  max-width: 60%;
+  background: rgba(0,32,63,0.2);
+  margin: 30px auto;
 }
 /*=============== navbar collapse threshold =================*/
 

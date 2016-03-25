@@ -3,12 +3,6 @@ var app = angular.module("ptuApp", ['ngRoute', 'ngResource']);
 
 app.config(function($routeProvider) {
   $routeProvider
-    .when('/login', {
-      controller: 'loginCtrl'
-    })
-    .when('/signup', {
-      controller: 'signupCtrl'
-    })
     .when('/dashboard', {
       controller: 'dashboardCtrl'
     })
@@ -20,18 +14,13 @@ app.config(function($routeProvider) {
       templateUrl: 'partials/my-certs.jade',
       controller: 'dashboardCtrl'
     })
-    .when('/cpt', {
-      controller: 'cptCtrl'
-    })
-    .when('/cmt', {
-      controller: 'cmtCtrl'
-    })
-    .when('/cns', {
-      controller: 'cnsCtrl'
-    })
     .when('/password', {
       templateUrl: 'partials/password.jade',
       controller: 'dashboardCtrl'
+    })
+    .when('/getusers', {
+      templateUrl: 'partials/getusers.jade',
+      controller: 'adminCtrl'
     })
     .otherwise({ redirectTo: '/'});
 });

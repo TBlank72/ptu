@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  include ./includes/header.jade
+  include ./includes/verifyModal.jade
+  .container-fluid.bg-navy-gradient
+    .form-container-pay
+      h1 #[span(class='fa fa-lock')] Secure Payment 
+      form(role='form', action='/user/payment', method='post')
+        .form-group
+          label What certification are paying for? 
+          br
+          select.bg-navy-gradient(name="certType")
+            option(value="certs.cpt") Certified Personal Trainer
+            option(value="certs.cmt") Certified Master Trainer
+            option(value="certs.cns") Certified Nutrition Specialist
+        .form-group
+          label Credit / Debit Card Number
+          input.form-control.bg-navy-gradient(type='text', name='ccNum')
+        .form-group
+          label 3-digit security id (on back of card)
+          input.form-control.bg-navy-gradient(type='password', name='secID')
+        button.btn.btn-custom(type='submit') Make Payment 
+        
+    
+  include ./includes/footer.jade

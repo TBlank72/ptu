@@ -2,12 +2,10 @@ extends layout
 
 block content
   .container(ng-controller="adminCtrl")
-    h1 Admin
+    h1 #[a(href='/admin') Admin]
     h3.
-       #[a(href='/admin/users') get users] |
-       #[a(href='/admin/users') get users] |
-       #[a(href='/admin/users') get users] |
-       #[a(href='/admin/users') get users] |
+       #[a(href='#/getusers') get users] |
+       #[a(href='/admin/users') users] |
+    div(ng-view)
     
-  
-  
+    p #{users}

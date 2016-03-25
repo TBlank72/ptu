@@ -2,6 +2,7 @@ extends layout
 
 block content
   include ./includes/header.jade
+  include ./includes/verifyModal.jade
   .container-fluid.bg-navy-gradient(ng-controller="dashboardCtrl")
     .dashboard-container
       .row
@@ -15,9 +16,12 @@ block content
             li
               a(href='#/my-certs', target='_self') My Certifications
         .col-sm-8
-          if (message.length > 0)
+          if (fmessage.length > 0)
             .msg-container
-              .alert.alert-danger #{message}
+              .alert.alert-danger #[strong() #{fmessage}]
+          if (smessage.length > 0)
+            .msg-container
+              .alert.alert-success #[strong() #{smessage}]
           div(ng-view)
         .col-sm-2
           p some other links or something

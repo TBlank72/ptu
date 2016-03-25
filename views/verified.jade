@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .verified-container
+    //if (cert.paid == true)
+    h4 PT University certification info for #[strong() #{username}]
+    h4 Certification: #[strong() #{cert.title}]
+    h5 Verification ID: #[strong() #{cert.verify_id}]
+      if (cert.passed == true)
+        h4.green Score: #[strong() #{cert.score}]
+        h4.green Passed Exam: #[span(class='fa fa-check-circle-o')]
+        h4.green Date Passed: #[strong() #{cert.passed_on}]
+      else
+        h4.red Score: #[strong() #{cert.score}]
+        h4.red Passed exam: #[span(class='fa fa-times')]
+    //else
+      h4.red #{username}'s account is not current.
+      h4 Please contact #[a(href='/support') support] for more information.
+
+
+
+////
+  .cert-container
+    if (cert_info.certs.cns.attempts.length > 0)
+      p #[span(class='fa fa-arrow-circle-up')]  High Score: #{cert_info.certs.cns.score}
+      if (cert_info.certs.cns.passed == true)
+        p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o')]
+      else
+        p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times')]
+      p #[span(class='fa fa-calendar-check-o')] Date Passed: #{cert_info.certs.cns.passed_on}
+      p #[span(class='fa fa-repeat')] Attempts: #{cert_info.certs.cns.attempts.length}
+      p #[span(class='fa fa-key')] Verification_ID: #{cert_info.certs.cns.verify_id}
+

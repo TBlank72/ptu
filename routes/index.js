@@ -65,7 +65,10 @@ var flash = ('connect-flash');
   // DASHBOARD SECTION =====================
   router.get('/dashboard', isLoggedIn, function(req, res) {
     res.render('dashboard.jade', 
-               { user: req.user, message: req.flash('message') });
+               { user: req.user,
+                 fmessage: req.flash('fmessage'),
+                 smessage: req.flash('smessage')
+               });
   });
 
   ///route partials request
@@ -74,10 +77,16 @@ var flash = ('connect-flash');
     res.render('partials/' + name, { user: req.user });
   });
 
-  /// email exists flash redirect 
-  router.get('/eflash', function(req, res) {
-    req.flash('message', 'email already exists')
-    res.redirect('/dashboard');
+  /// email exists contact update fail flash
+  router.get('/eflashfail', function(req, res) {
+    req.flash('fmessage', 'email already exists')
+    res.redirect('/dashboard#/contact-info');
+  });
+
+  /// contact update success flash
+  router.get('/eflashsuccess', function(req, res) {
+    req.flash('smessage', 'Contact info updated successfully')
+    res.redirect('/dashboard#/contact-info');
   });
   // ------------ update contact-info ------------ 
   router.post('/updatecontact', function(req, res) {
@@ -88,7 +97,7 @@ var flash = ('connect-flash');
     User.findOne({'local.email': newEmail}, function(err, user) {
       if (err) console.log(err);
       if (user) {
-        res.redirect('/eflash');
+        res.redirect('/eflashfail');
       }
       else {
 
@@ -100,7 +109,7 @@ var flash = ('connect-flash');
           }}, // end $set:
           { new: true, runValidators: true },
           function(err, updated_user) {
-            res.redirect('/dashboard#/contact-info');
+            res.redirect('/eflashsuccess');
           }// End res function
         ); // End findOneAndUpdate()
       }
@@ -108,6 +117,17 @@ var flash = ('connect-flash');
     ); // End User.findOne
   }); // End router.post(/updatecontact...
 
+  /// old password doesn't match fail flash 
+  router.get('/pflashfail', function(req, res) {
+    req.flash('fmessage', "Old Password doesn't match")
+    res.redirect('/dashboard#/password');
+  });
+
+  /// Password update success flash
+  router.get('/pflashsuccess', function(req, res) {
+    req.flash('smessage', "Password updated sucessfully")
+    res.redirect('/dashboard#/password');
+  });
   // ------------ update password ------------ 
   router.post('/updatepassword', function(req, res) {
     var Cuser = req.user;
@@ -117,7 +137,7 @@ var flash = ('connect-flash');
     User.findOne({'local.email': Cuemail}, function(err, user) { 
       if (err) console.log(err);
       if (!user.isValidPassword(oldPassword)) {
-        res.send("Old Password doesn't match");
+        res.redirect('/pflashfail');
       }
       else {
         User.findOneAndUpdate(
@@ -127,7 +147,7 @@ var flash = ('connect-flash');
           }}, // end $set:
           { new: true, runValidators: true },
           function(err, updated_user) {
-            res.redirect('/dashboard#/password');
+            res.redirect('/pflashsuccess');
           }
         ); // End findOneAndUpdate()
       }
@@ -139,6 +159,44 @@ var flash = ('connect-flash');
   router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
+  });
+
+  // Verify Certification form
+  router.post('/verify', function(req, res) {
+    var name = req.body.certType.concat('.verify_id');
+    var value = req.body.req_verify_id;
+    var query = {};
+    query[name] = value;
+
+    var thisCert = req.body.certType;
+    var justCert = thisCert.slice(6);
+    var proj = {};
+    proj[thisCert] = 1;
+    proj['local.name'] = 1;
+    proj['_id'] = 0;
+    User.findOne(query,
+                 proj,
+                 function (err, user_info) {
+        if (err) console.log(err);
+        if (user_info) {
+          console.log(justCert);
+          res.render('verified.jade',
+                     { username: user_info.local.name,
+                       cert: user_info.certs[justCert]
+                     });
+        }
+        else {
+          res.send('<h2>Certification Not Found</h2> <br />\
+                   Possible causes: <br />\
+                   1. The verification id was copied and pasted -- \
+                   pasting as plain text should fix this. <br />\
+                   2. The verification id was entered incorrectly -- \
+                   double check and make sure everything is correct.\
+                   <br />\
+                   <h4><a href="/">back to ptu home</a></h4>');
+        }
+      }
+    )
   });
 
 

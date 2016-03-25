@@ -12,28 +12,34 @@ var userSchema = mongoose.Schema({
   },
   certs         : {
     cpt         : {
+      title     : { type: String, default: 'Certified Personal Trainer' },
       verify_id : String,
       attempts  : Array,
       score     : { type: Number, default: 0 },
       passed    : { type: Boolean, default: false },
       passed_on : { type: Date, default: null },
-      paid      : { type: Boolean, default: false }
+      paid      : { type: Boolean, default: false },
+      paid_on   : { type: Date, default: null }
     },
     cmt         : {
+      title     : { type: String, default: 'Certified Master Trainer' },
       verify_id : String,
       attempts  : Array,
       score     : { type: Number, default: 0 },
       passed    : { type: Boolean, default: false },
       passed_on : { type: Date, default: null },
-      paid      : { type: Boolean, default: false }
+      paid      : { type: Boolean, default: false },
+      paid_on   : { type: Date, default: null }
     },
     cns         : {
+      title     : { type: String, default: 'Certified Nutrition Specialist' },
       verify_id : String,
       attempts  : Array,
       score     : { type: Number, default: 0 },
       passed    : { type: Boolean, default: false },
       passed_on : { type: Date, default: null },
-      paid      : { type: Boolean, default: false }
+      paid      : { type: Boolean, default: false },
+      paid_on   : { type: Date, default: null }
     }
   },
   facebook      : {
