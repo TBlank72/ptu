@@ -9,7 +9,7 @@
   "private": true,
   "main": "./bin/www",
   "scripts": {
-    "start": "nodemon"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "bcrypt": "^0.8.5",

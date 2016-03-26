@@ -1,0 +1,14 @@
+heroku urls given when:
+  heroku create ptum
+  https://ptum.herokuapp.com | https://git.heroku.com/ptum.git
+
+to deploy:
+  git push heroku master
+
+ensure that at least one instance of the app is running:
+  heroku ps:scale web=1
+
+see the running app
+  visit the url given above
+  or
+  heroku open
