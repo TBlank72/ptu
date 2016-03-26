@@ -18,17 +18,31 @@ var session      = require('express-session');
 // passpassport configuration + initialization
 var passportConfig = require('./config/passport');
 passportConfig(passport);
+
 // db configuration
 var configDB = require('./config/database');
+var uriString =
+  process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/ptu';
+
 // db connection
-mongoose.connect(configDB.url);
-// db logs
+mongoose.connect(uriString, function (err, res) {
+  if (err) {
+    console.log('ERROR connecting to: ' + uriString + '. ' + err);
+  } else {
+    console.log('SUCCESSFUL DATABASE CONNECTION AT: ' + uriString);
+  }
+});
+
+/*
 var db = mongoose.connection;
 db.on('error', console.error.bind(console,
      'connection error:')); 
 db.once('open', function() {
-  console.log('db connection on: ' + configDB.url);
+  console.log('DATABASE CONNECTION SUCCESSFUL...');
 });
+*/
 
 //------- set up our express application-------
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

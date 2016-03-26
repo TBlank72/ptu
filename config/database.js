@@ -1,5 +1,6 @@
 
 
 module.exports = {
-  'url' : 'mongodb://localhost/ptu',
+  'local' : 'mongodb://localhost/ptu',
+  'mLab'  : process.env.MONGOLAB_URI
 };
