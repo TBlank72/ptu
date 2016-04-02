@@ -34,7 +34,6 @@ mongoose.connect(uriString, function (err, res) {
     console.log('SUCCESSFUL DATABASE CONNECTION AT: ' + uriString);
   }
 });
-
 /*
 var db = mongoose.connection;
 db.on('error', console.error.bind(console,

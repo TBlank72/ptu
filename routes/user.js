@@ -6,13 +6,13 @@ var index = require('./index.js');
 
 // GET Exam pages
 router.get('/cpt', isLoggedIn, function(req, res) {
-  res.render('cpt_exam.jade', { user: req.user })
+  res.render('cpt_exam.jade', { user: req.user });
 });
 router.get('/cmt', isLoggedIn, function(req, res) {
-  res.render('cmt_exam.jade', { user: req.user })
+  res.render('cmt_exam.jade', { user: req.user });
 });
 router.get('/cns', isLoggedIn, function(req, res) {
-  res.render('cns_exam.jade', { user: req.user })
+  res.render('cns_exam.jade', { user: req.user });
 });
 
 

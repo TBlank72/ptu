@@ -1,5 +1,6 @@
 heroku urls given when:
   heroku create ptum
+  (in root of project folder)
   https://ptum.herokuapp.com | https://git.heroku.com/ptum.git
 
 to deploy:
