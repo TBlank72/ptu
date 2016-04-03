@@ -1,0 +1,199 @@
+extends ../layout
+
+block content
+  .container-fluid.bg-navy-gradient
+    .page-header
+      h3 Profile Information
+
+    form.form-horizontal(action='/account/profile', method='POST')
+      input(type='hidden', name='_csrf', value=_csrf)
+      .form-group
+        label.col-sm-3.control-label.orange(for='email') Email
+        .col-sm-7
+          input.form-control.form-input-custom(type='email', name='email', id='email', value='#{user.email}')
+      .form-group
+        label.col-sm-3.control-label.orange(for='name') Name
+        .col-sm-7
+          input.form-control.form-input-custom(type='text', name='name', id='name',
+          placeholder='**Enter your Full Name that will appear on your Certification**',
+          value='#{user.profile.name}')
+      .form-group
+        label.col-sm-3.control-label.orange(for='gender') Gender
+        .col-sm-4
+          label.radio.col-sm-4.orange
+            input(type='radio', checked=user.profile.gender=='male', name='gender', value='male', data-toggle='radio')
+            span Male
+          label.radio.col-sm-4.orange
+            input(type='radio', checked=user.profile.gender=='female', name='gender', value='female', data-toggle='radio')
+            span Female
+      .form-group
+        label.col-sm-3.control-label.orange(for='location') Location
+        .col-sm-7
+          input.form-control.form-input-custom(type='text', name='location', id='location', value='#{user.profile.location}')
+      .form-group
+        label.col-sm-3.control-label.orange(for='website') Website
+        .col-sm-7
+          input.form-control.form-input-custom(type='text', name='website', id='website', value='#{user.profile.website}')
+      ////.form-group
+        label.col-sm-3.control-label(for='gravatar') Gravatar
+        .col-sm-4
+          img(src="#{user.gravatar()}", class='profile', width='100', height='100')
+      .form-group
+        .col-sm-offset-3.col-sm-4
+          button.btn.btn.btn-custom(type='submit')
+            i.fa.fa-pencil
+            | Update Profile
+
+    .page-header
+      h3 My Certifications 
+    .certs-container
+
+      .cert-container
+        h1.bg-green-gradient Certified Personal Trainer 
+        if (user.certs.cpt.attempts.length > 0)
+          p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.cpt.score}
+          if (user.certs.cpt.passed == true)
+            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
+          else
+            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
+          p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.cpt.passed_on}
+          p #[span(class='fa fa-repeat')] Attempts: #{user.certs.cpt.attempts.length}
+          if (user.certs.cpt.paid == true)
+            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
+            p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cpt.verify_id}
+          else
+            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
+            p Pay for your certification to receive your Certification and Verification ID
+            form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+              input(type='hidden', name='cmd', value='_s-xclick')
+              input(type='hidden', name='hosted_button_id', value='BDS43QBCALSZ4')
+              input(type='image', src='https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif', border='0', name='submit', alt='PayPal - The safer, easier way to pay online!')
+              img(alt='', border='0', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width='1', height='1') 
+            form(action='/user/payment', method='get')
+              input(type='submit', value='Pay for CPT Certification', class='btn-custom bg-green-gradient')
+        else
+          p You haven't taken the CPT Exam yet.  Click to start now.
+        form(action='/cpt', target='_blank')
+          input(type='submit', value='Start CPT Exam', class='btn-custom bg-green-gradient')
+
+      .cert-container
+        h1.bg-red-gradient Certified Master Trainer
+        if (user.certs.cmt.attempts.length > 0)
+          p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.cmt.score}
+          if (user.certs.cmt.passed == true)
+            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
+          else
+            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
+          p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.cmt.passed_on}
+          p #[span(class='fa fa-repeat')] Attempts: #{user.certs.cmt.attempts.length}
+          if (user.certs.cmt.paid == true)
+            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
+            p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cmt.verify_id}
+          else
+            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
+            p Pay for your certification to receive your Certification and Verification ID
+            form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+              input(type='hidden', name='cmd', value='_s-xclick')
+              input(type='hidden', name='hosted_button_id', value='Y793FFVBKX8HU')
+              input(type='image', src='https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif', border='0', name='submit', alt='PayPal - The safer, easier way to pay online!')
+              img(alt='', border='0', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width='1', height='1')
+            form(action='/user/payment', method='get')
+              input(type='submit', value='Pay for CMT Certification', class='btn-custom bg-red-gradient')
+        else
+          p You haven't taken the CMT Exam yet.  Click to start now.
+        form(action='/cmt', target='_blank')
+          input(type='submit', value='Start CMT Exam', class='btn-custom bg-red-gradient')
+
+      .cert-container
+        h1.bg-blue-gradient Certified Nutrition Specialist
+        if (user.certs.cns.attempts.length > 0)
+          p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.cns.score}
+          if (user.certs.cns.passed == true)
+            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
+          else
+            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
+          p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.cns.passed_on}
+          p #[span(class='fa fa-repeat')] Attempts: #{user.certs.cns.attempts.length}
+          if (user.certs.cns.paid == true)
+            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
+            p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cns.verify_id}
+          else
+            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
+            p Pay for your certification to receive your Certification and Verification ID
+            form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+              input(type='hidden', name='cmd', value='_s-xclick')
+              input(type='hidden', name='hosted_button_id', value='LSL5CLD3SPMLC')
+              input(type='image', src='https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif', border='0', name='submit', alt='PayPal - The safer, easier way to pay online!')
+              img(alt='', border='0', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width='1', height='1')
+            form(action='/user/payment', method='get')
+              input(type='submit', value='Pay for CNS Certification', class='btn-custom bg-blue-gradient')
+        else
+          p You haven't taken the CNS Exam yet.  Click to start now.
+        form(action='/cns', target='_blank')
+          input(type='submit', value='Start CNS Exam', class='btn-custom bg-blue-gradient')
+
+    .page-header
+      h3 Change Password
+
+    form.form-horizontal(action='/account/password', method='POST')
+      input(type='hidden', name='_csrf', value=_csrf)
+      .form-group
+        label.col-sm-3.control-label.orange(for='password') New Password
+        .col-sm-7
+          input.form-control.form-input-custom(type='password', name='password', id='password')
+      .form-group
+        label.col-sm-3.control-label.orange(for='confirmPassword') Confirm Password
+        .col-sm-7
+          input.form-control.form-input-custom(type='password', name='confirmPassword', id='confirmPassword')
+      .form-group
+        .col-sm-offset-3.col-sm-4
+          button.btn.btn-custom(type='submit')
+            i.fa.fa-lock
+            | Change Password
+
+    .page-header
+      h3 Delete Account
+
+    form.form-horizontal(action='/account/delete', method='POST')
+      .form-group
+        p.col-sm-offset-3.col-sm-4 You can delete your account, but keep in mind this action is irreversible.
+        input(type='hidden', name='_csrf', value=_csrf)
+        .col-sm-offset-3.col-sm-4
+          button.btn.btn-danger(type='submit')
+            i.fa.fa-trash
+            | Delete my account
+
+    .page-header
+      h3 Linked Accounts
+    .form-horizontal
+      .form-group
+        .col-sm-offset-3.col-sm-4
+          if user.instagram
+            p: a.text-danger(href='/account/unlink/instagram') Unlink your Instagram account
+          else
+            p: a(href='/auth/instagram').orange Link your Instagram account
+        .col-sm-offset-3.col-sm-4
+          if user.google
+            p: a.text-danger(href='/account/unlink/google').orange Unlink your Google account
+          else
+            p: a(href='/auth/google').orange Link your Google account
+        .col-sm-offset-3.col-sm-4
+          if user.facebook
+            p: a.text-danger(href='/account/unlink/facebook') Unlink your Facebook account
+          else
+            p: a(href='/auth/facebook').orange Link your Facebook account
+        .col-sm-offset-3.col-sm-4
+          if user.twitter
+            p: a.text-danger(href='/account/unlink/twitter') Unlink your Twitter account
+          else
+            p: a(href='/auth/twitter').orange Link your Twitter account
+        .col-sm-offset-3.col-sm-4
+          if user.github
+            p: a.text-danger(href='/account/unlink/github') Unlink your GitHub account
+          else
+            p: a(href='/auth/github').orange Link your GitHub account
+        .col-sm-offset-3.col-sm-4
+          if user.linkedin
+            p: a.text-danger(href='/account/unlink/linkedin') Unlink your LinkedIn account
+          else
+            p: a(href='/auth/linkedin').orange Link your LinkedIn account

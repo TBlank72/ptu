@@ -1,8 +1,6 @@
 extends layout
 
 block content
-  include ./includes/header.jade
-  include ./includes/verifyModal.jade
   .container-fluid.bg-navy-gradient
     .myQuiz(ng-controller="cmtCtrl")
       h1 Certified Master Trainer (CMT)
@@ -43,7 +41,8 @@ block content
         p {{ resultsMsg }}
         .form-container
           h2 Results
-          form(action='/user/cmt', method='post')
+          form(action='/cmt', method='post')
+            input(type='hidden', name='_csrf', value=_csrf)
             .form-group
               label Score
               input.form-control.bg-navy-gradient(type='text', name='score', value="\
@@ -55,6 +54,3 @@ block content
               readonly)
               br
             button.btn-quiz(type='submit') Submit CMT Score
-      
-  include ./includes/footer.jade
-

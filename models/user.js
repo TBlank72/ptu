@@ -1,14 +1,28 @@
-// models/user.js
-
+var bcrypt = require('bcrypt-nodejs');
+var crypto = require('crypto');
 var mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
 
-var userSchema = mongoose.Schema({
+var userSchema = new mongoose.Schema({
+  email: { type: String, unique: true },
+  password: String,
+  passwordResetToken: String,
+  passwordResetExpires: Date,
 
-  local         : {
-    email       : { type: String, set: toLower, unique: true },
-    password    : String,
-    name        : String
+  facebook: String,
+  twitter: String,
+  google: String,
+  github: String,
+  instagram: String,
+  linkedin: String,
+  steam: String,
+  tokens: Array,
+
+  profile: {
+    name: { type: String, default: '' },
+    gender: { type: String, default: '' },
+    location: { type: String, default: '' },
+    website: { type: String, default: '' },
+    picture: { type: String, default: '' }
   },
   certs         : {
     cpt         : {
@@ -41,55 +55,54 @@ var userSchema = mongoose.Schema({
       paid      : { type: Boolean, default: false },
       paid_on   : { type: Date, default: null }
     }
-  },
-  facebook      : {
-    id          : String,
-    token       : String,
-    email       : String,
-    name        : String
-  },
-  twitter       : {
-    id          : String,
-    token       : String,
-    displayName : String,
-    username    : String
-  },
-  google        : {
-    id          : String,
-    token       : String,
-    email       : String,
-    name        : String
+  } // End of certs
+}, { timestamps: true });
+
+/**
+ * Password hash middleware.
+ */
+userSchema.pre('save', function(next) {
+  var user = this;
+  if (!user.isModified('password')) {
+    return next();
   }
-
-}); // End userSchema
-
-// toLowerCase function
-function toLower(v) {
-  return v.toLowerCase();
-}
-
-// methods ==================
-// generating a hash ========
-userSchema.methods.generateHash = function(password) {
-  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-};
-//********may need to change to synchronous
-// checking if password is valid
-userSchema.methods.isValidPassword = function(password) {
-  return bcrypt.compareSync(password, this.local.password);
-};
-/* For accepting username or email for logins
-userSchema.statics.isValidUserPassword = function(username, password, done) {
-    var criteria = (username.indexOf('@') === -1) ? {username: username} : {email: username};
-    this.findOne(criteria, function(err, user){
-        // All the same...
+  bcrypt.genSalt(10, function(err, salt) {
+    if (err) {
+      return next(err);
+    }
+    bcrypt.hash(user.password, salt, null, function(err, hash) {
+      if (err) {
+        return next(err);
+      }
+      user.password = hash;
+      next();
     });
-};*/
+  });
+});
 
+/**
+ * Helper method for validating user's password.
+ */
+userSchema.methods.comparePassword = function(candidatePassword, cb) {
+  bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
+    cb(err, isMatch);
+  });
+};
 
-// create model for users and expose to app
+/**
+ * Helper method for getting user's gravatar.
+ */
+userSchema.methods.gravatar = function(size) {
+  if (!size) {
+    size = 200;
+  }
+  if (!this.email) {
+    return 'https://gravatar.com/avatar/?s=' + size + '&d=retro';
+  }
+  var md5 = crypto.createHash('md5').update(this.email).digest('hex');
+  return 'https://gravatar.com/avatar/' + md5 + '?s=' + size + '&d=retro';
+};
+
 var User = mongoose.model('User', userSchema);
-module.exports = User; 
 
-//-------------------------------------------------
-
+module.exports = User;
