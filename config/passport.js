@@ -8,7 +8,7 @@ var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
 var OpenIDStrategy = require('passport-openid').Strategy;
 var OAuthStrategy = require('passport-oauth').OAuthStrategy;
-var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
+//var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
 //var InstagramStrategy = require('passport-instagram').Strategy;
 //var GitHubStrategy = require('passport-github').Strategy;
 
