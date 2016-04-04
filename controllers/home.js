@@ -7,16 +7,7 @@ exports.index = function(req, res) {
     title: 'Home'
   });
 };
-/*
-app.get('/about', homeController.about);
-app.get('/faq', homeController.faq);
-app.get('/certifications', homeController.certifications);
-app.post('/verify', homeController.verifycert);
-*/
 
-
-
-/*
 /**
  * GET /
  * About page.

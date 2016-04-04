@@ -3,7 +3,7 @@ var crypto = require('crypto');
 var mongoose = require('mongoose');
 
 var userSchema = new mongoose.Schema({
-  email: { type: String, unique: true },
+  email: { type: String, set: toLower, unique: true },
   password: String,
   passwordResetToken: String,
   passwordResetExpires: Date,
@@ -11,10 +11,7 @@ var userSchema = new mongoose.Schema({
   facebook: String,
   twitter: String,
   google: String,
-  github: String,
-  instagram: String,
   linkedin: String,
-  steam: String,
   tokens: Array,
 
   profile: {
@@ -57,6 +54,11 @@ var userSchema = new mongoose.Schema({
     }
   } // End of certs
 }, { timestamps: true });
+
+// toLowerCase function
+function toLower(v) {
+  return v.toLowerCase();
+}
 
 /**
  * Password hash middleware.

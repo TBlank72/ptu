@@ -10,6 +10,10 @@ footer.footer
             a(href='/about') About
           li
             a(href='/faq') FAQ
+          li(class=(title == 'API Examples') ? 'active' : undefined)
+            a(href='/api') API Examples
+          li(class=(title == 'Contact') ? 'active' : undefined)
+            a(href='/contact') Contact
       .col-sm-3
         ul.footer-links
           li
@@ -32,7 +36,7 @@ footer.footer
         ul.footer-links
           li
             if (user)
-              a(href='/dashboard') My Dashboard
+              a(href='/account') My Dashboard
             if (!user)
               a(href='/login') My Dashboard
           li

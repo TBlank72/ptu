@@ -188,6 +188,12 @@ body {
   font-weight: bold;
   font-size: 1.2em;
 }
+#SU {
+  color: rgba(1,255,111,1);
+}
+#LI {
+  color: rgba(57,204,204,1);
+}
 
 /*----------------- payment ------------------------*/
 
@@ -235,6 +241,10 @@ a.navbar-brand.logo-img {
   margin-bottom: -1px !important;
 }
 
+.navbar-custom ul li a {
+  font-weight: bold;
+}
+
 .navbar-brand {
   color: rgba(0,32,63,1);
 }
@@ -252,7 +262,6 @@ a.navbar-brand.logo-img {
 .navbar-custom button:hover {
   background: rgba(1,255,111,1);
 }
-
 /* toggle won't stay green
 .navbar-custom .navbar-nav .dropdown-menu,
 .navbar-custom .navbar-nav .dropdown > .active {
@@ -436,7 +445,42 @@ nav a:hover,
 nav a:focus {
 	outline: none;
 }
+/* Effect 1: Brackets */
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
 
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+/*
 .ij-effect-1 a::before,
 .ij-effect-1 a::after {
 	display: inline-block;
@@ -447,7 +491,7 @@ nav a:focus {
 }
 
 .ij-effect-1 a::before {
-	margin-right: 10px;
+	margin-right: 5px;
 	content: '[';
 	-webkit-transform: translateX(20px);
 	-moz-transform: translateX(20px);
@@ -455,7 +499,7 @@ nav a:focus {
 }
 
 .ij-effect-1 a::after {
-	margin-left: 10px;
+	margin-left: 5px;
 	content: ']';
 	-webkit-transform: translateX(-20px);
 	-moz-transform: translateX(-20px);
@@ -471,7 +515,7 @@ nav a:focus {
 	-moz-transform: translateX(0px);
 	transform: translateX(0px);
 }
-
+*/
 /*-------------Gradient Classes----------------------*/
 .bg-navy-gradient {
   background: rgba(0,32,63,1)  no-repeat;
