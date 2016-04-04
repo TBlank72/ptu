@@ -12,7 +12,7 @@ var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
 //var InstagramStrategy = require('passport-instagram').Strategy;
 //var GitHubStrategy = require('passport-github').Strategy;
 
-var User = require('../models/User');
+var User = require('../models/user');
 
 passport.serializeUser(function(user, done) {
   done(null, user.id);
