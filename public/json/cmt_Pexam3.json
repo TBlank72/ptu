@@ -1,0 +1,152 @@
+[
+  {
+    "question": "The Appendicular skeleton includes all of the following except?",
+    "answers": [
+      { "id": 0, "text": "legs" },
+      { "id": 1, "text": "arms" },
+      { "id": 2, "text": "ribs" },
+      { "id": 3, "text": "hip girdle" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "All of the following are part of the Axial skeleton except?",
+    "answers": [
+      { "id": 0, "text": "arms" },
+      { "id": 1, "text": "skull" },
+      { "id": 2, "text": "ribs" },
+      { "id": 3, "text": "vertebrae" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The rating of perceived exertion is _____.",
+    "answers": [
+      { "id": 0, "text": "an objective measure of intensity" },
+      { "id": 1, "text": "a subjective measure of intensity" },
+      { "id": 2, "text": "an objective measure of pain" },
+      { "id": 3, "text": "a subjective measure of pain" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The lactate threshold represents _____.",
+    "answers": [
+      { "id": 0, "text": "increased reliance on aerobic metabolism" },
+      { "id": 1, "text": "increased reliance on anaerobic metabolism" },
+      { "id": 2, "text": "decreased reliance on aerobic metabolism" },
+      { "id": 3, "text": "decreased reliance on anaerobic metabolism" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The end product of slow glycolysis is used in the _____.",
+    "answers": [
+      { "id": 0, "text": "cori cycle" },
+      { "id": 1, "text": "ETC" },
+      { "id": 2, "text": "krebs cycle" },
+      { "id": 3, "text": "fast glycolysis" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "During fast glycolysis, pyruvate is converted into _____.",
+    "answers": [
+      { "id": 0, "text": "lactate" },
+      { "id": 1, "text": "ACh" },
+      { "id": 2, "text": "O2" },
+      { "id": 3, "text": "H2O" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "When an individual trains with cardiovascular activities _____.",
+    "answers": [
+      { "id": 0, "text": "WBC increases" },
+      { "id": 1, "text": "RBC increases" },
+      { "id": 2, "text": "WBC decreases" },
+      { "id": 3, "text": "RBC decreases" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is the blood pressure when no blood is being ejected from the ventricles.",
+    "answers": [
+      { "id": 0, "text": "systolic" },
+      { "id": 1, "text": "diastolic" },
+      { "id": 2, "text": "resting" },
+      { "id": 3, "text": "zero" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "What covers the axon that allows faster nerve conduction?",
+    "answers": [
+      { "id": 0, "text": "RBC" },
+      { "id": 1, "text": "protein" },
+      { "id": 2, "text": "myelin sheath" },
+      { "id": 3, "text": "creatine" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ is an oxygen transport for the body?",
+    "answers": [
+      { "id": 0, "text": "lactic acid" },
+      { "id": 1, "text": "RBC" },
+      { "id": 2, "text": "WBC" },
+      { "id": 3, "text": "proteins" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Quickly squatting before performing a vertical jump results in a higher jump compared to a static squat jump due to?",
+    "answers": [
+      { "id": 0, "text": "stretch reflex" },
+      { "id": 1, "text": "more tempo" },
+      { "id": 2, "text": "faster tempo" },
+      { "id": 3, "text": "longer fibers" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The primary function of the rectus abdominus is _____.",
+    "answers": [
+      { "id": 0, "text": "trunk extension" },
+      { "id": 1, "text": "trunk flexion" },
+      { "id": 2, "text": "hip extension" },
+      { "id": 3, "text": "hip flexion" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "All of the following are true about smooth muscles except _____.",
+    "answers": [
+      { "id": 0, "text": "involuntary contraction" },
+      { "id": 1, "text": "non-striated" },
+      { "id": 2, "text": "surround organs" },
+      { "id": 3, "text": "attached to bones" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Elasticity refers to muscles _____.",
+    "answers": [
+      { "id": 0, "text": "shortening in length" },
+      { "id": 1, "text": "stretching and returning to normal position" },
+      { "id": 2, "text": "extending in length" },
+      { "id": 3, "text": "transmitting nerve impulses" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Contractibility refers to muscles _____.",
+    "answers": [
+      { "id": 0, "text": "shortening in length" },
+      { "id": 1, "text": "stretching and returning to normal position" },
+      { "id": 2, "text": "extending in length" },
+      { "id": 3, "text": "transmitting nerve impulses" }
+      ],
+      "correct": 0
+  }
+]

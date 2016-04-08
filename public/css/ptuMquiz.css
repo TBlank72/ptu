@@ -1,7 +1,7 @@
 /* ------------------quiz.css-------------------------*/
 /*---------------myQuiz-----------------------*/
 .myQuiz {
-	font-family: Roboto;
+	font-family: Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	width: 650px;
@@ -13,9 +13,10 @@
   margin: 10px auto;
   border-radius: 20px;  
 }
+
 .myQuiz h1 {
   font-weight: 100;
-  font-size: 2em;
+  font-size: 1.8em;
   text-transform: uppercase;
   margin: 0px;
   position: absolute;
@@ -86,6 +87,7 @@
 }
 .myQuiz .question .txt {
   font-size: 1.6em;
+  font-family: Helvetica, Arial, sans-serif;
   margin: 0px 0px 20px 0px;
 }
 .myQuiz .question .ans {

@@ -1,0 +1,152 @@
+[
+  {
+    "question": "The _____ separates the body into right and left halves.",
+    "answers": [
+      { "id": 0, "text": "sagital plane" },
+      { "id": 1, "text": "frontal plane" },
+      { "id": 2, "text": "transverse plane" },
+      { "id": 3, "text": "midfrontal plane" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The _____ separates the body into upper and lower halves.",
+    "answers": [
+      { "id": 0, "text": "sagital plane" },
+      { "id": 1, "text": "frontal plane" },
+      { "id": 2, "text": "transverse plane" },
+      { "id": 3, "text": "midfrontal plane" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Torso rotation occurs in what plane?",
+    "answers": [
+      { "id": 0, "text": "sagital" },
+      { "id": 1, "text": "frontal" },
+      { "id": 2, "text": "transverse" },
+      { "id": 3, "text": "midsagital" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ is towards the front of the body.",
+    "answers": [
+      { "id": 0, "text": "Anterior" },
+      { "id": 1, "text": "Posterior" },
+      { "id": 2, "text": "Ventral" },
+      { "id": 3, "text": "Both A and C" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ vertebrae make up the lumbar spine.",
+    "answers": [
+      { "id": 0, "text": "5" },
+      { "id": 1, "text": "6" },
+      { "id": 2, "text": "7" },
+      { "id": 3, "text": "8" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Which of the follow is a 'ball and socket' joint.",
+    "answers": [
+      { "id": 0, "text": "hip" },
+      { "id": 1, "text": "elbow" },
+      { "id": 2, "text": "knee" },
+      { "id": 3, "text": "ankle" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Gases are exchanged through _____ in the pulmonary system.",
+    "answers": [
+      { "id": 0, "text": "bronchi" },
+      { "id": 1, "text": "alveoli" },
+      { "id": 2, "text": "left ventricle" },
+      { "id": 3, "text": "blood vessels" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is used to test static strength.",
+    "answers": [
+      { "id": 0, "text": "Dynamometer" },
+      { "id": 1, "text": "Fat grips" },
+      { "id": 2, "text": "Skin fold calipers" },
+      { "id": 3, "text": "Hydrostatic tank" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Which of the following best describes what occurs in asthma?",
+    "answers": [
+      { "id": 0, "text": "black lung" },
+      { "id": 1, "text": "narrowing of the bronchial airways" },
+      { "id": 2, "text": "narrowing of the throat" },
+      { "id": 3, "text": "narrowing of the trachea" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "An imbalance in O2 supply and demand in the heart is known as _____.",
+    "answers": [
+      { "id": 0, "text": "stroke" },
+      { "id": 1, "text": "ischemia" },
+      { "id": 2, "text": "myocardial infarction" },
+      { "id": 3, "text": "poor ejection fraction" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "'Hardening' of the arteries is known as _____.",
+    "answers": [
+      { "id": 0, "text": "arteriosclerosis" },
+      { "id": 1, "text": "coronary artery athrosclerosis" },
+      { "id": 2, "text": "sarcopenia" },
+      { "id": 3, "text": "harderies" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The following lung condition is not fully reversible.",
+    "answers": [
+      { "id": 0, "text": "asthma" },
+      { "id": 1, "text": "chronic bronchitis" },
+      { "id": 2, "text": "chronic obstructive pulmonary disease" },
+      { "id": 3, "text": "emphysema" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ is the preferred form of exercise for senior adults.",
+    "answers": [
+      { "id": 0, "text": "Running" },
+      { "id": 1, "text": "Swimming" },
+      { "id": 2, "text": "Hiking" },
+      { "id": 3, "text": "Weight training" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Sweating helps cool the body by _____.",
+    "answers": [
+      { "id": 0, "text": "making the skin wet" },
+      { "id": 1, "text": "evaporation of sweat carrying heat away" },
+      { "id": 2, "text": "excreting hot sweat from the body" },
+      { "id": 3, "text": "pushing salt out of the body" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "All are 'white blood cells' except _____.",
+    "answers": [
+      { "id": 0, "text": "platelets" },
+      { "id": 1, "text": "neutrophils" },
+      { "id": 2, "text": "basophils" },
+      { "id": 3, "text": "eosinophils" }
+      ],
+      "correct": 0
+  }
+]

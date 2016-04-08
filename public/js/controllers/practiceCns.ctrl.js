@@ -1,5 +1,5 @@
-// cns.ctrl.js 
-angular.module('ptuApp').controller('cnsCtrl', ['$scope', '$http', '$rootScope', '$q', '$window', function($scope, $http, $rootScope, $q, $window) {
+// practicCns.ctrl.js 
+angular.module('ptuApp').controller('practiceCnsCtrl', ['$scope', '$http', '$rootScope', '$q', '$window', function($scope, $http, $rootScope, $q, $window) {
   
   $scope.score = 0;
   $scope.activeQuestion = -1;
@@ -7,11 +7,27 @@ angular.module('ptuApp').controller('cnsCtrl', ['$scope', '$http', '$rootScope',
   $scope.percentage = 0;
   $scope.resultsMsg = ''; 
   
-  // GET quiz data
-  $http.get('json/cns_final.json').then(function(quizData){
-    $scope.myQuestions = quizData.data;
-    $scope.totalQuestions = $scope.myQuestions.length;
-  });
+  // GET practice CNS quiz 1 data
+  if (window.location.href.indexOf("cnspractice1") > -1) {
+    $http.get('json/cns_Pexam1.json').then(function(quizData){
+      $scope.myQuestions = quizData.data;
+      $scope.totalQuestions = $scope.myQuestions.length;
+    });
+  }
+  // GET practice CNS quiz 2 data
+  else if (window.location.href.indexOf("cnspractice2") > -1) {
+    $http.get('json/cns_Pexam2.json').then(function(quizData){
+      $scope.myQuestions = quizData.data;
+      $scope.totalQuestions = $scope.myQuestions.length;
+    });
+  }
+  // GET practice CNS quiz 3 data
+  else if (window.location.href.indexOf("cnspractice3") > -1) {
+    $http.get('json/cns_Pexam3.json').then(function(quizData){
+      $scope.myQuestions = quizData.data;
+      $scope.totalQuestions = $scope.myQuestions.length;
+    });
+  }
 
   // selectAnswer function begin
   $scope.selectAnswer = function(qIndex, aIndex) {
@@ -38,16 +54,18 @@ angular.module('ptuApp').controller('cnsCtrl', ['$scope', '$http', '$rootScope',
     // Results panel
     $scope.percentage = (($scope.score / $scope.totalQuestions)*100).toFixed(2);
     if ($scope.percentage < 70) {
-      $scope.resultsMsg = "Sorry, you did not pass the CNS exam. Please review the\
-                           study material and try again. There is no penalty for\
-                           taking the exam multiple times. Only your highest score\
-                           will remain on record.";
+      $scope.resultsMsg = "You're not quite ready. Study the CNS practice exams\
+                           more before you take the certification exam.\
+                           Remember, there is no penalty for taking the CNS\
+                           certification exam more than once.  Only your\
+                           highest score will remain on record.";
     }
     else if ($scope.percentage >= 70) {
-      $scope.resultsMsg = "Congratulations, you passed the CNS exam. Please submit\
-                           your score below to record your CNS score. You will\
-                           see a link on your account page to checkout and receive\
-                           your certification and verification ID for employers.";
+      $scope.resultsMsg = "You did great! You're ready to take your CNS\
+                           certification exam! Remember, only your highest\
+                           score will remain on record, so it is okay if you\
+                           need to take the CNS certification exam more than once.\
+                           Good Luck!";
     }
 
   } // end selectAnswer function

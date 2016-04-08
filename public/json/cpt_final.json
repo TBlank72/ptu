@@ -18,7 +18,6 @@
       { "id": 3, "text": "110" }
       ],
       "correct": 1
-      
   },
   {
     "question": "The age predicted max heart rate of a 20 year old is what?",
@@ -29,7 +28,6 @@
       { "id": 3, "text": "220" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Exhaling against a closed epiglottis to increase trunk and core stability is called what?",
@@ -40,7 +38,6 @@
       { "id": 3, "text": "Valsalva Maneuver" }
       ],
       "correct": 3
-      
   },
   {
     "question": "It is appropriate to check an individual's blood pressure on their wrist with your thumb.",
@@ -49,7 +46,6 @@
       { "id": 1, "text": "False" }
       ],
       "correct": 1
-      
   },
   {
     "question": "It is appropriate to check an individual's heart rate on their wrist with your thumb.",
@@ -58,7 +54,6 @@
       { "id": 1, "text": "False" }
       ],
       "correct": 1
-      
   },
   {
     "question": "All are good forms of low impact cardio except _____.",
@@ -69,7 +64,6 @@
       { "id": 3, "text": "Treadmill" }
       ],
       "correct": 3
-      
   },
   {
     "question": "To increase strength _____ rep ranges should be used.",
@@ -80,7 +74,6 @@
       { "id": 3, "text": "15+" }
       ],
       "correct": 0
-      
   },
   {
     "question": "_____ is the term for increased muscular size.",
@@ -91,7 +84,6 @@
       { "id": 3, "text": "Dystrophy" }
       ],
       "correct": 1
-      
   },
   {
     "question": "_____ is a decrease in muscle size.",
@@ -102,7 +94,6 @@
       { "id": 3, "text": "Dystrophy" }
       ],
       "correct": 2
-      
   },
   {
     "question": "Cardio refers to what muscle?",
@@ -113,7 +104,6 @@
       { "id": 3, "text": "Heart" }
       ],
       "correct": 3
-      
   },
   {
     "question": "Cardiopulmonary refers to _____ and _____.",
@@ -124,7 +114,6 @@
       { "id": 3, "text": "Heart / Capillaries" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Type IIb fibers are _____.",
@@ -135,7 +124,6 @@
       { "id": 3, "text": "Small" }
       ],
       "correct": 1
-      
   },
   {
     "question": "18.5 - 24.9 BMI is _____.",
@@ -146,7 +134,6 @@
       { "id": 3, "text": "Underweight" }
       ],
       "correct": 1
-      
   },
   {
     "question": "30+ BMI is ______.",
@@ -157,7 +144,6 @@
       { "id": 3, "text": "Underweight" }
       ],
       "correct": 2
-      
   },
   {
     "question": "What muscle group is the antagonist of the triceps?",
@@ -168,7 +154,6 @@
       { "id": 3, "text": "Hamstrings" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Powerlifters primary goal is to increase _____.",
@@ -178,9 +163,7 @@
       { "id": 2, "text": "Stamina" },
       { "id": 3, "text": "Size" }
       ],
-      "correct": 0,
-      "feedback": "Powerlifters are only judged on weight lifted, not how fast they lift the weight."
-      
+      "correct": 0
   },
   {
     "question": "How many calories are in 1 lbs of fat tissue?",
@@ -191,7 +174,6 @@
       { "id": 3, "text": "3500" }
       ],
       "correct": 3
-      
   },
   {
     "question": "Weight loss of _____ pounds per week is considered healthy.",
@@ -202,7 +184,6 @@
       { "id": 3, "text": "5" }
       ],
       "correct": 0
-      
   },
   {
     "question": "All of the following muscles are in the lower body except _____.",
@@ -213,7 +194,6 @@
       { "id": 3, "text": "Latisimus dorsi" }
       ],
       "correct": 3
-      
   },
   {
     "question": "The optimal time to stretch to increase flexibility is _____.",
@@ -224,7 +204,6 @@
       { "id": 3, "text": "At night" }
       ],
       "correct": 2
-      
   },
   {
     "question": "Lats, rhomboids, and biceps are used for what movements?",
@@ -235,7 +214,6 @@
       { "id": 3, "text": "Jumping" }
       ],
       "correct": 2
-      
   },
   {
     "question": "The quadriceps are composed of how many muscle groups?",
@@ -246,7 +224,6 @@
       { "id": 3, "text": "6" }
       ],
       "correct": 1
-      
   },
   {
     "question": "25 - 29.9 BMI is _____.",
@@ -257,7 +234,6 @@
       { "id": 3, "text": "Super obese" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Which of the following is anaerobic in nature?",
@@ -268,7 +244,6 @@
       { "id": 3, "text": "Triathlons" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Healthy weight loss can involve losing _____ lbs per week.",
@@ -279,7 +254,6 @@
       { "id": 3, "text": "As much as possible" }
       ],
       "correct": 0
-      
   },
   {
     "question": "_____ is 'towards' the midline of the body.",
@@ -290,7 +264,6 @@
       { "id": 3, "text": "Flexion" }
       ],
       "correct": 0
-      
   },
   {
     "question": "_____ is 'away' from the midline of the body.",
@@ -301,7 +274,6 @@
       { "id": 3, "text": "Flexion" }
       ],
       "correct": 1
-      
   },
   {
     "question": "_____ refers to the front of the body.",
@@ -312,7 +284,6 @@
       { "id": 3, "text": "Inferior" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Activity lasting < 6 seconds uses primarily what energy system?",
@@ -323,7 +294,6 @@
       { "id": 3, "text": "Cori cycle" }
       ],
       "correct": 2
-      
   },
   {
     "question": "DNA is located in the _____ within the cell.",
@@ -334,7 +304,6 @@
       { "id": 3, "text": "Cell membrane" }
       ],
       "correct": 2
-      
   },
   {
     "question": "Which of the following tissues is the most dense?",
@@ -345,7 +314,6 @@
       { "id": 3, "text": "Nerves" }
       ],
       "correct": 1
-      
   },
   {
     "question": "_____ occurs when cells become resistant to the effects of insulin.",
@@ -356,7 +324,6 @@
       { "id": 3, "text": "Gestational diabetes" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Powerlifters compete in all of the following except _____.",
@@ -367,7 +334,6 @@
       { "id": 3, "text": "Deadlifts" }
       ],
       "correct": 2
-      
   },
   {
     "question": "Women have more testosterone compared to men.",
@@ -376,7 +342,6 @@
       { "id": 1, "text": "False" }
       ],
       "correct": 1
-      
   },
   {
     "question": "_____ forms glycogen molecules.",
@@ -387,7 +352,6 @@
       { "id": 3, "text": "Protein" }
       ],
       "correct": 1
-      
   },
   {
     "question": "The acronymn for Adenosine Triphosphate is _____.",
@@ -398,7 +362,6 @@
       { "id": 3, "text": "ATP" }
       ],
       "correct": 3
-      
   },
   {
     "question": "_____ is an example of a long bone.",
@@ -409,7 +372,6 @@
       { "id": 3, "text": "Meta tarsals" }
       ],
       "correct": 2
-      
   },
   {
     "question": "_____ is the prime mover for knee flexion.",
@@ -420,7 +382,6 @@
       { "id": 3, "text": "Biceps" }
       ],
       "correct": 0
-      
   },
   {
     "question": "_____ is the prime mover for elbow flexion.",
@@ -431,7 +392,6 @@
       { "id": 3, "text": "Glutes" }
       ],
       "correct": 1
-      
   },
   {
     "question": "_____ is the prime mover for knee extension.",
@@ -442,7 +402,6 @@
       { "id": 3, "text": "Quadriceps" }
       ],
       "correct": 3
-      
   },
   {
     "question": "_____ is involved in plantar flexion.",
@@ -453,7 +412,6 @@
       { "id": 3, "text": "Biceps" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Fat soluble vitamins can be toxic in high amounts.",
@@ -462,7 +420,6 @@
       { "id": 1, "text": "False" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Which of the following is a plyometric activity?",
@@ -473,7 +430,6 @@
       { "id": 3, "text": "Cycling" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Which of the following involves isometric contractions?",
@@ -484,7 +440,6 @@
       { "id": 3, "text": "Planks" }
       ],
       "correct": 3
-      
   },
   {
     "question": "Which of the following is NOT a common supplement?",
@@ -495,7 +450,6 @@
       { "id": 3, "text": "Lactic acid" }
       ],
       "correct": 3
-      
   },
   {
     "question": "Which of the following has the lowest protein content?",
@@ -506,7 +460,6 @@
       { "id": 3, "text": "Whole grains" }
       ],
       "correct": 3
-      
   },
   {
     "question": "Which of the following is NOT an endurance event?",
@@ -517,7 +470,6 @@
       { "id": 3, "text": "Marathon" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Fast twitch muscle fibers are used more in the 12-16 mile range of a marathon than slow twitch muscle fibers.",
@@ -526,7 +478,6 @@
       { "id": 1, "text": "False" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Biceps are skeletal muscle fibers.",
@@ -535,7 +486,6 @@
       { "id": 1, "text": "False" }
       ],
       "correct": 0
-      
   },
   {
     "question": "The GI tract is a smooth muscle.",
@@ -544,7 +494,6 @@
       { "id": 1, "text": "False" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Abs are smooth muscles.",
@@ -553,7 +502,6 @@
       { "id": 1, "text": "False" }
       ],
       "correct": 1
-      
   },
   {
     "question": "The heart is a smooth muscle.",
@@ -562,7 +510,6 @@
       { "id": 1, "text": "False" }
       ],
       "correct": 1
-      
   },
   {
     "question": "_____ refers to the lungs.",
@@ -573,7 +520,6 @@
       { "id": 3, "text": "RBC" }
       ],
       "correct": 1
-      
   },
   {
     "question": "_____ is judged on full ROM lifting technique.",
@@ -584,7 +530,6 @@
       { "id": 3, "text": "Track and field" }
       ],
       "correct": 2
-      
   },
   {
     "question": "Max heart rate can be calculated using _____.",
@@ -595,7 +540,6 @@
       { "id": 3, "text": "Weight" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Stretching improves muscles' _____.",
@@ -606,7 +550,6 @@
       { "id": 3, "text": "Size" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Stretching that involves a 'bouncing' movement is _____.",
@@ -617,7 +560,6 @@
       { "id": 3, "text": "Isometric" }
       ],
       "correct": 2
-      
   },
   {
     "question": "Intense cardio for extended duraion can cause _____.",
@@ -628,7 +570,6 @@
       { "id": 3, "text": "Hypertrophy" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Training at higher altitudes is more difficult because _____.",
@@ -639,7 +580,6 @@
       { "id": 3, "text": "Lungs can't transfer O2 as fast" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Torso rotation occurs in the _____.",
@@ -650,7 +590,6 @@
       { "id": 3, "text": "Anterior plane" }
       ],
       "correct": 2
-      
   },
   {
     "question": "Lateral shoulder raises occur in the _____ plane.",
@@ -661,7 +600,6 @@
       { "id": 3, "text": "Dorsal" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Seated biceps curls occur in the _____ plane.",
@@ -672,7 +610,6 @@
       { "id": 3, "text": "Transverse" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Activity lasting 90-120 seconds primarily uses what energy system?",
@@ -683,7 +620,6 @@
       { "id": 3, "text": "Cori cycle" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Activity lasting > 2 minutes primarily uses what energy system?",
@@ -694,7 +630,6 @@
       { "id": 3, "text": "Cori cycle" }
       ],
       "correct": 2
-      
   },
   {
     "question": "The best way to stay warm in a very cold environment is _____.",
@@ -705,7 +640,6 @@
       { "id": 3, "text": "breathe as slow as possible" }
       ],
       "correct": 0
-      
   },
   {
     "question": "ADP is the acronymn for _____.",
@@ -716,7 +650,6 @@
       { "id": 3, "text": "Alpha-di-protein" }
       ],
       "correct": 2
-      
   },
   {
     "question": "_____ makes up the largest percentage of body weight in normal-weight Americans.",
@@ -727,7 +660,6 @@
       { "id": 3, "text": "Neurons" }
       ],
       "correct": 1
-      
   },
   {
     "question": "Obesity increases risk for all of the following except _____.",
@@ -738,7 +670,6 @@
       { "id": 3, "text": "lower resting heart rate" }
       ],
       "correct": 3
-      
   },
   {
     "question": "Which is the following is the least dense?",
@@ -749,7 +680,6 @@
       { "id": 3, "text": "Oxygen" }
       ],
       "correct": 3
-      
   },
   {
     "question": "By pulling your foot towards your glutes, _____ is being stretched.",
@@ -760,7 +690,6 @@
       { "id": 3, "text": "Soleus" }
       ],
       "correct": 2
-      
   },
   {
     "question": "Static stretching involves _____.",
@@ -771,7 +700,6 @@
       { "id": 3, "text": "Rapid movement" }
       ],
       "correct": 0
-      
   },
   {
     "question": "Max heart rate could be estimated with _____ formula.",
@@ -782,7 +710,6 @@
       { "id": 3, "text": "220 - weight" }
       ],
       "correct": 2
-      
   },
   {
     "question": "_____ and _____ are most important for running marathons.",
@@ -793,7 +720,6 @@
       { "id": 3, "text": "cardiovascular power / muscular power" }
       ],
       "correct": 1
-      
   },
   {
     "question": "_____ is the most important factor in determining how fast someone can finish a marathon.",
@@ -804,7 +730,6 @@
       { "id": 3, "text": "VCO2max" }
       ],
       "correct": 2
-      
   },
   {
     "question": "_____ is an example of an endurance event.",
@@ -815,7 +740,6 @@
       { "id": 3, "text": "Vertical jump test" }
       ],
       "correct": 2
-      
   },
   {
     "question": "Running for 1 hour is an example of _____.",
@@ -826,7 +750,6 @@
       { "id": 3, "text": "Endurance" }
       ],
       "correct": 3
-      
   },
   {
     "question": "_____ is NOT an endurance event.",
@@ -837,7 +760,6 @@
       { "id": 3, "text": "10K" }
       ],
       "correct": 0
-      
   },
   {
     "question": "_____ has the highest relative amount of protein.",
@@ -848,237 +770,197 @@
       { "id": 3, "text": "Fish" }
       ],
       "correct": 2
-      
   },
   {
-    "question": "NEED ABOUT 21 MORE QUESTIONS including this one.",
+    "question": "Extensibility refers to muscles _____.",
     "answers": [
-      { "id": 0, "text": "NEED ABOUT 21 MORE QUESTIONS" },
-      { "id": 1, "text": "NEED ABOUT 21 MORE QUESTIONS" },
-      { "id": 2, "text": "NEED ABOUT 21 MORE QUESTIONS" },
-      { "id": 3, "text": "NEED ABOUT 21 MORE QUESTIONS" }
+      { "id": 0, "text": "shortening in length" },
+      { "id": 1, "text": "stretching and returning to normal position" },
+      { "id": 2, "text": "extending in length" },
+      { "id": 3, "text": "transmitting nerve impulses" }
       ],
-      "correct": 9
-      
+      "correct": 2 
   },
   {
-    "question": "",
+    "question": "Conductivity refers to muscles _____.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "shortening in length" },
+      { "id": 1, "text": "stretching and returning to normal position" },
+      { "id": 2, "text": "extending in length" },
+      { "id": 3, "text": "transmitting nerve impulses" }
       ],
-      "correct": 9
-      
+      "correct": 3
   },
   {
-    "question": "",
+    "question": "Irritability refers to muscles _____.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "responding to stimuli" },
+      { "id": 1, "text": "stretching and returning to normal position" },
+      { "id": 2, "text": "extending in length" },
+      { "id": 3, "text": "transmitting nerve impulses" }
       ],
-      "correct": 9
-      
+      "correct": 0
   },
   {
-    "question": "",
+    "question": "All of the following are part of a neuromuscular junction except _____.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "synaptic axon" },
+      { "id": 1, "text": "axon terminal" },
+      { "id": 2, "text": "synaptic cleft" },
+      { "id": 3, "text": "receptor" }
       ],
-      "correct": 9
-      
+      "correct": 0
   },
   {
-    "question": "",
+    "question": "All are part of a muscle fiber except _____.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "endomysium" },
+      { "id": 1, "text": "sarcolemma" },
+      { "id": 2, "text": "myofibrils" },
+      { "id": 3, "text": "myelin sheath" }
       ],
-      "correct": 9
-      
+      "correct": 3
   },
   {
-    "question": "",
+    "question": "Myofibrils contain actin and perimysium.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
       ],
-      "correct": 9
-      
+      "correct": 1
   },
   {
-    "question": "",
+    "question": "Latissimus dorsi is an antagonist to the deltoid.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
       ],
-      "correct": 9
-      
+      "correct": 0
   },
   {
-    "question": "",
+    "question": "Hamstrings are an antagonist to the quadriceps.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
       ],
-      "correct": 9
-      
+      "correct": 0
   },
   {
-    "question": "",
+    "question": "A muscle origin is the distal attachment to a bone.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
       ],
-      "correct": 9
-      
+      "correct": 0
   },
   {
-    "question": "",
+    "question": "Which of the following is not part of the hamstrings",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "semimembranosus" },
+      { "id": 1, "text": "rectus femoris" },
+      { "id": 2, "text": "semitendinosus" },
+      { "id": 3, "text": "biceps femoris" }
       ],
-      "correct": 9
-      
+      "correct": 1
   },
   {
-    "question": "",
+    "question": "Main functions of the respiratory system include all of the following except _____.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "supply O2 to the blood" },
+      { "id": 1, "text": "remove CO2 from the blood" },
+      { "id": 2, "text": "regulate blood pH" },
+      { "id": 3, "text": "circulate blood to the body" }
       ],
-      "correct": 9
-      
+      "correct": 3
   },
   {
-    "question": "",
+    "question": "What types of muscles pull limbs in towards the midline of the body?",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "abductor" },
+      { "id": 1, "text": "extensor" },
+      { "id": 2, "text": "adductor" },
+      { "id": 3, "text": "flexor" }
       ],
-      "correct": 9
-      
+      "correct": 2
   },
   {
-    "question": "",
+    "question": "Which of the following is not a characteristic of a cardiac muscle?",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "found in one place" },
+      { "id": 1, "text": "voluntary" },
+      { "id": 2, "text": "involuntary" },
+      { "id": 3, "text": "striated" }
       ],
-      "correct": 9
-      
+      "correct": 1
   },
   {
-    "question": "",
+    "question": "The right side of the heart pumps oxygenated blood to the body.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
       ],
-      "correct": 9
-      
+      "correct": 1
   },
   {
-    "question": "",
+    "question": "The left side of the heart pumps oxygenated blood to the body.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
       ],
-      "correct": 9
-      
+      "correct": 0
   },
   {
-    "question": "",
+    "question": "_____ is known as the 'pacemaker' of the heart.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "purkinje fibers" },
+      { "id": 1, "text": "atrioventricular node" },
+      { "id": 2, "text": "sinoatrial node" },
+      { "id": 3, "text": "myocardium" }
       ],
-      "correct": 9
-      
+      "correct": 2
   },
   {
-    "question": "",
+    "question": "Electrical activity of the heart is measured with _____.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "ECG" },
+      { "id": 1, "text": "ABC" },
+      { "id": 2, "text": "EFG" },
+      { "id": 3, "text": "DOM" }
       ],
-      "correct": 9
-      
+      "correct": 0
   },
   {
-    "question": "",
+    "question": "A QRS complex represents repolarization of the ventricle.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
       ],
-      "correct": 9
-      
+      "correct": 1
   },
   {
-    "question": "",
+    "question": "P waves represent depolarization through the atria.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
       ],
-      "correct": 9
-      
+      "correct": 0
   },
   {
-    "question": "",
+    "question": "Arteries return blood to the heart.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
       ],
-      "correct": 9
-      
+      "correct": 1
   },
   {
-    "question": "",
+    "question": "Blood platelets _____.",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "transport O2" },
+      { "id": 1, "text": "transport CO2" },
+      { "id": 2, "text": "regulate blood clotting" },
+      { "id": 3, "text": "destroy foreign elements" }
       ],
-      "correct": 9
-      
+      "correct": 2
   }
 ]

@@ -3,13 +3,28 @@ var User = require('../models/user');
 // GET Exam pages
 
 exports.getCpt = function(req, res) {
-  res.render('cpt_exam');
+  res.render('exams/cpt_exam');
+}
+exports.getPracticeCpt = function(req, res) {
+  res.render('exams/practice_cpt_exam');
 }
 exports.getCmt = function(req, res) {
-  res.render('cmt_exam');
+  res.render('exams/cmt_exam');
+}
+exports.getPracticeCmt = function(req, res) {
+  res.render('exams/practice_cmt_exam');
 }
 exports.getCns = function(req, res) {
-  res.render('cns_exam');
+  res.render('exams/cns_exam');
+}
+exports.getPracticeCns = function(req, res) {
+  res.render('exams/practice_cns_exam');
+}
+exports.getTest = function(req, res) {
+  res.render('exams/test_exam');
+}
+exports.getPracticeTest = function(req, res) {
+  res.render('exams/practice_test_exam');
 }
 
 
@@ -99,7 +114,37 @@ exports.submitCns = function(req, res) {
   ); // End findOneAndUpdate()
 };
 
+// ==== SUBMIT TEST EXAM ====
+exports.submitTest = function(req, res) {
+  var Cuser = req.user;
+  var Cu_id = req.user._id;
+  var Cuemail = Cuser.email;
+  var hScore = Cuser.certs.test.score;
+  var newScore = req.body.score;
+  var Cpassed_on = (Cuser.certs.test.passed_on == null) ? null : Cuser.certs.test.passed_on;
+  var today = new Date();
+  User.findOneAndUpdate(
+    {'email': Cuemail},
+    { $set: { 'certs.test.verify_id': Cu_id + 'test',
+              'certs.test.score' : (newScore > hScore) ? newScore : hScore,
+              'certs.test.passed' : (newScore > 69 | hScore > 69) ? true : false,
+              'certs.test.passed_on' : 
+                (newScore > 69 && Cpassed_on == null) ? today : Cpassed_on 
+      },
+      $push: { 'certs.test.attempts': today }
+    },
+    {new: true, runValidators: true},
+    function(err, updated_user) {
+      if (err) console.log(err);
+      //res.json(updated_user);
+      res.redirect('/account');
+    } 
+  ); // End findOneAndUpdate()
+};
+
+
 // ------------- Verify Certifications --------------
+
 // Verify Certification form
 exports.verifyCert = function(req, res) {
   var name = req.body.certType.concat('.verify_id');

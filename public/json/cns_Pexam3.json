@@ -1,0 +1,150 @@
+[
+  {
+    "question": "_____ helps with thyroid hormone function.",
+    "answers": [
+      { "id": 0, "text": "flourine" },
+      { "id": 1, "text": "iodine" },
+      { "id": 2, "text": "iodide" },
+      { "id": 3, "text": "flouride" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ helps with nerve and muscle function, and water balance.",
+    "answers": [
+      { "id": 0, "text": "sodium" },
+      { "id": 1, "text": "vitamin K" },
+      { "id": 2, "text": "flourine" },
+      { "id": 3, "text": "iron" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ is important for blood clotting.",
+    "answers": [
+      { "id": 0, "text": "sodium" },
+      { "id": 1, "text": "vitamin K" },
+      { "id": 2, "text": "vitamin B" },
+      { "id": 3, "text": "vitamin E" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ transports cholesterol and triglycerides from the liver to be used in various other cellular processes.",
+    "answers": [
+      { "id": 0, "text": "LDL" },
+      { "id": 1, "text": "HDL" },
+      { "id": 2, "text": "cholesterol transporter-L" },
+      { "id": 3, "text": "cholesterol transporter-H" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ retrieves cholesterol fromt he body's cells and returns it to the liver to be metabolized.",
+    "answers": [
+      { "id": 0, "text": "LDL" },
+      { "id": 1, "text": "HDL" },
+      { "id": 2, "text": "cholesterol transporter-L" },
+      { "id": 3, "text": "cholesterol transporter-H" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "To compete at the highest level, athletes must take ergogenic aids such as anabolic steroids.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ facilitates energy production in the cells.",
+    "answers": [
+      { "id": 0, "text": "niacin" },
+      { "id": 1, "text": "magnesium" },
+      { "id": 2, "text": "manganese" },
+      { "id": 3, "text": "iron" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ functions as a coenzyme in the synsthesis of fatty acids and glycogen.",
+    "answers": [
+      { "id": 0, "text": "calcium" },
+      { "id": 1, "text": "magnesium" },
+      { "id": 2, "text": "folic acid" },
+      { "id": 3, "text": "biotin" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ functions as a coenzyme in the synthesis of nucleic acids and protiens.",
+    "answers": [
+      { "id": 0, "text": "calcium" },
+      { "id": 1, "text": "magnesium" },
+      { "id": 2, "text": "folic acid" },
+      { "id": 3, "text": "biotin" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Riboflavin is involved in _____.",
+    "answers": [
+      { "id": 0, "text": "energy metabolism as part of a coenzyme" },
+      { "id": 1, "text": "gas exchange as part of a coenzyme" },
+      { "id": 2, "text": "infection control as part of a coenzyme" },
+      { "id": 3, "text": "nerve transmission as part of a coenzyme" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Potassium is important for _____.",
+    "answers": [
+      { "id": 0, "text": "bone and muscle function" },
+      { "id": 1, "text": "organ and muscle function" },
+      { "id": 2, "text": "nerve and protein function" },
+      { "id": 3, "text": "nerve and muscle function" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Zinc is important for _____.",
+    "answers": [
+      { "id": 0, "text": "hormone function and growth" },
+      { "id": 1, "text": "enzyme function and growth" },
+      { "id": 2, "text": "hormone and muscle function" },
+      { "id": 3, "text": "enzyme function and infection control" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Phosphorus is important for _____.",
+    "answers": [
+      { "id": 0, "text": "muscles, teeth, and energy transfer" },
+      { "id": 1, "text": "brain, nerves, and energy transfer" },
+      { "id": 2, "text": "bones, teeth, and energy transfer" },
+      { "id": 3, "text": "blood, teeth, and muscle function" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Magnesium is important for _____.",
+    "answers": [
+      { "id": 0, "text": "bone growth" },
+      { "id": 1, "text": "nerves" },
+      { "id": 2, "text": "muscles" },
+      { "id": 3, "text": "All of the above" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "What food doesn't belong in this food group?",
+    "answers": [
+      { "id": 0, "text": "chicken" },
+      { "id": 1, "text": "steak" },
+      { "id": 2, "text": "lamb" },
+      { "id": 3, "text": "kiwi" }
+      ],
+      "correct": 3
+  }
+]

@@ -1,0 +1,148 @@
+[
+  {
+    "question": "Abs are smooth muscles.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The heart is a smooth muscle.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ refers to the lungs.",
+    "answers": [
+      { "id": 0, "text": "Cardio" },
+      { "id": 1, "text": "Pulmonary" },
+      { "id": 2, "text": "Alveoli" },
+      { "id": 3, "text": "RBC" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is judged on full ROM lifting technique.",
+    "answers": [
+      { "id": 0, "text": "Swimming" },
+      { "id": 1, "text": "Crossfit" },
+      { "id": 2, "text": "Powerlifting" },
+      { "id": 3, "text": "Track and field" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Max heart rate can be calculated using _____.",
+    "answers": [
+      { "id": 0, "text": "BMI" },
+      { "id": 1, "text": "Age" },
+      { "id": 2, "text": "Mother's age" },
+      { "id": 3, "text": "Weight" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Stretching improves muscles' _____.",
+    "answers": [
+      { "id": 0, "text": "Strength" },
+      { "id": 1, "text": "Flexibility" },
+      { "id": 2, "text": "Power" },
+      { "id": 3, "text": "Size" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Stretching that involves a 'bouncing' movement is _____.",
+    "answers": [
+      { "id": 0, "text": "Static" },
+      { "id": 1, "text": "Dynamic" },
+      { "id": 2, "text": "Ballistic" },
+      { "id": 3, "text": "Isometric" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Intense cardio for extended duraion can cause _____.",
+    "answers": [
+      { "id": 0, "text": "Protein loss" },
+      { "id": 1, "text": "Type I diabetes" },
+      { "id": 2, "text": "Type II diabetes" },
+      { "id": 3, "text": "Hypertrophy" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Training at higher altitudes is more difficult because _____.",
+    "answers": [
+      { "id": 0, "text": "There are more O2 molecules / volume of air" },
+      { "id": 1, "text": "There are less O2 molecules / volume of air" },
+      { "id": 2, "text": "There is more pollution in the air" },
+      { "id": 3, "text": "Lungs can't transfer O2 as fast" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Torso rotation occurs in the _____.",
+    "answers": [
+      { "id": 0, "text": "Frontal plane" },
+      { "id": 1, "text": "Mid-sagital plane" },
+      { "id": 2, "text": "Transverse plane" },
+      { "id": 3, "text": "Anterior plane" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Lateral shoulder raises occur in the _____ plane.",
+    "answers": [
+      { "id": 0, "text": "Frontal" },
+      { "id": 1, "text": "Transverse" },
+      { "id": 2, "text": "Sagital" },
+      { "id": 3, "text": "Dorsal" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Seated biceps curls occur in the _____ plane.",
+    "answers": [
+      { "id": 0, "text": "Frontal" },
+      { "id": 1, "text": "Sagital" },
+      { "id": 2, "text": "Backward" },
+      { "id": 3, "text": "Transverse" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Activity lasting 90-120 seconds primarily uses what energy system?",
+    "answers": [
+      { "id": 0, "text": "ATP-CrP" },
+      { "id": 1, "text": "Glycolysis" },
+      { "id": 2, "text": "Krebs cycle" },
+      { "id": 3, "text": "Cori cycle" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Activity lasting > 2 minutes primarily uses what energy system?",
+    "answers": [
+      { "id": 0, "text": "ATP-CrP" },
+      { "id": 1, "text": "Glycolysis" },
+      { "id": 2, "text": "Krebs cycle" },
+      { "id": 3, "text": "Cori cycle" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "The best way to stay warm in a very cold environment is _____.",
+    "answers": [
+      { "id": 0, "text": "perform physical activiy" },
+      { "id": 1, "text": "huddle up with a friend" },
+      { "id": 2, "text": "try to block any wind" },
+      { "id": 3, "text": "breathe as slow as possible" }
+      ],
+      "correct": 0
+  }
+]

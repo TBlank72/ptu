@@ -1,0 +1,150 @@
+[
+  {
+    "question": "Older adults may need to consume additional vitamins _____ and _____ through fortification or supplements.",
+    "answers": [
+      { "id": 0, "text": "B12 / D" },
+      { "id": 1, "text": "B3 / C" },
+      { "id": 2, "text": "B12 / K" },
+      { "id": 3, "text": "B3 / D" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Alcohol intake up to _____ drinks per day can safely be consumed for men.",
+    "answers": [
+      { "id": 0, "text": "1" },
+      { "id": 1, "text": "2" },
+      { "id": 2, "text": "3" },
+      { "id": 3, "text": "4" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Alcohol intake up to _____ drinks per day can safely be consumed for women.",
+    "answers": [
+      { "id": 0, "text": "1" },
+      { "id": 1, "text": "2" },
+      { "id": 2, "text": "3" },
+      { "id": 3, "text": "4" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The following is not considered 1 serving of alcohol?",
+    "answers": [
+      { "id": 0, "text": "12 oz beer" },
+      { "id": 1, "text": "4.5 oz wine" },
+      { "id": 2, "text": "1 oz liquor" },
+      { "id": 3, "text": "1.5 oz liquor" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Fats should mostly be consumed from all of the following sources except?",
+    "answers": [
+      { "id": 0, "text": "fish" },
+      { "id": 1, "text": "oils" },
+      { "id": 2, "text": "nuts" },
+      { "id": 3, "text": "pork" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "The American Heart Association has different dietary guidlines than the USDA and DASH eating plans. The AHA recommendation for fat intake is _____.",
+    "answers": [
+      { "id": 0, "text": "significatly more than the other two" },
+      { "id": 1, "text": "significatly less than the other two" },
+      { "id": 2, "text": "about the same as the other two" },
+      { "id": 3, "text": "between the other two" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The foodguide pyramid was used for many years as the guidelines for American diets. It was first introduced in _____.",
+    "answers": [
+      { "id": 0, "text": "1970" },
+      { "id": 1, "text": "1980" },
+      { "id": 2, "text": "1992" },
+      { "id": 3, "text": "2004" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "The acronym for carbohydrates is CHO because _____.",
+    "answers": [
+      { "id": 0, "text": "carbs contain carbon, hydrogen, and oxygen" },
+      { "id": 1, "text": "carbs contain carbs, helium, and oxygen" },
+      { "id": 2, "text": "carbs contain carbolyn, hydrogen, and oxygen" },
+      { "id": 3, "text": "it's easier to write" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "What macronutrient is the only Nitrogen containing macronutrient?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "proteins" },
+      { "id": 2, "text": "fats" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is essential for heart health, skeletal muscle function, bone health, and blood vessel tone.",
+    "answers": [
+      { "id": 0, "text": "calcium" },
+      { "id": 1, "text": "magnesium" },
+      { "id": 2, "text": "manganese" },
+      { "id": 3, "text": "fiber" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Athletes need more carbs to restore glycogen to perform sports. How many grams of carbs per day are recommended for athletes?",
+    "answers": [
+      { "id": 0, "text": "4-8g per kg bodyweight per day" },
+      { "id": 1, "text": "6-10g per kg bodyweight per day" },
+      { "id": 2, "text": "8-12g per kg bodyweight per day" },
+      { "id": 3, "text": "10-14g per kg bodyweight per day" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Which of the following is the best pre-workout meal?",
+    "answers": [
+      { "id": 0, "text": "steak" },
+      { "id": 1, "text": "oatmeal and whey protein" },
+      { "id": 2, "text": "cereal" },
+      { "id": 3, "text": "milk" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "During pregnancy, women require an additional _____ calories per day.",
+    "answers": [
+      { "id": 0, "text": "150-290" },
+      { "id": 1, "text": "250-390" },
+      { "id": 2, "text": "450-690" },
+      { "id": 3, "text": "650-790" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Women that are breast feeding require an additional _____ calories per day.",
+    "answers": [
+      { "id": 0, "text": "300-500" },
+      { "id": 1, "text": "400-600" },
+      { "id": 2, "text": "500-700" },
+      { "id": 3, "text": "600-800" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "A general recommendation that would help all Americans is to avoid sugary drinks and foods.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 0
+  }
+]

@@ -1,23 +1,994 @@
 [
   {
-    "question": "question 1 cns.",
+    "question": "What macronutrient does the USDA recommend Americans consume the largest percentage of calories from?",
     "answers": [
-      { "id": 0, "text": "100" },
-      { "id": 1, "text": "120" },
-      { "id": 2, "text": "140" },
-      { "id": 3, "text": "160" }
+      { "id": 0, "text": "fats" },
+      { "id": 1, "text": "carbohydrates" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
       ],
       "correct": 1
   },
   {
-    "question": "question 2 cns.",
+    "question": "Scurvy is caused by a deficiency of what vitamin?",
     "answers": [
-      { "id": 0, "text": "60" },
-      { "id": 1, "text": "80" },
-      { "id": 2, "text": "100" },
-      { "id": 3, "text": "110" }
+      { "id": 0, "text": "A" },
+      { "id": 1, "text": "B" },
+      { "id": 2, "text": "C" },
+      { "id": 3, "text": "D" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "What macronutrient is protein sparing?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "protein" },
+      { "id": 3, "text": "alcohol" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Muscle tissue is composed of what?",
+    "answers": [
+      { "id": 0, "text": "fat and carbohydrates" },
+      { "id": 1, "text": "protein and CO2" },
+      { "id": 2, "text": "protein and O2" },
+      { "id": 3, "text": "protein and H2O" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Athletes require _____ because of their activity level.",
+    "answers": [
+      { "id": 0, "text": "the same water and nutrients" },
+      { "id": 1, "text": "more water and nutrients" },
+      { "id": 2, "text": "less water and nutrients" },
+      { "id": 3, "text": "only gatorade" }
       ],
       "correct": 1
-      
+  },
+  {
+    "question": "The primary macronutrient in grains is _____.",
+    "answers": [
+      { "id": 0, "text": "fats" },
+      { "id": 1, "text": "carbohydrates" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Carbs contain approximately _____ calories per gram.",
+    "answers": [
+      { "id": 0, "text": "4" },
+      { "id": 1, "text": "5" },
+      { "id": 2, "text": "6" },
+      { "id": 3, "text": "7" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Fat contains approximately _____ calories per gram.",
+    "answers": [
+      { "id": 0, "text": "7" },
+      { "id": 1, "text": "8" },
+      { "id": 2, "text": "9" },
+      { "id": 3, "text": "10" }
+      ],
+      "correct": 9
+  },
+  {
+    "question": "Protein contains approximately _____ calories per gram.",
+    "answers": [
+      { "id": 0, "text": "4" },
+      { "id": 1, "text": "5" },
+      { "id": 2, "text": "6" },
+      { "id": 3, "text": "7" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Alcohol contains approximately ____ calories per gram.",
+    "answers": [
+      { "id": 0, "text": "4" },
+      { "id": 1, "text": "5" },
+      { "id": 2, "text": "6" },
+      { "id": 3, "text": "7" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Oxidation of what macronutrient is shut down while alcohol is present in the body?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Oxidation of what macronutrient speeds up while alcohol is present in the body?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "water" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "What macronutrient refills glycogen stores in the muscle?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "What energy source do the heart and brain primarily receive energy from?",
+    "answers": [
+      { "id": 0, "text": "glucose" },
+      { "id": 1, "text": "glycogen" },
+      { "id": 2, "text": "polyunsaturated fats" },
+      { "id": 3, "text": "monounsaturated fats" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "What alternative energy source can the brain and heart function off of when dietary carbs are limited?",
+    "answers": [
+      { "id": 0, "text": "liver enzymes" },
+      { "id": 1, "text": "monounsaturated fats" },
+      { "id": 2, "text": "ketones" },
+      { "id": 3, "text": "polyunsaturated fats" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "The primary macronutrient in meat is _____.",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "What natural food has the highest bioavailability of protein?",
+    "answers": [
+      { "id": 0, "text": "chicken" },
+      { "id": 1, "text": "bread" },
+      { "id": 2, "text": "eggs" },
+      { "id": 3, "text": "steak" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "The primary macronutrient in pasta is _____.",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Glucose is an example of a _____.",
+    "answers": [
+      { "id": 0, "text": "monosacharide" },
+      { "id": 1, "text": "disacharide" },
+      { "id": 2, "text": "polysacharide" },
+      { "id": 3, "text": "monopolysacharide" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ are the building blocks of protein.",
+    "answers": [
+      { "id": 0, "text": "amino acids" },
+      { "id": 1, "text": "polysacharides" },
+      { "id": 2, "text": "ATP" },
+      { "id": 3, "text": "ADP" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ loading is often used for peak performance before an athletic event.",
+    "answers": [
+      { "id": 0, "text": "carbohydrate" },
+      { "id": 1, "text": "protein" },
+      { "id": 2, "text": "fat" },
+      { "id": 3, "text": "alcohol" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Carbs increase water retention because _____.",
+    "answers": [
+      { "id": 0, "text": "people normally drink water with carbs" },
+      { "id": 1, "text": "carbs make people thirsty" },
+      { "id": 2, "text": "glycogen is stored with H2O molecules" },
+      { "id": 3, "text": "carbs are salty" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Fat is important for which of the following?",
+    "answers": [
+      { "id": 0, "text": "Vitamin absorption, cellular function, joint lubrication" },
+      { "id": 1, "text": "Vitamin absorption, heart health, joint lubrication" },
+      { "id": 2, "text": "Vitamin absorption, cellular function, heart health" },
+      { "id": 3, "text": "ATP-CrP loading, cellular function, joint lubrication" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "What supplement should be recommended to most Americans?",
+    "answers": [
+      { "id": 0, "text": "whey protein" },
+      { "id": 1, "text": "snake oil" },
+      { "id": 2, "text": "creatine" },
+      { "id": 3, "text": "omega-3" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "How many Americans are obese?",
+    "answers": [
+      { "id": 0, "text": "1/2" },
+      { "id": 1, "text": "1/4" },
+      { "id": 2, "text": "1/3" },
+      { "id": 3, "text": "1/5" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "The primary macronutrient in fruits is _____.",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Creatine has been shown to _____.",
+    "answers": [
+      { "id": 0, "text": "improve performance for activity lasting < 6 secs" },
+      { "id": 1, "text": "improve performance for activity lasting > 6 secs" },
+      { "id": 2, "text": "improve performance for activity lasting > 2 min" },
+      { "id": 3, "text": "improve performance for activity lasting > 10 min" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Creatine _____.",
+    "answers": [
+      { "id": 0, "text": "increases fat retention" },
+      { "id": 1, "text": "increases water retention" },
+      { "id": 2, "text": "increases vitamin retention" },
+      { "id": 3, "text": "increases ketone retention" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "All of the following are BCAA except _____.",
+    "answers": [
+      { "id": 0, "text": "valine" },
+      { "id": 1, "text": "leucine" },
+      { "id": 2, "text": "iso-leucine" },
+      { "id": 3, "text": "iso-valine" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Testosterone is _____.",
+    "answers": [
+      { "id": 0, "text": "catabolic" },
+      { "id": 1, "text": "anabolic" },
+      { "id": 2, "text": "isometabolic" },
+      { "id": 3, "text": "good for everyone" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The following is the most consumed supplement in the world?",
+    "answers": [
+      { "id": 0, "text": "creatine" },
+      { "id": 1, "text": "whey protein" },
+      { "id": 2, "text": "fish oil" },
+      { "id": 3, "text": "caffeine" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "What macronutrient is burned first during exercise?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "When dietary carbs are limited, what can the body convert into glucose?",
+    "answers": [
+      { "id": 0, "text": "fats" },
+      { "id": 1, "text": "proteins" },
+      { "id": 2, "text": "alcohols" },
+      { "id": 3, "text": "water" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Muscle cramps are caused from _____.",
+    "answers": [
+      { "id": 0, "text": "carbohydrate imbalances" },
+      { "id": 1, "text": "electrolyte imbalances" },
+      { "id": 2, "text": "drinking too much gatorade" },
+      { "id": 3, "text": "drinking too much water" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Which of the following fruits contain the highest fiber content?",
+    "answers": [
+      { "id": 0, "text": "apples" },
+      { "id": 1, "text": "blueberries" },
+      { "id": 2, "text": "blackberries" },
+      { "id": 3, "text": "pears" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Which of the following is not a fat soluble vitamin?",
+    "answers": [
+      { "id": 0, "text": "C" },
+      { "id": 1, "text": "D" },
+      { "id": 2, "text": "E" },
+      { "id": 3, "text": "K" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "What is the most vital Omega-3 essential fatty acid?",
+    "answers": [
+      { "id": 0, "text": "EGA/EPA" },
+      { "id": 1, "text": "EPA/EHG" },
+      { "id": 2, "text": "EDB/DHB" },
+      { "id": 3, "text": "EPA/DHA" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "The following is not a good source of protien.",
+    "answers": [
+      { "id": 0, "text": "chicken" },
+      { "id": 1, "text": "bread" },
+      { "id": 2, "text": "eggs" },
+      { "id": 3, "text": "beans" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The following has the highest Vitamin C content",
+    "answers": [
+      { "id": 0, "text": "oranges" },
+      { "id": 1, "text": "apples" },
+      { "id": 2, "text": "kiwi" },
+      { "id": 3, "text": "mango" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Which food has an amino acid profile that covers most of what the body needs?",
+    "answers": [
+      { "id": 0, "text": "steak" },
+      { "id": 1, "text": "chicken" },
+      { "id": 2, "text": "eggs" },
+      { "id": 3, "text": "pork" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Which of the following has the highest content of Omega-3 fatty acids?",
+    "answers": [
+      { "id": 0, "text": "shark" },
+      { "id": 1, "text": "salmon" },
+      { "id": 2, "text": "tilapia" },
+      { "id": 3, "text": "halibut" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Niacin is known as _____.",
+    "answers": [
+      { "id": 0, "text": "B2" },
+      { "id": 1, "text": "B3" },
+      { "id": 2, "text": "B4" },
+      { "id": 3, "text": "B5" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The thermic effect of food is _____.",
+    "answers": [
+      { "id": 0, "text": "how hot the food is" },
+      { "id": 1, "text": "energy absorbed during digestion" },
+      { "id": 2, "text": "energy wasted during digestion" },
+      { "id": 3, "text": "energy processed during digestion" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "A heart attack is referred to as a _____ in medical terms.",
+    "answers": [
+      { "id": 0, "text": "myocardia refraction" },
+      { "id": 1, "text": "myocardia defaction" },
+      { "id": 2, "text": "myocardia infarction" },
+      { "id": 3, "text": "myocardia infraction" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ is known to increase testosterone levels.",
+    "answers": [
+      { "id": 0, "text": "saturated fats" },
+      { "id": 1, "text": "omega-3 fats" },
+      { "id": 2, "text": "polyunsaturated fats" },
+      { "id": 3, "text": "monounsaturated fats" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "All of the following are low carb except _____",
+    "answers": [
+      { "id": 0, "text": "fish" },
+      { "id": 1, "text": "chicken" },
+      { "id": 2, "text": "beans" },
+      { "id": 3, "text": "steak" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Which of the following has the highest fiber content?",
+    "answers": [
+      { "id": 0, "text": "apples" },
+      { "id": 1, "text": "bananas" },
+      { "id": 2, "text": "berries" },
+      { "id": 3, "text": "white bread" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Olive oil is high in _____.",
+    "answers": [
+      { "id": 0, "text": "monounsaturated fats" },
+      { "id": 1, "text": "polyunsaturated fats" },
+      { "id": 2, "text": "saturated fats" },
+      { "id": 3, "text": "omega-3 fats" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "DASH is an acronym for a diet. What does it mean?",
+    "answers": [
+      { "id": 0, "text": "dietary application to stop hyperplasia" },
+      { "id": 1, "text": "dietary approaches to stop head diseases" },
+      { "id": 2, "text": "dietary approaches to stop hypertrophy" },
+      { "id": 3, "text": "dietary approaches to stop hypertension" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "The DASH eating plan emphasizes _____.",
+    "answers": [
+      { "id": 0, "text": "whole grains" },
+      { "id": 1, "text": "meat" },
+      { "id": 2, "text": "candy" },
+      { "id": 3, "text": "alcohol" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Older adults may need to consume additional vitamins _____ and _____ through fortification or supplements.",
+    "answers": [
+      { "id": 0, "text": "B12 / D" },
+      { "id": 1, "text": "B3 / C" },
+      { "id": 2, "text": "B12 / K" },
+      { "id": 3, "text": "B3 / D" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Alcohol intake up to _____ drinks per day can safely be consumed for men.",
+    "answers": [
+      { "id": 0, "text": "1" },
+      { "id": 1, "text": "2" },
+      { "id": 2, "text": "3" },
+      { "id": 3, "text": "4" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Alcohol intake up to _____ drinks per day can safely be consumed for women.",
+    "answers": [
+      { "id": 0, "text": "1" },
+      { "id": 1, "text": "2" },
+      { "id": 2, "text": "3" },
+      { "id": 3, "text": "4" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The following is not considered 1 serving of alcohol?",
+    "answers": [
+      { "id": 0, "text": "12 oz beer" },
+      { "id": 1, "text": "4.5 oz wine" },
+      { "id": 2, "text": "1 oz liquor" },
+      { "id": 3, "text": "1.5 oz liquor" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Fats should mostly be consumed from all of the following sources except?",
+    "answers": [
+      { "id": 0, "text": "fish" },
+      { "id": 1, "text": "oils" },
+      { "id": 2, "text": "nuts" },
+      { "id": 3, "text": "pork" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "The American Heart Association has different dietary guidlines than the USDA and DASH eating plans. The AHA recommendation for fat intake is _____.",
+    "answers": [
+      { "id": 0, "text": "significatly more than the other two" },
+      { "id": 1, "text": "significatly less than the other two" },
+      { "id": 2, "text": "about the same as the other two" },
+      { "id": 3, "text": "between the other two" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The foodguide pyramid was used for many years as the guidelines for American diets. It was first introduced in _____.",
+    "answers": [
+      { "id": 0, "text": "1970" },
+      { "id": 1, "text": "1980" },
+      { "id": 2, "text": "1992" },
+      { "id": 3, "text": "2004" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "The acronym for carbohydrates is CHO because _____.",
+    "answers": [
+      { "id": 0, "text": "carbs contain carbon, hydrogen, and oxygen" },
+      { "id": 1, "text": "carbs contain carbs, helium, and oxygen" },
+      { "id": 2, "text": "carbs contain carbolyn, hydrogen, and oxygen" },
+      { "id": 3, "text": "it's easier to write" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "What macronutrient is the only Nitrogen containing macronutrient?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "proteins" },
+      { "id": 2, "text": "fats" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is essential for heart health, skeletal muscle function, bone health, and blood vessel tone.",
+    "answers": [
+      { "id": 0, "text": "calcium" },
+      { "id": 1, "text": "magnesium" },
+      { "id": 2, "text": "manganese" },
+      { "id": 3, "text": "fiber" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Athletes need more carbs to restore glycogen to perform sports. How many grams of carbs per day are recommended for athletes?",
+    "answers": [
+      { "id": 0, "text": "4-8g per kg bodyweight per day" },
+      { "id": 1, "text": "6-10g per kg bodyweight per day" },
+      { "id": 2, "text": "8-12g per kg bodyweight per day" },
+      { "id": 3, "text": "10-14g per kg bodyweight per day" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Which of the following is the best pre-workout meal?",
+    "answers": [
+      { "id": 0, "text": "steak" },
+      { "id": 1, "text": "oatmeal and whey protein" },
+      { "id": 2, "text": "cereal" },
+      { "id": 3, "text": "milk" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "During pregnancy, women require an additional _____ calories per day.",
+    "answers": [
+      { "id": 0, "text": "150-290" },
+      { "id": 1, "text": "250-390" },
+      { "id": 2, "text": "450-690" },
+      { "id": 3, "text": "650-790" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Women that are breast feeding require an additional _____ calories per day.",
+    "answers": [
+      { "id": 0, "text": "300-500" },
+      { "id": 1, "text": "400-600" },
+      { "id": 2, "text": "500-700" },
+      { "id": 3, "text": "600-800" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "A general recommendation that would help all Americans is to avoid sugary drinks and foods.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The diabetes food pyramid is based on _____ instead of food classification.",
+    "answers": [
+      { "id": 0, "text": "proteins and fats" },
+      { "id": 1, "text": "carbs and fats" },
+      { "id": 2, "text": "fats and alcohols" },
+      { "id": 3, "text": "carbs and proteins" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ can not be broken down by the human digestion system.",
+    "answers": [
+      { "id": 0, "text": "fat" },
+      { "id": 1, "text": "fiber" },
+      { "id": 2, "text": "water" },
+      { "id": 3, "text": "complex proteins" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is the primary storage form of fat in the body.",
+    "answers": [
+      { "id": 0, "text": "triglycerides" },
+      { "id": 1, "text": "glycogen fatty acids" },
+      { "id": 2, "text": "amino acids" },
+      { "id": 3, "text": "glucose polymers" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The glycemic index is _____.",
+    "answers": [
+      { "id": 0, "text": "the rate that blood glucose rises after food intake" },
+      { "id": 1, "text": "the rate that blood glycemia rises after food intake" },
+      { "id": 2, "text": "the rate that blood glycogen rises after food intake" },
+      { "id": 3, "text": "the rate that blood fat rises after food intake" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ are large molecules that allow fat to travel through the bloodstream.",
+    "answers": [
+      { "id": 0, "text": "fatty acid transporter-L" },
+      { "id": 1, "text": "fatty acid transporter-G" },
+      { "id": 2, "text": "triglycerides" },
+      { "id": 3, "text": "lipoproteins" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ are an important component of the cell membrance.",
+    "answers": [
+      { "id": 0, "text": "phosphoaminos" },
+      { "id": 1, "text": "phosphomembranes" },
+      { "id": 2, "text": "phospholipids" },
+      { "id": 3, "text": "phosphopolyphenols" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ is a sterol, or fatty substance in which carbon, hydrogen, and oxygen atoms are arranged in rings.",
+    "answers": [
+      { "id": 0, "text": "cholesterol" },
+      { "id": 1, "text": "amino acid" },
+      { "id": 2, "text": "lipoprotein" },
+      { "id": 3, "text": "DHA" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ form a lipid bi-layer in the cell membrane.",
+    "answers": [
+      { "id": 0, "text": "lipo-membranosous" },
+      { "id": 1, "text": "phospholipids" },
+      { "id": 2, "text": "seratus linear" },
+      { "id": 3, "text": "alpha-glucose dehydrogenase" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is the amount of essential nutrients a food contains compared to the calories it contains.",
+    "answers": [
+      { "id": 0, "text": "nutrient complexity" },
+      { "id": 1, "text": "nutrient valuability" },
+      { "id": 2, "text": "nutrient density" },
+      { "id": 3, "text": "nutrient availability" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ is a 'man made' fat.",
+    "answers": [
+      { "id": 0, "text": "polyunsaturated fat" },
+      { "id": 1, "text": "trans fat" },
+      { "id": 2, "text": "saturated fat" },
+      { "id": 3, "text": "McDonalds fat" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is responsible for carrying oxygen throughout the body.",
+    "answers": [
+      { "id": 0, "text": "RBC" },
+      { "id": 1, "text": "WBC" },
+      { "id": 2, "text": "CBC" },
+      { "id": 3, "text": "DBC" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ catalyze reactions.",
+    "answers": [
+      { "id": 0, "text": "riboflavin" },
+      { "id": 1, "text": "glucose" },
+      { "id": 2, "text": "enzymes" },
+      { "id": 3, "text": "proteins" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ fight diseases.",
+    "answers": [
+      { "id": 0, "text": "RBC" },
+      { "id": 1, "text": "WBC" },
+      { "id": 2, "text": "CBC" },
+      { "id": 3, "text": "DBC" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ act as 'messengers'.",
+    "answers": [
+      { "id": 0, "text": "glucose hormones" },
+      { "id": 1, "text": "fatty acid hormones" },
+      { "id": 2, "text": "DNA hormones" },
+      { "id": 3, "text": "protein hormones" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ clots blood.",
+    "answers": [
+      { "id": 0, "text": "prohormonethrombin" },
+      { "id": 1, "text": "prothrombin" },
+      { "id": 2, "text": "RBC yeast" },
+      { "id": 3, "text": "lipoprotein" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Vitamins are organic substances vital to human life.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Minerals are organic elements that serve a variety of functions in the human body.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ are molecules or fragments of molecules that can damage the body's tissues.",
+    "answers": [
+      { "id": 0, "text": "free radicals" },
+      { "id": 1, "text": "free radials" },
+      { "id": 2, "text": "free rationals" },
+      { "id": 3, "text": "free testosterone" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ helps with bone and teeth growth.",
+    "answers": [
+      { "id": 0, "text": "flourine" },
+      { "id": 1, "text": "lipoprotein" },
+      { "id": 2, "text": "vitamin F" },
+      { "id": 3, "text": "flouride" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ helps with oxygen transport in RBC.",
+    "answers": [
+      { "id": 0, "text": "calcium carbonate" },
+      { "id": 1, "text": "magnesium" },
+      { "id": 2, "text": "iron" },
+      { "id": 3, "text": "flouride" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ helps with thyroid hormone function.",
+    "answers": [
+      { "id": 0, "text": "flourine" },
+      { "id": 1, "text": "iodine" },
+      { "id": 2, "text": "iodide" },
+      { "id": 3, "text": "flouride" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ helps with nerve and muscle function, and water balance.",
+    "answers": [
+      { "id": 0, "text": "sodium" },
+      { "id": 1, "text": "vitamin K" },
+      { "id": 2, "text": "flourine" },
+      { "id": 3, "text": "iron" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ is important for blood clotting.",
+    "answers": [
+      { "id": 0, "text": "sodium" },
+      { "id": 1, "text": "vitamin K" },
+      { "id": 2, "text": "vitamin B" },
+      { "id": 3, "text": "vitamin E" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ transports cholesterol and triglycerides from the liver to be used in various other cellular processes.",
+    "answers": [
+      { "id": 0, "text": "LDL" },
+      { "id": 1, "text": "HDL" },
+      { "id": 2, "text": "cholesterol transporter-L" },
+      { "id": 3, "text": "cholesterol transporter-H" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ retrieves cholesterol fromt he body's cells and returns it to the liver to be metabolized.",
+    "answers": [
+      { "id": 0, "text": "LDL" },
+      { "id": 1, "text": "HDL" },
+      { "id": 2, "text": "cholesterol transporter-L" },
+      { "id": 3, "text": "cholesterol transporter-H" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "To compete at the highest level, athletes must take ergogenic aids such as anabolic steroids.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ facilitates energy production in the cells.",
+    "answers": [
+      { "id": 0, "text": "niacin" },
+      { "id": 1, "text": "magnesium" },
+      { "id": 2, "text": "manganese" },
+      { "id": 3, "text": "iron" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ functions as a coenzyme in the synsthesis of fatty acids and glycogen.",
+    "answers": [
+      { "id": 0, "text": "calcium" },
+      { "id": 1, "text": "magnesium" },
+      { "id": 2, "text": "folic acid" },
+      { "id": 3, "text": "biotin" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ functions as a coenzyme in the synthesis of nucleic acids and protiens.",
+    "answers": [
+      { "id": 0, "text": "calcium" },
+      { "id": 1, "text": "magnesium" },
+      { "id": 2, "text": "folic acid" },
+      { "id": 3, "text": "biotin" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Riboflavin is involved in _____.",
+    "answers": [
+      { "id": 0, "text": "energy metabolism as part of a coenzyme" },
+      { "id": 1, "text": "gas exchange as part of a coenzyme" },
+      { "id": 2, "text": "infection control as part of a coenzyme" },
+      { "id": 3, "text": "nerve transmission as part of a coenzyme" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Potassium is important for _____.",
+    "answers": [
+      { "id": 0, "text": "bone and muscle function" },
+      { "id": 1, "text": "organ and muscle function" },
+      { "id": 2, "text": "nerve and protein function" },
+      { "id": 3, "text": "nerve and muscle function" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Zinc is important for _____.",
+    "answers": [
+      { "id": 0, "text": "hormone function and growth" },
+      { "id": 1, "text": "enzyme function and growth" },
+      { "id": 2, "text": "hormone and muscle function" },
+      { "id": 3, "text": "enzyme function and infection control" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Phosphorus is important for _____.",
+    "answers": [
+      { "id": 0, "text": "muscles, teeth, and energy transfer" },
+      { "id": 1, "text": "brain, nerves, and energy transfer" },
+      { "id": 2, "text": "bones, teeth, and energy transfer" },
+      { "id": 3, "text": "blood, teeth, and muscle function" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Magnesium is important for _____.",
+    "answers": [
+      { "id": 0, "text": "bone growth" },
+      { "id": 1, "text": "nerves" },
+      { "id": 2, "text": "muscles" },
+      { "id": 3, "text": "All of the above" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "What food doesn't belong in this food group?",
+    "answers": [
+      { "id": 0, "text": "chicken" },
+      { "id": 1, "text": "steak" },
+      { "id": 2, "text": "lamb" },
+      { "id": 3, "text": "kiwi" }
+      ],
+      "correct": 3
   }
 ]

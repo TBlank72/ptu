@@ -1,9 +1,9 @@
-extends layout
+extends ../layout
 
 block content
   .container-fluid.bg-navy-gradient
-    .myQuiz(ng-controller="cptCtrl")
-      h1 Certified Personal Trainer (CPT)
+    .myQuiz(ng-controller="practiceTestCtrl")
+      h1 Certified PRACTICE TEST Trainer (PTEST)
       .progress-quiz
         div(class="\
           {{ ($index === activeQuestion) ? 'on' : 'off' }}\
@@ -12,13 +12,13 @@ block content
           ng-repeat="myQuestion in myQuestions")
       div(class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active' }}")
         h2 Welcome
-        p This is the PT University CPT exam.
-        p Your selections will be recorded when you
-        p click on the answers. DO NOT use any browser
-        p navigation methods, as this will terminate your exam.
+        p This is a practice exam. Questions were 
+        p taken from the real certification exam. 
+        p To select an answer, click the box that 
+        p contains the answer you want to select.
         hr
-        p Click to start your exam when you are ready. 
-        p.btn-quiz(ng-click="activeQuestion = 0") Start CPT Exam
+        p Click to start your practice exam when you are ready. 
+        p.btn-quiz(ng-click="activeQuestion = 0") Start Practice TEST Exam
 
 
       .question(class="\
@@ -41,16 +41,14 @@ block content
         p {{ resultsMsg }}
         .form-container
           h2 Results
-          form(action='/cpt', method='post')
-            input(type='hidden', name='_csrf', value=_csrf)
+          form(action='/study', method='GET')
             .form-group
               label Score
-              input.form-control.bg-navy-gradient(type='text', name='score', value="\
-              {{percentage}}", placeholder="{{percentage}}%", readonly)
+              input.form-control.bg-navy-gradient(type='text', placeholder="{{percentage}}%", readonly)
               br
               label Correct / Total
-              input.form-control.bg-navy-gradient(type='text', name='ratio', value="\
-              {{score}} / {{totalQuestions}}", placeholder="{{score}} / {{totalQuestions}}",
-              readonly)
+              input.form-control.bg-navy-gradient(type='text',
+              placeholder="{{score}} / {{totalQuestions}}", readonly)
               br
-            button.btn-quiz(type='submit') Submit CPT Score
+            button.btn-quiz(type='submit') Back to Study Home
+

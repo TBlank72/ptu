@@ -120,8 +120,10 @@ exports.postSignup = function(req, res, next) {
  * Profile page.
  */
 exports.getAccount = function(req, res) {
+  stripe = require('stripe')(process.env.STRIPE_SKEY);
   res.render('account/profile', {
-    title: 'Account Management'
+    title: 'Account Management',
+    publishableKey: process.env.STRIPE_PKEY
   });
 };
 

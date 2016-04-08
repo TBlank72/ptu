@@ -51,6 +51,16 @@ var userSchema = new mongoose.Schema({
       passed_on : { type: Date, default: null },
       paid      : { type: Boolean, default: false },
       paid_on   : { type: Date, default: null }
+    },
+    test        : {
+      title     : { type: String, default: 'Certified Nutrition Specialist' },
+      verify_id : String,
+      attempts  : Array,
+      score     : { type: Number, default: 0 },
+      passed    : { type: Boolean, default: false },
+      passed_on : { type: Date, default: null },
+      paid      : { type: Boolean, default: false },
+      paid_on   : { type: Date, default: null }
     }
   } // End of certs
 }, { timestamps: true });

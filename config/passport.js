@@ -4,11 +4,11 @@ var request = require('request');
 var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 var TwitterStrategy = require('passport-twitter').Strategy;
-//var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
-////var OpenIDStrategy = require('passport-openid').Strategy;
-//var OAuthStrategy = require('passport-oauth').OAuthStrategy;
-//var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
+var OpenIDStrategy = require('passport-openid').Strategy;
+var OAuthStrategy = require('passport-oauth').OAuthStrategy;
+var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
 //var InstagramStrategy = require('passport-instagram').Strategy;
 //var GitHubStrategy = require('passport-github').Strategy;
 
@@ -166,6 +166,7 @@ passport.use(new TwitterStrategy({
 
 /**
  * Sign in with Google.
+ */
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_ID,
   clientSecret: process.env.GOOGLE_SECRET,
@@ -216,7 +217,6 @@ passport.use(new GoogleStrategy({
     });
   }
 }));
- */
 
 /**
  * Sign in with LinkedIn.

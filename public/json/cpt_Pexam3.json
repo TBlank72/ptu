@@ -1,0 +1,136 @@
+[
+  {
+    "question": "Latissimus dorsi is an antagonist to the deltoid.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Hamstrings are an antagonist to the quadriceps.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "A muscle origin is the distal attachment to a bone.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Which of the following is not part of the hamstrings",
+    "answers": [
+      { "id": 0, "text": "semimembranosus" },
+      { "id": 1, "text": "rectus femoris" },
+      { "id": 2, "text": "semitendinosus" },
+      { "id": 3, "text": "biceps femoris" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Main functions of the respiratory system include all of the following except _____.",
+    "answers": [
+      { "id": 0, "text": "supply O2 to the blood" },
+      { "id": 1, "text": "remove CO2 from the blood" },
+      { "id": 2, "text": "regulate blood pH" },
+      { "id": 3, "text": "circulate blood to the body" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "What types of muscles pull limbs in towards the midline of the body?",
+    "answers": [
+      { "id": 0, "text": "abductor" },
+      { "id": 1, "text": "extensor" },
+      { "id": 2, "text": "adductor" },
+      { "id": 3, "text": "flexor" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Which of the following is not a characteristic of a cardiac muscle?",
+    "answers": [
+      { "id": 0, "text": "found in one place" },
+      { "id": 1, "text": "voluntary" },
+      { "id": 2, "text": "involuntary" },
+      { "id": 3, "text": "striated" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The right side of the heart pumps oxygenated blood to the body.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The left side of the heart pumps oxygenated blood to the body.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ is known as the 'pacemaker' of the heart.",
+    "answers": [
+      { "id": 0, "text": "purkinje fibers" },
+      { "id": 1, "text": "atrioventricular node" },
+      { "id": 2, "text": "sinoatrial node" },
+      { "id": 3, "text": "myocardium" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Electrical activity of the heart is measured with _____.",
+    "answers": [
+      { "id": 0, "text": "ECG" },
+      { "id": 1, "text": "ABC" },
+      { "id": 2, "text": "EFG" },
+      { "id": 3, "text": "DOM" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "A QRS complex represents repolarization of the ventricle.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "P waves represent depolarization through the atria.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Arteries return blood to the heart.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Blood platelets _____.",
+    "answers": [
+      { "id": 0, "text": "transport O2" },
+      { "id": 1, "text": "transport CO2" },
+      { "id": 2, "text": "regulate blood clotting" },
+      { "id": 3, "text": "destroy foreign elements" }
+      ],
+      "correct": 2
+  }
+]

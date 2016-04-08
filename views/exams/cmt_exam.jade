@@ -1,9 +1,9 @@
-extends layout
+extends ../layout
 
 block content
   .container-fluid.bg-navy-gradient
-    .myQuiz(ng-controller="cnsCtrl")
-      h1 Certified Nutrition Specialist (CNS)
+    .myQuiz(ng-controller="cmtCtrl")
+      h1 Certified Master Trainer (CMT)
       .progress-quiz
         div(class="\
           {{ ($index === activeQuestion) ? 'on' : 'off' }}\
@@ -12,13 +12,13 @@ block content
           ng-repeat="myQuestion in myQuestions")
       div(class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active' }}")
         h2 Welcome
-        p This is the PT University CNS exam.
+        p This is the PT University CMT exam.
         p Your selections will be recorded when you
         p click on the answers. DO NOT use any browser
         p navigation methods, as this will terminate your exam.
         hr
         p Click to start your exam when you are ready. 
-        p.btn-quiz(ng-click="activeQuestion = 0") Start CNS Exam
+        p.btn-quiz(ng-click="activeQuestion = 0") Start CMT Exam
 
 
       .question(class="\
@@ -41,7 +41,7 @@ block content
         p {{ resultsMsg }}
         .form-container
           h2 Results
-          form(action='/cns', method='post')
+          form(action='/cmt', method='post')
             input(type='hidden', name='_csrf', value=_csrf)
             .form-group
               label Score
@@ -53,4 +53,4 @@ block content
               {{score}} / {{totalQuestions}}", placeholder="{{score}} / {{totalQuestions}}",
               readonly)
               br
-            button.btn-quiz(type='submit') Submit CNS Score
+            button.btn-quiz(type='submit') Submit CMT Score

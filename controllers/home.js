@@ -39,3 +39,12 @@ exports.certs = function(req, res) {
 exports.study = function(req, res) {
   res.render('study');
 };
+
+/**
+ * GET /
+ * Images.
+ */
+exports.getImage = function(req, res) {
+  var img = req.params.name;
+  res.send('public/images/' + img);
+};

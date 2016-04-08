@@ -1,9 +1,9 @@
-extends layout
+extends ../layout
 
 block content
   .container-fluid.bg-navy-gradient
-    .myQuiz(ng-controller="cmtCtrl")
-      h1 Certified Master Trainer (CMT)
+    .myQuiz(ng-controller="testCtrl")
+      h1 Certified TEST Trainer (TEST)
       .progress-quiz
         div(class="\
           {{ ($index === activeQuestion) ? 'on' : 'off' }}\
@@ -12,13 +12,13 @@ block content
           ng-repeat="myQuestion in myQuestions")
       div(class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active' }}")
         h2 Welcome
-        p This is the PT University CMT exam.
+        p This is the PT University TEST exam.
         p Your selections will be recorded when you
         p click on the answers. DO NOT use any browser
         p navigation methods, as this will terminate your exam.
         hr
         p Click to start your exam when you are ready. 
-        p.btn-quiz(ng-click="activeQuestion = 0") Start CMT Exam
+        p.btn-quiz(ng-click="activeQuestion = 0") Start TEST Exam
 
 
       .question(class="\
@@ -41,7 +41,7 @@ block content
         p {{ resultsMsg }}
         .form-container
           h2 Results
-          form(action='/cmt', method='post')
+          form(action='/test', method='post')
             input(type='hidden', name='_csrf', value=_csrf)
             .form-group
               label Score
@@ -53,4 +53,5 @@ block content
               {{score}} / {{totalQuestions}}", placeholder="{{score}} / {{totalQuestions}}",
               readonly)
               br
-            button.btn-quiz(type='submit') Submit CMT Score
+            button.btn-quiz(type='submit') Submit TEST Score
+

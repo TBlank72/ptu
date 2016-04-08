@@ -1,0 +1,153 @@
+[
+  {
+    "question": "How many ounces of water shoud an active adult consume per day",
+    "answers": [
+      { "id": 0, "text": "12" },
+      { "id": 1, "text": "24" },
+      { "id": 2, "text": "68" },
+      { "id": 3, "text": "192" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "The human body contains how many bones?",
+    "answers": [
+      { "id": 0, "text": "192" },
+      { "id": 1, "text": "300" },
+      { "id": 2, "text": "206" },
+      { "id": 3, "text": "220" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Muscle fibers are composed of all of the following filaments except _____.",
+    "answers": [
+      { "id": 0, "text": "Actin" },
+      { "id": 1, "text": "Myosin" },
+      { "id": 2, "text": "Titin" },
+      { "id": 3, "text": "Lactate" }
+      ],
+      "correct": 3 
+  },
+  {
+    "question": "What is known as the 'power house' of the cell?",
+    "answers": [
+      { "id": 0, "text": "cell membrane" },
+      { "id": 1, "text": "cell wall" },
+      { "id": 2, "text": "mitochondria" },
+      { "id": 3, "text": "sarcoplasmic reticulum" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "What type of contraction produces the most muscle damage?",
+    "answers": [
+      { "id": 0, "text": "eccentric" },
+      { "id": 1, "text": "concentric" },
+      { "id": 2, "text": "isometric" },
+      { "id": 3, "text": "isotension" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "When a phosphate bond is broken in an ATP molecule, what is produced?",
+    "answers": [
+      { "id": 0, "text": "AMP" },
+      { "id": 1, "text": "CrP" },
+      { "id": 2, "text": "ADP" },
+      { "id": 3, "text": "H2O" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "What equation will give you cardiac output?",
+    "answers": [
+      { "id": 0, "text": "stroke volume X heart rate" },
+      { "id": 1, "text": "stroke volume X lung volume" },
+      { "id": 2, "text": "heart rate X lung volume" },
+      { "id": 3, "text": "heart rate X VO2max" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Which of the following pumps blood to the body?",
+    "answers": [
+      { "id": 0, "text": "right atrium" },
+      { "id": 1, "text": "left ventricle" },
+      { "id": 2, "text": "right ventricle" },
+      { "id": 3, "text": "left atrium" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Which of the following pumps blood to the left ventricle?",
+    "answers": [
+      { "id": 0, "text": "right atrium" },
+      { "id": 1, "text": "left atrium" },
+      { "id": 2, "text": "aorta" },
+      { "id": 3, "text": "right ventricle" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Deoxygenated blood is pumped tothe lungs by what heart chamber?",
+    "answers": [
+      { "id": 0, "text": "left ventricle" },
+      { "id": 1, "text": "left atrium" },
+      { "id": 2, "text": "right atrium" },
+      { "id": 3, "text": "right ventricle" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "The truest test of aerobic capacity is _____.",
+    "answers": [
+      { "id": 0, "text": "1-mile run" },
+      { "id": 1, "text": "3-mile swim" },
+      { "id": 2, "text": "VO2max" },
+      { "id": 3, "text": "1/2 marathon" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "A sarcomere unit runs from _____ to _____.",
+    "answers": [
+      { "id": 0, "text": "Z-line / Z-line" },
+      { "id": 1, "text": "Z-line / M-zone" },
+      { "id": 2, "text": "A-band / A-band" },
+      { "id": 3, "text": "M-zone / M-zone" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Pull ups work all of the following except _____.",
+    "answers": [
+      { "id": 0, "text": "lats" },
+      { "id": 1, "text": "biceps" },
+      { "id": 2, "text": "abs" },
+      { "id": 3, "text": "hamstrings" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "The rate limiting enzyme in glycolysis is _____.",
+    "answers": [
+      { "id": 0, "text": "isocitrate dehydrogenase" },
+      { "id": 1, "text": "PFK" },
+      { "id": 2, "text": "pyruvate" },
+      { "id": 3, "text": "lactic acid" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "All of the following are primary aerobic metabolic pathways except?",
+    "answers": [
+      { "id": 0, "text": "electron transport chain" },
+      { "id": 1, "text": "krebs cycle" },
+      { "id": 2, "text": "citric acid cycle" },
+      { "id": 3, "text": "glycolysis" }
+      ],
+      "correct": 3
+  }
+]
+

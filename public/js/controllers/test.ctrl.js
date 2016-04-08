@@ -1,5 +1,5 @@
-// cpt.ctrl.js 
-angular.module('ptuApp').controller('cptCtrl', ['$scope', '$http', '$rootScope', '$q', '$window', function($scope, $http, $rootScope, $q, $window) {
+// test.ctrl.js 
+angular.module('ptuApp').controller('testCtrl', ['$scope', '$http', '$rootScope', '$q', '$window', function($scope, $http, $rootScope, $q, $window) {
   
   $scope.score = 0;
   $scope.activeQuestion = -1;
@@ -8,7 +8,7 @@ angular.module('ptuApp').controller('cptCtrl', ['$scope', '$http', '$rootScope',
   $scope.resultsMsg = ''; 
   
   // GET quiz data
-  $http.get('json/cpt_final.json').then(function(quizData){
+  $http.get('json/test_exam.json').then(function(quizData){
     $scope.myQuestions = quizData.data;
     $scope.totalQuestions = $scope.myQuestions.length;
   });
@@ -38,14 +38,14 @@ angular.module('ptuApp').controller('cptCtrl', ['$scope', '$http', '$rootScope',
     // Results panel
     $scope.percentage = (($scope.score / $scope.totalQuestions)*100).toFixed(2);
     if ($scope.percentage < 70) {
-      $scope.resultsMsg = "Sorry, you did not pass the CPT exam. Please review the\
+      $scope.resultsMsg = "Sorry, you did not pass the TEST exam. Please review the\
                            study material and try again. There is no penalty for\
                            taking the exam multiple times. Only your highest score\
                            will remain on record.";
     }
     else if ($scope.percentage >= 70) {
-      $scope.resultsMsg = "Congratulations, you passed the CPT exam. Please submit\
-                           your score below to record your CPT score. You will\
+      $scope.resultsMsg = "Congratulations, you passed the TEST exam. Please submit\
+                           your score below to record your TEST score. You will\
                            see a link on your account page to checkout and receive\
                            your certification and verification ID for employers.";
     }
@@ -67,5 +67,5 @@ angular.module('ptuApp').controller('cptCtrl', ['$scope', '$http', '$rootScope',
   }
 
 
-}]); //====== END CONTROLLER cptCtrl ======
+}]); //====== END CONTROLLER testCtrl ======
 

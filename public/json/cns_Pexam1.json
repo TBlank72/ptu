@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What macronutrient does the USDA recommend Americans consume the largest percentage of calories from?",
+    "answers": [
+      { "id": 0, "text": "fats" },
+      { "id": 1, "text": "carbohydrates" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Scurvy is caused by a deficiency of what vitamin?",
+    "answers": [
+      { "id": 0, "text": "A" },
+      { "id": 1, "text": "B" },
+      { "id": 2, "text": "C" },
+      { "id": 3, "text": "D" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "What macronutrient is protein sparing?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "protein" },
+      { "id": 3, "text": "alcohol" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Muscle tissue is composed of what?",
+    "answers": [
+      { "id": 0, "text": "fat and carbohydrates" },
+      { "id": 1, "text": "protein and CO2" },
+      { "id": 2, "text": "protein and O2" },
+      { "id": 3, "text": "protein and H2O" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Athletes require _____ because of their activity level.",
+    "answers": [
+      { "id": 0, "text": "the same water and nutrients" },
+      { "id": 1, "text": "more water and nutrients" },
+      { "id": 2, "text": "less water and nutrients" },
+      { "id": 3, "text": "only gatorade" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The primary macronutrient in grains is _____.",
+    "answers": [
+      { "id": 0, "text": "fats" },
+      { "id": 1, "text": "carbohydrates" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Carbs contain approximately _____ calories per gram.",
+    "answers": [
+      { "id": 0, "text": "4" },
+      { "id": 1, "text": "5" },
+      { "id": 2, "text": "6" },
+      { "id": 3, "text": "7" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Fat contains approximately _____ calories per gram.",
+    "answers": [
+      { "id": 0, "text": "7" },
+      { "id": 1, "text": "8" },
+      { "id": 2, "text": "9" },
+      { "id": 3, "text": "10" }
+      ],
+      "correct": 9
+  },
+  {
+    "question": "Protein contains approximately _____ calories per gram.",
+    "answers": [
+      { "id": 0, "text": "4" },
+      { "id": 1, "text": "5" },
+      { "id": 2, "text": "6" },
+      { "id": 3, "text": "7" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Alcohol contains approximately ____ calories per gram.",
+    "answers": [
+      { "id": 0, "text": "4" },
+      { "id": 1, "text": "5" },
+      { "id": 2, "text": "6" },
+      { "id": 3, "text": "7" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Oxidation of what macronutrient is shut down while alcohol is present in the body?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Oxidation of what macronutrient speeds up while alcohol is present in the body?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "water" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "What macronutrient refills glycogen stores in the muscle?",
+    "answers": [
+      { "id": 0, "text": "carbohydrates" },
+      { "id": 1, "text": "fats" },
+      { "id": 2, "text": "proteins" },
+      { "id": 3, "text": "alcohols" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "What energy source do the heart and brain primarily receive energy from?",
+    "answers": [
+      { "id": 0, "text": "glucose" },
+      { "id": 1, "text": "glycogen" },
+      { "id": 2, "text": "polyunsaturated fats" },
+      { "id": 3, "text": "monounsaturated fats" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "What alternative energy source can the brain and heart function off of when dietary carbs are limited?",
+    "answers": [
+      { "id": 0, "text": "liver enzymes" },
+      { "id": 1, "text": "monounsaturated fats" },
+      { "id": 2, "text": "ketones" },
+      { "id": 3, "text": "polyunsaturated fats" }
+      ],
+      "correct": 2
+  }
+]

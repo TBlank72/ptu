@@ -1,4 +1,6 @@
 // dashboardCtrl
+/*
+ *
 app.controller('dashboardCtrl', function($scope, $http, $route, $rootScope) {
   console.log('dashboardCtrl called');
   // Get cert files
@@ -8,3 +10,4 @@ app.controller('dashboardCtrl', function($scope, $http, $route, $rootScope) {
 
 
 });
+ */

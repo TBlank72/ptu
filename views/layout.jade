@@ -5,15 +5,15 @@ html(ng-app="ptuApp", lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='csrf-token', content=_csrf)
-    title PT University - Hack 
-    ////link(rel='shortcut icon', href='/favicon.ico')
+    title PT University 
+    link(rel='shortcut icon', href='/favicon.ico')
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet")
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css", rel="stylesheet")
     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css", rel="stylesheet")
-    ////link(rel='stylesheet', href='/css/main.css')
     link(rel='stylesheet', href='/css/ptuMstyle.css')
     link(rel='stylesheet', href='/css/ptuMquiz.css')
+    base(href='/')
   body
     include partials/header
 
@@ -22,25 +22,25 @@ html(ng-app="ptuApp", lang='en')
     block content
 
     include partials/footer
+    include partials/vendor
 
-    //script(src='/js/lib/jquery-2.2.0.min.js')
-    //script(src='/js/lib/bootstrap.min.js')
-    //script(src='/js/main.js')
     script(src='https://code.jquery.com/jquery-2.1.3.min.js')
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js')
+    //script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js')
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.js')
+    //script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.js')
     script(src='js/ptuapp.config.js')
     script(src='js/controllers/dashboard.ctrl.js')
     script(src='js/controllers/admin.ctrl.js')
     script(src='js/controllers/cpt.ctrl.js')
     script(src='js/controllers/cmt.ctrl.js')
     script(src='js/controllers/cns.ctrl.js')
-    script(src='json/cpt_final.json')
-    script(src='json/cmt_final.json')
-    script(src='json/cns_final.json')
+    script(src='js/controllers/test.ctrl.js')
+    script(src='js/controllers/practiceTest.ctrl.js')
+    script(src='js/controllers/practiceCpt.ctrl.js')
+    script(src='js/controllers/practiceCmt.ctrl.js')
+    script(src='js/controllers/practiceCns.ctrl.js')
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID
     script.

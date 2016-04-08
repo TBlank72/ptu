@@ -1,5 +1,7 @@
 var _ = require('lodash');
 var async = require('async');
+var Payment = require('../models/payment');
+var User = require('../models/user');
 
 /**
  * Split into declaration and initialization for better startup performance.
@@ -117,6 +119,7 @@ exports.postTwitter = function(req, res, next) {
 /**
  * GET /api/stripe
  * Stripe API example.
+ * Delete after Stripe Integration into Account page
  */
 exports.getStripe = function(req, res) {
   stripe = require('stripe')(process.env.STRIPE_SKEY);
@@ -132,21 +135,85 @@ exports.getStripe = function(req, res) {
  * Make a payment.
  */
 exports.postStripe = function(req, res, next) {
+  stripe = require('stripe')(process.env.STRIPE_SKEY);
   var stripeToken = req.body.stripeToken;
   var stripeEmail = req.body.stripeEmail;
-  stripe.charges.create({
-    amount: 395,
+  var certType = req.body.certType;
+  var charge = stripe.charges.create({
+    amount: 9900,
     currency: 'usd',
     source: stripeToken,
-    description: stripeEmail
+    description: certType 
   }, function(err, charge) {
     if (err && err.type === 'StripeCardError') {
       req.flash('errors', { msg: 'Your card has been declined.' });
-      return res.redirect('/api/stripe');
+      return res.redirect('/account');
     }
     req.flash('success', { msg: 'Your card has been charged successfully.' });
-    res.redirect('/api/stripe');
+    //var body = req.body;
+    //res.json(body);
+    res.redirect('/account');
   });
+};
+
+/**
+ * GET /api/stripe/charges
+ * Get Stripe Charge Activity (Webhooks)
+ */
+exports.postStripeCharges = function(req, res) {
+  stripe = require('stripe')(process.env.STRIPE_SKEY);
+
+  // Retrieve the request's body and parse it as JSON
+  var event_json = JSON.parse(req.body);
+
+  // Send status 200 to Stripe before processing data
+  res.send(200);
+
+  var today = new Date();
+  var userID;
+
+  User.findOne({email: event_json.data.object.description}, function(err, user) {
+    if (!user)
+      userID = null;
+    if (user)
+      userID = user._id;
+  });
+
+  var payment = new Payment({
+    event_Obj_id: event_json.data.object.id,
+    created_on: today,
+    event_type: event_json.type,
+    cert: event_json.data.object.description,
+    //sucess: use event type 
+    amount: event_json.data.object.amount,
+    user_email: event_json.data.object.source.name || event_json.data.object.description,
+    user_id: userID 
+
+  });
+
+  Payment.findOne({ event_Obj_id: event_json.data.object.id }, function(err, existingEvent) {
+    if (existingEvent) {
+      // do something if that payment event id exists
+    }
+    payment.save(function(err) {
+      if (err) {
+        return next(err);
+      }
+    });
+  });
+  // if charge succeeded 
+  if (event_json.type == 'charge.succeeded') {
+    // add find user and update paid to true and paid_on date
+    // and update payment collection
+  }
+  // if charge failed
+  else if (event_json.type == 'charge.failed') {
+    // update payment collection 
+  }
+  else {
+    // log other event
+  }
+
 };
 
 

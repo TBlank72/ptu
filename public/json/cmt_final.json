@@ -1,43 +1,998 @@
 [
   {
-    "question": "question 1.",
+    "question": "How many ounces of water shoud an active adult consume per day",
     "answers": [
-      { "id": 0, "text": "100" },
-      { "id": 1, "text": "120" },
-      { "id": 2, "text": "140" },
-      { "id": 3, "text": "160" }
+      { "id": 0, "text": "12" },
+      { "id": 1, "text": "24" },
+      { "id": 2, "text": "68" },
+      { "id": 3, "text": "192" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "The human body contains how many bones?",
+    "answers": [
+      { "id": 0, "text": "192" },
+      { "id": 1, "text": "300" },
+      { "id": 2, "text": "206" },
+      { "id": 3, "text": "220" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Muscle fibers are composed of all of the following filaments except _____.",
+    "answers": [
+      { "id": 0, "text": "Actin" },
+      { "id": 1, "text": "Myosin" },
+      { "id": 2, "text": "Titin" },
+      { "id": 3, "text": "Lactate" }
+      ],
+      "correct": 3 
+  },
+  {
+    "question": "What is known as the 'power house' of the cell?",
+    "answers": [
+      { "id": 0, "text": "cell membrane" },
+      { "id": 1, "text": "cell wall" },
+      { "id": 2, "text": "mitochondria" },
+      { "id": 3, "text": "sarcoplasmic reticulum" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "What type of contraction produces the most muscle damage?",
+    "answers": [
+      { "id": 0, "text": "eccentric" },
+      { "id": 1, "text": "concentric" },
+      { "id": 2, "text": "isometric" },
+      { "id": 3, "text": "isotension" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "When a phosphate bond is broken in an ATP molecule, what is produced?",
+    "answers": [
+      { "id": 0, "text": "AMP" },
+      { "id": 1, "text": "CrP" },
+      { "id": 2, "text": "ADP" },
+      { "id": 3, "text": "H2O" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "What equation will give you cardiac output?",
+    "answers": [
+      { "id": 0, "text": "stroke volume X heart rate" },
+      { "id": 1, "text": "stroke volume X lung volume" },
+      { "id": 2, "text": "heart rate X lung volume" },
+      { "id": 3, "text": "heart rate X VO2max" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Which of the following pumps blood to the body?",
+    "answers": [
+      { "id": 0, "text": "right atrium" },
+      { "id": 1, "text": "left ventricle" },
+      { "id": 2, "text": "right ventricle" },
+      { "id": 3, "text": "left atrium" }
       ],
       "correct": 1
   },
   {
-    "question": "question 2.",
+    "question": "Which of the following pumps blood to the left ventricle?",
     "answers": [
-      { "id": 0, "text": "60" },
-      { "id": 1, "text": "80" },
-      { "id": 2, "text": "100" },
-      { "id": 3, "text": "110" }
-      ],
-      "correct": 1
-      
-  },
-  {
-    "question": "question 3.",
-    "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "right atrium" },
+      { "id": 1, "text": "left atrium" },
+      { "id": 2, "text": "aorta" },
+      { "id": 3, "text": "right ventricle" }
       ],
       "correct": 1
   },
   {
-    "question": "question 4.",
+    "question": "Deoxygenated blood is pumped tothe lungs by what heart chamber?",
     "answers": [
-      { "id": 0, "text": "" },
-      { "id": 1, "text": "" },
-      { "id": 2, "text": "" },
-      { "id": 3, "text": "" }
+      { "id": 0, "text": "left ventricle" },
+      { "id": 1, "text": "left atrium" },
+      { "id": 2, "text": "right atrium" },
+      { "id": 3, "text": "right ventricle" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "The truest test of aerobic capacity is _____.",
+    "answers": [
+      { "id": 0, "text": "1-mile run" },
+      { "id": 1, "text": "3-mile swim" },
+      { "id": 2, "text": "VO2max" },
+      { "id": 3, "text": "1/2 marathon" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "A sarcomere unit runs from _____ to _____.",
+    "answers": [
+      { "id": 0, "text": "Z-line / Z-line" },
+      { "id": 1, "text": "Z-line / M-zone" },
+      { "id": 2, "text": "A-band / A-band" },
+      { "id": 3, "text": "M-zone / M-zone" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Pull ups work all of the following except _____.",
+    "answers": [
+      { "id": 0, "text": "lats" },
+      { "id": 1, "text": "biceps" },
+      { "id": 2, "text": "abs" },
+      { "id": 3, "text": "hamstrings" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "The rate limiting enzyme in glycolysis is _____.",
+    "answers": [
+      { "id": 0, "text": "isocitrate dehydrogenase" },
+      { "id": 1, "text": "PFK" },
+      { "id": 2, "text": "pyruvate" },
+      { "id": 3, "text": "lactic acid" }
       ],
       "correct": 1
+  },
+  {
+    "question": "All of the following are primary aerobic metabolic pathways except?",
+    "answers": [
+      { "id": 0, "text": "electron transport chain" },
+      { "id": 1, "text": "krebs cycle" },
+      { "id": 2, "text": "citric acid cycle" },
+      { "id": 3, "text": "glycolysis" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "All of the following are enzymes within the Krebs cycle except?",
+    "answers": [
+      { "id": 0, "text": "alpha-ketoglutarate dehydrogenase" },
+      { "id": 1, "text": "citrate synthase" },
+      { "id": 2, "text": "isocitrate dehydrogenase" },
+      { "id": 3, "text": "lactate dehydrogenase" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "The krebs cycle occurs in the _____.",
+    "answers": [
+      { "id": 0, "text": "cytoplasmic reticulum" },
+      { "id": 1, "text": "mitochondria" },
+      { "id": 2, "text": "cell membrane" },
+      { "id": 3, "text": "cytosol" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Glycolysis is _____.",
+    "answers": [
+      { "id": 0, "text": "anaerobic" },
+      { "id": 1, "text": "aerobic" },
+      { "id": 2, "text": "for marathons" },
+      { "id": 3, "text": "best for swimming" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Glycolysis takes place in the _____.",
+    "answers": [
+      { "id": 0, "text": "mitocondria" },
+      { "id": 1, "text": "cytosol" },
+      { "id": 2, "text": "cell membrane" },
+      { "id": 3, "text": "cell wall" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Hypertrophy occurs as a response to all of the following except _____.",
+    "answers": [
+      { "id": 0, "text": "mechanical tension" },
+      { "id": 1, "text": "metabolic stress" },
+      { "id": 2, "text": "muscle damage" },
+      { "id": 3, "text": "muscle pump" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Training with movements that mimic movements used in an athlete's sport is an example of _____.",
+    "answers": [
+      { "id": 0, "text": "progressive overload" },
+      { "id": 1, "text": "specificity" },
+      { "id": 2, "text": "sports training" },
+      { "id": 3, "text": "athletic training" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Gradual increase of the stress placed on the body during exercise is the _____ principle.",
+    "answers": [
+      { "id": 0, "text": "mass building" },
+      { "id": 1, "text": "progressive overload" },
+      { "id": 2, "text": "specificity" },
+      { "id": 3, "text": "hypertrophy" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "What is the safest form of cardio for clients with knee injuries?",
+    "answers": [
+      { "id": 0, "text": "swimming" },
+      { "id": 1, "text": "running" },
+      { "id": 2, "text": "jumping" },
+      { "id": 3, "text": "hiking" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "All of the following are upper back muscles except _____.",
+    "answers": [
+      { "id": 0, "text": "rhomboids" },
+      { "id": 1, "text": "lats" },
+      { "id": 2, "text": "trapezius" },
+      { "id": 3, "text": "semitendinosus" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "All of the following are muscles in the leg except _____.",
+    "answers": [
+      { "id": 0, "text": "vastus lateralus" },
+      { "id": 1, "text": "vastus medialus" },
+      { "id": 2, "text": "seratus anterior" },
+      { "id": 3, "text": "semimembranosus" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "All of the following are primarily used during a chest press except _____.",
+    "answers": [
+      { "id": 0, "text": "pectoralis major" },
+      { "id": 1, "text": "pectoralis minor" },
+      { "id": 2, "text": "levator scapulae" },
+      { "id": 3, "text": "external intercostals" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "The vertical jump is a test of _____.",
+    "answers": [
+      { "id": 0, "text": "strength" },
+      { "id": 1, "text": "power" },
+      { "id": 2, "text": "flexibility" },
+      { "id": 3, "text": "endurance" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "All of the following are common aerobic tests except _____.",
+    "answers": [
+      { "id": 0, "text": "1-mile run" },
+      { "id": 1, "text": "3-mile run" },
+      { "id": 2, "text": "VO2max" },
+      { "id": 3, "text": "sit-n-reach" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Running at varied speeds and inclines is known as _____.",
+    "answers": [
+      { "id": 0, "text": "military training" },
+      { "id": 1, "text": "cross country training" },
+      { "id": 2, "text": "fartlek training" },
+      { "id": 3, "text": "crossfit" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "A 1-RM bench press is testing _____.",
+    "answers": [
+      { "id": 0, "text": "strength" },
+      { "id": 1, "text": "power" },
+      { "id": 2, "text": "ROM" },
+      { "id": 3, "text": "endurance" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The time that it takes to produce a given amount of force is _____.",
+    "answers": [
+      { "id": 0, "text": "strength" },
+      { "id": 1, "text": "power" },
+      { "id": 2, "text": "acceleration" },
+      { "id": 3, "text": "momentum" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The 'sit and reach' test is commonly used to test _____.",
+    "answers": [
+      { "id": 0, "text": "strength" },
+      { "id": 1, "text": "power" },
+      { "id": 2, "text": "flexibility" },
+      { "id": 3, "text": "stamina" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Bench pressing 225 pounds for as many reps as possible is testing _____.",
+    "answers": [
+      { "id": 0, "text": "strength" },
+      { "id": 1, "text": "power" },
+      { "id": 2, "text": "endurance" },
+      { "id": 3, "text": "flexibility" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Type I fibers can be fully converted into Type IIb fibers if trained properly.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ fatigue the fastest.",
+    "answers": [
+      { "id": 0, "text": "Type I" },
+      { "id": 1, "text": "Type Ia" },
+      { "id": 2, "text": "Type IIa" },
+      { "id": 3, "text": "Type IIb" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ fatigue the slowest.",
+    "answers": [
+      { "id": 0, "text": "Type I" },
+      { "id": 1, "text": "Type Ia" },
+      { "id": 2, "text": "Type IIa" },
+      { "id": 3, "text": "Type IIb" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ are capable of producing the greatest force.",
+    "answers": [
+      { "id": 0, "text": "Type I" },
+      { "id": 1, "text": "Type Ia" },
+      { "id": 2, "text": "Type IIa" },
+      { "id": 3, "text": "Type IIb" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ fibers are primarily used during a marathon.",
+    "answers": [
+      { "id": 0, "text": "Type I" },
+      { "id": 1, "text": "Type Ia" },
+      { "id": 2, "text": "Type IIa" },
+      { "id": 3, "text": "Type IIb" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "4 grams of protein contains fewer calories than 2 grams of fat.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "BMI is not a good indicator of health risk in athletic populations because _____.",
+    "answers": [
+      { "id": 0, "text": "All athletes are healthy" },
+      { "id": 1, "text": "BMI increases with added lean muscle" },
+      { "id": 2, "text": "BMI isn't accurate" },
+      { "id": 3, "text": "The BMI scale doesn't go high enough" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The _____ is the bone in the upper arm.",
+    "answers": [
+      { "id": 0, "text": "humerus" },
+      { "id": 1, "text": "biceps" },
+      { "id": 2, "text": "acromion" },
+      { "id": 3, "text": "radius" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The _____ is the bone in the upper leg.",
+    "answers": [
+      { "id": 0, "text": "humerus" },
+      { "id": 1, "text": "quadriceps" },
+      { "id": 2, "text": "femur" },
+      { "id": 3, "text": "tibia" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ connects bone to bone.",
+    "answers": [
+      { "id": 0, "text": "Tendons" },
+      { "id": 1, "text": "Bone tendons" },
+      { "id": 2, "text": "Ligaments" },
+      { "id": 3, "text": "Cartilage" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ connects muscle to bone.",
+    "answers": [
+      { "id": 0, "text": "Tendons" },
+      { "id": 1, "text": "Ligaments" },
+      { "id": 2, "text": "Cartilage" },
+      { "id": 3, "text": "Nerves" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The first adaptation that occurs when a sedentary individual begins a cardio program is _____.",
+    "answers": [
+      { "id": 0, "text": "increased RBC" },
+      { "id": 1, "text": "decreased RBC" },
+      { "id": 2, "text": "increased plasma volume" },
+      { "id": 3, "text": "increased WBC" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ pressure is exerted against the atrial walls when blood is ejected from the ventricles.",
+    "answers": [
+      { "id": 0, "text": "Diastolic" },
+      { "id": 1, "text": "Systolic" },
+      { "id": 2, "text": "Heart" },
+      { "id": 3, "text": "Ejection fraction" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "A nerve is composed of all of the following except _____.",
+    "answers": [
+      { "id": 0, "text": "axon" },
+      { "id": 1, "text": "dendrite" },
+      { "id": 2, "text": "cell body" },
+      { "id": 3, "text": "red blood cells" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "During fast glycolysis, the end product is converted into _____.",
+    "answers": [
+      { "id": 0, "text": "lactate" },
+      { "id": 1, "text": "AMP" },
+      { "id": 2, "text": "fatty acids" },
+      { "id": 3, "text": "CrP" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ is the acronym used to describe muscle soreness.",
+    "answers": [
+      { "id": 0, "text": "DMOS" },
+      { "id": 1, "text": "DOMS" },
+      { "id": 2, "text": "MOMS" },
+      { "id": 3, "text": "PTSD" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Lactate is used primarily in what metabolic pathway?",
+    "answers": [
+      { "id": 0, "text": "krebs cycle" },
+      { "id": 1, "text": "glycolysis" },
+      { "id": 2, "text": "ETC" },
+      { "id": 3, "text": "cori cycle" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "The _____ separates the body into right and left halves.",
+    "answers": [
+      { "id": 0, "text": "sagital plane" },
+      { "id": 1, "text": "frontal plane" },
+      { "id": 2, "text": "transverse plane" },
+      { "id": 3, "text": "midfrontal plane" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The _____ separates the body into upper and lower halves.",
+    "answers": [
+      { "id": 0, "text": "sagital plane" },
+      { "id": 1, "text": "frontal plane" },
+      { "id": 2, "text": "transverse plane" },
+      { "id": 3, "text": "midfrontal plane" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Torso rotation occurs in what plane?",
+    "answers": [
+      { "id": 0, "text": "sagital" },
+      { "id": 1, "text": "frontal" },
+      { "id": 2, "text": "transverse" },
+      { "id": 3, "text": "midsagital" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ is towards the front of the body.",
+    "answers": [
+      { "id": 0, "text": "Anterior" },
+      { "id": 1, "text": "Posterior" },
+      { "id": 2, "text": "Ventral" },
+      { "id": 3, "text": "Both A and C" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ vertebrae make up the lumbar spine.",
+    "answers": [
+      { "id": 0, "text": "5" },
+      { "id": 1, "text": "6" },
+      { "id": 2, "text": "7" },
+      { "id": 3, "text": "8" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Which of the follow is a 'ball and socket' joint.",
+    "answers": [
+      { "id": 0, "text": "hip" },
+      { "id": 1, "text": "elbow" },
+      { "id": 2, "text": "knee" },
+      { "id": 3, "text": "ankle" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Gases are exchanged through _____ in the pulmonary system.",
+    "answers": [
+      { "id": 0, "text": "bronchi" },
+      { "id": 1, "text": "alveoli" },
+      { "id": 2, "text": "left ventricle" },
+      { "id": 3, "text": "blood vessels" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is used to test static strength.",
+    "answers": [
+      { "id": 0, "text": "Dynamometer" },
+      { "id": 1, "text": "Fat grips" },
+      { "id": 2, "text": "Skin fold calipers" },
+      { "id": 3, "text": "Hydrostatic tank" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Which of the following best describes what occurs in asthma?",
+    "answers": [
+      { "id": 0, "text": "black lung" },
+      { "id": 1, "text": "narrowing of the bronchial airways" },
+      { "id": 2, "text": "narrowing of the throat" },
+      { "id": 3, "text": "narrowing of the trachea" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "An imbalance in O2 supply and demand in the heart is known as _____.",
+    "answers": [
+      { "id": 0, "text": "stroke" },
+      { "id": 1, "text": "ischemia" },
+      { "id": 2, "text": "myocardial infarction" },
+      { "id": 3, "text": "poor ejection fraction" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "'Hardening' of the arteries is known as _____.",
+    "answers": [
+      { "id": 0, "text": "arteriosclerosis" },
+      { "id": 1, "text": "coronary artery athrosclerosis" },
+      { "id": 2, "text": "sarcopenia" },
+      { "id": 3, "text": "harderies" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The following lung condition is not fully reversible.",
+    "answers": [
+      { "id": 0, "text": "asthma" },
+      { "id": 1, "text": "chronic bronchitis" },
+      { "id": 2, "text": "chronic obstructive pulmonary disease" },
+      { "id": 3, "text": "emphysema" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ is the preferred form of exercise for senior adults.",
+    "answers": [
+      { "id": 0, "text": "Running" },
+      { "id": 1, "text": "Swimming" },
+      { "id": 2, "text": "Hiking" },
+      { "id": 3, "text": "Weight training" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Sweating helps cool the body by _____.",
+    "answers": [
+      { "id": 0, "text": "making the skin wet" },
+      { "id": 1, "text": "evaporation of sweat carrying heat away" },
+      { "id": 2, "text": "excreting hot sweat from the body" },
+      { "id": 3, "text": "pushing salt out of the body" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "All are 'white blood cells' except _____.",
+    "answers": [
+      { "id": 0, "text": "platelets" },
+      { "id": 1, "text": "neutrophils" },
+      { "id": 2, "text": "basophils" },
+      { "id": 3, "text": "eosinophils" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "During aerobic exercise, which would not be considered normal?",
+    "answers": [
+      { "id": 0, "text": "increased systolic blood pressure" },
+      { "id": 1, "text": "increased diastolic blood pressure" },
+      { "id": 2, "text": "increased heart rate" },
+      { "id": 3, "text": "increased sweating" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "ATPase that produces muscle fiber contractions is found _____.",
+    "answers": [
+      { "id": 0, "text": "on the actin" },
+      { "id": 1, "text": "on the myosin tail" },
+      { "id": 2, "text": "on the myosin cross-bridge heads" },
+      { "id": 3, "text": "on the myosin neck" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Which of the following is composed of only one cell layer and functions to exchange waste and nutrients between the blood and tissues?",
+    "answers": [
+      { "id": 0, "text": "veins" },
+      { "id": 1, "text": "arteries" },
+      { "id": 2, "text": "capillaries" },
+      { "id": 3, "text": "blood vessels" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Which of the following is a common site for a skin fold measurement?",
+    "answers": [
+      { "id": 0, "text": "inner toes" },
+      { "id": 1, "text": "subscapular" },
+      { "id": 2, "text": "neck" },
+      { "id": 3, "text": "glutes" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Which of the following decreases joint angle and occurs in the sagittal plane around a mediolateral axis?",
+    "answers": [
+      { "id": 0, "text": "extension" },
+      { "id": 1, "text": "flexion" },
+      { "id": 2, "text": "rotation" },
+      { "id": 3, "text": "hyperextension" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Which valve does blood flow through when moving from the right atrium to the right ventricle?",
+    "answers": [
+      { "id": 0, "text": "aorta" },
+      { "id": 1, "text": "bicuspid" },
+      { "id": 2, "text": "tricuspid" },
+      { "id": 3, "text": "pulmonary" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "In a _____ class lever, the effort force lies closer to the axis of the lever than the resistance, and the force arm is smaller than the resistance arm.",
+    "answers": [
+      { "id": 0, "text": "1st" },
+      { "id": 1, "text": "2nd" },
+      { "id": 2, "text": "3rd" },
+      { "id": 3, "text": "4th" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "In a _____ class lever, the resistance lies between the effort force and the axis of rotation and the force arm is greater than the resistance arm.",
+    "answers": [
+      { "id": 0, "text": "1st" },
+      { "id": 1, "text": "2nd" },
+      { "id": 2, "text": "3rd" },
+      { "id": 3, "text": "4th" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "In a _____ class lever, the axis is between the force and the resistance arm, and the force arm may be greater than, smaller than, or equal to the resistance arm.",
+    "answers": [
+      { "id": 0, "text": "1st" },
+      { "id": 1, "text": "2nd" },
+      { "id": 2, "text": "3rd" },
+      { "id": 3, "text": "4th" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Nerve transmissions occur by neurotransmitters crossing a synaptic cleft.  What is the neurotransmitter that makes this possible?",
+    "answers": [
+      { "id": 0, "text": "GABA" },
+      { "id": 1, "text": "ACh" },
+      { "id": 2, "text": "Glutamate" },
+      { "id": 3, "text": "Lactic Acid" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "All of the following are hip bones except _____.",
+    "answers": [
+      { "id": 0, "text": "ilium" },
+      { "id": 1, "text": "patella" },
+      { "id": 2, "text": "ischium" },
+      { "id": 3, "text": "pubis" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ vertebrae make up the thoracic spine.",
+    "answers": [
+      { "id": 0, "text": "9" },
+      { "id": 1, "text": "10" },
+      { "id": 2, "text": "11" },
+      { "id": 3, "text": "12" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "_____ vertebrae make up the cervical spine.",
+    "answers": [
+      { "id": 0, "text": "5" },
+      { "id": 1, "text": "6" },
+      { "id": 2, "text": "7" },
+      { "id": 3, "text": "8" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ is extension of the ankle joint.",
+    "answers": [
+      { "id": 0, "text": "dosiflexion" },
+      { "id": 1, "text": "plantarflexion" },
+      { "id": 2, "text": "dorsiextension" },
+      { "id": 3, "text": "plantarextension" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is flexion of the ankle joint.",
+    "answers": [
+      { "id": 0, "text": "dosiflexion" },
+      { "id": 1, "text": "plantarflexion" },
+      { "id": 2, "text": "dorsiextension" },
+      { "id": 3, "text": "plantarextension" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Posterior, or dorsal, is towards the __________.",
+    "answers": [
+      { "id": 0, "text": "front" },
+      { "id": 1, "text": "rear" },
+      { "id": 2, "text": "top" },
+      { "id": 3, "text": "bottom" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Anterior, or ventral, is towards the __________.",
+    "answers": [
+      { "id": 0, "text": "front" },
+      { "id": 1, "text": "rear" },
+      { "id": 2, "text": "top" },
+      { "id": 3, "text": "bottom" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The _____ separates the body into superior and inferior divisions.",
+    "answers": [
+      { "id": 0, "text": "frontal plane" },
+      { "id": 1, "text": "transverse plane" },
+      { "id": 2, "text": "sagittal plane" },
+      { "id": 3, "text": "superior plane" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The _____ separates the body anteriorly and posteriorly.",
+    "answers": [
+      { "id": 0, "text": "frontal plane" },
+      { "id": 1, "text": "transverse plane" },
+      { "id": 2, "text": "sagittal plane" },
+      { "id": 3, "text": "superior plane" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The _____ separates the body into right and left divisions.",
+    "answers": [
+      { "id": 0, "text": "frontal plane" },
+      { "id": 1, "text": "transverse plane" },
+      { "id": 2, "text": "sagittal plane" },
+      { "id": 3, "text": "superior plane" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "The Appendicular skeleton includes all of the following except?",
+    "answers": [
+      { "id": 0, "text": "legs" },
+      { "id": 1, "text": "arms" },
+      { "id": 2, "text": "ribs" },
+      { "id": 3, "text": "hip girdle" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "All of the following are part of the Axial skeleton except?",
+    "answers": [
+      { "id": 0, "text": "arms" },
+      { "id": 1, "text": "skull" },
+      { "id": 2, "text": "ribs" },
+      { "id": 3, "text": "vertebrae" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The rating of perceived exertion is _____.",
+    "answers": [
+      { "id": 0, "text": "an objective measure of intensity" },
+      { "id": 1, "text": "a subjective measure of intensity" },
+      { "id": 2, "text": "an objective measure of pain" },
+      { "id": 3, "text": "a subjective measure of pain" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The lactate threshold represents _____.",
+    "answers": [
+      { "id": 0, "text": "increased reliance on aerobic metabolism" },
+      { "id": 1, "text": "increased reliance on anaerobic metabolism" },
+      { "id": 2, "text": "decreased reliance on aerobic metabolism" },
+      { "id": 3, "text": "decreased reliance on anaerobic metabolism" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The end product of slow glycolysis is used in the _____.",
+    "answers": [
+      { "id": 0, "text": "cori cycle" },
+      { "id": 1, "text": "ETC" },
+      { "id": 2, "text": "krebs cycle" },
+      { "id": 3, "text": "fast glycolysis" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "During fast glycolysis, pyruvate is converted into _____.",
+    "answers": [
+      { "id": 0, "text": "lactate" },
+      { "id": 1, "text": "ACh" },
+      { "id": 2, "text": "O2" },
+      { "id": 3, "text": "H2O" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "When an individual trains with cardiovascular activities _____.",
+    "answers": [
+      { "id": 0, "text": "WBC increases" },
+      { "id": 1, "text": "RBC increases" },
+      { "id": 2, "text": "WBC decreases" },
+      { "id": 3, "text": "RBC decreases" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is the blood pressure when no blood is being ejected from the ventricles.",
+    "answers": [
+      { "id": 0, "text": "systolic" },
+      { "id": 1, "text": "diastolic" },
+      { "id": 2, "text": "resting" },
+      { "id": 3, "text": "zero" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "What covers the axon that allows faster nerve conduction?",
+    "answers": [
+      { "id": 0, "text": "RBC" },
+      { "id": 1, "text": "protein" },
+      { "id": 2, "text": "myelin sheath" },
+      { "id": 3, "text": "creatine" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "_____ is an oxygen transport for the body?",
+    "answers": [
+      { "id": 0, "text": "lactic acid" },
+      { "id": 1, "text": "RBC" },
+      { "id": 2, "text": "WBC" },
+      { "id": 3, "text": "proteins" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Quickly squatting before performing a vertical jump results in a higher jump compared to a static squat jump due to?",
+    "answers": [
+      { "id": 0, "text": "stretch reflex" },
+      { "id": 1, "text": "more tempo" },
+      { "id": 2, "text": "faster tempo" },
+      { "id": 3, "text": "longer fibers" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "The primary function of the rectus abdominus is _____.",
+    "answers": [
+      { "id": 0, "text": "trunk extension" },
+      { "id": 1, "text": "trunk flexion" },
+      { "id": 2, "text": "hip extension" },
+      { "id": 3, "text": "hip flexion" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "All of the following are true about smooth muscles except _____.",
+    "answers": [
+      { "id": 0, "text": "involuntary contraction" },
+      { "id": 1, "text": "non-striated" },
+      { "id": 2, "text": "surround organs" },
+      { "id": 3, "text": "attached to bones" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Elasticity refers to muscles _____.",
+    "answers": [
+      { "id": 0, "text": "shortening in length" },
+      { "id": 1, "text": "stretching and returning to normal position" },
+      { "id": 2, "text": "extending in length" },
+      { "id": 3, "text": "transmitting nerve impulses" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Contractibility refers to muscles _____.",
+    "answers": [
+      { "id": 0, "text": "shortening in length" },
+      { "id": 1, "text": "stretching and returning to normal position" },
+      { "id": 2, "text": "extending in length" },
+      { "id": 3, "text": "transmitting nerve impulses" }
+      ],
+      "correct": 0
   }
 ]

@@ -1,0 +1,148 @@
+[
+  {
+    "question": "Systolic blood pressure below _____ is considered normal.",
+    "answers": [
+      { "id": 0, "text": "100" },
+      { "id": 1, "text": "120" },
+      { "id": 2, "text": "140" },
+      { "id": 3, "text": "160" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "Diastolic blood pressure below _____ is considered normal.",
+    "answers": [
+      { "id": 0, "text": "60" },
+      { "id": 1, "text": "80" },
+      { "id": 2, "text": "100" },
+      { "id": 3, "text": "110" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "The age predicted max heart rate of a 20 year old is what?",
+    "answers": [
+      { "id": 0, "text": "200" },
+      { "id": 1, "text": "190" },
+      { "id": 2, "text": "180" },
+      { "id": 3, "text": "220" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Exhaling against a closed epiglottis to increase trunk and core stability is called what?",
+    "answers": [
+      { "id": 0, "text": "Power Lifting" },
+      { "id": 1, "text": "Hypertension" },
+      { "id": 2, "text": "DOMS" },
+      { "id": 3, "text": "Valsalva Maneuver" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "It is appropriate to check an individual's blood pressure on their wrist with your thumb.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "It is appropriate to check an individual's heart rate on their wrist with your thumb.",
+    "answers": [
+      { "id": 0, "text": "True" },
+      { "id": 1, "text": "False" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "All are good forms of low impact cardio except _____.",
+    "answers": [
+      { "id": 0, "text": "Upright Bike" },
+      { "id": 1, "text": "Swimming" },
+      { "id": 2, "text": "Recumbent Bike" },
+      { "id": 3, "text": "Treadmill" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "To increase strength _____ rep ranges should be used.",
+    "answers": [
+      { "id": 0, "text": "1-6" },
+      { "id": 1, "text": "6-10" },
+      { "id": 2, "text": "10-15" },
+      { "id": 3, "text": "15+" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "_____ is the term for increased muscular size.",
+    "answers": [
+      { "id": 0, "text": "Hyperplasia" },
+      { "id": 1, "text": "Hypertrophy" },
+      { "id": 2, "text": "Atrophy" },
+      { "id": 3, "text": "Dystrophy" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "_____ is a decrease in muscle size.",
+    "answers": [
+      { "id": 0, "text": "Hyperplasia" },
+      { "id": 1, "text": "Hypertrophy" },
+      { "id": 2, "text": "Atrophy" },
+      { "id": 3, "text": "Dystrophy" }
+      ],
+      "correct": 2
+  },
+  {
+    "question": "Cardio refers to what muscle?",
+    "answers": [
+      { "id": 0, "text": "Lungs" },
+      { "id": 1, "text": "Stomach" },
+      { "id": 2, "text": "Intestines" },
+      { "id": 3, "text": "Heart" }
+      ],
+      "correct": 3
+  },
+  {
+    "question": "Cardiopulmonary refers to _____ and _____.",
+    "answers": [
+      { "id": 0, "text": "Heart / Lungs" },
+      { "id": 1, "text": "Heart / Veins" },
+      { "id": 2, "text": "Heart / Arteries" },
+      { "id": 3, "text": "Heart / Capillaries" }
+      ],
+      "correct": 0
+  },
+  {
+    "question": "Type IIb fibers are _____.",
+    "answers": [
+      { "id": 0, "text": "Slow twitch" },
+      { "id": 1, "text": "Fast twitch" },
+      { "id": 2, "text": "Intermediate twitch" },
+      { "id": 3, "text": "Small" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "18.5 - 24.9 BMI is _____.",
+    "answers": [
+      { "id": 0, "text": "Overweight" },
+      { "id": 1, "text": "Normal" },
+      { "id": 2, "text": "Obese" },
+      { "id": 3, "text": "Underweight" }
+      ],
+      "correct": 1
+  },
+  {
+    "question": "30+ BMI is ______.",
+    "answers": [
+      { "id": 0, "text": "Overweight" },
+      { "id": 1, "text": "Normal" },
+      { "id": 2, "text": "Obese" },
+      { "id": 3, "text": "Underweight" }
+      ],
+      "correct": 2
+  }
+]

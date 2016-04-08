@@ -24,7 +24,7 @@ var upload = multer({ dest: path.join(__dirname, 'uploads') });
  *
  * Default path: .env (You can remove the path argument entirely, after renaming `.env.example` to `.env`)
  */
-dotenv.load();
+dotenv.config({silent: true});
 
 /**
  * Controllers (route handlers).
@@ -115,6 +115,7 @@ app.get('/about', homeController.about);
 app.get('/faq', homeController.faq);
 app.get('/certifications', homeController.certs);
 app.get('/study', homeController.study);
+app.get('/images/:img', homeController.getImage); 
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
@@ -123,7 +124,9 @@ app.post('/forgot', userController.postForgot);
 app.get('/reset/:token', userController.getReset);
 app.post('/reset/:token', userController.postReset);
 app.get('/signup', userController.getSignup);
-app.post('/signup', userController.postSignup);
+app.post('/signup', userController
+         
+         .postSignup);
 app.get('/contact', contactController.getContact);
 app.post('/contact', contactController.postContact);
 app.get('/account', passportConfig.isAuthenticated, userController.getAccount);
@@ -131,23 +134,39 @@ app.post('/account/profile', passportConfig.isAuthenticated, userController.post
 app.post('/account/password', passportConfig.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
+app.post('/account/payment', apiController.postStripe);
 
 /**
  * Certification Exam app routes.
  */
 app.get('/cpt', examController.getCpt);
+app.get('/cptpractice1', examController.getPracticeCpt);
+app.get('/cptpractice2', examController.getPracticeCpt);
+app.get('/cptpractice3', examController.getPracticeCpt);
 app.get('/cmt', examController.getCmt);
+app.get('/cmtpractice1', examController.getPracticeCmt);
+app.get('/cmtpractice2', examController.getPracticeCmt);
+app.get('/cmtpractice3', examController.getPracticeCmt);
 app.get('/cns', examController.getCns);
+app.get('/cnspractice1', examController.getPracticeCns);
+app.get('/cnspractice2', examController.getPracticeCns);
+app.get('/cnspractice3', examController.getPracticeCns);
+app.get('/test', examController.getTest);
+app.get('/testpractice1', examController.getPracticeTest);
+app.get('/testpractice2', examController.getPracticeTest);
+app.get('/testpractice3', examController.getPracticeTest);
 app.post('/cpt', examController.submitCpt);
 app.post('/cmt', examController.submitCmt);
 app.post('/cns', examController.submitCns);
+app.post('/test', examController.submitTest);
 app.post('/verify', examController.verifyCert);
 
 /**
- * API examples routes.
+ * API routes.
  */
 app.get('/api', apiController.getApi);
 app.get('/api/stripe', apiController.getStripe);
+app.post('/api/stripe/charges', apiController.postStripeCharges);
 app.post('/api/stripe', apiController.postStripe);
 app.get('/api/facebook', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getFacebook);
 app.get('/api/twitter', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getTwitter);

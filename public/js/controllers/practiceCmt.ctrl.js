@@ -1,5 +1,5 @@
-// cmt.ctrl.js 
-angular.module('ptuApp').controller('cmtCtrl', ['$scope', '$http', '$rootScope', '$q', '$window', function($scope, $http, $rootScope, $q, $window) {
+// practicCmt.ctrl.js 
+angular.module('ptuApp').controller('practiceCmtCtrl', ['$scope', '$http', '$rootScope', '$q', '$window', function($scope, $http, $rootScope, $q, $window) {
   
   $scope.score = 0;
   $scope.activeQuestion = -1;
@@ -7,11 +7,27 @@ angular.module('ptuApp').controller('cmtCtrl', ['$scope', '$http', '$rootScope',
   $scope.percentage = 0;
   $scope.resultsMsg = ''; 
   
-  // GET quiz data
-  $http.get('json/cmt_final.json').then(function(quizData){
-    $scope.myQuestions = quizData.data;
-    $scope.totalQuestions = $scope.myQuestions.length;
-  });
+  // GET practice CMT quiz 1 data
+  if (window.location.href.indexOf("cmtpractice1") > -1) {
+    $http.get('json/cmt_Pexam1.json').then(function(quizData){
+      $scope.myQuestions = quizData.data;
+      $scope.totalQuestions = $scope.myQuestions.length;
+    });
+  }
+  // GET practice CMT quiz 2 data
+  else if (window.location.href.indexOf("cmtpractice2") > -1) {
+    $http.get('json/cmt_Pexam2.json').then(function(quizData){
+      $scope.myQuestions = quizData.data;
+      $scope.totalQuestions = $scope.myQuestions.length;
+    });
+  }
+  // GET practice CMT quiz 3 data
+  else if (window.location.href.indexOf("cmtpractice3") > -1) {
+    $http.get('json/cmt_Pexam3.json').then(function(quizData){
+      $scope.myQuestions = quizData.data;
+      $scope.totalQuestions = $scope.myQuestions.length;
+    });
+  }
 
   // selectAnswer function begin
   $scope.selectAnswer = function(qIndex, aIndex) {
@@ -38,16 +54,18 @@ angular.module('ptuApp').controller('cmtCtrl', ['$scope', '$http', '$rootScope',
     // Results panel
     $scope.percentage = (($scope.score / $scope.totalQuestions)*100).toFixed(2);
     if ($scope.percentage < 70) {
-      $scope.resultsMsg = "Sorry, you did not pass the CMT exam. Please review the\
-                           study material and try again. There is no penalty for\
-                           taking the exam multiple times. Only your highest score\
-                           will remain on record.";
+      $scope.resultsMsg = "You're not quite ready. Study the CMT practice exams\
+                           more before you take the certification exam.\
+                           Remember, there is no penalty for taking the CMT\
+                           certification exam more than once.  Only your\
+                           highest score will remain on record.";
     }
     else if ($scope.percentage >= 70) {
-      $scope.resultsMsg = "Congratulations, you passed the CMT exam. Please submit\
-                           your score below to record your CMT score. You will\
-                           see a link on your account page to checkout and receive\
-                           your certification and verification ID for employers.";
+      $scope.resultsMsg = "You did great! You're ready to take your CMT\
+                           certification exam! Remember, only your highest\
+                           score will remain on record, so it is okay if you\
+                           need to take the CMT certification exam more than once.\
+                           Good Luck!";
     }
 
   } // end selectAnswer function
@@ -68,4 +86,3 @@ angular.module('ptuApp').controller('cmtCtrl', ['$scope', '$http', '$rootScope',
 
 
 }]); //====== END CONTROLLER cmtCtrl ======
-
