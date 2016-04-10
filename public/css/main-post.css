@@ -1,13 +1,15 @@
 /*------------- Images --------------*/
 .logo-img {
   background: url(../images/ptulogo.png) no-repeat center;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   width: 200px;
   height: 50px; }
 
 .logo-img-O {
   background: url(../images/ptulogoOrange.png) no-repeat center;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   width: 200px;
   height: 50px; }
 
@@ -34,6 +36,9 @@
 .btn-custom {
   width: 100%;
   background: #ff851b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff851b), to(#ff501b));
+  background: -webkit-linear-gradient(top, #ff851b 0%, #ff501b 100%);
+  background: -o-linear-gradient(top, #ff851b 0%, #ff501b 100%);
   background: linear-gradient(to bottom, #ff851b 0%, #ff501b 100%);
   border-radius: 5px;
   border: 1px solid #001F3F;
@@ -41,11 +46,15 @@
   font-size: 1.2em; }
 
 .btn-custom:hover {
-  box-shadow: inset 0 0 10px #000; }
+  -webkit-box-shadow: inset 0 0 10px #000;
+          box-shadow: inset 0 0 10px #000; }
 
 .btn-custom-N {
   width: 100%;
   background: #00203f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00203f), to(#000a14));
+  background: -webkit-linear-gradient(top, #00203f 0%, #000a14 100%);
+  background: -o-linear-gradient(top, #00203f 0%, #000a14 100%);
   background: linear-gradient(to bottom, #00203f 0%, #000a14 100%);
   color: #FF851B;
   border-radius: 5px;
@@ -54,13 +63,17 @@
   font-size: 1.2em; }
 
 .btn-custom-N:hover {
-  box-shadow: inset 0 0 20px #7fdbff;
+  -webkit-box-shadow: inset 0 0 20px #7fdbff;
+          box-shadow: inset 0 0 20px #7fdbff;
   color: #FF851B;
   border: 1px solid #7fdbff; }
 
 /*-----------------Footer--------------------------*/
 .footer {
   background: #ff851b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff851b), to(#ff501b));
+  background: -webkit-linear-gradient(top, #ff851b 0%, #ff501b 100%);
+  background: -o-linear-gradient(top, #ff851b 0%, #ff501b 100%);
   background: linear-gradient(to bottom, #ff851b 0%, #ff501b 100%);
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif;
   padding: 10px; }
@@ -92,11 +105,15 @@ ul.footer-links li {
 
 a.navbar-brand.logo-img {
   background: url(../images/ptulogo.png) no-repeat center;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   width: 200px; }
 
 .navbar-custom {
   background: #ff851b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff851b), to(#ff501b));
+  background: -webkit-linear-gradient(top, #ff851b 0%, #ff501b 100%);
+  background: -o-linear-gradient(top, #ff851b 0%, #ff501b 100%);
   background: linear-gradient(to bottom, #ff851b 0%, #ff501b 100%);
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif;
   margin-bottom: -1px !important; }
@@ -135,7 +152,8 @@ button.navbar-toggle {
     display: block; }
   .navbar-collapse {
     border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
   .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px; }
@@ -230,50 +248,86 @@ body {
 /*------------------ Gradient Backgrounds -----------------*/
 .bg-aqua-gradient {
   background: #7fdbff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#7fdbff), to(#528ca3));
+  background: -webkit-linear-gradient(top, #7fdbff 0%, #528ca3 100%);
+  background: -o-linear-gradient(top, #7fdbff 0%, #528ca3 100%);
   background: linear-gradient(to bottom, #7fdbff 0%, #528ca3 100%); }
 
 .bg-blue-gradient {
   background: #0074d9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0074d9), to(#00417a));
+  background: -webkit-linear-gradient(top, #0074d9 0%, #00417a 100%);
+  background: -o-linear-gradient(top, #0074d9 0%, #00417a 100%);
   background: linear-gradient(to bottom, #0074d9 0%, #00417a 100%); }
 
 .bg-navy-gradient {
   background: #00203f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00203f), to(#000a14));
+  background: -webkit-linear-gradient(top, #00203f 0%, #000a14 100%);
+  background: -o-linear-gradient(top, #00203f 0%, #000a14 100%);
   background: linear-gradient(to bottom, #00203f 0%, #000a14 100%); }
 
 .bg-teal-gradient {
   background: #39cccc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#39cccc), to(#227a7a));
+  background: -webkit-linear-gradient(top, #39cccc 0%, #227a7a 100%);
+  background: -o-linear-gradient(top, #39cccc 0%, #227a7a 100%);
   background: linear-gradient(to bottom, #39cccc 0%, #227a7a 100%); }
 
 .bg-green-gradient {
   background: #2ecc40;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2ecc40), to(#1c7a27));
+  background: -webkit-linear-gradient(top, #2ecc40 0%, #1c7a27 100%);
+  background: -o-linear-gradient(top, #2ecc40 0%, #1c7a27 100%);
   background: linear-gradient(to bottom, #2ecc40 0%, #1c7a27 100%); }
 
 .bg-lime-gradient {
   background: #01ff6f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01ff6f), to(#02a348));
+  background: -webkit-linear-gradient(top, #01ff6f 0%, #02a348 100%);
+  background: -o-linear-gradient(top, #01ff6f 0%, #02a348 100%);
   background: linear-gradient(to bottom, #01ff6f 0%, #02a348 100%); }
 
 .bg-yellow-gradient {
   background: #ffdd00;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffdd00), to(#b89300));
+  background: -webkit-linear-gradient(top, #ffdd00 0%, #b89300 100%);
+  background: -o-linear-gradient(top, #ffdd00 0%, #b89300 100%);
   background: linear-gradient(to bottom, #ffdd00 0%, #b89300 100%); }
 
 .bg-orange-gradient {
   background: #ff851b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff851b), to(#ff501b));
+  background: -webkit-linear-gradient(top, #ff851b 0%, #ff501b 100%);
+  background: -o-linear-gradient(top, #ff851b 0%, #ff501b 100%);
   background: linear-gradient(to bottom, #ff851b 0%, #ff501b 100%); }
 
 .bg-red-gradient {
   background: #f62e24;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f62e24), to(#ff3679));
+  background: -webkit-linear-gradient(top, #f62e24 0%, #ff3679 100%);
+  background: -o-linear-gradient(top, #f62e24 0%, #ff3679 100%);
   background: linear-gradient(to bottom, #f62e24 0%, #ff3679 100%); }
 
 .bg-fuchsia-gradient {
   background: #f012bc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f012bc), to(#a30b80));
+  background: -webkit-linear-gradient(top, #f012bc 0%, #a30b80 100%);
+  background: -o-linear-gradient(top, #f012bc 0%, #a30b80 100%);
   background: linear-gradient(to bottom, #f012bc 0%, #a30b80 100%); }
 
 .bg-purple-gradient {
   background: #b00dc9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b00dc9), to(#6b077a));
+  background: -webkit-linear-gradient(top, #b00dc9 0%, #6b077a 100%);
+  background: -o-linear-gradient(top, #b00dc9 0%, #6b077a 100%);
   background: linear-gradient(to bottom, #b00dc9 0%, #6b077a 100%); }
 
 .bg-maroon-gradient {
   background: #cc1f73;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cc1f73), to(#85144b));
+  background: -webkit-linear-gradient(top, #cc1f73 0%, #85144b 100%);
+  background: -o-linear-gradient(top, #cc1f73 0%, #85144b 100%);
   background: linear-gradient(to bottom, #cc1f73 0%, #85144b 100%); }
 
 /***************************************************************
@@ -319,6 +373,8 @@ li {
 .form-input-custom::-webkit-input-placeholder {
   color: #FF851B;
   background: #00203f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00203f), to(#000a14));
+  background: -webkit-linear-gradient(top, #00203f 0%, #000a14 100%);
   background: linear-gradient(to bottom, #00203f 0%, #000a14 100%); }
 
 .form-container input,
@@ -514,7 +570,7 @@ nav a:focus {
   font-weight: 700;
   text-shadow: none;
   -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
   transition: color 0.3s; }
 
 /*top/bottom bars hover*/
@@ -528,23 +584,28 @@ nav a:focus {
   content: '';
   opacity: 0;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  -o-transition: opacity 0.3s, transform 0.3s, -o-transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s, -o-transform 0.3s;
   -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  transform: translateY(-10px); }
+  -ms-transform: translateY(-10px);
+   -o-transform: translateY(-10px);
+      transform: translateY(-10px); }
 
 .cl-effect-21 a::before {
   top: 0;
   -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  transform: translateY(-10px); }
+  -ms-transform: translateY(-10px);
+   -o-transform: translateY(-10px);
+      transform: translateY(-10px); }
 
 .cl-effect-21 a::after {
   bottom: 0;
   -webkit-transform: translateY(10px);
-  -moz-transform: translateY(10px);
-  transform: translateY(10px);
+  -ms-transform: translateY(10px);
+   -o-transform: translateY(10px);
+      transform: translateY(10px);
   text-decoration: none; }
 
 /*text color hover*/
@@ -559,8 +620,9 @@ nav a:focus {
 .cl-effect-21 a:focus::after {
   opacity: 1;
   -webkit-transform: translateY(0px);
-  -moz-transform: translateY(0px);
-  transform: translateY(0px);
+  -ms-transform: translateY(0px);
+   -o-transform: translateY(0px);
+      transform: translateY(0px);
   text-decoration: none; }
 
 /*---------Link Effects for Header----------------*/
@@ -587,22 +649,27 @@ nav a:focus {
   display: inline-block;
   opacity: 0;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
-  transition: transform 0.3s, opacity 0.2s; }
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
+  transition: opacity 0.2s, -webkit-transform 0.3s;
+  -o-transition: transform 0.3s, opacity 0.2s, -o-transform 0.3s;
+  transition: transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s, -o-transform 0.3s; }
 
 .cl-effect-1 a::before {
   margin-right: 10px;
   content: '[';
   -webkit-transform: translateX(20px);
-  -moz-transform: translateX(20px);
-  transform: translateX(20px); }
+  -ms-transform: translateX(20px);
+   -o-transform: translateX(20px);
+      transform: translateX(20px); }
 
 .cl-effect-1 a::after {
   margin-left: 10px;
   content: ']';
   -webkit-transform: translateX(-20px);
-  -moz-transform: translateX(-20px);
-  transform: translateX(-20px); }
+  -ms-transform: translateX(-20px);
+   -o-transform: translateX(-20px);
+      transform: translateX(-20px); }
 
 .cl-effect-1 a:hover::before,
 .cl-effect-1 a:hover::after,
@@ -610,8 +677,9 @@ nav a:focus {
 .cl-effect-1 a:focus::after {
   opacity: 1;
   -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  transform: translateX(0px); }
+  -ms-transform: translateX(0px);
+   -o-transform: translateX(0px);
+      transform: translateX(0px); }
 
 /*---------------Cert Containers---------------------------*/
 .certs-container {
@@ -678,4 +746,4 @@ span.lg {
   background: rgba(0, 32, 63, 0.2);
   margin: 30px auto; }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main-post.css.map */
