@@ -226,19 +226,19 @@ block content
             p: a(href='/auth/instagram').orange Link your Instagram account
         .col-sm-offset-3.col-sm-4
           if user.facebook
-            p: a.text-danger(href='/account/unlink/facebook') Unlink your Facebook account
+            p: a.btn-link.text-danger(href='/account/unlink/facebook') Unlink your Facebook account
           else
-            p: a(href='/auth/facebook').orange Link your Facebook account
+            p: a(href='/auth/facebook').btn-link.orange Link your Facebook account
         .col-sm-offset-3.col-sm-4
           if user.google
-            p: a.text-danger(href='/account/unlink/google').orange Unlink your Google account
+            p: a.btn-link.text-danger(href='/account/unlink/google').orange Unlink your Google account
           else
-            p: a(href='/auth/google').orange Link your Google account
+            p: a(href='/auth/google').btn-link.orange Link your Google account
         .col-sm-offset-3.col-sm-4
           if user.twitter
-            p: a.text-danger(href='/account/unlink/twitter') Unlink your Twitter account
+            p: a.btn-link.text-danger(href='/account/unlink/twitter') Unlink your Twitter account
           else
-            p: a(href='/auth/twitter').orange Link your Twitter account
+            p: a(href='/auth/twitter').btn-link.orange Link your Twitter account
         ////.col-sm-offset-3.col-sm-4
           if user.github
             p: a.text-danger(href='/account/unlink/github') Unlink your GitHub account
@@ -246,6 +246,6 @@ block content
             p: a(href='/auth/github').orange Link your GitHub account
         .col-sm-offset-3.col-sm-4
           if user.linkedin
-            p: a.text-danger(href='/account/unlink/linkedin') Unlink your LinkedIn account
+            p: a.btn-link.text-danger(href='/account/unlink/linkedin') Unlink your LinkedIn account
           else
-            p: a(href='/auth/linkedin').orange Link your LinkedIn account
+            p: a(href='/auth/linkedin').btn-link.orange Link your LinkedIn account

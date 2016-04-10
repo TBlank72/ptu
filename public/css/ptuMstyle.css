@@ -13,7 +13,7 @@ body {
   padding-top: 50px;
 }
 .container-fluid {
-  min-height: 83vh;
+  min-height: 85vh;
 }
 .container-fluid .bg-navy-gradient {
   margin-top: 0 !important;
@@ -302,7 +302,7 @@ button.navbar-toggle {
 
 /*-----------------Carousel--------------------------*/
 .carousel-inner {
-  height: 83vh;
+  height: 85vh;
   text-align: center;
   margin: 0 auto;
   color: white;
@@ -354,7 +354,9 @@ button.navbar-toggle {
   position: relative;
   top: 0;
 }
-
+ul.footer-links li {
+  list-style-type: none;
+}
 .footer-links li,
 .footer-links li a,
 .footer-links li p {
@@ -367,6 +369,9 @@ button.navbar-toggle {
 a,
 a:hover {
   text-decoration: none;
+}
+a.btn-link:hover {
+  color: rgba(0,116,217,1);
 }
 
 nav a {

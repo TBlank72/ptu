@@ -1,0 +1,30 @@
+// everything buttons
+
+.btn-custom {
+  width: 100%;
+  @include bg-orange-gradient();
+  border-radius: 5px;
+  border: 1px solid $primeC1;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.btn-custom:hover {
+  box-shadow: inset 0 0 10px #000;
+}
+
+.btn-custom-N {
+  width: 100%;
+  @include bg-navy-gradient();
+  color: $primeC2;
+  border-radius: 5px;
+  border: 1px solid $primeC1;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.btn-custom-N:hover {
+  box-shadow: inset 0 0 20px rgba(127,219,255,1);
+  color: $primeC2;
+  border: 1px solid rgba(127,219,255,1);
+}

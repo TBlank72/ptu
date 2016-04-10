@@ -1,0 +1,29 @@
+// everything footers 
+
+/*-----------------Footer--------------------------*/
+
+.footer {
+  @include bg-orange-gradient();
+  font-family: $fontF-std;
+  padding: 10px;
+}
+
+.footer .container {
+  max-width: 80%;
+}
+
+.footer-links {
+  display: inline-block;
+  margin: auto;
+  list-style-type: none;
+  position: relative;
+  top: 0;
+}
+ul.footer-links li {
+  list-style-type: none;
+}
+.footer-links li,
+.footer-links li a,
+.footer-links li p {
+  color: $primeC1;
+}

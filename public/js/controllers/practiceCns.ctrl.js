@@ -9,21 +9,21 @@ angular.module('ptuApp').controller('practiceCnsCtrl', ['$scope', '$http', '$roo
   
   // GET practice CNS quiz 1 data
   if (window.location.href.indexOf("cnspractice1") > -1) {
-    $http.get('json/cns_Pexam1.json').then(function(quizData){
+    $http.get('json/cns_pexam1.json').then(function(quizData){
       $scope.myQuestions = quizData.data;
       $scope.totalQuestions = $scope.myQuestions.length;
     });
   }
   // GET practice CNS quiz 2 data
   else if (window.location.href.indexOf("cnspractice2") > -1) {
-    $http.get('json/cns_Pexam2.json').then(function(quizData){
+    $http.get('json/cns_pexam2.json').then(function(quizData){
       $scope.myQuestions = quizData.data;
       $scope.totalQuestions = $scope.myQuestions.length;
     });
   }
   // GET practice CNS quiz 3 data
   else if (window.location.href.indexOf("cnspractice3") > -1) {
-    $http.get('json/cns_Pexam3.json').then(function(quizData){
+    $http.get('json/cns_pexam3.json').then(function(quizData){
       $scope.myQuestions = quizData.data;
       $scope.totalQuestions = $scope.myQuestions.length;
     });

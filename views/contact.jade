@@ -1,25 +1,30 @@
 extends layout
 
 block content
-  .page-header
-    h3 Contact Form
+  .container-fluid.bg-navy-gradient
+    .page-header
+      h1 #[span(class='orange') Contact Us]
+      p.
+        Please send us any questions or concerns and you will
+        receive a response within 24 hours. You may also find
+        the FAQ page helpful for common questions.
 
-  form.form-horizontal(method='POST', action='/contact')
-    input(type='hidden', name='_csrf', value=_csrf)
-    .form-group
-      label(class='col-sm-2 control-label', for='name') Name
-      .col-sm-8
-        input.form-control(type='text', name='name', id='name', autofocus=true)
-    .form-group
-      label(class='col-sm-2 control-label', for='email') Email
-      .col-sm-8
-        input.form-control(type='text', name='email', id='email')
-    .form-group
-      label(class='col-sm-2 control-label', for='message') Body
-      .col-sm-8
-        textarea.form-control(name='message', id='message', rows='7')
-    .form-group
-      .col-sm-offset-2.col-sm-8
-        button.btn.btn-primary(type='submit')
-          i.fa.fa-envelope
-          | Send
+    form.form-horizontal(method='POST', action='/contact')
+      input(type='hidden', name='_csrf', value=_csrf)
+      .form-group
+        label.control-label.orange(class='col-sm-2 control-label.control-label.orange', for='name') Name
+        .col-sm-8
+          input.form-control.form-input-custom(type='text', name='name', id='name', autofocus=true)
+      .form-group
+        label.control-label.orange(class='col-sm-2 control-label.control-label.orange', for='email') Email
+        .col-sm-8
+          input.form-control.form-input-custom(type='text', name='email', id='email')
+      .form-group
+        label.control-label.orange(class='col-sm-2 control-label.control-label.orange', for='message') Body
+        .col-sm-8
+          textarea.form-control.form-input-custom(name='message', id='message', rows='7')
+      .form-group
+        .col-sm-offset-2.col-sm-8
+          button.btn.btn-custom(type='submit')
+            i.fa.fa-envelope
+            | Send

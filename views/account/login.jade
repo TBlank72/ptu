@@ -3,7 +3,7 @@ extends ../layout
 block content
   .container-fluid.bg-navy-gradient
     .page-header
-      h3 Sign in
+      h3 Sign in 
     form.form-horizontal(method='POST', action='/login')
       input(type='hidden', name='_csrf', value=_csrf)
       .form-group
@@ -20,6 +20,8 @@ block content
             i.fa.fa-user
             | Login
           a.btn.btn-link.lime(href='/forgot') Forgot your password?
+          br
+          a.btn.btn-link.lime(href='/signup') Create a new account?
       .form-group
         .col-sm-offset-3.col-sm-7
           hr

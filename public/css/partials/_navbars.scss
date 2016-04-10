@@ -1,0 +1,53 @@
+// navbar formatting
+
+/*---------------Navbar-----------------------------*/
+
+.navbar,
+.navbar-custom,
+.navbar-fixed-top,
+.navbar .navbar-custom .navbar-fixed-top {
+  margin-bottom: 0 !important;
+}
+
+a.navbar-brand.logo-img {
+  background: url(../images/ptulogo.png) no-repeat center;
+  background-size: contain; 
+  width: 200px;
+}
+
+.navbar-custom {
+  @include bg-orange-gradient(); 
+  font-family: $fontF-std;
+  margin-bottom: -1px !important;
+}
+
+.navbar-custom ul li a {
+  font-weight: bold;
+}
+
+.navbar-brand {
+  color: $primeC1;
+}
+
+.navbar-custom button,
+.navbar-custom span,
+.navbar-custom li a {
+  color: $primeC1;
+}
+
+.navbar-custom li a:hover {
+  background: none;
+}
+
+.navbar-custom button:hover {
+  background: $blue;
+}
+
+button.navbar-toggle {
+  color: $primeC2;
+  background: $primeC1;
+}
+
+.navbar-toggle span {
+  background: $primeC2;
+}

@@ -39,7 +39,7 @@ block content
       .results( class=" {{ (totalQuestions === activeQuestion) ?\
         'active' : 'inactive' }} ")
         p {{ resultsMsg }}
-        .form-container
+        .form-container-results
           h2 Results
           form(action='/cmt', method='post')
             input(type='hidden', name='_csrf', value=_csrf)

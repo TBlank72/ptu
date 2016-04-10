@@ -5,28 +5,27 @@
       li.active(data-target='#myCarousel', data-slide-to='0')
       li(data-target='#myCarousel', data-slide-to='1')
       li(data-target='#myCarousel', data-slide-to='2')
+    // Content
     .carousel-inner
       .item.active
-        .container
           h1 Test Now, Pay Later
-          h3 Only pay for your certification if you pass the test
+          h3 Only pay for your certification if you pass the exam
           nav.cl-effect-21
-            a(href='#').cta-link Start Test
-          a.btn.btn-lg.btn-primary(href='#', role='button' data-toggle="modal" data-target="#loginModal") Sign up today
+            a(href='/account').cta-link Start Test
+          a.btn.btn-lg.btn-primary(href='/signup', role='button') Sign up today
       .item
-        .container
-          h1 Free Study Guide
-          h3 Full access to online modules
+          h1 Grow Your Career 
+          h3 Improve your resume, results, and client retention
           nav.cl-effect-21
             a(href='#').cta-link Learn More?
-          a.btn.btn-lg.btn-primary(href='#', role='button') Sign up today
+          a.btn.btn-lg.btn-primary(href='/signup', role='button') Sign up today
       .item
-        .container
           h1 No Expiration Date!
           h3 Never worry about re-certification again!
           nav.cl-effect-21
             a(href='#').cta-link Lifetime Certifications
-          a.btn.btn-lg.btn-primary(href='#', role='button') Sign up today
+          a.btn.btn-lg.btn-primary(href='/signup', role='button') Sign up today
+    //left / right buttons
     a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
       span.glyphicon.glyphicon-chevron-left
     a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
