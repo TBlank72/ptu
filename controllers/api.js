@@ -180,6 +180,8 @@ exports.postStripeCharges = function(req, res) {
     var certInitials = 'cmt';
   else if (certType == 'Certified Nutrition Specialist')
     var certInitials = 'cns';
+  else if (certType == 'Certified TESTING')
+    var certInitials = 'test';
 
   var CurCert = ('certs.' + certInitials);
   var CurCertPaid = (CurCert + '.paid');
