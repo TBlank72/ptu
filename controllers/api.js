@@ -164,8 +164,8 @@ exports.postStripeCharges = function(req, res) {
   stripe = require('stripe')(process.env.STRIPE_SKEY);
 
   // Retrieve the request's body and parse it as JSON
-  var event_json = JSON.parse(req.body);
-
+  var event_json = req.body;
+  //JSON.parse removed before req.body
   // Send status 200 to Stripe before processing data
   res.send(200);
 /*
