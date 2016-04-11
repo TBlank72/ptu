@@ -86,7 +86,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use(function(req, res, next) {
-  if (req.path === '/api/upload') {
+  if (req.path === '/api/upload' || req.path == '/api/stripe/charges') {
     next();
   } else {
     lusca.csrf()(req, res, next);

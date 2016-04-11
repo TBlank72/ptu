@@ -168,7 +168,7 @@ exports.postStripeCharges = function(req, res) {
 
   // Send status 200 to Stripe before processing data
   res.send(200);
-
+/*
   var today = new Date();
   var userID;
 
@@ -191,7 +191,7 @@ exports.postStripeCharges = function(req, res) {
       }
     });
   });
-
+*/
   /*
   // if charge succeeded 
   if (event_json.type == 'charge.succeeded') {
