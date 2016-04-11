@@ -167,6 +167,9 @@ exports.postStripeCharges = function(req, res) {
   // Retrieve the request's body from Stripe
   var event_json = req.body;
 
+  // Send status 200 to Stripe before processing data
+  res.sendStatus(200);
+
   // Set values to update user model paid + paid_on
   var today = new Date();
   var Cuemail = event_json.data.object.source.name;
@@ -174,18 +177,19 @@ exports.postStripeCharges = function(req, res) {
 
   // Set value of cert to update
   if (certType == 'Certified Personal Trainer')
-    certType = 'cpt';
+    var certInitials = 'cpt';
   else if (certType == 'Certified Master Trainer')
-    certType = 'cmt';
+    var certInitials = 'cmt';
   else if (certType == 'Certified Nutrition Specialist')
-    certType = 'cns';
+    var certInitials = 'cns';
+  console.log('-----------certInitials = ' certInitials);
 
-  var CurCert = 'certs.'.concat(certType);
-  var CurCertPaid = CurCert.concat('.paid');
-  var CurCertPaid_On = CurCert.concat('.paid_on');
+  var CurCert = ('certs.' += certInitials);
+  var CurCertPaid = (CurCert += '.paid');
+  var CurCertPaid_On = (CurCert += '.paid_on');
+  console.log('-----------CurCertPaid = ' CurCertPaid);
+  console.log('-----------CurCertPaid_On = ' CurCertPaid_On);
 
-  // Send status 200 to Stripe before processing data
-  res.send(200);
 
   // Create and save payment record
   var payment = new Payment({
