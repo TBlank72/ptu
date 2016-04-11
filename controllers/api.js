@@ -150,9 +150,7 @@ exports.postStripe = function(req, res, next) {
       req.flash('errors', { msg: 'Your card has been declined.' });
       return res.redirect('/account');
     }
-    req.flash('success', { msg: 'Your card has been charged successfully.' });
-    //var body = req.body;
-    //res.json(body);
+    req.flash('success', { msg: 'Your card has been charged successfully.  You may need to refresh your browser to to see your updated payment status.' });
     res.redirect('/account');
   });
 };
@@ -174,8 +172,7 @@ exports.postStripeCharges = function(req, res) {
   var today = new Date();
   var Cuemail = event_json.data.object.source.name;
   var certType = event_json.data.object.description;
-  console.log("Cuemail = " + Cuemail);
-  console.log("certType = " + certType);
+
   // Set value of cert to update
   if (certType == 'Certified Personal Trainer')
     var certInitials = 'cpt';
@@ -183,13 +180,10 @@ exports.postStripeCharges = function(req, res) {
     var certInitials = 'cmt';
   else if (certType == 'Certified Nutrition Specialist')
     var certInitials = 'cns';
-  console.log('-----------certInitials = ' + certInitials);
 
   var CurCert = ('certs.' + certInitials);
   var CurCertPaid = (CurCert + '.paid');
   var CurCertPaid_On = (CurCert + '.paid_on');
-  console.log('-----------CurCertPaid = ' + CurCertPaid);
-  console.log('-----------CurCertPaid_On = ' + CurCertPaid_On);
   var update = {};
   update[CurCertPaid] = true;
   update[CurCertPaid_On] = today;
@@ -213,7 +207,6 @@ exports.postStripeCharges = function(req, res) {
 
   // if charge succeeded update paid = true + paid_on date
   if (event_json.type == 'charge.succeeded') {
-    console.log('charge.succeeded = true');
     User.findOneAndUpdate(
       {'email': Cuemail},
       { $set: update },
@@ -223,7 +216,6 @@ exports.postStripeCharges = function(req, res) {
           console.log(err);
         else {
           updated_user.save();
-          console.log('updated_user.email= ' + updated_user.email);
         }
       }
     ); // End findOneAndUpdate()
