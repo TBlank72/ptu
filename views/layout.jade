@@ -12,11 +12,11 @@ html(ng-app="ptuApp", lang='en')
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css", rel="stylesheet")
     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet")
     link(href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css", rel="stylesheet")
-    //link(rel='stylesheet', href='/css/main.css')
+    link(rel='stylesheet', href='/css/main.css')
     //link(rel='stylesheet', href='/css/quiz.css')
     //link(rel='stylesheet', href='/css/main-post.css')
     //link(rel='stylesheet', href='/css/quiz-post.css')
-    link(rel='stylesheet', href='/css/main-min.css')
+    //link(rel='stylesheet', href='/css/main-min.css')
     link(rel='stylesheet', href='/css/quiz-min.css')
     base(href='/')
   body
@@ -47,11 +47,13 @@ html(ng-app="ptuApp", lang='en')
     script(src='js/controllers/practicecmt.ctrl.js')
     script(src='js/controllers/practicecns.ctrl.js')
 
-    // Google Analytics: change UA-XXXXX-X to be your site's ID
+    // Google Analytics
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-XXXXX-X', 'auto');
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-76194353-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('require', 'linkid');
       ga('send', 'pageview');

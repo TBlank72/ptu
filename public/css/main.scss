@@ -146,12 +146,12 @@ li {
   color: $white;
 }
 
-.container-fluid h1,
-.container-fluid h2,
-.container-fluid h3,
-.container-fluid h4,
-.container-fluid h5,
-.container-fluid p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   color: $white;
   font-family: $fontF-std;
 }
@@ -174,11 +174,22 @@ li {
   color: $primeC2;
   @include bg-navy-gradient();
 }
+
 .form-container input,
 .form-container input::-webkit-input-placeholder {
   color: $primeC2;
   text-align: center;
   font-family: $fontF-std;
+}
+
+.form-container-verified {
+  margin: 30px auto;
+  padding: 20px;
+  width: 800px !important;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  border: 2px solid rgba(255,133,27,1);
+  text-align: center;
 }
 
 
@@ -582,7 +593,8 @@ span.lg {
 
 /*----------------- verified.jade -----------------------*/
 .verified-container {
-  max-width: 60%;
-  background: rgba(0,32,63,0.2);
+  width: 1080px;
+  background: rgba(0,32,63,1);
   margin: 30px auto;
+  padding: 100px;
 }

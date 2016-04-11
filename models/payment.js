@@ -5,10 +5,8 @@ var paymentSchema = new mongoose.Schema({
   created_on: Date,
   event_type: String,
   cert: String,
-  //success: Boolean, use event type
   amount: Number,
   user_email: String,
-  user_id: String
 }, { timestamps: true });
 
 var Payment = mongoose.model('Payment', paymentSchema);

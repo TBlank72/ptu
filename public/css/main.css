@@ -12,11 +12,18 @@
   height: 50px; }
 
 /*---------------- cert image -----------------*/
+.cert-img-pad {
+  background: white;
+  padding: 20px;
+  margin: 10px auto 100px auto;
+  width: 1200px;
+  text-align: center; }
+
 .cert-img-container {
   position: relative;
   background: none;
-  width: 80%;
-  margin: 20px auto 50px auto;
+  width: 1060px;
+  margin: 50px auto 50px auto;
   text-align: center; }
 
 .cert-img {
@@ -24,12 +31,25 @@
   position: relative; }
 
 #nameOnCert {
+  font-size: 3.5em;
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: none;
+  color: #001F3F;
+  display: inline;
+  position: absolute;
+  top: 270px;
+  left: 60px; }
+
+#verifyIdOnCert {
+  font-size: 1.4em;
+  font-family: sans-serif;
   background-color: none;
   color: black;
   display: inline;
   position: absolute;
-  top: 300px;
-  left: 400px; }
+  top: 666px;
+  left: 714px; }
 
 .btn-custom {
   width: 100%;
@@ -295,12 +315,12 @@ li {
   list-style: square;
   color: #FFFFFF; }
 
-.container-fluid h1,
-.container-fluid h2,
-.container-fluid h3,
-.container-fluid h4,
-.container-fluid h5,
-.container-fluid p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   color: #FFFFFF;
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif; }
 
@@ -326,6 +346,15 @@ li {
   color: #FF851B;
   text-align: center;
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif; }
+
+.form-container-verified {
+  margin: 30px auto;
+  padding: 20px;
+  width: 800px !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 2px solid #ff851b;
+  text-align: center; }
 
 .msg-container {
   max-width: 400px;
@@ -674,8 +703,9 @@ span.lg {
 
 /*----------------- verified.jade -----------------------*/
 .verified-container {
-  max-width: 60%;
-  background: rgba(0, 32, 63, 0.2);
-  margin: 30px auto; }
+  width: 1080px;
+  background: #00203f;
+  margin: 30px auto;
+  padding: 100px; }
 
 /*# sourceMappingURL=main.css.map */

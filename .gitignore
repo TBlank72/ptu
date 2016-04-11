@@ -9,8 +9,12 @@ lib-cov
 *.swp
 
 pids
+
 logs
+npm-debug.log
+
 results
+
 tmp
 
 # API keys and secrets

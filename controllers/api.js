@@ -172,23 +172,13 @@ exports.postStripeCharges = function(req, res) {
   var today = new Date();
   var userID;
 
-  User.findOne({email: event_json.data.object.description}, function(err, user) {
-    if (!user)
-      userID = null;
-    if (user)
-      userID = user._id;
-  });
-
   var payment = new Payment({
     event_Obj_id: event_json.data.object.id,
     created_on: today,
     event_type: event_json.type,
     cert: event_json.data.object.description,
-    //sucess: use event type 
     amount: event_json.data.object.amount,
-    user_email: event_json.data.object.source.name || event_json.data.object.description,
-    user_id: userID 
-
+    user_email: event_json.data.object.source.name,
   });
 
   Payment.findOne({ event_Obj_id: event_json.data.object.id }, function(err, existingEvent) {
@@ -201,6 +191,8 @@ exports.postStripeCharges = function(req, res) {
       }
     });
   });
+
+  /*
   // if charge succeeded 
   if (event_json.type == 'charge.succeeded') {
     // add find user and update paid to true and paid_on date
@@ -213,6 +205,7 @@ exports.postStripeCharges = function(req, res) {
   else {
     // log other event
   }
+ */
 
 };
 
