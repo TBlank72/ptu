@@ -217,11 +217,11 @@ exports.postStripeCharges = function(req, res) {
       },
       {new: true, runValidators: true},
       function(err, updated_user) {
-        if (err) console.log(err);
-      }
-        else {
+        if (err)
+          console.log(err);
+        else
           console.log('updated_user.email= ' + updated_user.email);
-        }
+      }
     ); // End findOneAndUpdate()
 
   } // end if 'charge.secceded'
