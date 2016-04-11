@@ -190,6 +190,10 @@ exports.postStripeCharges = function(req, res) {
   var CurCertPaid_On = (CurCert + '.paid_on');
   console.log('-----------CurCertPaid = ' + CurCertPaid);
   console.log('-----------CurCertPaid_On = ' + CurCertPaid_On);
+  var update = {};
+  update[CurCertPaid] = true;
+  update[CurCertPaid_On] = today;
+
 
 
   // Create and save payment record
@@ -212,10 +216,7 @@ exports.postStripeCharges = function(req, res) {
     console.log('charge.succeeded = true');
     User.findOneAndUpdate(
       {'email': Cuemail},
-      { $set: { 'certs.cpt.paid': true,
-                CurCertPaid_On : today
-              }
-      },
+      { $set: update },
       {new: true, runValidators: true},
       function(err, updated_user) {
         if (err)
@@ -223,7 +224,6 @@ exports.postStripeCharges = function(req, res) {
         else {
           updated_user.save();
           console.log('updated_user.email= ' + updated_user.email);
-          console.log('updated_user.certs= ' + updated_user.certs);
         }
       }
     ); // End findOneAndUpdate()
