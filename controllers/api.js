@@ -163,12 +163,10 @@ exports.postStripe = function(req, res, next) {
 exports.postStripeCharges = function(req, res) {
   stripe = require('stripe')(process.env.STRIPE_SKEY);
 
-  // Retrieve the request's body and parse it as JSON
+  // Retrieve the request's body from Stripe
   var event_json = req.body;
-  //JSON.parse removed before req.body
   // Send status 200 to Stripe before processing data
   res.send(200);
-/*
   var today = new Date();
   var userID;
 
@@ -180,18 +178,20 @@ exports.postStripeCharges = function(req, res) {
     amount: event_json.data.object.amount,
     user_email: event_json.data.object.source.name,
   });
-
+  payment.save(function(err) {
+    if (err)
+      return next(err);
+    //else
+     // return next();
+  });
+  /*
   Payment.findOne({ event_Obj_id: event_json.data.object.id }, function(err, existingEvent) {
     if (existingEvent) {
       // do something if that payment event id exists
     }
-    payment.save(function(err) {
-      if (err) {
-        return next(err);
-      }
-    });
+    //payment.save func removed from here
   });
-*/
+ */
   /*
   // if charge succeeded 
   if (event_json.type == 'charge.succeeded') {
