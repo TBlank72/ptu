@@ -187,8 +187,8 @@ exports.postStripeCharges = function(req, res) {
   var CurCert = ('certs.' + certInitials);
   var CurCertPaid = (CurCert + '.paid');
   var CurCertPaid_On = (CurCert + '.paid_on');
-  console.log('-----------CurCertPaid = ' CurCertPaid);
-  console.log('-----------CurCertPaid_On = ' CurCertPaid_On);
+  console.log('-----------CurCertPaid = ' + CurCertPaid);
+  console.log('-----------CurCertPaid_On = ' + CurCertPaid_On);
 
 
   // Create and save payment record
