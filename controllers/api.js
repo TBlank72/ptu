@@ -139,8 +139,9 @@ exports.postStripe = function(req, res, next) {
   var stripeToken = req.body.stripeToken;
   var stripeEmail = req.body.stripeEmail;
   var certType = req.body.certType;
+  var price = req.body.price;
   var charge = stripe.charges.create({
-    amount: 9900,
+    amount: price,
     currency: 'usd',
     source: stripeToken,
     description: certType 

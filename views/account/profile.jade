@@ -67,6 +67,7 @@ block content
             form(method='POST', action="account/payment")
               input(type='hidden', name='_csrf', value=_csrf)
               input(type='hidden', name='certType', value='Certified Personal Trainer')
+              input(type='hidden', name='price', value='9900')
               script(
               src='https://checkout.stripe.com/checkout.js',
               class='stripe-button',
@@ -101,6 +102,7 @@ block content
             form(method='POST', action="account/payment")
               input(type='hidden', name='_csrf', value=_csrf)
               input(type='hidden', name='certType', value='Certified Master Trainer')
+              input(type='hidden', name='price', value='14900')
               script(
               src='https://checkout.stripe.com/checkout.js',
               class='stripe-button',
@@ -135,6 +137,7 @@ block content
             form(method='POST', action="account/payment")
               input(type='hidden', name='_csrf', value=_csrf)
               input(type='hidden', name='certType', value='Certified Nutrition Specialist')
+              input(type='hidden', name='price', value='9900')
               script(
               src='https://checkout.stripe.com/checkout.js',
               class='stripe-button',
