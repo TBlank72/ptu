@@ -218,6 +218,9 @@ exports.postStripeCharges = function(req, res) {
       function(err, updated_user) {
         if (err) console.log(err);
       }
+        else {
+          console.log('updated_user.email= ' + updated_user.email);
+        }
     ); // End findOneAndUpdate()
 
   } // end if 'charge.secceded'
