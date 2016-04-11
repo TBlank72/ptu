@@ -174,7 +174,8 @@ exports.postStripeCharges = function(req, res) {
   var today = new Date();
   var Cuemail = event_json.data.object.source.name;
   var certType = event_json.data.object.description;
-
+  console.log("Cuemail = " + Cuemail);
+  console.log("certType = " + certType);
   // Set value of cert to update
   if (certType == 'Certified Personal Trainer')
     var certInitials = 'cpt';
@@ -182,7 +183,7 @@ exports.postStripeCharges = function(req, res) {
     var certInitials = 'cmt';
   else if (certType == 'Certified Nutrition Specialist')
     var certInitials = 'cns';
-  console.log('-----------certInitials = ' certInitials);
+  console.log('-----------certInitials = ' + certInitials);
 
   var CurCert = ('certs.' + certInitials);
   var CurCertPaid = (CurCert + '.paid');
