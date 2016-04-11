@@ -209,9 +209,10 @@ exports.postStripeCharges = function(req, res) {
 
   // if charge succeeded update paid = true + paid_on date
   if (event_json.type == 'charge.succeeded') {
+    console.log('charge.succeeded = true');
     User.findOneAndUpdate(
       {'email': Cuemail},
-      { $set: { CurCertPaid: true,
+      { $set: { 'certs.cpt.paid': true,
                 CurCertPaid_On : today
               }
       },
@@ -219,8 +220,11 @@ exports.postStripeCharges = function(req, res) {
       function(err, updated_user) {
         if (err)
           console.log(err);
-        else
+        else {
+          updated_user.save();
           console.log('updated_user.email= ' + updated_user.email);
+          console.log('updated_user.certs= ' + updated_user.certs);
+        }
       }
     ); // End findOneAndUpdate()
 
