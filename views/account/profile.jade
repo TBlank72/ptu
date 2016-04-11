@@ -76,7 +76,7 @@ block content
               data-name='PT University',
               data-description='CPT Certification ($99)',
               data-amount='9900')
-            form(action='/api/stripe', method='get')
+            //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for CPT Certification', class='btn-custom bg-green-gradient')
         else
           p You haven't taken the CPT Exam yet.  Click to start now.
@@ -111,7 +111,7 @@ block content
               data-name='PT University',
               data-description='CMT Certification ($149)',
               data-amount='14900')
-            form(action='/api/stripe', method='get')
+            //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for CMT Certification', class='btn-custom bg-red-gradient')
         else
           p You haven't taken the CMT Exam yet.  Click to start now.
@@ -146,7 +146,7 @@ block content
               data-name='PT University',
               data-description='CNS Certification ($99)',
               data-amount='9900')
-            form(action='/api/stripe', method='get')
+            //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for CNS Certification', class='btn-custom bg-blue-gradient')
         else
           p You haven't taken the CNS Exam yet.  Click to start now.
@@ -172,15 +172,16 @@ block content
             form(method='POST', action="account/payment")
               input(type='hidden', name='_csrf', value=_csrf)
               input(type='hidden', name='certType', value='Certified TESTING')
+              input(type='hidden', name='price', value='2499')
               script(
               src='https://checkout.stripe.com/checkout.js',
               class='stripe-button',
               data-key=publishableKey,
               data-image='/images/ptStripeLogo.png',
               data-name='PT University',
-              data-description='TEST Certification ($99)',
-              data-amount='9900')
-            form(action='/api/stripe', method='get')
+              data-description='TEST Certification ($24.99)',
+              data-amount='24.99')
+            //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for TEST Certification', class='btn-custom bg-aqua-gradient')
         else
           p You haven't taken the TEST Exam yet.  Click to start now.
@@ -222,11 +223,6 @@ block content
       h3 Linked Accounts
     .form-horizontal
       .form-group
-        ////.col-sm-offset-3.col-sm-4
-          if user.instagram
-            p: a.text-danger(href='/account/unlink/instagram') Unlink your Instagram account
-          else
-            p: a(href='/auth/instagram').orange Link your Instagram account
         .col-sm-offset-3.col-sm-4
           if user.facebook
             p: a.btn-link.text-danger(href='/account/unlink/facebook') Unlink your Facebook account
@@ -242,11 +238,6 @@ block content
             p: a.btn-link.text-danger(href='/account/unlink/twitter') Unlink your Twitter account
           else
             p: a(href='/auth/twitter').btn-link.orange Link your Twitter account
-        ////.col-sm-offset-3.col-sm-4
-          if user.github
-            p: a.text-danger(href='/account/unlink/github') Unlink your GitHub account
-          else
-            p: a(href='/auth/github').orange Link your GitHub account
         .col-sm-offset-3.col-sm-4
           if user.linkedin
             p: a.btn-link.text-danger(href='/account/unlink/linkedin') Unlink your LinkedIn account
