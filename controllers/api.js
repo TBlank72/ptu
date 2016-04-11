@@ -168,12 +168,27 @@ exports.postStripeCharges = function(req, res) {
   var event_json = req.body;
   // Send status 200 to Stripe before processing data
   res.send(200);
-  var today = new Date();
-  var userID;
 
+  // Set values to update user model paid + paid_on
+  var today = new Date();
+  var Cuemail = event_json.data.object.source.name;
+  var certType = event_json.data.object.description;
+
+  // Set value of cert to update
+  if (certType == 'Certified Personal Trainer')
+    certType = 'cpt';
+  else if (certType == 'Certified Master Trainer')
+    certType = 'cmt';
+  else if (certType == 'Certified Nutrition Specialist')
+    certType = 'cns';
+
+  var CurCert = 'certs.'.concat(certType);
+  var CurCertPaid = CurCert.concat('.paid');
+  var CurCertPaid_On = CurCert.concat('.paid_on');
+
+  // Create and save payment record
   var payment = new Payment({
     event_Obj_id: event_json.data.object.id,
-    created_on: today,
     event_type: event_json.type,
     cert: event_json.data.object.description,
     amount: event_json.data.object.amount,
@@ -185,28 +200,23 @@ exports.postStripeCharges = function(req, res) {
     //else
      // return next();
   });
-  /*
-  Payment.findOne({ event_Obj_id: event_json.data.object.id }, function(err, existingEvent) {
-    if (existingEvent) {
-      // do something if that payment event id exists
-    }
-    //payment.save func removed from here
-  });
- */
-  /*
-  // if charge succeeded 
+
+  // if charge succeeded update paid = true + paid_on date
   if (event_json.type == 'charge.succeeded') {
-    // add find user and update paid to true and paid_on date
-    // and update payment collection
-  }
-  // if charge failed
-  else if (event_json.type == 'charge.failed') {
-    // update payment collection 
-  }
-  else {
-    // log other event
-  }
- */
+    User.findOneAndUpdate(
+      {'email': Cuemail},
+      { $set: { CurCertPaid: true,
+                CurCertPaid_On : today
+              }
+      },
+      {new: true, runValidators: true},
+      function(err, updated_user) {
+        if (err) console.log(err);
+        res.json(updated_user);
+        //res.redirect('/account');
+      } 
+    ); // End findOneAndUpdate()
+  } // end if 'charge.secceded'
 
 };
 
