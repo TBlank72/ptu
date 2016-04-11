@@ -213,10 +213,9 @@ exports.postStripeCharges = function(req, res) {
       {new: true, runValidators: true},
       function(err, updated_user) {
         if (err) console.log(err);
-        //res.send(updated_user);
-        res.redirect('/account');
-      } 
+      }
     ); // End findOneAndUpdate()
+
   } // end if 'charge.secceded'
 
 };
