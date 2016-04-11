@@ -166,8 +166,6 @@ exports.postStripeCharges = function(req, res) {
 
   // Retrieve the request's body from Stripe
   var event_json = req.body;
-  // Send status 200 to Stripe before processing data
-  res.send(200);
 
   // Set values to update user model paid + paid_on
   var today = new Date();
@@ -185,6 +183,9 @@ exports.postStripeCharges = function(req, res) {
   var CurCert = 'certs.'.concat(certType);
   var CurCertPaid = CurCert.concat('.paid');
   var CurCertPaid_On = CurCert.concat('.paid_on');
+
+  // Send status 200 to Stripe before processing data
+  res.send(200);
 
   // Create and save payment record
   var payment = new Payment({
@@ -212,8 +213,8 @@ exports.postStripeCharges = function(req, res) {
       {new: true, runValidators: true},
       function(err, updated_user) {
         if (err) console.log(err);
-        res.json(updated_user);
-        //res.redirect('/account');
+        //res.send(updated_user);
+        res.redirect('/account');
       } 
     ); // End findOneAndUpdate()
   } // end if 'charge.secceded'
