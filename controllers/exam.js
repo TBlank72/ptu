@@ -1,4 +1,5 @@
 var User = require('../models/user');
+var contactController = require('./contact');
 
 // GET Exam pages
 
@@ -39,6 +40,8 @@ exports.submitCpt = function(req, res) {
   var newScore = req.body.score;
   var Cpassed_on = (Cuser.certs.cpt.passed_on == null) ? null : Cuser.certs.cpt.passed_on;
   var today = new Date();
+  var certTitle = 'Certified Personal Trainer';
+  var Cuname = req.user.profile.name;
   User.findOneAndUpdate(
     {'email': Cuemail},
     { $set: { 'certs.cpt.verify_id': Cu_id + 'cpt',
@@ -53,6 +56,9 @@ exports.submitCpt = function(req, res) {
     function(err, updated_user) {
       if (err) console.log(err);
       //res.json(updated_user);
+      contactController.emailUserExam(Cuemail, Cuname, certTitle, newScore, today);
+      req.flash('success', { msg: 'Success! Your exam score has been submitted.' });
+      contactController.emailUserExam(Cuemail, certTitle, newScore, today);
       res.redirect('/account');
     } 
   ); // End findOneAndUpdate()
@@ -67,6 +73,8 @@ exports.submitCmt = function(req, res) {
   var newScore = req.body.score;
   var Cpassed_on = (Cuser.certs.cmt.passed_on == null) ? null : Cuser.certs.cmt.passed_on;
   var today = new Date();
+  var certTitle = 'Certified Master Trainer';
+  var Cuname = req.user.profile.name;
   User.findOneAndUpdate(
     {'email': Cuemail},
     { $set: { 'certs.cmt.verify_id': Cu_id + 'cmt',
@@ -81,6 +89,9 @@ exports.submitCmt = function(req, res) {
     function(err, updated_user) {
       if (err) console.log(err);
       //res.json(updated_user);
+      contactController.emailUserExam(Cuemail, Cuname, certTitle, newScore, today);
+      req.flash('success', { msg: 'Success! Your exam score has been submitted.' });
+      contactController.emailUserExam(Cuemail, certTitle, newScore, today);
       res.redirect('/account')
     } 
   ); // End findOneAndUpdate()
@@ -95,6 +106,8 @@ exports.submitCns = function(req, res) {
   var newScore = req.body.score;
   var Cpassed_on = (Cuser.certs.cns.passed_on == null) ? null : Cuser.certs.cns.passed_on;
   var today = new Date();
+  var certTitle = 'Certified Nutrition Specialist';
+  var Cuname = req.user.profile.name;
   User.findOneAndUpdate(
     {'email': Cuemail},
     { $set: { 'certs.cns.verify_id': Cu_id + 'cns',
@@ -109,6 +122,8 @@ exports.submitCns = function(req, res) {
     function(err, updated_user) {
       if (err) console.log(err);
       //res.json(updated_user);
+      contactController.emailUserExam(Cuemail, Cuname, certTitle, newScore, today);
+      req.flash('success', { msg: 'Success! Your exam score has been submitted.' });
       res.redirect('/account');
     } 
   ); // End findOneAndUpdate()
@@ -123,6 +138,8 @@ exports.submitTest = function(req, res) {
   var newScore = req.body.score;
   var Cpassed_on = (Cuser.certs.test.passed_on == null) ? null : Cuser.certs.test.passed_on;
   var today = new Date();
+  var certTitle = 'Certified TEST Trainer';
+  var Cuname = req.user.profile.name;
   User.findOneAndUpdate(
     {'email': Cuemail},
     { $set: { 'certs.test.verify_id': Cu_id + 'test',
@@ -137,6 +154,8 @@ exports.submitTest = function(req, res) {
     function(err, updated_user) {
       if (err) console.log(err);
       //res.json(updated_user);
+      contactController.emailUserExam(Cuemail, Cuname, certTitle, newScore, today);
+      req.flash('success', { msg: 'Success! Your exam score has been submitted.' });
       res.redirect('/account');
     } 
   ); // End findOneAndUpdate()

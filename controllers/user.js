@@ -4,6 +4,7 @@ var crypto = require('crypto');
 var nodemailer = require('nodemailer');
 var passport = require('passport');
 var User = require('../models/user');
+var contactController = require('./contact');
 
 /**
  * GET /login
@@ -91,6 +92,7 @@ exports.postSignup = function(req, res, next) {
     return res.redirect('/signup');
   }
 
+  var user_email = req.body.email;
   var user = new User({
     email: req.body.email,
     password: req.body.password
@@ -109,6 +111,7 @@ exports.postSignup = function(req, res, next) {
         if (err) {
           return next(err);
         }
+        contactController.emailNewUser(user_email);
         res.redirect('/account');
       });
     });

@@ -1,6 +1,7 @@
 /**
  * Module dependencies.
  */
+require ('./config/newrelic');
 var express = require('express');
 var compress = require('compression');
 var session = require('express-session');
@@ -163,6 +164,7 @@ app.post('/verify', examController.verifyCert);
  * API routes.
  */
 app.get('/api', apiController.getApi);
+app.get('/api/sendgrid', contactController.sendGrid);
 app.get('/api/stripe', apiController.getStripe);
 app.post('/api/stripe/charges', apiController.postStripeCharges);
 app.post('/api/stripe', apiController.postStripe);
