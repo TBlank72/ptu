@@ -17,7 +17,7 @@ block content
           input.form-control.form-input-custom(type='text', name='name', id='name',
           placeholder='**Enter your Full Name that will appear on your Certification**',
           value='#{user.profile.name}')
-      .form-group
+      //.form-group
         label.col-sm-3.control-label.orange(for='gender') Gender
         .col-sm-4
           label.radio.col-sm-4.orange
@@ -26,11 +26,11 @@ block content
           label.radio.col-sm-4.orange
             input(type='radio', checked=user.profile.gender=='female', name='gender', value='female', data-toggle='radio')
             span Female
-      .form-group
+      //.form-group
         label.col-sm-3.control-label.orange(for='location') Location
         .col-sm-7
           input.form-control.form-input-custom(type='text', name='location', id='location', value='#{user.profile.location}')
-      .form-group
+      //.form-group
         label.col-sm-3.control-label.orange(for='website') Website
         .col-sm-7
           input.form-control.form-input-custom(type='text', name='website', id='website', value='#{user.profile.website}')
@@ -153,7 +153,7 @@ block content
         form(action='/cns', target='_blank')
           input(type='submit', value='Start CNS Exam', class='btn-custom bg-blue-gradient')
 
-      .cert-container
+      //.cert-container
         h1.bg-aqua-gradient Test Certification 
         if (user.certs.test.attempts.length > 0)
           p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.test.score}
@@ -225,21 +225,21 @@ block content
       .form-group
         .col-sm-offset-3.col-sm-4
           if user.facebook
-            p: a.btn-link.text-danger(href='/account/unlink/facebook') Unlink your Facebook account
+            p: a.link-blue-hov.text-danger(href='/account/unlink/facebook') Unlink your Facebook account
           else
-            p: a(href='/auth/facebook').btn-link.orange Link your Facebook account
+            p: a.link-blue-hov.orange(href='/auth/facebook') Link your Facebook account
         .col-sm-offset-3.col-sm-4
           if user.google
-            p: a.btn-link.text-danger(href='/account/unlink/google').orange Unlink your Google account
+            p: a.link-blue-hov.text-danger(href='/account/unlink/google') Unlink your Google account
           else
-            p: a(href='/auth/google').btn-link.orange Link your Google account
+            p: a.link-blue-hov.orange(href='/auth/google') Link your Google account
         .col-sm-offset-3.col-sm-4
           if user.twitter
-            p: a.btn-link.text-danger(href='/account/unlink/twitter') Unlink your Twitter account
+            p: a.link-blue-hov.text-danger(href='/account/unlink/twitter') Unlink your Twitter account
           else
-            p: a(href='/auth/twitter').btn-link.orange Link your Twitter account
+            p: a.link-blue-hov.orange(href='/auth/twitter') Link your Twitter account
         .col-sm-offset-3.col-sm-4
           if user.linkedin
-            p: a.btn-link.text-danger(href='/account/unlink/linkedin') Unlink your LinkedIn account
+            p: a.link-blue-hov.text-danger(href='/account/unlink/linkedin') Unlink your LinkedIn account
           else
-            p: a(href='/auth/linkedin').btn-link.orange Link your LinkedIn account
+            p: a.link-blue-hov.orange(href='/auth/linkedin') Link your LinkedIn account

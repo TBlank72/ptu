@@ -48,16 +48,16 @@ block content
       .cert-img-pad
         if (certImg == 'cpt' && cert.passed == true && cert.paid == true)
           .cert-img-container
-            img.cert-img(src='/images/cpt_cert.png')
+            img.cert-img(src='/images/cpt_cert.png', class='img-responsive')
             #nameOnCert #{username}
             #verifyIdOnCert #{cert.verify_id}
         if (certImg == 'cmt' && cert.passed == true && cert.paid == true)
           .cert-img-container
-            img.cert-img(src='/images/cmt_cert.png')
+            img.cert-img(src='/images/cmt_cert.png', class='img-responsive')
             #nameOnCert #{username}
             #verifyIdOnCert #{cert.verify_id}
         if (certImg == 'cns' && cert.passed == true && cert.paid == true)
           .cert-img-container
-            img.cert-img(src='/images/cns_cert.png')
+            img.cert-img(src='/images/cns_cert.png', class='img-responsive')
             #nameOnCert #{username}
             #verifyIdOnCert #{cert.verify_id}

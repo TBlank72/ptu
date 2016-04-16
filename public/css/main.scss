@@ -19,7 +19,11 @@ blue: rgba(0,116,217,1)
 
 body {
   font-family: $fontF-std;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
   padding-top: 50px;
+  overflow-x: hidden;
 }
 /*------------------ Colors -----------------*/
 .navy {

@@ -163,13 +163,13 @@ button.navbar-toggle {
   background: #FF851B; }
 
 .comp-table {
-  width: 80%;
+  width: 80vw;
   margin: auto; }
 
 .comp-table-h {
   background: #222;
   color: #fff;
-  width: 80%;
+  width: 80vw;
   font-size: 2em;
   text-align: center;
   border: 2px solid white;
@@ -178,7 +178,7 @@ button.navbar-toggle {
 .comp-table-f {
   background: #222;
   color: #fff;
-  width: 80%;
+  width: 80vw;
   font-size: 1em;
   text-align: center;
   border: 2px solid white;
@@ -192,6 +192,26 @@ button.navbar-toggle {
   text-align: center;
   border: 2px solid white;
   margin: auto; }
+
+@media (max-width: 600px) {
+  h2, h3, h4, h5 {
+    font-size: 1.2em !important; }
+  td {
+    font-size: 0.9em !important; }
+  ul li.no-style a.green {
+    font-size: 0.7em !important; }
+  .carousel-inner .item h1 {
+    font-size: 1.5em !important; }
+  .carousel-inner .item h3 {
+    font-size: 1em !important; }
+  .carousel-inner .item nav a {
+    font-size: 1em !important; }
+  .cert-container h1 {
+    font-size: 1.5em !important; } }
+
+@media (max-width: 700px) {
+  ol.carousel-indicators li {
+    display: none !important; } }
 
 /*=============== navbar collapse threshold =================*/
 @media (max-width: 1200px) {
@@ -233,7 +253,11 @@ blue: rgba(0,116,217,1)
 */
 body {
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif;
-  padding-top: 50px; }
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding-top: 50px;
+  overflow-x: hidden; }
 
 /*------------------ Colors -----------------*/
 .navy {

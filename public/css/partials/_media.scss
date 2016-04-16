@@ -1,5 +1,35 @@
 // @media formatting
+@media (max-width: 600px) {
+h2, h3, h4, h5 {
+  font-size: 1.2em !important;
+} 
+td {
+  font-size: 0.9em !important;
+}
+ul li.no-style a.green, {
+  font-size: 0.7em !important;
+} 
 
+.carousel-inner .item h1 {
+  font-size: 1.5em !important;
+}
+.carousel-inner .item h3 {
+  font-size: 1em !important;
+}
+.carousel-inner .item nav a {
+  font-size: 1em !important;
+}
+.cert-container h1 {
+  font-size: 1.5em !important;
+}
+
+}
+
+@media (max-width: 700px) {
+ol.carousel-indicators li {
+  display: none !important;
+}
+} 
 /*=============== navbar collapse threshold =================*/
 
 @media (max-width: 1200px) {
