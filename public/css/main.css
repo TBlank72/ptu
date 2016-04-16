@@ -145,6 +145,37 @@ button.navbar-toggle {
 .navbar-toggle span {
   background: #FF851B; }
 
+.comp-table {
+  width: 80%;
+  margin: auto; }
+
+.comp-table-h {
+  background: #222;
+  color: #fff;
+  width: 80%;
+  font-size: 2em;
+  text-align: center;
+  border: 2px solid white;
+  margin: auto; }
+
+.comp-table-f {
+  background: #222;
+  color: #fff;
+  width: 80%;
+  font-size: 1em;
+  text-align: center;
+  border: 2px solid white;
+  margin: auto; }
+
+.comp-table-d {
+  background: #222;
+  color: #fff;
+  width: auto;
+  font-size: 2em;
+  text-align: center;
+  border: 2px solid white;
+  margin: auto; }
+
 /*=============== navbar collapse threshold =================*/
 @media (max-width: 1200px) {
   .navbar-header {
@@ -307,12 +338,22 @@ body {
 .container-fluid .bg-navy-gradient {
   margin-top: 0 !important; }
 
+.bg-grey-seal {
+  background: url(../images/ptusealgreyO15.png) no-repeat center;
+  background-color: #001F3F;
+  background-size: cover;
+  opacity: 1; }
+
 /*--------------- Link Styles ----------------*/
 a.study_link:hover {
   color: #FF851B; }
 
-li {
+ul li {
   list-style: square;
+  color: #FFFFFF; }
+
+ol li {
+  list-style: upper-roman;
   color: #FFFFFF; }
 
 h1,
@@ -516,8 +557,11 @@ a,
 a:hover {
   text-decoration: none; }
 
-a.btn-link:hover {
+a.link-blue-hov:hover {
   color: #0074D9; }
+
+a.link-green-hov:hover {
+  color: #2ECC40; }
 
 nav a {
   position: relative;
@@ -707,5 +751,15 @@ span.lg {
   background: #00203f;
   margin: 30px auto;
   padding: 100px; }
+
+/*----------------- faq.jade -----------------------*/
+#q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10 {
+  padding-top: 40px; }
+
+.no-style {
+  list-style-type: none; }
+
+.text-lg {
+  font-size: 1.7em; }
 
 /*# sourceMappingURL=main.css.map */

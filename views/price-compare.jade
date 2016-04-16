@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  .container-fluid.bg-grey-seal
+    .page-header
+      h1 #[span(class='orange') Competitor Comparison]
+      p.
+        Below is a price comparison of our closest competitors in
+        the fitness industry.
+    table.comp-table
+      thead
+        tr
+          td.comp-table-h(colspan="7").
+            Fitness Certification Pricing
+      tfoot
+        tr
+          td.comp-table-f(colspan="7").
+            --Prices are accurate as of 4/15/16--
+      tbody
+        tr
+          td.comp-table-d.green Certification
+          td.comp-table-d.orange PTU
+          td.comp-table-d NSCA
+          td.comp-table-d NASM
+          td.comp-table-d ASFA
+          td.comp-table-d ACE
+          td.comp-table-d ACSM
+        tr
+          td.comp-table-d Personal Trainer
+          td.comp-table-d.orange $99
+          td.comp-table-d $435
+          td.comp-table-d $599
+          td.comp-table-d $499
+          td.comp-table-d $599
+          td.comp-table-d $279
+        tr
+          td.comp-table-d Master Trainer
+          td.comp-table-d.orange $149
+          td.comp-table-d N/A
+          td.comp-table-d N/A
+          td.comp-table-d $699
+          td.comp-table-d N/A
+          td.comp-table-d N/A
+        tr
+          td.comp-table-d Nutrition Specialist
+          td.comp-table-d.orange $99
+          td.comp-table-d N/A
+          td.comp-table-d $449
+          td.comp-table-d $299
+          td.comp-table-d $399
+          td.comp-table-d N/A
+

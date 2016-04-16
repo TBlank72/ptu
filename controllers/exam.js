@@ -58,7 +58,6 @@ exports.submitCpt = function(req, res) {
       //res.json(updated_user);
       contactController.emailUserExam(Cuemail, Cuname, certTitle, newScore, today);
       req.flash('success', { msg: 'Success! Your exam score has been submitted.' });
-      contactController.emailUserExam(Cuemail, certTitle, newScore, today);
       res.redirect('/account');
     } 
   ); // End findOneAndUpdate()
@@ -91,7 +90,6 @@ exports.submitCmt = function(req, res) {
       //res.json(updated_user);
       contactController.emailUserExam(Cuemail, Cuname, certTitle, newScore, today);
       req.flash('success', { msg: 'Success! Your exam score has been submitted.' });
-      contactController.emailUserExam(Cuemail, certTitle, newScore, today);
       res.redirect('/account')
     } 
   ); // End findOneAndUpdate()

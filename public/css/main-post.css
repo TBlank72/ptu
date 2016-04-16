@@ -14,11 +14,18 @@
   height: 50px; }
 
 /*---------------- cert image -----------------*/
+.cert-img-pad {
+  background: white;
+  padding: 20px;
+  margin: 10px auto 100px auto;
+  width: 1200px;
+  text-align: center; }
+
 .cert-img-container {
   position: relative;
   background: none;
-  width: 80%;
-  margin: 20px auto 50px auto;
+  width: 1060px;
+  margin: 50px auto 50px auto;
   text-align: center; }
 
 .cert-img {
@@ -26,12 +33,25 @@
   position: relative; }
 
 #nameOnCert {
+  font-size: 3.5em;
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: none;
+  color: #001F3F;
+  display: inline;
+  position: absolute;
+  top: 270px;
+  left: 60px; }
+
+#verifyIdOnCert {
+  font-size: 1.4em;
+  font-family: sans-serif;
   background-color: none;
   color: black;
   display: inline;
   position: absolute;
-  top: 300px;
-  left: 400px; }
+  top: 666px;
+  left: 714px; }
 
 .btn-custom {
   width: 100%;
@@ -141,6 +161,37 @@ button.navbar-toggle {
 
 .navbar-toggle span {
   background: #FF851B; }
+
+.comp-table {
+  width: 80%;
+  margin: auto; }
+
+.comp-table-h {
+  background: #222;
+  color: #fff;
+  width: 80%;
+  font-size: 2em;
+  text-align: center;
+  border: 2px solid white;
+  margin: auto; }
+
+.comp-table-f {
+  background: #222;
+  color: #fff;
+  width: 80%;
+  font-size: 1em;
+  text-align: center;
+  border: 2px solid white;
+  margin: auto; }
+
+.comp-table-d {
+  background: #222;
+  color: #fff;
+  width: auto;
+  font-size: 2em;
+  text-align: center;
+  border: 2px solid white;
+  margin: auto; }
 
 /*=============== navbar collapse threshold =================*/
 @media (max-width: 1200px) {
@@ -341,20 +392,31 @@ body {
 .container-fluid .bg-navy-gradient {
   margin-top: 0 !important; }
 
+.bg-grey-seal {
+  background: url(../images/ptusealgreyO15.png) no-repeat center;
+  background-color: #001F3F;
+  -webkit-background-size: cover;
+          background-size: cover;
+  opacity: 1; }
+
 /*--------------- Link Styles ----------------*/
 a.study_link:hover {
   color: #FF851B; }
 
-li {
+ul li {
   list-style: square;
   color: #FFFFFF; }
 
-.container-fluid h1,
-.container-fluid h2,
-.container-fluid h3,
-.container-fluid h4,
-.container-fluid h5,
-.container-fluid p {
+ol li {
+  list-style: upper-roman;
+  color: #FFFFFF; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   color: #FFFFFF;
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif; }
 
@@ -382,6 +444,15 @@ li {
   color: #FF851B;
   text-align: center;
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif; }
+
+.form-container-verified {
+  margin: 30px auto;
+  padding: 20px;
+  width: 800px !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 2px solid #ff851b;
+  text-align: center; }
 
 .msg-container {
   max-width: 400px;
@@ -543,8 +614,11 @@ a,
 a:hover {
   text-decoration: none; }
 
-a.btn-link:hover {
+a.link-blue-hov:hover {
   color: #0074D9; }
+
+a.link-green-hov:hover {
+  color: #2ECC40; }
 
 nav a {
   position: relative;
@@ -742,8 +816,18 @@ span.lg {
 
 /*----------------- verified.jade -----------------------*/
 .verified-container {
-  max-width: 60%;
-  background: rgba(0, 32, 63, 0.2);
-  margin: 30px auto; }
+  width: 1080px;
+  background: #00203f;
+  margin: 30px auto;
+  padding: 100px; }
 
+/*----------------- faq.jade -----------------------*/
+#q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10 {
+  padding-top: 40px; }
+
+.no-style {
+  list-style-type: none; }
+
+.text-lg {
+  font-size: 1.7em; }
 /*# sourceMappingURL=main-post.css.map */

@@ -116,6 +116,7 @@ app.get('/about', homeController.about);
 app.get('/faq', homeController.faq);
 app.get('/certifications', homeController.certs);
 app.get('/study', homeController.study);
+app.get('/pricecompare', homeController.priceCompare);
 app.get('/images/:img', homeController.getImage); 
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
@@ -164,7 +165,7 @@ app.post('/verify', examController.verifyCert);
  * API routes.
  */
 app.get('/api', apiController.getApi);
-app.get('/api/sendgrid', contactController.sendGrid);
+app.post('/api/sendgrid', contactController.sendGridHook);
 app.get('/api/stripe', apiController.getStripe);
 app.post('/api/stripe/charges', apiController.postStripeCharges);
 app.post('/api/stripe', apiController.postStripe);

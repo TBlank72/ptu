@@ -133,6 +133,12 @@ body {
 .container-fluid .bg-navy-gradient {
   margin-top: 0 !important;
 }
+.bg-grey-seal {
+  background: url(../images/ptusealgreyO15.png) no-repeat center;
+  background-color: $navy;
+  background-size: cover; 
+  opacity: 1;
+}
 
 /*--------------- Link Styles ----------------*/
 a.study_link {
@@ -141,8 +147,12 @@ a.study_link:hover {
   color: $primeC2;
 }
 
-li {
+ul li {
   list-style: square;
+  color: $white;
+}
+ol li {
+  list-style: upper-roman;
   color: $white;
 }
 
@@ -375,8 +385,11 @@ a,
 a:hover {
   text-decoration: none;
 }
-a.btn-link:hover {
+a.link-blue-hov:hover {
   color: $blue;
+}
+a.link-green-hov:hover {
+  color: $green;
 }
 
 nav a {
@@ -597,4 +610,18 @@ span.lg {
   background: rgba(0,32,63,1);
   margin: 30px auto;
   padding: 100px;
+}
+
+/*----------------- faq.jade -----------------------*/
+
+#q1,#q2,#q3,#q4,#q5,#q6,#q7,#q8,#q9,#q10 {
+  padding-top: 40px;
+}
+
+.no-style {
+  list-style-type: none;
+}
+
+.text-lg {
+  font-size: 1.7em; 
 }

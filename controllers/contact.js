@@ -1,58 +1,12 @@
 var sendgrid  = require('sendgrid')(process.env.SENDGRID_API_KEY);
 
 /**
- * GET /api/sendgrid
- * test route. Delete after all emails are working.
+ * POST /api/sendgrid
+ * SendGrid Webhook route for event reporting
  */
-exports.sendGrid = function(req, res) {
+exports.sendGridHook = function(req, res) {
+  res.sendStatus(200);
 
-  var email       = new sendgrid.Email();
-  email.to        = 'toddmblankenship@yahoo.com',
-  email.from      = 'ptuteam@ptuniversity.org',
-  email.subject   = 'new sendgrid.Email',
-  email.text      = 'some body text',
-  email.addSubstitution('-user_email-', 'SUBSTITUTION');
-  email.setFilters({
-    'templates': {
-        'settings': {
-            'enable': 1,
-            'template_id' : 'b8370713-1d2f-4b46-8705-d00adc13abb2',
-        }
-    }
-  });
-  /* available params
-  var params = {
-    smtpapi:  new sendgrid.smtpapi(),
-    to:       [],
-    toname:   [],
-    from:     '',
-    fromname: '',
-    subject:  '',
-    text:     '',
-    html:     '',
-    bcc:      [],
-    cc:       [],
-    replyto:  '',
-    date:     '',
-    files: [
-      {
-        filename:     '',           // required only if file.content is used.
-        contentType:  '',           // optional
-        cid:          '',           // optional, used to specify cid for inline content
-        path:         '',           //
-        url:          '',           // == One of these three options is required
-        content:      ('' | Buffer) //
-      }
-    ],
-    file_data:  {},
-    headers:    {}
-  }; 
- */
-
-  sendgrid.send(email, function(err, json) {
-    if (err) { return console.error(err); }
-    console.log(json);
-  });
 };
 
 
@@ -68,7 +22,7 @@ exports.getContact = function(req, res) {
 
 /**
  * POST /contact
- * Send a contact form via Nodemailer.
+ * Send User contact form via SendGrid.
  */
 exports.postContact = function(req, res) {
   req.assert('name', 'Name cannot be blank').notEmpty();
@@ -82,20 +36,13 @@ exports.postContact = function(req, res) {
     return res.redirect('/contact');
   }
 
-  var to = 'ptuteam@ptuniversity.org';
-  var from = req.body.email;
-  var name = req.body.name;
-  var body = req.body.message;
-  var subject = 'Contact Form | PT University';
+  var email       = new sendgrid.Email();
+  email.to        = 'ptuteam@ptuniversity.org',
+  email.from      = req.body.email,
+  email.subject   = req.body.subject,
+  email.text      = req.body.message,
 
-  var payload   = {
-    to      : to,
-    from    : from,
-    subject : subject,
-    text    : body
-  }
-
-  sendgrid.send(payload, function(err, json) {
+  sendgrid.send(email, function(err, json) {
     if (err) {
       req.flash('errors', { msg: err.message });
       return res.redirect('/contact');
@@ -156,6 +103,34 @@ exports.emailUserExam = function(Cuemail, Cuname, certTitle, newScore, today) {
 
 };
 
+  /* available sendgrid email params
+  var params = {
+    smtpapi:  new sendgrid.smtpapi(),
+    to:       [],
+    toname:   [],
+    from:     '',
+    fromname: '',
+    subject:  '',
+    text:     '',
+    html:     '',
+    bcc:      [],
+    cc:       [],
+    replyto:  '',
+    date:     '',
+    files: [
+      {
+        filename:     '',           // required only if file.content is used.
+        contentType:  '',           // optional
+        cid:          '',           // optional, used to specify cid for inline content
+        path:         '',           //
+        url:          '',           // == One of these three options is required
+        content:      ('' | Buffer) //
+      }
+    ],
+    file_data:  {},
+    headers:    {}
+  }; 
+ */
 
 /* ----- REPLACED WITH SENDGRID DIRECTLY -----
 var nodemailer = require("nodemailer");

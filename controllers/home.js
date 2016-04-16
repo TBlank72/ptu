@@ -42,6 +42,14 @@ exports.study = function(req, res) {
 
 /**
  * GET /
+ * Price Comparison page.
+ */
+exports.priceCompare = function(req, res) {
+  res.render('price-compare');
+};
+
+/**
+ * GET /
  * Images.
  */
 exports.getImage = function(req, res) {
