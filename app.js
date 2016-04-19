@@ -89,7 +89,6 @@ app.use(flash());
 
 /*
  * Redirect to https
- */
 app.use(function(req, res, next) {
   if (req.headers['x-forwarded-proto'] != 'https') {
     res.redirect('https://' + req.headers.host + req.path);
@@ -98,6 +97,7 @@ app.use(function(req, res, next) {
     return next();
   }
 });
+ */
 
 app.use(function(req, res, next) {
   if (req.path === '/api/upload' || req.path == '/api/stripe/charges') {
