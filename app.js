@@ -86,6 +86,19 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+
+/*
+ * Redirect to https
+ */
+app.use(function(req, res, next) {
+  if (req.headers['x-forwarded-proto'] != 'https') {
+    res.redirect('https://' + req.headers.host + req.path);
+  }
+  else {
+    return next();
+  }
+});
+
 app.use(function(req, res, next) {
   if (req.path === '/api/upload' || req.path == '/api/stripe/charges') {
     next();
@@ -111,6 +124,11 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 /**
  * Primary app routes.
  */
+/*const https = require('https');
+app.get('*',function(req,res){  
+    res.redirect('https://localhost:3000'+req.url)
+})
+*/
 app.get('/', homeController.index);
 app.get('/about', homeController.about);
 app.get('/faq', homeController.faq);

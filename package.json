@@ -4,7 +4,7 @@
   "description": "Online Personal Training and Fitness Certifications",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sahat/hackathon-starter.git"
+    "url": "https://github.com/TBlank72/ptu.git"
   },
   "main": "app.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "multer": "1.1.0",
     "newrelic": "1.26.2",
     "node-linkedin": "0.5.3",
-    "node-sass-middleware": "0.9.7",
+    "node-sass-middleware": "0.9.8",
     "nodemailer": "2.3.0",
     "passport": "^0.3.2",
     "passport-facebook": "2.1.0",
