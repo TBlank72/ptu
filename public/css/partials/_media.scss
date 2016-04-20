@@ -1,10 +1,16 @@
 // @media formatting
 @media (max-width: 600px) {
+body {
+  line-height: 21px !important;
+}
 h2, h3, h4, h5 {
   font-size: 1.2em !important;
 } 
 td {
   font-size: 0.9em !important;
+}
+p {
+  font-size: 12px !important;
 }
 ul li.no-style a.green, {
   font-size: 0.7em !important;

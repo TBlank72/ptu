@@ -7,20 +7,12 @@
 @import "./vendor/images";
 @import "./partials/base";
 
-/*
-lime green: rgba(1,255,111,1)
-orange: rgba(255,133,27,1)
-navy: rgba(0,32,63,1)
-teal: rgba(57,204,204,1)
-red: rgba(246,46,36,1)
-green: rgba(46,204,64,1)
-blue: rgba(0,116,217,1)
-*/
 
 body {
   font-family: $fontF-std;
   width: 100%;
   height: 100%;
+  line-height: 33px;
   margin: 0px;
   padding-top: 50px;
   overflow-x: hidden;
@@ -132,10 +124,13 @@ body {
 ***************************************************************/
 
 .container-fluid {
-  min-height: 85vh;
+  min-height: 100vh;
 }
-.container-fluid .bg-navy-gradient {
+.container-fluid .bg-grey-seal {
   margin-top: 0 !important;
+}
+p {
+  font-size: 16px;
 }
 .bg-grey-seal {
   background: url(../images/ptusealgreyO15.png) no-repeat center;
@@ -351,7 +346,7 @@ a.fa.fa-linkedin-square:hover {
 
 /*-----------------Carousel--------------------------*/
 .carousel-inner {
-  height: 85vh;
+  height: 93vh;
   text-align: center;
   margin: 0 auto;
   color: white;
@@ -388,6 +383,9 @@ a.fa.fa-linkedin-square:hover {
 a,
 a:hover {
   text-decoration: none;
+}
+a:visited {
+  color: $aqua;
 }
 a.link-blue-hov:hover {
   color: $blue;
@@ -478,7 +476,7 @@ nav a:focus {
 }
 
 /*---------Link Effects for Header----------------*/
-
+/*
 nav a {
 	position: relative;
 	display: inline-block;
@@ -492,7 +490,7 @@ nav a {
 	text-shadow: 0 0 1px rgba(255,255,255,0.3);
 	font-size: 1.35em;
 }
-
+*/
 nav a:hover,
 nav a:focus {
 	outline: none;
