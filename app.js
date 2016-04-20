@@ -80,14 +80,17 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   store: new MongoStore({
     url: process.env.MONGODB || process.env.MONGOLAB_URI,
-    autoReconnect: true
+    autoReconnect: true,
+    ttl: 14 * 24 * 60 * 60, // = 14 days. Default
+    touchAfter: 24 * 3600, // limits resave to db 1/24 hours
+    autoRemove: 'native'
   })
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-/*
+/* --------- This moved to cloudflare to avoid redirect issues -------
  * Redirect to https
 app.use(function(req, res, next) {
   if (req.headers['x-forwarded-proto'] != 'https') {

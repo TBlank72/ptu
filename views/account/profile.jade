@@ -76,7 +76,7 @@ block content
               data-name='PT University',
               data-description='CPT Certification ($99)',
               data-amount='9900')
-            form(action='/api/stripe', method='get')
+            //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for CPT Certification', class='btn-custom bg-green-gradient')
         else
           p You haven't taken the CPT Exam yet.  Click to start now.
@@ -111,7 +111,7 @@ block content
               data-name='PT University',
               data-description='CMT Certification ($149)',
               data-amount='14900')
-            form(action='/api/stripe', method='get')
+            //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for CMT Certification', class='btn-custom bg-red-gradient')
         else
           p You haven't taken the CMT Exam yet.  Click to start now.
@@ -146,14 +146,14 @@ block content
               data-name='PT University',
               data-description='CNS Certification ($99)',
               data-amount='9900')
-            form(action='/api/stripe', method='get')
+            //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for CNS Certification', class='btn-custom bg-blue-gradient')
         else
           p You haven't taken the CNS Exam yet.  Click to start now.
         form(action='/cns', target='_blank')
           input(type='submit', value='Start CNS Exam', class='btn-custom bg-blue-gradient')
 
-      //.cert-container
+      .cert-container
         h1.bg-aqua-gradient Test Certification 
         if (user.certs.test.attempts.length > 0)
           p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.test.score}
@@ -172,15 +172,15 @@ block content
             form(method='POST', action="account/payment")
               input(type='hidden', name='_csrf', value=_csrf)
               input(type='hidden', name='certType', value='Certified TESTING')
-              input(type='hidden', name='price', value='2499')
+              input(type='hidden', name='price', value='50')
               script(
               src='https://checkout.stripe.com/checkout.js',
               class='stripe-button',
               data-key=publishableKey,
               data-image='/images/ptStripeLogo.png',
               data-name='PT University',
-              data-description='TEST Certification ($24.99)',
-              data-amount='2499')
+              data-description='TEST Certification ($00.50)',
+              data-amount='50')
             //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for TEST Certification', class='btn-custom bg-aqua-gradient')
         else
