@@ -159,7 +159,7 @@ exports.postStripe = function(req, res, next) {
  * GET /api/stripe/charges
  * Get Stripe Charge Activity (Webhooks)
  */
-exports.postStripeCharges = function(req, res) {
+exports.postStripeCharges = function(req, res, next) {
   stripe = require('stripe')(process.env.STRIPE_SKEY);
 
   // Retrieve the request's body from Stripe
