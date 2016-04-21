@@ -212,7 +212,7 @@ block content
 
     form.form-horizontal(action='/account/delete', method='POST')
       .form-group
-        p.col-sm-offset-3.col-sm-4 You can delete your account, but keep in mind this action is irreversible.
+        p.col-sm-offset-3.col-sm-4 You can delete your account, but keep in mind this action is irreversible and all of your certification records will be deleted.
         input(type='hidden', name='_csrf', value=_csrf)
         .col-sm-offset-3.col-sm-4
           button.btn.btn-danger(type='submit')

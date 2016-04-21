@@ -19,6 +19,7 @@ var expressValidator = require('express-validator');
 var sass = require('node-sass-middleware');
 var multer = require('multer');
 var upload = multer({ dest: path.join(__dirname, 'uploads') });
+var compressor = require('node-minify');
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -26,6 +27,38 @@ var upload = multer({ dest: path.join(__dirname, 'uploads') });
  * Default path: .env (You can remove the path argument entirely, after renaming `.env.example` to `.env`)
  */
 dotenv.config({silent: true});
+
+/*
+ * Minify all Public Controllers JavaScript
+ * Uncomment and run without nodemon to minify
+ */
+new compressor.minify({
+  type: 'yui-js',
+  fileIn: 'public/js/controllers/**/*.js',
+  fileOut: 'public/js-dist/all-controllers-min.js',
+  options: ['--nomunge'],
+  sync: true, 
+  callback: function(err, min) {
+    console.log('error: ' + err);
+    //console.log(min);
+  }
+});
+/*
+ * Minify Public Main(config) JavaScript
+ * Uncomment and run without nodemon to minify
+ */
+new compressor.minify({
+  type: 'yui-js',
+  fileIn: 'public/js/ptuapp.config.js',
+  fileOut: 'public/js-dist/ptuapp-config-min.js',
+  options: ['--nomunge'],
+  sync: true, 
+  callback: function(err, min) {
+    console.log('error: ' + err);
+    //console.log(min);
+  }
+});
+
 
 /**
  * Controllers (route handlers).
