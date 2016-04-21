@@ -111,10 +111,20 @@ ul.footer-links li {
 .navbar .navbar-custom .navbar-fixed-top {
   margin-bottom: 0 !important; }
 
+/* ---- uncomment to pull navbar brand left
+.navbar.navbar-custom.navbar-fixed-top .container {
+  padding-left: 20px !important;
+  margin-left: 20px !important;
+}
+*/
 a.navbar-brand.logo-img {
   background: url(../images/ptulogo.png) no-repeat center;
   background-size: contain;
   width: 200px; }
+
+body > div.navbar.navbar-custom.navbar-fixed-top > div > div.collapse.navbar-collapse > ul li a {
+  padding-left: 2px !important;
+  padding-right: 2px !important; }
 
 .navbar-custom {
   background: #ff851b;
@@ -378,7 +388,7 @@ ul li {
   color: #FFFFFF; }
 
 ol li {
-  list-style: upper-roman;
+  list-style: decimal;
   color: #FFFFFF; }
 
 h1,
@@ -513,10 +523,20 @@ p {
   max-height: 60px;
   max-width: 160px; }
 
+.copyright {
+  position: relative;
+  float: right;
+  vertical-align: bottom;
+  line-height: 0;
+  margin: 0px;
+  bottom: 0px;
+  color: #001F3F; }
+
 .social-container {
   background: #282828;
   padding-right: 20px;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 0px; }
 
 a.fa.fa-facebook-square {
   font-size: 3em;
@@ -791,5 +811,12 @@ span.lg {
 
 .text-lg {
   font-size: 1.7em; }
+
+/*-------- donation button -----------*/
+#customButton {
+  max-width: 134px; }
+
+#donation_amount {
+  line-height: 0; }
 
 /*# sourceMappingURL=main.css.map */

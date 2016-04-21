@@ -15,7 +15,9 @@ block content
       tfoot
         tr
           td.comp-table-f(colspan="7").
-            --Prices are accurate as of 4/15/16--
+            --Prices were most recently updated April 2016. Competitor
+            pricing may change without our notice.  We check all prices
+            quarterly to ensure accuracy--
       tbody
         tr
           td.comp-table-d.green Certification
@@ -50,3 +52,53 @@ block content
           td.comp-table-d $399
           td.comp-table-d N/A
 
+    .container
+      h3.orange How are PT University's prices so low?
+      p.
+        We don't think a personal trainer's resume and marketability should
+        be limited by their bank account and socioeconomic status. From the
+        beginning, PT University has made providing fitness certifications 
+        that anyone can afford a primary focus of our business.  We are able 
+        to offer the most competitive pricing model in the fitness industry by
+        limiting our expenses in a few key ways:
+      ol
+        li
+          p.
+            <strong>We don't send paper copies through the mail.</strong> 
+            Postage, paper, ink, printers, copiers, etc. cost a lot of money. Our 
+            expenses for paper are essentially zero! 
+            #[a(href="http://www.greenpeace.org/usa/", target='_blank', class="green link-blue-hov") Go Green].
+        li
+          p.
+            <strong>We don't pay for advertising.</strong> Our only advertising
+            is word of mouth from satisfied customers.
+        li
+          p.
+            <strong>We don't offer live testing</strong>.  We don't have live 
+            seminars, classes, testing centers, instructor salaries, etc.
+            100% of our testing is online.
+        //li
+          p.
+            <strong>Donations.</strong> We accept small donations from
+            those that would like to help the cause. Most donations we receive
+            are less than $10. If you would like to help support PT University,
+            feel free to throw a few bucks our way. If not, we completely
+            understand.
+        //form(method='POST', action="account/payment")
+          input(type='hidden', name='_csrf', value=_csrf)
+          input(type='hidden', name='certType', value='Certified Personal Trainer')
+          input(type='hidden', name='price', value='9900')
+          script(
+          src='https://checkout.stripe.com/checkout.js',
+          class='stripe-button',
+          data-key=publishableKey,
+          data-image='/images/ptStripeLogo.png',
+          data-name='PT University',
+          data-description='CPT Certification ($99)',
+          data-amount='9900')
+        //form(class='orange', method='POST', action="account/payment").
+          amount $
+          #[input#donation_amount(type='number', class='bg-navy-gradient orange', min='1', max='10000', step='1', name='donation_amount', required='required') ]
+        //button#customButton.btn.btn-custom Donate
+  //script(src='https://checkout.stripe.com/checkout.js')
+  //script(src='js/main.js')

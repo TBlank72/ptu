@@ -4,22 +4,34 @@ var contactController = require('./contact');
 // GET Exam pages
 
 exports.getCpt = function(req, res) {
-  res.render('exams/cpt_exam');
+  res.render('exams/cpt_exam', {
+    title: 'Certified Personal Trainer (CPT) Exam | PT University'
+  });
 }
 exports.getPracticeCpt = function(req, res) {
-  res.render('exams/practice_cpt_exam');
+  res.render('exams/practice_cpt_exam', {
+    title: 'CPT Practice Exam | PT University'
+  });
 }
 exports.getCmt = function(req, res) {
-  res.render('exams/cmt_exam');
+  res.render('exams/cmt_exam', {
+    title: 'Certified Master Trainer (CMT) Exam | PT University'
+  });
 }
 exports.getPracticeCmt = function(req, res) {
-  res.render('exams/practice_cmt_exam');
+  res.render('exams/practice_cmt_exam', {
+    title: 'CMT Practice Exam | PT University'
+  });
 }
 exports.getCns = function(req, res) {
-  res.render('exams/cns_exam');
+  res.render('exams/cns_exam', {
+    title: 'Certified Nutrition Specialist (CNS) Exam | PT University'
+  });
 }
 exports.getPracticeCns = function(req, res) {
-  res.render('exams/practice_cns_exam');
+  res.render('exams/practice_cns_exam', {
+    title: 'CNS Practice Exam | PT University'
+  });
 }
 exports.getTest = function(req, res) {
   res.render('exams/test_exam');

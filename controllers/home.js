@@ -4,7 +4,7 @@
  */
 exports.index = function(req, res) {
   res.render('home', {
-    title: 'Home'
+    title: 'PT University | Online Personal Trainer Certifications'
   });
 };
 
@@ -13,7 +13,9 @@ exports.index = function(req, res) {
  * About page.
  */
 exports.about = function(req, res) {
-  res.render('about');
+  res.render('about', {
+    title: 'PT University | Online Personal Trainer Certifications'
+  });
 };
 
 /**
@@ -21,7 +23,9 @@ exports.about = function(req, res) {
  * FAQ page.
  */
 exports.faq = function(req, res) {
-  res.render('faq');
+  res.render('faq', {
+    title: 'PT University | Online Personal Trainer Certifications'
+  });
 };
 
 /**
@@ -29,7 +33,9 @@ exports.faq = function(req, res) {
  * Certifications page.
  */
 exports.certs = function(req, res) {
-  res.render('certs');
+  res.render('certs', {
+    title: 'PT University | Online Personal Trainer Certifications'
+  });
 };
 
 /**
@@ -37,7 +43,10 @@ exports.certs = function(req, res) {
  * Study page.
  */
 exports.study = function(req, res) {
-  res.render('study');
+  res.render('study', {
+    title: 'PT University | Online Personal Trainer Certifications',
+    desc: 'study online personal training certification'
+  });
 };
 
 /**
@@ -45,7 +54,10 @@ exports.study = function(req, res) {
  * Price Comparison page.
  */
 exports.priceCompare = function(req, res) {
-  res.render('price-compare');
+  res.render('price-compare', {
+    title: 'PT University | Price Comparison Online Personal Trainer Certifications',
+    desc: 'online personal training certification price comparison'
+  });
 };
 
 /**

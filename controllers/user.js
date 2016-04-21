@@ -15,7 +15,7 @@ exports.getLogin = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/login', {
-    title: 'Login'
+    title: 'Login | PT University'
   });
 };
 
@@ -71,7 +71,7 @@ exports.getSignup = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/signup', {
-    title: 'Create Account'
+    title: 'Create Account | PT University'
   });
 };
 
@@ -125,7 +125,7 @@ exports.postSignup = function(req, res, next) {
 exports.getAccount = function(req, res) {
   stripe = require('stripe')(process.env.STRIPE_SKEY);
   res.render('account/profile', {
-    title: 'Account Management',
+    title: 'My Account | PT University',
     publishableKey: process.env.STRIPE_PKEY
   });
 };
@@ -256,7 +256,7 @@ exports.getReset = function(req, res, next) {
         return res.redirect('/forgot');
       }
       res.render('account/reset', {
-        title: 'Password Reset'
+        title: 'Password Reset | PT University'
       });
     });
 };
@@ -339,7 +339,7 @@ exports.getForgot = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/forgot', {
-    title: 'Forgot Password'
+    title: 'Forgot Password | PT University'
   });
 };
 

@@ -144,7 +144,7 @@ exports.postStripe = function(req, res, next) {
     amount: price,
     currency: 'usd',
     source: stripeToken,
-    description: certType 
+    description: (certType || 'Donation') 
   }, function(err, charge) {
     if (err && err.type === 'StripeCardError') {
       req.flash('errors', { msg: 'Your card has been declined.' });
