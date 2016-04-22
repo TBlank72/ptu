@@ -37,7 +37,7 @@ exports.config = {
    *
    * @env NEW_RELIC_USE_SSL
    */
-  ssl: false,
+  ssl: true,
   /**
    * Proxy url
    *

@@ -1,7 +1,7 @@
 /**
  * Module dependencies.
  */
-require ('./config/newrelic');
+require ('newrelic');
 var express = require('express');
 var compress = require('compression');
 var session = require('express-session');
@@ -32,17 +32,17 @@ dotenv.config({silent: true});
  * Minify all Public Controllers JavaScript
  * Uncomment and run without nodemon to minify
  */
-new compressor.minify({
-  type: 'yui-js',
-  fileIn: 'public/js/controllers/**/*.js',
-  fileOut: 'public/js-dist/all-controllers-min.js',
-  options: ['--nomunge'],
-  sync: true, 
-  callback: function(err, min) {
-    console.log('error: ' + err);
-    //console.log(min);
-  }
-});
+//new compressor.minify({
+//  type: 'yui-js',
+//  fileIn: 'public/js/controllers/**/*.js',
+//  fileOut: 'public/js-dist/all-controllers-min.js',
+//  options: ['--nomunge'],
+//  sync: true, 
+//  callback: function(err, min) {
+//    console.log('error: ' + err);
+//    //console.log(min);
+//  }
+//});
 
 
 /**
@@ -155,6 +155,7 @@ app.get('/about', homeController.about);
 app.get('/faq', homeController.faq);
 app.get('/certifications', homeController.certs);
 app.get('/study', homeController.study);
+app.get('/blog/:blog', homeController.blog);
 app.get('/pricecompare', homeController.priceCompare);
 app.get('/images/:img', homeController.getImage); 
 app.get('/login', userController.getLogin);

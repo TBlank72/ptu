@@ -68,3 +68,13 @@ exports.getImage = function(req, res) {
   var img = req.params.name;
   res.send('public/images/' + img);
 };
+
+/**
+ * GET /
+ * blog.
+ */
+exports.blog = function(req, res) {
+  var blog = req.params.blog;
+  //res.send(req.params.blog);
+  res.render('blog/' + blog);
+};
