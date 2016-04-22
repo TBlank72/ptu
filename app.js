@@ -43,21 +43,6 @@ new compressor.minify({
     //console.log(min);
   }
 });
-/*
- * Minify Public Main(config) JavaScript
- * Uncomment and run without nodemon to minify
- */
-new compressor.minify({
-  type: 'yui-js',
-  fileIn: 'public/js/ptuapp.config.js',
-  fileOut: 'public/js-dist/ptuapp-config-min.js',
-  options: ['--nomunge'],
-  sync: true, 
-  callback: function(err, min) {
-    console.log('error: ' + err);
-    //console.log(min);
-  }
-});
 
 
 /**
@@ -155,7 +140,7 @@ app.use(function(req, res, next) {
   }
   next();
 });
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: 604800000 }));
 
 /**
  * Primary app routes.
