@@ -1,7 +1,7 @@
 /**
  * Module dependencies.
  */
-require ('newrelic');
+require ('./config/newrelic');
 var express = require('express');
 var compress = require('compression');
 var session = require('express-session');
