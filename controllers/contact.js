@@ -52,6 +52,9 @@ exports.postContact = function(req, res) {
   });
 };
 
+/**
+ * Send New User Welcome Email via SendGrid.
+ */
 exports.emailNewUser = function(user_email) {
 
   var email       = new sendgrid.Email();
@@ -76,6 +79,9 @@ exports.emailNewUser = function(user_email) {
 
 };
 
+/**
+ * Send User Exam Results via SendGrid.
+ */
 exports.emailUserExam = function(Cuemail, Cuname, certTitle, newScore, today) {
 
   var email       = new sendgrid.Email();

@@ -145,11 +145,6 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 604800000 }));
 /**
  * Primary app routes.
  */
-/*const https = require('https');
-app.get('*',function(req,res){  
-    res.redirect('https://localhost:3000'+req.url)
-})
-*/
 app.get('/', homeController.index);
 app.get('/about', homeController.about);
 app.get('/faq', homeController.faq);
@@ -158,6 +153,8 @@ app.get('/study', homeController.study);
 app.get('/blog/:blog', homeController.blog);
 app.get('/pricecompare', homeController.priceCompare);
 app.get('/images/:img', homeController.getImage); 
+app.get('/mobile', homeController.getMobile); 
+app.get('/m', homeController.getMobile); 
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
@@ -175,6 +172,7 @@ app.post('/account/password', passportConfig.isAuthenticated, userController.pos
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
 app.post('/account/payment', apiController.postStripe);
+
 
 /**
  * Certification Exam app routes.
@@ -204,25 +202,12 @@ app.post('/verify', examController.verifyCert);
 /**
  * API routes.
  */
-app.get('/api', apiController.getApi);
 app.post('/api/sendgrid', contactController.sendGridHook);
-app.get('/api/stripe', apiController.getStripe);
 app.post('/api/stripe/charges', apiController.postStripeCharges);
 app.post('/api/stripe', apiController.postStripe);
-app.get('/api/facebook', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getFacebook);
-app.get('/api/twitter', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getTwitter);
-app.post('/api/twitter', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.postTwitter);
-app.get('/api/linkedin', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getLinkedin);
-app.get('/api/paypal', apiController.getPayPal);
-app.get('/api/paypal/success', apiController.getPayPalSuccess);
-app.get('/api/paypal/cancel', apiController.getPayPalCancel);
-app.get('/api/upload', apiController.getFileUpload);
-app.post('/api/upload', upload.single('myFile'), apiController.postFileUpload);
-
-
 
 /**
- * OAuth authentication routes. (Sign in)
+ * OAuth authentication API routes. (Sign in)
  */
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }), function(req, res) {

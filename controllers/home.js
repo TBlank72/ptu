@@ -78,3 +78,11 @@ exports.blog = function(req, res) {
   //res.send(req.params.blog);
   res.render('blog/' + blog);
 };
+
+/**
+ * GET /
+ * mobile.
+ */
+exports.getMobile = function(req, res) {
+  res.redirect(301, '/');
+};
