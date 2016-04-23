@@ -2,7 +2,7 @@ extends layout
 block content
   .container-fluid.bg-grey-seal
     h1 #[span(class='orange') Frequently Asked Questions]
-    ul
+    ol
       li.no-style.text-lg
         a(href='/faq#q1').link-blue-hov.green.
           When will I receive my certification after passing my exam and
@@ -34,6 +34,9 @@ block content
       li.no-style.text-lg            
         a(href='/faq#q10').link-blue-hov.green.
           Where do PTU professionals work?
+      li.no-style.text-lg            
+        a(href='/faq#q11').link-blue-hov.green.
+          How do I contact PT University?
           
     .container
       ul
@@ -146,3 +149,10 @@ block content
             fitness industry.  Gyms, sports teams, hospitals, and wellness
             facilities are just a few examples of where our fitness
             professionals are working.
+
+        li#q11.no-style
+          h3.orange.
+            How do I contact PT University?
+          p.
+            You may send us an email from our #[a(href='/contact').link-blue-hov.orange contact page]
+            . All emails are sent to <strong>ptuteam@ptuniversity.org</strong>
