@@ -1,7 +1,7 @@
 
 /*------------- Images --------------*/
 .logo-img {
-  background: url(../images/ptulogo-compressor.png) no-repeat center;
+  background: url(../images/ptulogo-comp.png) no-repeat center;
   background-size: contain; 
   width: 200px;
   height: 50px;
@@ -34,6 +34,7 @@
   margin: auto;
   position: relative;
 }
+
 #nameOnCert {
   font-size: 3.5em;
   font-weight: bold;
@@ -41,17 +42,19 @@
   background-color: none;
   color: $primeC1;
   display: inline;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 432px;
   position: absolute;
-  top: 270px;
-  left: 60px;
 }
 #verifyIdOnCert {
   font-size: 1.4em;
   font-family: sans-serif;
   background-color: none;
-  color: black;
+  color: $primeC1;
   display: inline;
   position: absolute;
-  top: 666px;
-  left: 714px;
+  bottom: 17px;
+  left: 180px;
 }

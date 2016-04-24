@@ -1,6 +1,6 @@
 /*------------- Images --------------*/
 .logo-img {
-  background: url(../images/ptulogo-compressor.png) no-repeat center;
+  background: url(../images/ptulogo-comp.png) no-repeat center;
   background-size: contain;
   width: 200px;
   height: 50px; }
@@ -37,19 +37,21 @@
   background-color: none;
   color: #001F3F;
   display: inline;
-  position: absolute;
-  top: 270px;
-  left: 60px; }
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 432px;
+  position: absolute; }
 
 #verifyIdOnCert {
   font-size: 1.4em;
   font-family: sans-serif;
   background-color: none;
-  color: black;
+  color: #001F3F;
   display: inline;
   position: absolute;
-  top: 666px;
-  left: 714px; }
+  bottom: 17px;
+  left: 180px; }
 
 .btn-custom {
   width: 100%;
@@ -118,7 +120,7 @@ ul.footer-links li {
 }
 */
 a.navbar-brand.logo-img {
-  background: url(../images/ptulogo.png) no-repeat center;
+  background: url(../images/ptulogo-comp.png) no-repeat center;
   background-size: contain;
   width: 200px; }
 
@@ -191,68 +193,54 @@ button.navbar-toggle {
 @media (max-width: 600px) {
   body {
     line-height: 21px !important; }
-
   h2, h3, h4, h5 {
     font-size: 1.2em !important; }
-
   td {
     font-size: 0.9em !important; }
-
   p {
     font-size: 12px !important; }
-
   ul li.no-style a.green {
     font-size: 0.7em !important; }
-
   .carousel-inner .item h1 {
     font-size: 1.5em !important; }
-
   .carousel-inner .item h3 {
     font-size: 1em !important; }
-
   .carousel-inner .item nav a {
     font-size: 1em !important; }
-
   .cert-container h1 {
     font-size: 1.5em !important; } }
+
 @media (max-width: 700px) {
   ol.carousel-indicators li {
     display: none !important; } }
+
 /*=============== navbar collapse threshold =================*/
 @media (max-width: 1200px) {
   .navbar-header {
     float: none; }
-
   .navbar-left, .navbar-right {
     float: none !important; }
-
   .navbar-toggle {
     display: block; }
-
   .navbar-collapse {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
-
   .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px; }
-
   .navbar-collapse.collapse {
     display: none !important; }
-
   .navbar-nav {
     float: none !important;
     margin-top: 7.5px; }
-
   .navbar-nav > li {
     float: none; }
-
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px; }
-
   .collapse.in {
     display: block !important; } }
+
 /*==============End Navbar collapse threshold=============*/
 /* ------------------quiz.css-------------------------*/
 /*---------------myQuiz-----------------------*/
@@ -458,91 +446,71 @@ button.navbar-toggle {
   .container-fluid {
     padding: 0px;
     margin: 0px; }
-
   .myQuiz {
     width: 320px;
     background-size: 320px auto; }
-
   .myQuiz h1 {
     width: 300px;
     font-size: 1.2em;
     top: 25px;
     left: 25px; }
-
   .myQuiz h1 span {
     line-height: 43px; }
-
   .myQuiz h2 {
     margin: 0px; }
-
   .myQuiz h3 {
     font-size: 2.2em;
     margin-bottom: 15px; }
-
   .myQuiz p {
     max-width: 300px; }
-
   .btn-quiz {
     max-width: 90%; }
-
   .myQuiz .progress-quiz {
     width: 95%;
     top: 80px;
     left: 25px; }
-
   .myQuiz .progress-quiz div {
     width: 2px;
     height: 3px;
     margin-right: 0.5px; }
-
   .myQuiz .progress-quiz div::after {
     top: -30px;
     width: 53px;
     height: 33px; }
-
   .myQuiz .intro {
     width: 300px;
     top: 110px;
     left: 330px; }
-
   .myQuiz .question {
     width: 300px;
     top: 110px;
     left: 330px; }
-
   .myQuiz .question .txt {
     font-size: 1.4em;
     margin-bottom: 15px; }
-
   .myQuiz .question .ans {
     font-size: 1em;
     padding: 5px 10px;
     margin-bottom: 10px; }
-
   .myQuiz .question .ans.image {
     min-height: 45px;
     background-size: auto 45px; }
-
   .myQuiz .question .ans.image:hover {
     background-color: #000; }
-
   .myQuiz .results {
     width: 260px;
     top: 130px;
     left: 330px; }
-
   .myQuiz .results .share {
     margin-top: 20px; }
-
   .myQuiz .results .a.btn-quiz {
     margin-bottom: 20px; }
-
   .myQuiz .active {
     left: 25px; }
-
   .myQuiz .intro.inactive,
   .myQuiz .inactive.answered {
     left: -650px; } }
+
 /* end @media screen */
 body {
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif;
@@ -678,7 +646,7 @@ p {
   font-size: 16px; }
 
 .bg-grey-seal {
-  background: url(../images/ptusealgreyO15-compressor.png) no-repeat center;
+  background: url(../images/ptusealgreyO15-comp.png) no-repeat center;
   background-color: #001F3F;
   background-size: cover;
   opacity: 1; }
