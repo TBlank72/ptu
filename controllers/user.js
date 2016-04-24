@@ -15,7 +15,8 @@ exports.getLogin = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/login', {
-    title: 'Login | PT University'
+    title: 'Login | PT University',
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
   });
 };
 
@@ -71,7 +72,8 @@ exports.getSignup = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/signup', {
-    title: 'Create Account | PT University'
+    title: 'Create Account | PT University',
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
   });
 };
 
@@ -126,7 +128,8 @@ exports.getAccount = function(req, res) {
   stripe = require('stripe')(process.env.STRIPE_SKEY);
   res.render('account/profile', {
     title: 'My Account | PT University',
-    publishableKey: process.env.STRIPE_PKEY
+    publishableKey: process.env.STRIPE_PKEY,
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
   });
 };
 
@@ -256,7 +259,8 @@ exports.getReset = function(req, res, next) {
         return res.redirect('/forgot');
       }
       res.render('account/reset', {
-        title: 'Password Reset | PT University'
+        title: 'Password Reset | PT University',
+        desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
       });
     });
 };
@@ -339,7 +343,8 @@ exports.getForgot = function(req, res) {
     return res.redirect('/');
   }
   res.render('account/forgot', {
-    title: 'Forgot Password | PT University'
+    title: 'Forgot Password | PT University',
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
   });
 };
 

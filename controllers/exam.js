@@ -5,32 +5,38 @@ var contactController = require('./contact');
 
 exports.getCpt = function(req, res) {
   res.render('exams/cpt_exam', {
-    title: 'Certified Personal Trainer (CPT) Exam | PT University'
+    title: 'Certified Personal Trainer (CPT) Exam | PT University',
+    desc: "Online Certified Personal Trainer exam | Don't pay unless you pass"
   });
 }
 exports.getPracticeCpt = function(req, res) {
   res.render('exams/practice_cpt_exam', {
-    title: 'CPT Practice Exam | PT University'
+    title: 'CPT Practice Exam | PT University',
+    desc: "Online Certified Personal Trainer practice exam"
   });
 }
 exports.getCmt = function(req, res) {
   res.render('exams/cmt_exam', {
-    title: 'Certified Master Trainer (CMT) Exam | PT University'
+    title: 'Certified Master Trainer (CMT) Exam | PT University',
+    desc: "Online Certified Master Trainer exam | Don't pay unless you pass"
   });
 }
 exports.getPracticeCmt = function(req, res) {
   res.render('exams/practice_cmt_exam', {
-    title: 'CMT Practice Exam | PT University'
+    title: 'CMT Practice Exam | PT University',
+    desc: "Online Certified Personal Trainer practice exam"
   });
 }
 exports.getCns = function(req, res) {
   res.render('exams/cns_exam', {
-    title: 'Certified Nutrition Specialist (CNS) Exam | PT University'
+    title: 'Certified Nutrition Specialist (CNS) Exam | PT University',
+    desc: "Online Certified Nutrition Specialist exam | Don't pay unless you pass"
   });
 }
 exports.getPracticeCns = function(req, res) {
   res.render('exams/practice_cns_exam', {
-    title: 'CNS Practice Exam | PT University'
+    title: 'CNS Practice Exam | PT University',
+    desc: "Online Certified Personal Trainer practice exam"
   });
 }
 exports.getTest = function(req, res) {

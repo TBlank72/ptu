@@ -16,7 +16,8 @@ exports.sendGridHook = function(req, res) {
  */
 exports.getContact = function(req, res) {
   res.render('contact', {
-    title: 'Contact | PT University Support'
+    title: 'Contact | PT University Support',
+    desc: "Contact PT University"
   });
 };
 

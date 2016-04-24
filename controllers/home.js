@@ -4,7 +4,8 @@
  */
 exports.index = function(req, res) {
   res.render('home', {
-    title: 'PT University | Online Personal Trainer Certifications'
+    title: 'PT University | Online Personal Trainer Certifications',
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
   });
 };
 
@@ -14,7 +15,8 @@ exports.index = function(req, res) {
  */
 exports.about = function(req, res) {
   res.render('about', {
-    title: 'PT University | Online Personal Trainer Certifications'
+    title: 'PT University | Online Personal Trainer Certifications',
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
   });
 };
 
@@ -24,7 +26,8 @@ exports.about = function(req, res) {
  */
 exports.faq = function(req, res) {
   res.render('faq', {
-    title: 'PT University | Online Personal Trainer Certifications'
+    title: 'PT University | Online Personal Trainer Certifications',
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
   });
 };
 
@@ -34,7 +37,8 @@ exports.faq = function(req, res) {
  */
 exports.certs = function(req, res) {
   res.render('certs', {
-    title: 'PT University | Online Personal Trainer Certifications'
+    title: 'PT University | Online Personal Trainer Certifications',
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
   });
 };
 
@@ -45,7 +49,7 @@ exports.certs = function(req, res) {
 exports.study = function(req, res) {
   res.render('study', {
     title: 'PT University | Online Personal Trainer Certifications',
-    desc: 'study online personal training certification'
+    desc: 'study online personal training certifications exam material, exercise science books, nutrition books'
   });
 };
 
@@ -56,7 +60,7 @@ exports.study = function(req, res) {
 exports.priceCompare = function(req, res) {
   res.render('price-compare', {
     title: 'PT University | Price Comparison Online Personal Trainer Certifications',
-    desc: 'online personal training certification price comparison'
+    desc: 'Price comparison for top personal training certifications'
   });
 };
 
@@ -76,7 +80,11 @@ exports.getImage = function(req, res) {
 exports.blog = function(req, res) {
   var blog = req.params.blog;
   //res.send(req.params.blog);
-  res.render('blog/' + blog);
+  res.render('blog/' + blog, {
+    title: blog,
+    desc: blog
+
+  });
 };
 
 /**
