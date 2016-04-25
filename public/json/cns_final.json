@@ -77,7 +77,7 @@
       { "id": 2, "text": "9" },
       { "id": 3, "text": "10" }
       ],
-      "correct": 9
+      "correct": 2
   },
   {
     "question": "Protein contains approximately _____ calories per gram.",
@@ -240,7 +240,7 @@
       "correct": 3
   },
   {
-    "question": "How many Americans are obese?",
+    "question": "What fraction of the American population is obese?",
     "answers": [
       { "id": 0, "text": "1/2" },
       { "id": 1, "text": "1/4" },
@@ -360,7 +360,7 @@
       "correct": 0
   },
   {
-    "question": "What is the most vital Omega-3 essential fatty acid?",
+    "question": "_____ and _____ are the most vital Omega-3 essential fatty acids?",
     "answers": [
       { "id": 0, "text": "EGA/EPA" },
       { "id": 1, "text": "EPA/EHG" },
