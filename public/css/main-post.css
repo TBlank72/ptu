@@ -1,6 +1,6 @@
 /*------------- Images --------------*/
 .logo-img {
-  background: url(../images/ptulogo-compressor.png) no-repeat center;
+  background: url(../images/ptulogo-comp.png) no-repeat center;
   -webkit-background-size: contain;
           background-size: contain;
   width: 200px;
@@ -39,19 +39,21 @@
   background-color: none;
   color: #001F3F;
   display: inline;
-  position: absolute;
-  top: 270px;
-  left: 60px; }
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 432px;
+  position: absolute; }
 
 #verifyIdOnCert {
   font-size: 1.4em;
   font-family: sans-serif;
   background-color: none;
-  color: black;
+  color: #001F3F;
   display: inline;
   position: absolute;
-  top: 666px;
-  left: 714px; }
+  bottom: 17px;
+  left: 180px; }
 
 .btn-custom {
   width: 100%;
@@ -131,7 +133,7 @@ ul.footer-links li {
 }
 */
 a.navbar-brand.logo-img {
-  background: url(../images/ptulogo.png) no-repeat center;
+  background: url(../images/ptulogo-comp.png) no-repeat center;
   -webkit-background-size: contain;
           background-size: contain;
   width: 200px; }
@@ -743,7 +745,7 @@ p {
   font-size: 16px; }
 
 .bg-grey-seal {
-  background: url(../images/ptusealgreyO15-compressor.png) no-repeat center;
+  background: url(../images/ptusealgreyO15-comp.png) no-repeat center;
   background-color: #001F3F;
   -webkit-background-size: cover;
           background-size: cover;

@@ -67,15 +67,15 @@ block content
             form(method='POST', action="account/payment")
               input(type='hidden', name='_csrf', value=_csrf)
               input(type='hidden', name='certType', value='Certified Personal Trainer')
-              input(type='hidden', name='price', value='9900')
+              input(type='hidden', name='price', value='50')
               script(
               src='https://checkout.stripe.com/checkout.js',
               class='stripe-button',
               data-key=publishableKey,
               data-image='/images/ptStripeLogo.png',
               data-name='PT University',
-              data-description='CPT Certification ($99)',
-              data-amount='9900')
+              data-description='CPT Certification ($00.50)',
+              data-amount='50')
             //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for CPT Certification', class='btn-custom bg-green-gradient')
         else
@@ -102,15 +102,15 @@ block content
             form(method='POST', action="account/payment")
               input(type='hidden', name='_csrf', value=_csrf)
               input(type='hidden', name='certType', value='Certified Master Trainer')
-              input(type='hidden', name='price', value='14900')
+              input(type='hidden', name='price', value='50')
               script(
               src='https://checkout.stripe.com/checkout.js',
               class='stripe-button',
               data-key=publishableKey,
               data-image='/images/ptStripeLogo.png',
               data-name='PT University',
-              data-description='CMT Certification ($149)',
-              data-amount='14900')
+              data-description='CMT Certification ($00.50)',
+              data-amount='50')
             //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for CMT Certification', class='btn-custom bg-red-gradient')
         else
@@ -137,15 +137,15 @@ block content
             form(method='POST', action="account/payment")
               input(type='hidden', name='_csrf', value=_csrf)
               input(type='hidden', name='certType', value='Certified Nutrition Specialist')
-              input(type='hidden', name='price', value='9900')
+              input(type='hidden', name='price', value='50')
               script(
               src='https://checkout.stripe.com/checkout.js',
               class='stripe-button',
               data-key=publishableKey,
               data-image='/images/ptStripeLogo.png',
               data-name='PT University',
-              data-description='CNS Certification ($99)',
-              data-amount='9900')
+              data-description='CNS Certification ($00.50)',
+              data-amount='50')
             //form(action='/api/stripe', method='get')
               input(type='submit', value='Pay for CNS Certification', class='btn-custom bg-blue-gradient')
         else
