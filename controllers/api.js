@@ -15,11 +15,13 @@ exports.postStripe = function(req, res, next) {
   var stripeEmail = req.body.stripeEmail;
   var certType = req.body.certType;
   var price = req.body.price;
+
   var charge = stripe.charges.create({
+    receipt_email: stripeEmail,
     amount: price,
     currency: 'usd',
     source: stripeToken,
-    description: (certType || 'Donation') 
+    description: certType
   }, function(err, charge) {
     if (err && err.type === 'StripeCardError') {
       req.flash('errors', { msg: 'Your card has been declined.' });

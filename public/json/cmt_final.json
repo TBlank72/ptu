@@ -90,7 +90,7 @@
       "correct": 1
   },
   {
-    "question": "Deoxygenated blood is pumped tothe lungs by what heart chamber?",
+    "question": "Deoxygenated blood is pumped to the lungs by what heart chamber?",
     "answers": [
       { "id": 0, "text": "left ventricle" },
       { "id": 1, "text": "left atrium" },
@@ -338,7 +338,7 @@
       "correct": 1
   },
   {
-    "question": "_____ fatigue the fastest.",
+    "question": "_____ fibers fatigue the fastest.",
     "answers": [
       { "id": 0, "text": "Type I" },
       { "id": 1, "text": "Type Ia" },
@@ -796,7 +796,7 @@
       "correct": 0
   },
   {
-    "question": "Posterior, or dorsal, is towards the __________.",
+    "question": "Posterior, or dorsal, is towards the _____.",
     "answers": [
       { "id": 0, "text": "front" },
       { "id": 1, "text": "rear" },
@@ -806,7 +806,7 @@
       "correct": 1
   },
   {
-    "question": "Anterior, or ventral, is towards the __________.",
+    "question": "Anterior, or ventral, is towards the _____.",
     "answers": [
       { "id": 0, "text": "front" },
       { "id": 1, "text": "rear" },

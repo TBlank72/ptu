@@ -66,7 +66,7 @@
       "correct": 3
   },
   {
-    "question": "To increase strength _____ rep ranges should be used.",
+    "question": "To increase strength, _____ rep ranges should be used.",
     "answers": [
       { "id": 0, "text": "1-6" },
       { "id": 1, "text": "6-10" },
@@ -156,7 +156,7 @@
       "correct": 1
   },
   {
-    "question": "Powerlifters primary goal is to increase _____.",
+    "question": "A Powerlifters primary goal is to increase _____.",
     "answers": [
       { "id": 0, "text": "Strength" },
       { "id": 1, "text": "Power" },
@@ -851,7 +851,7 @@
       { "id": 0, "text": "True" },
       { "id": 1, "text": "False" }
       ],
-      "correct": 0
+      "correct": 1
   },
   {
     "question": "Which of the following is not part of the hamstrings",
