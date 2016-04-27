@@ -108,18 +108,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-/* --------- This moved to cloudflare to avoid redirect issues -------
- * Redirect to https
-app.use(function(req, res, next) {
-  if (req.headers['x-forwarded-proto'] != 'https') {
-    res.redirect('https://' + req.headers.host + req.path);
-  }
-  else {
-    return next();
-  }
-});
- */
-
 app.use(function(req, res, next) {
   if (req.path === '/api/upload' || req.path == '/api/stripe/charges') {
     next();
@@ -150,6 +138,9 @@ app.get('/about', homeController.about);
 app.get('/faq', homeController.faq);
 app.get('/certifications', homeController.certs);
 app.get('/study', homeController.study);
+app.get('/study/PTU-study-guide-pdf', homeController.studyGuidePdf);
+app.get('/link-to-ptu', homeController.linkToPtu);
+app.get('/article-guidelines', homeController.articleGuidelines);
 app.get('/blog/:blog', homeController.blog);
 app.get('/pricecompare', homeController.priceCompare);
 app.get('/images/:img', homeController.getImage); 
@@ -197,7 +188,7 @@ app.post('/cpt', examController.submitCpt);
 app.post('/cmt', examController.submitCmt);
 app.post('/cns', examController.submitCns);
 app.post('/test', examController.submitTest);
-app.post('/verify', examController.verifyCert);
+app.post('/verify-trainer-cert', examController.verifyCert);
 
 /**
  * API routes.

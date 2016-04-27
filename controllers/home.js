@@ -1,3 +1,5 @@
+var path = require('path');
+
 /**
  * GET /
  * Home page.
@@ -55,12 +57,46 @@ exports.study = function(req, res) {
 
 /**
  * GET /
+ * Study page.
+ */
+exports.articleGuidelines = function(req, res) {
+  res.render('article-guidelines', {
+    title: 'PT University | Article Submission Guidelines',
+    desc: "PT University Editorial Guidelines for article submission."
+  });
+};
+
+/**
+ * GET /
+ * Study Guide pdf.
+ */
+exports.studyGuidePdf = function(req, res) {
+  res.sendFile('PTU-HandBook.pdf', {
+    root: path.join(__dirname, '../views/study'),
+    title: 'PT University | Online Personal Trainer Certifications',
+    desc: 'study online personal training certifications exam material, exercise science books, nutrition books'
+  });
+};
+
+/**
+ * GET /
  * Price Comparison page.
  */
 exports.priceCompare = function(req, res) {
   res.render('price-compare', {
     title: 'PT University | Price Comparison Online Personal Trainer Certifications',
     desc: 'Price comparison for top personal training certifications'
+  });
+};
+
+/**
+ * GET /
+ * Link-to-ptu page.
+ */
+exports.linkToPtu = function(req, res) {
+  res.render('link-to-ptu', {
+    title: 'PT University | Online Personal Trainer Certifications',
+    desc: 'PT University welcomes links from our certified professionals'
   });
 };
 

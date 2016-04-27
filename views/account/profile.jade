@@ -2,244 +2,241 @@ extends ../layout
 
 block content
   .container-fluid.bg-grey-seal
-    .page-header
-      h3 Profile Information
+    .width900
+      .page-header
+        h2.orange #{user.profile.name || user.email}
 
-    form.form-horizontal(action='/account/profile', method='POST')
-      input(type='hidden', name='_csrf', value=_csrf)
-      .form-group
-        label.col-sm-3.control-label.orange(for='email') Email
-        .col-sm-7
-          input.form-control.form-input-custom(type='email', name='email', id='email', value='#{user.email}')
-      .form-group
-        label.col-sm-3.control-label.orange(for='name') Name
-        .col-sm-7
-          input.form-control.form-input-custom(type='text', name='name', id='name',
-          placeholder='Full Name - as it should appear on your Certification',
-          value='#{user.profile.name}')
-      //.form-group
-        label.col-sm-3.control-label.orange(for='gender') Gender
-        .col-sm-4
-          label.radio.col-sm-4.orange
-            input(type='radio', checked=user.profile.gender=='male', name='gender', value='male', data-toggle='radio')
-            span Male
-          label.radio.col-sm-4.orange
-            input(type='radio', checked=user.profile.gender=='female', name='gender', value='female', data-toggle='radio')
-            span Female
-      //.form-group
-        label.col-sm-3.control-label.orange(for='location') Location
-        .col-sm-7
-          input.form-control.form-input-custom(type='text', name='location', id='location', value='#{user.profile.location}')
-      //.form-group
-        label.col-sm-3.control-label.orange(for='website') Website
-        .col-sm-7
-          input.form-control.form-input-custom(type='text', name='website', id='website', value='#{user.profile.website}')
-      ////.form-group
-        label.col-sm-3.control-label(for='gravatar') Gravatar
-        .col-sm-4
-          img(src="#{user.gravatar()}", class='profile', width='100', height='100')
-      .form-group
-        .col-sm-offset-3.col-sm-4
-          button.btn.btn.btn-custom(type='submit')
-            i.fa.fa-pencil
-            | Update Profile
-
-    .page-header
-      h3 My Certifications 
-    .certs-container
-
-      .cert-container
-        h1.bg-green-gradient Certified Personal Trainer 
-        if (user.certs.cpt.attempts.length > 0)
-          p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.cpt.score}
-          if (user.certs.cpt.passed == true)
-            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
-          else
-            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
-          p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.cpt.passed_on}
-          p #[span(class='fa fa-repeat')] Attempts: #{user.certs.cpt.attempts.length}
-          if (user.certs.cpt.paid == true)
-            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
-            p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cpt.verify_id}
-          else
-            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
-            p Pay for your certification to receive your Certification and Verification ID
-            form(method='POST', action="account/payment")
-              input(type='hidden', name='_csrf', value=_csrf)
-              input(type='hidden', name='certType', value='Certified Personal Trainer')
-              input(type='hidden', name='price', value='9900')
-              script(
-              src='https://checkout.stripe.com/checkout.js',
-              class='stripe-button',
-              data-key=publishableKey,
-              data-image='/images/ptStripeLogo.png',
-              data-name='PT University',
-              data-description='CPT Certification ($99.00)',
-              data-amount='9900')
-            //form(action='/api/stripe', method='get')
-              input(type='submit', value='Pay for CPT Certification', class='btn-custom bg-green-gradient')
-        else
-          p You haven't taken the CPT Exam yet.  Click to start now.
-        form(action='/cpt', target='_blank')
-          input(type='submit', value='Start CPT Exam', class='btn-custom bg-green-gradient')
-
-      .cert-container
-        h1.bg-red-gradient Certified Master Trainer
-        if (user.certs.cmt.attempts.length > 0)
-          p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.cmt.score}
-          if (user.certs.cmt.passed == true)
-            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
-          else
-            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
-          p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.cmt.passed_on}
-          p #[span(class='fa fa-repeat')] Attempts: #{user.certs.cmt.attempts.length}
-          if (user.certs.cmt.paid == true)
-            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
-            p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cmt.verify_id}
-          else
-            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
-            p Pay for your certification to receive your Certification and Verification ID
-            form(method='POST', action="account/payment")
-              input(type='hidden', name='_csrf', value=_csrf)
-              input(type='hidden', name='certType', value='Certified Master Trainer')
-              input(type='hidden', name='price', value='14900')
-              script(
-              src='https://checkout.stripe.com/checkout.js',
-              class='stripe-button',
-              data-key=publishableKey,
-              data-image='/images/ptStripeLogo.png',
-              data-name='PT University',
-              data-description='CMT Certification ($149.00)',
-              data-amount='14900')
-            //form(action='/api/stripe', method='get')
-              input(type='submit', value='Pay for CMT Certification', class='btn-custom bg-red-gradient')
-        else
-          p You haven't taken the CMT Exam yet.  Click to start now.
-        form(action='/cmt', target='_blank')
-          input(type='submit', value='Start CMT Exam', class='btn-custom bg-red-gradient')
-
-      .cert-container
-        h1.bg-blue-gradient Certified Nutrition Specialist
-        if (user.certs.cns.attempts.length > 0)
-          p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.cns.score}
-          if (user.certs.cns.passed == true)
-            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
-          else
-            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
-          p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.cns.passed_on}
-          p #[span(class='fa fa-repeat')] Attempts: #{user.certs.cns.attempts.length}
-          if (user.certs.cns.paid == true)
-            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
-            p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cns.verify_id}
-          else
-            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
-            p Pay for your certification to receive your Certification and Verification ID
-            form(method='POST', action="account/payment")
-              input(type='hidden', name='_csrf', value=_csrf)
-              input(type='hidden', name='certType', value='Certified Nutrition Specialist')
-              input(type='hidden', name='price', value='9900')
-              script(
-              src='https://checkout.stripe.com/checkout.js',
-              class='stripe-button',
-              data-key=publishableKey,
-              data-image='/images/ptStripeLogo.png',
-              data-name='PT University',
-              data-description='CNS Certification ($99.00)',
-              data-amount='9900')
-            //form(action='/api/stripe', method='get')
-              input(type='submit', value='Pay for CNS Certification', class='btn-custom bg-blue-gradient')
-        else
-          p You haven't taken the CNS Exam yet.  Click to start now.
-        form(action='/cns', target='_blank')
-          input(type='submit', value='Start CNS Exam', class='btn-custom bg-blue-gradient')
-
-      //.cert-container
-        h1.bg-aqua-gradient Test Certification 
-        if (user.certs.test.attempts.length > 0)
-          p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.test.score}
-          if (user.certs.test.passed == true)
-            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
-          else
-            p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
-          p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.test.passed_on}
-          p #[span(class='fa fa-repeat')] Attempts: #{user.certs.test.attempts.length}
-          if (user.certs.test.paid == true)
-            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
-            p #[span(class='fa fa-key')] Verification_ID: #{user.certs.test.verify_id}
-          else
-            p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
-            p Pay for your certification to receive your Certification and Verification ID
-            form(method='POST', action="account/payment")
-              input(type='hidden', name='_csrf', value=_csrf)
-              input(type='hidden', name='certType', value='Certified TESTING')
-              input(type='hidden', name='price', value='50')
-              script(
-              src='https://checkout.stripe.com/checkout.js',
-              class='stripe-button',
-              data-key=publishableKey,
-              data-image='/images/ptStripeLogo.png',
-              data-name='PT University',
-              data-description='TEST Certification ($00.50)',
-              data-amount='50')
-            //form(action='/api/stripe', method='get')
-              input(type='submit', value='Pay for TEST Certification', class='btn-custom bg-aqua-gradient')
-        else
-          p You haven't taken the TEST Exam yet.  Click to start now.
-        form(action='/test', target='_blank')
-          input(type='submit', value='Start TEST Exam', class='btn-custom bg-aqua-gradient')
-
-    .page-header
-      h3 Change Password
-
-    form.form-horizontal(action='/account/password', method='POST')
-      input(type='hidden', name='_csrf', value=_csrf)
-      .form-group
-        label.col-sm-3.control-label.orange(for='password') New Password
-        .col-sm-7
-          input.form-control.form-input-custom(type='password', name='password', id='password')
-      .form-group
-        label.col-sm-3.control-label.orange(for='confirmPassword') Confirm Password
-        .col-sm-7
-          input.form-control.form-input-custom(type='password', name='confirmPassword', id='confirmPassword')
-      .form-group
-        .col-sm-offset-3.col-sm-4
-          button.btn.btn-custom(type='submit')
-            i.fa.fa-lock
-            | Change Password
-
-    .page-header
-      h3 Delete Account
-
-    form.form-horizontal(action='/account/delete', method='POST')
-      .form-group
-        p.col-sm-offset-3.col-sm-4 You can delete your account, but keep in mind this action is irreversible and all of your certification records will be deleted.
+      form.form-horizontal(action='/account/profile', method='POST')
         input(type='hidden', name='_csrf', value=_csrf)
-        .col-sm-offset-3.col-sm-4
-          button.btn.btn-danger(type='submit')
-            i.fa.fa-trash
-            | Delete my account
+        .form-group
+          label.col-sm-3.control-label.orange(for='email') Email
+          .col-sm-7
+            input.form-control.form-input-custom(type='email', name='email', id='email', value='#{user.email}')
+        .form-group
+          label.col-sm-3.control-label.orange(for='name') Name
+          .col-sm-7
+            input.form-control.form-input-custom(type='text', name='name', id='name',
+            placeholder='Full Name - as it should appear on your Certification',
+            value='#{user.profile.name}')
+        //.form-group
+          label.col-sm-3.control-label.orange(for='location') Location
+          .col-sm-7
+            input.form-control.form-input-custom(type='text', name='location', id='location', value='#{user.profile.location}')
+        .form-group
+          label.col-sm-3.control-label.orange(for='website') Website/Blog
+          .col-sm-7
+            input.form-control.form-input-custom(type='text', name='website', id='website', value='#{user.profile.website}', placeholder='www.my-blog-example.com')
+        //.form-group
+          label.col-sm-3.control-label(for='gravatar') Gravatar
+          .col-sm-4
+            img(src="#{user.gravatar()}", class='profile', width='100', height='100')
+        .form-group
+          .col-sm-offset-3.col-sm-4
+            button.btn.btn.btn-custom(type='submit')
+              i.fa.fa-pencil
+              | Update Profile
 
-    .page-header
-      h3 Linked Accounts
-    .form-horizontal
-      .form-group
-        .col-sm-offset-3.col-sm-4
-          if user.facebook
-            p: a.link-blue-hov.text-danger(href='/account/unlink/facebook') Unlink your Facebook account
+      .page-header
+        h3 My Certifications 
+      .certs-container
+
+        .cert-container
+          h1.bg-green-gradient Certified Personal Trainer 
+          if (user.certs.cpt.attempts.length > 0)
+            p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.cpt.score}
+            if (user.certs.cpt.passed == true)
+              p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
+            else
+              p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
+            p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.cpt.passed_on}
+            p #[span(class='fa fa-repeat')] Attempts: #{user.certs.cpt.attempts.length}
+            if (user.certs.cpt.paid == true)
+              p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
+              p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cpt.verify_id}
+            else
+              p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
+              p Pay for your certification to receive your Certification and Verification ID
+              form(method='POST', action="account/payment")
+                input(type='hidden', name='_csrf', value=_csrf)
+                input(type='hidden', name='certType', value='Certified Personal Trainer')
+                input(type='hidden', name='price', value='9900')
+                script(
+                src='https://checkout.stripe.com/checkout.js',
+                class='stripe-button',
+                data-key=publishableKey,
+                data-image='/images/ptStripeLogo.png',
+                data-name='PT University',
+                data-description='CPT Certification ($99.00)',
+                data-amount='9900')
           else
-            p: a.link-blue-hov.orange(href='/auth/facebook') Link your Facebook account
-        .col-sm-offset-3.col-sm-4
-          if user.google
-            p: a.link-blue-hov.text-danger(href='/account/unlink/google') Unlink your Google account
+            p You haven't taken the CPT Exam yet.  Click to start now.
+          form(action='/cpt', target='_blank')
+            input(type='submit', value='Start CPT Exam', class='btn-custom bg-green-gradient')
+
+        .cert-container
+          h1.bg-red-gradient Certified Master Trainer
+          if (user.certs.cmt.attempts.length > 0)
+            p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.cmt.score}
+            if (user.certs.cmt.passed == true)
+              p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
+            else
+              p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
+            p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.cmt.passed_on}
+            p #[span(class='fa fa-repeat')] Attempts: #{user.certs.cmt.attempts.length}
+            if (user.certs.cmt.paid == true)
+              p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
+              p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cmt.verify_id}
+            else
+              p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
+              p Pay for your certification to receive your Certification and Verification ID
+              form(method='POST', action="account/payment")
+                input(type='hidden', name='_csrf', value=_csrf)
+                input(type='hidden', name='certType', value='Certified Master Trainer')
+                input(type='hidden', name='price', value='14900')
+                script(
+                src='https://checkout.stripe.com/checkout.js',
+                class='stripe-button',
+                data-key=publishableKey,
+                data-image='/images/ptStripeLogo.png',
+                data-name='PT University',
+                data-description='CMT Certification ($149.00)',
+                data-amount='14900')
           else
-            p: a.link-blue-hov.orange(href='/auth/google') Link your Google account
-        .col-sm-offset-3.col-sm-4
-          if user.twitter
-            p: a.link-blue-hov.text-danger(href='/account/unlink/twitter') Unlink your Twitter account
+            p You haven't taken the CMT Exam yet.  Click to start now.
+          form(action='/cmt', target='_blank')
+            input(type='submit', value='Start CMT Exam', class='btn-custom bg-red-gradient')
+
+        .cert-container
+          h1.bg-blue-gradient Certified Nutrition Specialist
+          if (user.certs.cns.attempts.length > 0)
+            p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.cns.score}
+            if (user.certs.cns.passed == true)
+              p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
+            else
+              p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
+            p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.cns.passed_on}
+            p #[span(class='fa fa-repeat')] Attempts: #{user.certs.cns.attempts.length}
+            if (user.certs.cns.paid == true)
+              p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
+              p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cns.verify_id}
+            else
+              p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
+              p Pay for your certification to receive your Certification and Verification ID
+              form(method='POST', action="account/payment")
+                input(type='hidden', name='_csrf', value=_csrf)
+                input(type='hidden', name='certType', value='Certified Nutrition Specialist')
+                input(type='hidden', name='price', value='9900')
+                script(
+                src='https://checkout.stripe.com/checkout.js',
+                class='stripe-button',
+                data-key=publishableKey,
+                data-image='/images/ptStripeLogo.png',
+                data-name='PT University',
+                data-description='CNS Certification ($99.00)',
+                data-amount='9900')
           else
-            p: a.link-blue-hov.orange(href='/auth/twitter') Link your Twitter account
-        .col-sm-offset-3.col-sm-4
-          if user.linkedin
-            p: a.link-blue-hov.text-danger(href='/account/unlink/linkedin') Unlink your LinkedIn account
+            p You haven't taken the CNS Exam yet.  Click to start now.
+          form(action='/cns', target='_blank')
+            input(type='submit', value='Start CNS Exam', class='btn-custom bg-blue-gradient')
+
+        //.cert-container
+          h1.bg-aqua-gradient Test Certification 
+          if (user.certs.test.attempts.length > 0)
+            p #[span(class='fa fa-arrow-circle-up')]  High Score: #{user.certs.test.score}
+            if (user.certs.test.passed == true)
+              p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-check-circle-o green')]
+            else
+              p #[span(class='fa fa-file-text')] Passed Exam: #[span(class='fa fa-times red')]
+            p #[span(class='fa fa-calendar-check-o')] Date Passed: #{user.certs.test.passed_on}
+            p #[span(class='fa fa-repeat')] Attempts: #{user.certs.test.attempts.length}
+            if (user.certs.test.paid == true)
+              p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
+              p #[span(class='fa fa-key')] Verification_ID: #{user.certs.test.verify_id}
+            else
+              p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-times red')]
+              p Pay for your certification to receive your Certification and Verification ID
+              form(method='POST', action="account/payment")
+                input(type='hidden', name='_csrf', value=_csrf)
+                input(type='hidden', name='certType', value='Certified TESTING')
+                input(type='hidden', name='price', value='50')
+                script(
+                src='https://checkout.stripe.com/checkout.js',
+                class='stripe-button',
+                data-key=publishableKey,
+                data-image='/images/ptStripeLogo.png',
+                data-name='PT University',
+                data-description='TEST Certification ($00.50)',
+                data-amount='50')
           else
-            p: a.link-blue-hov.orange(href='/auth/linkedin') Link your LinkedIn account
+            p You haven't taken the TEST Exam yet.  Click to start now.
+          form(action='/test', target='_blank')
+            input(type='submit', value='Start TEST Exam', class='btn-custom bg-aqua-gradient')
+
+      .page-header
+        h3 Trainer Resources
+      .row
+        .col-sm-4
+          ul
+            li
+              p #[a(href='/study/PTU-study-guide-pdf', target="_blank").link-green-hov.orange PTU-Study-Guide.pdf]
+        .col-sm-4
+        .col-sm-4
+
+      .page-header
+        h3 Change Password
+
+      form.form-horizontal(action='/account/password', method='POST')
+        input(type='hidden', name='_csrf', value=_csrf)
+        .form-group
+          label.col-sm-3.control-label.orange(for='password') New Password
+          .col-sm-7
+            input.form-control.form-input-custom(type='password', name='password', id='password')
+        .form-group
+          label.col-sm-3.control-label.orange(for='confirmPassword') Confirm Password
+          .col-sm-7
+            input.form-control.form-input-custom(type='password', name='confirmPassword', id='confirmPassword')
+        .form-group
+          .col-sm-offset-3.col-sm-4
+            button.btn.btn-custom(type='submit')
+              i.fa.fa-lock
+              | Change Password
+
+      .page-header
+        h3 Linked Accounts
+      .form-horizontal
+        .form-group
+          .col-sm-offset-3.col-sm-4
+            if user.facebook
+              p: a.link-blue-hov.text-danger(href='/account/unlink/facebook') Unlink your Facebook account
+            else
+              p: a.link-blue-hov.orange(href='/auth/facebook') Link your Facebook account
+          .col-sm-offset-3.col-sm-4
+            if user.google
+              p: a.link-blue-hov.text-danger(href='/account/unlink/google') Unlink your Google account
+            else
+              p: a.link-blue-hov.orange(href='/auth/google') Link your Google account
+          .col-sm-offset-3.col-sm-4
+            if user.twitter
+              p: a.link-blue-hov.text-danger(href='/account/unlink/twitter') Unlink your Twitter account
+            else
+              p: a.link-blue-hov.orange(href='/auth/twitter') Link your Twitter account
+          .col-sm-offset-3.col-sm-4
+            if user.linkedin
+              p: a.link-blue-hov.text-danger(href='/account/unlink/linkedin') Unlink your LinkedIn account
+            else
+              p: a.link-blue-hov.orange(href='/auth/linkedin') Link your LinkedIn account
+
+      .page-header
+        h3 Delete Account
+
+      form.form-horizontal(action='/account/delete', method='POST')
+        .form-group
+          p.col-sm-offset-3.col-sm-4.red.
+            <strong>You can delete your account, but keep in mind this action is 
+            irreversible and all of your certification records will be deleted.</strong>
+          input(type='hidden', name='_csrf', value=_csrf)
+          .col-sm-offset-3.col-sm-4
+            button.btn.btn-danger(type='submit')
+              i.fa.fa-trash
+              | Delete my account
+

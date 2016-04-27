@@ -1,45 +1,59 @@
 extends layout
+
 block content
   .container-fluid.bg-grey-seal
-    h1 #[span(class='orange') Frequently Asked Questions]
-    ol
-      li.no-style.text-lg
-        a(href='/faq#q1').link-blue-hov.green.
-          When will I receive my certification after passing my exam and
-          processing payment?
-      li.no-style.text-lg
-        a(href='/faq#q2').link-blue-hov.green.
-          Does PT University send certifications through the mail?
-      li.no-style.text-lg           
-        a(href='/faq#q3').link-blue-hov.green.
-          How do I verify / validate my certification?
-      li.no-style.text-lg           
-        a(href='/faq#q4').link-blue-hov.green.
-          My name isn't correct. Can I change it?
-      li.no-style.text-lg           
-        a(href='/faq#q5').link-blue-hov.green.
-          Is there a cost if I fail the certification exam?
-      li.no-style.text-lg           
-        a(href='/faq#q6').link-blue-hov.green.
-          Can I download a copy of my certification?
-      li.no-style.text-lg           
-        a(href='/faq#q7').link-blue-hov.green.
-          I didn't pass my certification exam. Can I take it again?
-      li.no-style.text-lg           
-        a(href='/faq#q8').link-blue-hov.green.
-          What score do I need to earn a certification?
-      li.no-style.text-lg           
-        a(href='/faq#q9').link-blue-hov.green.
-          Do you offer refunds?
-      li.no-style.text-lg            
-        a(href='/faq#q10').link-blue-hov.green.
-          Where do PTU professionals work?
-      li.no-style.text-lg            
-        a(href='/faq#q11').link-blue-hov.green.
-          How do I contact PT University?
-          
-    .container
+    .width900
+      .page-header
+        h1.orange Frequently Asked Questions
+      ol
+        li.no-style.text-lg
+          a(href='/faq#q0').link-blue-hov.green.
+            How do I take a certification exam?
+        li.no-style.text-lg
+          a(href='/faq#q1').link-blue-hov.green.
+            When will I receive my certification after passing my exam and
+            processing payment?
+        li.no-style.text-lg
+          a(href='/faq#q2').link-blue-hov.green.
+            Does PT University send certifications through the mail?
+        li.no-style.text-lg           
+          a(href='/faq#q3').link-blue-hov.green.
+            How do I verify / validate my certification?
+        li.no-style.text-lg           
+          a(href='/faq#q4').link-blue-hov.green.
+            My name isn't correct. Can I change it?
+        li.no-style.text-lg           
+          a(href='/faq#q5').link-blue-hov.green.
+            Is there a cost if I fail the certification exam?
+        li.no-style.text-lg           
+          a(href='/faq#q6').link-blue-hov.green.
+            Can I download a copy of my certification?
+        li.no-style.text-lg           
+          a(href='/faq#q7').link-blue-hov.green.
+            I didn't pass my certification exam. Can I take it again?
+        li.no-style.text-lg           
+          a(href='/faq#q8').link-blue-hov.green.
+            What score do I need to earn a certification?
+        li.no-style.text-lg           
+          a(href='/faq#q9').link-blue-hov.green.
+            Do you offer refunds?
+        li.no-style.text-lg            
+          a(href='/faq#q10').link-blue-hov.green.
+            Where do PTU professionals work?
+        li.no-style.text-lg            
+          a(href='/faq#q11').link-blue-hov.green.
+            How do I contact PT University?
+            
       ul
+        li#q0.no-style
+          h3.orange.
+            How do I take a certification exam?
+          p.
+            All certification exams can be found on your
+            #[a(href='/account').link-blue-hov.orange account page]
+            in the "My Certifications" section. Simply click the "start
+            [certification] exam" button to start the exam.
+
         li#q1.no-style
           h3.orange.
             When will I receive my certification after passing my exam and
@@ -48,19 +62,16 @@ block content
             Your certification will be available immediately.
           p.
             Copy your verification ID from your profile page.
-          .container
-            img(alt='verification id', src='/images/faq_verification_id.png', class='img-responsive')
+          img.faq-img(alt='verification id', src='/images/faq_verification_id.png', class='img-responsive')
           p.
             Click the 'verify certification' link in the navigation bar.
-          .container
-            img(alt='verification link', src='/images/faq_verification_link.png', class='img-responsive')
+          img.faq-img(alt='verification link', src='/images/faq_verification_link.png', class='img-responsive')
           p.
             Choose the certification title you're verifying and paste your
             verification ID into the form #[strong() as plain text]. Note:
             you must type in your verification ID or paste it as plain text.
             The normal copy/paste will not work in most browsers.
-          .container
-            img(alt='verification form', src='/images/faq_verification_form.png', class='img-responsive')
+          img.faq-img(alt='verification form', src='/images/faq_verification_form.png', class='img-responsive')
           p.
             Click the 'Verify Certification' button.  You'll be redirected to
             the page containing your certification credentials and the copy

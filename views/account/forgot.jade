@@ -2,15 +2,16 @@ extends ../layout
 
 block content
   .container-fluid.bg-grey-seal
-    .col-sm-8.col-sm-offset-2
-      form(method='POST', action='/forgot')
-        h3 Forgot Password
-        input(type='hidden', name='_csrf', value=_csrf)
-        .form-group
-          p Enter your email address below and we will send you password reset instructions.
-          label.control-label.orange(for='email') Email
-          input.form-control.form-input-custom(type='email', name='email', id='email', placeholder='Email', autofocus, required)
-        .form-group
-          button.btn.btn-custom(type='submit')
-            i.fa.fa-key
-            | Reset Password
+    .width900
+      .col-sm-8.col-sm-offset-2
+        form(method='POST', action='/forgot')
+          h3 Forgot Password
+          input(type='hidden', name='_csrf', value=_csrf)
+          .form-group
+            p Enter your email address below and we will send you password reset instructions.
+            label.control-label.orange(for='email') Email
+            input.form-control.form-input-custom(type='email', name='email', id='email', placeholder='Email', autofocus, required)
+          .form-group
+            button.btn.btn-custom(type='submit')
+              i.fa.fa-key
+              | Reset Password

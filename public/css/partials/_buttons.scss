@@ -13,6 +13,20 @@
   box-shadow: inset 0 0 10px #000;
 }
 
+.btn-custom-home {
+  height: 60px;
+  width: 100%;
+  @include bg-orange-gradient();
+  border-radius: 5px;
+  border: 1px solid $primeC1;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.btn-custom-home:hover {
+  box-shadow: inset 0 0 10px #000;
+}
+
 .btn-custom-N {
   width: 100%;
   @include bg-navy-gradient();

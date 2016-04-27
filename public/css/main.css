@@ -1,4 +1,9 @@
 /*------------- Images --------------*/
+.faq-img {
+  max-width: 90%;
+  height: auto;
+  margin: auto; }
+
 .logo-img {
   background: url(../images/ptulogo-comp.png) no-repeat center;
   background-size: contain;
@@ -63,6 +68,19 @@
   font-size: 1.2em; }
 
 .btn-custom:hover {
+  box-shadow: inset 0 0 10px #000; }
+
+.btn-custom-home {
+  height: 60px;
+  width: 100%;
+  background: #ff851b;
+  background: linear-gradient(to bottom, #ff851b 0%, #ff501b 100%);
+  border-radius: 5px;
+  border: 1px solid #001F3F;
+  font-weight: bold;
+  font-size: 1.2em; }
+
+.btn-custom-home:hover {
   box-shadow: inset 0 0 10px #000; }
 
 .btn-custom-N {
@@ -160,26 +178,29 @@ button.navbar-toggle {
   background: #FF851B; }
 
 .comp-table {
-  width: 80vw;
-  margin: auto; }
+  width: 100%;
+  margin: auto;
+  padding: 5px; }
 
 .comp-table-h {
   background: #222;
   color: #fff;
-  width: 80vw;
+  width: 100%;
   font-size: 2em;
   text-align: center;
   border: 2px solid white;
-  margin: auto; }
+  margin: auto;
+  padding: 5px; }
 
 .comp-table-f {
   background: #222;
   color: #fff;
-  width: 80vw;
+  width: 100%;
   font-size: 1em;
   text-align: center;
   border: 2px solid white;
-  margin: auto; }
+  margin: auto;
+  padding: 5px; }
 
 .comp-table-d {
   background: #222;
@@ -188,7 +209,8 @@ button.navbar-toggle {
   font-size: 2em;
   text-align: center;
   border: 2px solid white;
-  margin: auto; }
+  margin: auto;
+  padding: 5px; }
 
 @media (max-width: 600px) {
   body {
@@ -201,7 +223,10 @@ button.navbar-toggle {
     font-size: 0.9em !important; }
 
   p {
-    font-size: 12px !important; }
+    font-size: 14px !important; }
+
+  li {
+    font-size: 14px !important; }
 
   ul li.no-style a.green {
     font-size: 0.7em !important; }
@@ -552,7 +577,6 @@ body {
   height: 100%;
   line-height: 33px;
   margin: 0px;
-  padding-top: 50px;
   overflow-x: hidden; }
 
 /*------------------ Colors -----------------*/
@@ -676,12 +700,24 @@ body {
 .container-fluid .bg-grey-seal {
   margin-top: 0 !important; }
 
+.width900 {
+  max-width: 900px;
+  margin: auto; }
+
 p {
+  font-size: 16px; }
+
+li {
   font-size: 16px; }
 
 .bg-grey-seal {
   background: url(../images/ptusealgreyO15-comp.png) no-repeat center;
   background-color: #001F3F;
+  background-size: cover;
+  opacity: 1; }
+
+.bg-home {
+  background: url(../images/landing12_edited.jpg) no-repeat center;
   background-size: cover;
   opacity: 1; }
 
@@ -728,6 +764,24 @@ p {
   color: #FF851B;
   text-align: center;
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif; }
+
+.form-container-home {
+  margin-left: 0px;
+  margin-right: 120px;
+  margin-top: 120px;
+  padding: 20px;
+  max-width: 350px;
+  border-radius: 20px;
+  text-align: center; }
+
+.form-input-home,
+.form-input-home input,
+.form-input-home::-webkit-input-placeholder {
+  color: #FFFFFF;
+  background: #00203f;
+  background: linear-gradient(to bottom, #00203f 0%, #000a14 100%);
+  font-size: 16px;
+  height: 50px; }
 
 .form-container-verified {
   margin: 30px auto;
@@ -876,11 +930,37 @@ a.fa.fa-linkedin-square {
 a.fa.fa-linkedin-square:hover {
   color: #007bb6; }
 
-/*-----------------Carousel--------------------------*/
+/*-----------------Carousel / carousel-fade--------------------------*/
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity; }
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0; }
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1; }
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.carousel-fade .carousel-control {
+  z-index: 2; }
+
 .carousel-inner {
-  height: 93vh;
-  text-align: center;
-  margin: 0 auto;
+  text-align: left;
+  margin: auto;
+  margin-top: 34px;
+  margin-bottom: 0px;
   color: white;
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif; }
 
@@ -888,7 +968,7 @@ a.fa.fa-linkedin-square:hover {
   background: transparent; }
 
 .carousel-inner h1 {
-  font-size: 3em; }
+  font-size: 4em; }
 
 .carousel-inner h3 {
   margin: 3px; }
@@ -1044,7 +1124,7 @@ nav a:focus {
 
 /*---------------Cert Containers---------------------------*/
 .certs-container {
-  max-width: 70%;
+  max-width: 90%;
   margin: auto;
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif; }
 
@@ -1109,7 +1189,7 @@ span.lg {
   padding: 100px; }
 
 /*----------------- faq.jade -----------------------*/
-#q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10 {
+#q0, #q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10 {
   padding-top: 40px; }
 
 .no-style {

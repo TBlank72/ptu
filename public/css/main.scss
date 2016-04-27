@@ -15,7 +15,7 @@ body {
   height: 100%;
   line-height: 33px;
   margin: 0px;
-  padding-top: 50px;
+  //padding-top: 70px;
   overflow-x: hidden;
 }
 /*------------------ Colors -----------------*/
@@ -130,7 +130,14 @@ body {
 .container-fluid .bg-grey-seal {
   margin-top: 0 !important;
 }
+.width900 {
+  max-width: 900px;
+  margin: auto;
+}
 p {
+  font-size: 16px;
+}
+li {
   font-size: 16px;
 }
 .bg-grey-seal {
@@ -139,7 +146,11 @@ p {
   background-size: cover; 
   opacity: 1;
 }
-
+.bg-home {
+  background: url(../images/landing12_edited.jpg) no-repeat center;
+  background-size: cover;
+  opacity: 1;
+}
 /*--------------- Link Styles ----------------*/
 a.study_link {
 }
@@ -190,6 +201,27 @@ p {
   color: $primeC2;
   text-align: center;
   font-family: $fontF-std;
+}
+
+.form-container-home {
+  margin-left: 0px;
+  margin-right: 120px;
+  margin-top: 120px;
+  padding: 20px;
+  max-width: 350px;
+  //background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  //border: 2px solid rgba(255,133,27,1);
+  text-align: center;
+}
+
+.form-input-home,
+.form-input-home input,
+.form-input-home::-webkit-input-placeholder {
+  color: $white;
+  @include bg-navy-gradient();
+  font-size: 16px;
+  height: 50px;
 }
 
 .form-container-verified {
@@ -357,11 +389,38 @@ a.fa.fa-linkedin-square:hover {
 }
 
 
-/*-----------------Carousel--------------------------*/
+/*-----------------Carousel / carousel-fade--------------------------*/
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
 .carousel-inner {
-  height: 93vh;
-  text-align: center;
-  margin: 0 auto;
+  //height: 93vh;
+  text-align: left;
+  margin: auto;
+  margin-top: 34px;
+  margin-bottom: 0px;
   color: white;
   font-family: $fontF-std;
 }
@@ -370,7 +429,7 @@ a.fa.fa-linkedin-square:hover {
 }
 
 .carousel-inner h1 {
-  font-size: 3em;
+  font-size: 4em;
 }
 
 .carousel-inner h3 {
@@ -543,10 +602,11 @@ nav a:focus {
 	-moz-transform: translateX(0px);
 	transform: translateX(0px);
 }
+
 /*---------------Cert Containers---------------------------*/
 
 .certs-container {
-  max-width: 70%;
+  max-width: 90%;
   margin: auto;
   font-family: $fontF-std;
 }
@@ -629,7 +689,7 @@ span.lg {
 
 /*----------------- faq.jade -----------------------*/
 
-#q1,#q2,#q3,#q4,#q5,#q6,#q7,#q8,#q9,#q10 {
+#q0,#q1,#q2,#q3,#q4,#q5,#q6,#q7,#q8,#q9,#q10 {
   padding-top: 40px;
 }
 

@@ -1,24 +1,27 @@
 .comp-table {
-  width: 80vw;
+  width: 100%;
   margin: auto;
+  padding: 5px;
 }
 .comp-table-h {
   background: #222;
   color: #fff;
-  width: 80vw;
+  width: 100%;
   font-size: 2em;
   text-align: center;
   border: 2px solid white;
   margin: auto;
+  padding: 5px;
 }
 .comp-table-f {
   background: #222;
   color: #fff;
-  width: 80vw;
+  width: 100%;
   font-size: 1em;
   text-align: center;
   border: 2px solid white;
   margin: auto;
+  padding: 5px;
 }
 .comp-table-d {
   background: #222;
@@ -28,4 +31,5 @@
   text-align: center;
   border: 2px solid white;
   margin: auto;
+  padding: 5px;
 }

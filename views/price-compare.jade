@@ -2,58 +2,54 @@ extends layout
 
 block content
   .container-fluid.bg-grey-seal
-    .page-header
-      h1 #[span(class='orange') Competitor Comparison]
-      p.
-        Below is a price comparison of our closest competitors in
-        the fitness industry.
-    table.comp-table
-      thead
-        tr
-          td.comp-table-h(colspan="7").
-            Fitness Certification Pricing
-      tfoot
-        tr
-          td.comp-table-f(colspan="7").
-            --Prices were most recently updated April 2016. Competitor
-            pricing may change without our notice.  We check all prices
-            quarterly to ensure accuracy--
-      tbody
-        tr
-          td.comp-table-d.green Certification
-          td.comp-table-d.orange PTU
-          td.comp-table-d NSCA
-          td.comp-table-d NASM
-          td.comp-table-d ASFA
-          td.comp-table-d ACE
-          td.comp-table-d ACSM
-        tr
-          td.comp-table-d Personal Trainer
-          td.comp-table-d.orange $99
-          td.comp-table-d $435
-          td.comp-table-d $599
-          td.comp-table-d $499
-          td.comp-table-d $599
-          td.comp-table-d $279
-        tr
-          td.comp-table-d Master Trainer
-          td.comp-table-d.orange $149
-          td.comp-table-d N/A
-          td.comp-table-d N/A
-          td.comp-table-d $699
-          td.comp-table-d N/A
-          td.comp-table-d N/A
-        tr
-          td.comp-table-d Nutrition Specialist
-          td.comp-table-d.orange $99
-          td.comp-table-d N/A
-          td.comp-table-d $449
-          td.comp-table-d $299
-          td.comp-table-d $399
-          td.comp-table-d N/A
+    .width900
+      .page-header
+        h1.orange Certification Price Comparison
+      table.comp-table
+        thead
+          tr
+            td.comp-table-h(colspan="7").
+              Fitness Certification Price Comparison
+        tfoot
+          tr
+            td.comp-table-f(colspan="7").
+              -- Competitor pricing may change without our notice.  All prices
+              are updated quarterly to ensure accuracy--
+        tbody
+          tr
+            td.comp-table-d.green Certification
+            td.comp-table-d.orange PTU
+            td.comp-table-d NSCA
+            td.comp-table-d NASM
+            td.comp-table-d ASFA
+            td.comp-table-d ACE
+            td.comp-table-d ACSM
+          tr
+            td.comp-table-d Personal Trainer
+            td.comp-table-d.orange $99
+            td.comp-table-d $435
+            td.comp-table-d $599
+            td.comp-table-d $499
+            td.comp-table-d $599
+            td.comp-table-d $279
+          tr
+            td.comp-table-d Master Trainer
+            td.comp-table-d.orange $149
+            td.comp-table-d N/A
+            td.comp-table-d N/A
+            td.comp-table-d $699
+            td.comp-table-d N/A
+            td.comp-table-d N/A
+          tr
+            td.comp-table-d Nutrition Specialist
+            td.comp-table-d.orange $99
+            td.comp-table-d N/A
+            td.comp-table-d $449
+            td.comp-table-d $299
+            td.comp-table-d $399
+            td.comp-table-d N/A
 
-    .container
-      h3.orange How are PT University's prices so low?
+      h3.orange How do we keep our prices low?
       p.
         We don't think a personal trainer's resume and marketability should
         be limited by their bank account and socioeconomic status. From the
@@ -64,17 +60,17 @@ block content
       ol
         li
           p.
-            <strong>We don't send paper copies through the mail.</strong> 
+            <span style="color:#ff851b">We don't send paper copies through the mail.</span> 
             Postage, paper, ink, printers, copiers, etc. cost a lot of money. Our 
             expenses for paper are essentially zero! 
             #[a(href="http://www.greenpeace.org/usa/", target='_blank', class="green link-blue-hov") Go Green].
         li
           p.
-            <strong>We don't pay for advertising.</strong> Our only advertising
+            <span style="color:#ff851b">We don't pay for advertising.</span> Our only advertising
             is word of mouth from satisfied customers.
         li
           p.
-            <strong>We don't offer live testing</strong>.  We don't have live 
+            <span style="color:#ff851b">We don't offer live testing</span>.  We don't have live 
             seminars, classes, testing centers, instructor salaries, etc.
             100% of our testing is online.
         //li

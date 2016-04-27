@@ -1,84 +1,94 @@
 extends layout
 block content
   .container-fluid.bg-grey-seal
-    h1 #[span(class='orange') Study Material]
-    .page-header
-      h2 Practice Exams 
-
-    h3 #[span(class='cpt') Certified Personal Trainer]
-    ul
-      li
-        a.cpt.study_link(href='/cptpractice1') CPT practice exam 1
-      li
-        a.cpt.study_link(href='/cptpractice2') CPT practice exam 2
-      li
-        a.cpt.study_link(href='/cptpractice3') CPT practice exam 3
-
-    h3 #[span(class='cmt') Certified Master Trainer]
-    ul
-      li
-        a.cmt.study_link(href='/cmtpractice1') CMT practice exam 1
-      li
-        a.cmt.study_link(href='/cmtpractice2') CMT practice exam 2
-      li
-        a.cmt.study_link(href='/cmtpractice3') CMT practice exam 3
-
-    h3 #[span(class='cns') Certified Nutrition Specialist]
-    ul.cns
-      li
-        a.cns.study_link(href='/cnspractice1') CNS practice exam 1
-      li
-        a.cns.study_link(href='/cnspractice2') CNS practice exam 2
-      li
-        a.cns.study_link(href='/cnspractice3') CNS practice exam 3
-    
-    .page-header
-      h2 Books
+    .width900
+      h1.orange Study Material
+      .page-header
+        h2 Study Guide 
+      p.
+        Our PT University Study Guide provides everything you need to successfully
+        pass all of our exams.
+      ul
+        li
+          p #[a(href='/study/PTU-study-guide-pdf', target="_blank").link-blue-hov.orange PTU-Study-Guide.pdf]
+      .page-header
+        h2 Practice Exams 
+      .row
+        .col-sm-4
+          h4.cpt Certified Personal Trainer
+          ul
+            li
+              a.cpt.study_link(href='/cptpractice1') CPT practice exam 1
+            li
+              a.cpt.study_link(href='/cptpractice2') CPT practice exam 2
+            li
+              a.cpt.study_link(href='/cptpractice3') CPT practice exam 3
+        .col-sm-4
+          h4.cmt Certified Master Trainer
+          ul
+            li
+              a.cmt.study_link(href='/cmtpractice1') CMT practice exam 1
+            li
+              a.cmt.study_link(href='/cmtpractice2') CMT practice exam 2
+            li
+              a.cmt.study_link(href='/cmtpractice3') CMT practice exam 3
+        .col-sm-4
+          h4.cns Certified Nutrition Specialist
+          ul.cns
+            li
+              a.cns.study_link(href='/cnspractice1') CNS practice exam 1
+            li
+              a.cns.study_link(href='/cnspractice2') CNS practice exam 2
+            li
+              a.cns.study_link(href='/cnspractice3') CNS practice exam 3
+      
+      .page-header
+        h2 Books
       p.
         All books are completely optional and are not required to
         pass the certification exams. We've found that some
         individuals want more in-depth knoweledge, so we decided to
         provide recommendations for the top books in the fields of
         exercise and nutrition science for those that are interested.
-    
-    .page-header
-      h3 #[span(class='cpt') Certified Personal Trainer]
-      .row
-        .col-sm-2
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=0736084150&asins=0736084150&linkId=IVOQKWASU4V4MOPO&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=0982522738&asins=0982522738&linkId=4IDQHYJKKMKO65YI&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=0736092269&asins=0736092269&linkId=37JVYGHHSQ7LKK2T&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=9963916317&asins=9963916317&linkId=UG5K7JKNZWIV5BHG&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          
-    .page-header
-      h3 #[span(class='cmt') Certified Master Trainer]
-      .row
-        .col-sm-2
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=149250162X&asins=149250162X&linkId=TK5D7X3DWV6JM7WB&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=9963916309&asins=9963916309&linkId=FSET6U5FBQLZBH4W&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=0982608624&asins=0982608624&linkId=CV425ZSYWSJHSTC5&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=1609139550&asins=1609139550&linkId=3ER6ARW5TRDEYSL4&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          
-    .page-header
-      h3 #[span(class='cns') Certified Nutrition Specialist]
-      .row
-        .col-sm-2
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=1450459935&asins=1450459935&linkId=V2LZGMD7J66SKPZI&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=1450401619&asins=1450401619&linkId=VPKW22P4CO5EONT2&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=1591201411&asins=1591201411&linkId=YEERAJWDGMYJXSLQ&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
-          iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=0736083499&asins=0736083499&linkId=YOYJC5TYD5OJA3VR&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
-        .col-sm-2
+      
+      .page-header
+        h3 #[span(class='cpt') Certified Personal Trainer]
+        .row
+          .col-sm-2
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=0736084150&asins=0736084150&linkId=IVOQKWASU4V4MOPO&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=0982522738&asins=0982522738&linkId=4IDQHYJKKMKO65YI&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=0736092269&asins=0736092269&linkId=37JVYGHHSQ7LKK2T&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=9963916317&asins=9963916317&linkId=UG5K7JKNZWIV5BHG&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            
+      .page-header
+        h3 #[span(class='cmt') Certified Master Trainer]
+        .row
+          .col-sm-2
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=149250162X&asins=149250162X&linkId=TK5D7X3DWV6JM7WB&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=9963916309&asins=9963916309&linkId=FSET6U5FBQLZBH4W&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=0982608624&asins=0982608624&linkId=CV425ZSYWSJHSTC5&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=1609139550&asins=1609139550&linkId=3ER6ARW5TRDEYSL4&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            
+      .page-header
+        h3 #[span(class='cns') Certified Nutrition Specialist]
+        .row
+          .col-sm-2
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=1450459935&asins=1450459935&linkId=V2LZGMD7J66SKPZI&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=1450401619&asins=1450401619&linkId=VPKW22P4CO5EONT2&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=1591201411&asins=1591201411&linkId=YEERAJWDGMYJXSLQ&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2
+            iframe(style='width:120px;height:240px;', marginwidth='0', marginheight='0', scrolling='no', frameborder='0', src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ptun07-20&marketplace=amazon&region=US&placement=0736083499&asins=0736083499&linkId=YOYJC5TYD5OJA3VR&show_border=false&link_opens_in_new_window=true&price_color=FFFFFF&title_color=FF851B&bg_color=00203F')
+          .col-sm-2

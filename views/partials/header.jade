@@ -3,7 +3,7 @@ if user
   - var shortE = email[0].concat('@...');
   - var name = user.profile.name.split(' ');
   - var firstN = name[0];
-.navbar.navbar-custom.navbar-fixed-top
+.navbar.navbar-custom
   .container
     .navbar-header
       button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
@@ -14,9 +14,9 @@ if user
       a.navbar-brand.logo-img(href='/')
     .collapse.navbar-collapse
       ul.nav.navbar-nav.cl-effect-1
-        li(class=(title == 'About') ? 'active' : undefined)
+        //li(class=(title == 'About') ? 'active' : undefined)
           a(href='/about') About 
-        li(class=(title == 'FAQ') ? 'active' : undefined)
+        //li(class=(title == 'FAQ') ? 'active' : undefined)
           a(href='/faq') FAQ 
         li(class=(title == 'Certifications') ? 'active' : undefined)
           a(href='/certifications') Certifications 

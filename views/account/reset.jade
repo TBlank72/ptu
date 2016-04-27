@@ -2,17 +2,18 @@ extends ../layout
 
 block content
   .container-fluid.bg-grey-seal
-    .col-sm-8.col-sm-offset-2
-      form(method='POST', action="")
-        legend.white Reset Password
-        input(type='hidden', name='_csrf', value=_csrf)
-        .form-group
-          label(for='password').orange New Password
-          input.form-control.form-input-custom(type='password', name='password', id='password', placeholder='New password', autofocus, required)
-        .form-group
-          label(for='confirm').orange Confirm Password
-          input.form-control.form-input-custom(type='password', name='confirm', id='confirm', placeholder='Confirm password', required)
-        .form-group
-          button.btn.btn-primary.btn-reset(type='submit')
-            i.fa.fa-keyboard-o
-            | Change Password
+    .width900
+      .col-sm-8.col-sm-offset-2
+        form(method='POST', action="")
+          legend.white Reset Password
+          input(type='hidden', name='_csrf', value=_csrf)
+          .form-group
+            label(for='password').orange New Password
+            input.form-control.form-input-custom(type='password', name='password', id='password', placeholder='New password', autofocus, required)
+          .form-group
+            label(for='confirm').orange Confirm Password
+            input.form-control.form-input-custom(type='password', name='confirm', id='confirm', placeholder='Confirm password', required)
+          .form-group
+            button.btn.btn-primary.btn-reset(type='submit')
+              i.fa.fa-keyboard-o
+              | Change Password
