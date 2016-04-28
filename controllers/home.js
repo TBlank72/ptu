@@ -80,6 +80,31 @@ exports.studyGuidePdf = function(req, res) {
 
 /**
  * GET /
+ * Trainer Resources page.
+ */
+exports.trainerResources = function(req, res) {
+  res.render('trainer-resources-p', {
+    title: 'PT University | Personal Trainer Resources',
+    desc: '1 Rep max conversion charts, Par-Q'
+  });
+};
+
+/**
+ * GET /
+ * Trainer Resources File.
+ */
+exports.tResource = function(req, res) {
+  var resource = req.params.resource;
+  res.sendFile(resource, {
+    root: path.join(__dirname, '../views/trainer-resources'),
+    title: resource,
+    desc: resource
+
+  });
+};
+
+/**
+ * GET /
  * Price Comparison page.
  */
 exports.priceCompare = function(req, res) {

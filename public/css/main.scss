@@ -80,6 +80,20 @@ body {
   color: $blue; 
 }
 
+.bg-white {
+  background: white;
+}
+
+.bg-orange-gradient h1,
+.bg-orange-gradient h2,
+.bg-orange-gradient h3,
+.bg-orange-gradient h4,
+.bg-orange-gradient h5,
+.bg-orange-gradient p {
+  color: $navy;
+  text-shadow: none;
+}
+
 /*------------------ Gradient Backgrounds -----------------*/
 .bg-aqua-gradient {
   @include bg-aqua-gradient(); 
@@ -125,13 +139,17 @@ body {
 ***************************************************************/
 
 .container-fluid {
-  min-height: 100vh;
+  min-height: 92vh;
 }
 .container-fluid .bg-grey-seal {
   margin-top: 0 !important;
 }
 .width900 {
   max-width: 900px;
+  margin: auto;
+}
+.width300 {
+  max-width: 300px;
   margin: auto;
 }
 p {
@@ -175,6 +193,19 @@ h5,
 p {
   color: $white;
   font-family: $fontF-std;
+  text-shadow: 1px 1px 1px black;
+}
+
+label {
+  text-shadow: 1px 1px 1px black;
+}
+a {
+  text-shadow: 1px 1px 1px black;
+}
+
+footer a,
+footer p {
+  text-shadow: none;
 }
 
 /*-------------Form Containers--------------*/
@@ -209,6 +240,7 @@ p {
   margin-top: 120px;
   padding: 20px;
   max-width: 350px;
+  min-width:220px;
   //background: rgba(255,255,255,0.1);
   border-radius: 20px;
   //border: 2px solid rgba(255,133,27,1);
@@ -218,17 +250,25 @@ p {
 .form-input-home,
 .form-input-home input,
 .form-input-home::-webkit-input-placeholder {
-  color: $white;
+  color: white;
   @include bg-navy-gradient();
   font-size: 16px;
   height: 50px;
 }
 
+.form-container-home-media {
+  display: none;
+  max-width: 300px;
+  margin: auto;
+
+}
 .form-container-verified {
   margin: 30px auto;
-  padding: 20px;
-  width: 800px !important;
-  background: rgba(255,255,255,0.1);
+  padding: 2px;
+  max-width: 800px;
+  min-width: 300px;
+  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.1);
   border-radius: 20px;
   border: 2px solid rgba(255,133,27,1);
   text-align: center;
@@ -430,10 +470,12 @@ a.fa.fa-linkedin-square:hover {
 
 .carousel-inner h1 {
   font-size: 4em;
+  text-shadow: 2px 2px 1px black;
 }
 
 .carousel-inner h3 {
-  margin: 3px;
+  margin-top: 3px;
+  text-shadow: 2px 2px 1px black;
 }
 
 .item {
@@ -449,7 +491,23 @@ a.fa.fa-linkedin-square:hover {
   font-size: 2em;
 }
 
+.welcome-message {
+  margin: 60px auto 60px auto;
+  max-width: 70%;
+}
 
+.welcome-img-container {
+  text-align: center;
+  text-shadow: none;
+  font-weight: bold;
+  margin: 20px auto 20px auto;
+  padding: 5px;
+  border: solid 4px $navy;
+  min-height: 625px;
+}
+.welcome-img-container p {
+  font-size: 1.4em;
+}
 /*------------- Link Effects-------------------------*/
 
 a,
@@ -662,8 +720,10 @@ span.lg {
 }
 
 .modal p,
+.modal h4,
 .modal label {
   font-weight: bold;
+  text-shadow: none;
 }
 
 .modal select,

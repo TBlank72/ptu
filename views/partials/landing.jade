@@ -1,2 +1,126 @@
-.container-fluid.bg-navy-gradient  
+.container-fluid.bg-home 
+  .row
+    .col-sm-7
+      #myCarousel.carousel.slide.carousel-fade(data-ride='carousel-off')
+        // Indicators
+        //ol.carousel-indicators
+          li.active(data-target='#myCarousel', data-slide-to='0')
+          li(data-target='#myCarousel', data-slide-to='1')
+          li(data-target='#myCarousel', data-slide-to='2')
+        // Content
+        .carousel-inner
+          .item.active
+              h1 Where personal trainers get certified
+              h3.
+                Thousands of personal trainers use PT University
+                to improve their resumes, build client trust, 
+                get more interviews, and get better job offers.
+              //nav.cl-effect-21
+                a(href='/certifications').cta-link certifications
+          //.item
+              h1 Test Now, Pay Later
+              h3 Only pay for your certification if you pass the exam.
+              nav.cl-effect-21
+                a(href='/study').cta-link Try a Practice Exam
+              //a.btn.btn-lg.btn-primary(href='/signup', role='button') Sign up today
+          //.item
+              h1 Take Your Career to the Next Level 
+              h3 Improve your resume, results, and client retention.
+              nav.cl-effect-21
+                a(href='/certifications').cta-link View Certifications
+              //a.btn.btn-lg.btn-primary(href='/signup', role='button') Sign up today
+          //.item
+              h1 Industry Leader in Online Fitness Certifications
+              h3 Best Value in Specialized Fitness Certifications.
+              nav.cl-effect-21
+                a(href='/pricecompare').cta-link Compare Prices
+              //a.btn.btn-lg.btn-primary(href='/signup', role='button') Sign up today
+        //left / right buttons
+        //a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left
+        //a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right
+       // /.carousel
+    .col-sm-5
+      .form-container-home
+        form.form-horizontal(id='signup-form', method='POST', action='signup')
+          input(type='hidden', name='_csrf', value=_csrf)
+          .form-group
+            input.form-control.form-input-home(type='email', name='email', id='email', placeholder='Your email address', required)
+          .form-group
+              input.form-control.form-input-home(type='password', name='password', id='password', placeholder='Create a password', required)
+          .form-group
+              input.form-control.form-input-home(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm your password', required)
+          .form-group
+              button.btn.btn-custom-home(type='submit')
+                | Signup for PT University
+              a.btn.link-blue-hov.lime(href='/login') Already have an account?
 
+      .form-container-home-media
+        form(action="/signup", method="get")
+          .form-group
+              button.btn.btn-custom-home(type="submit")
+                | Signup for PT University
+.container-fluid.bg-navy-gradient 
+  .welcome-message
+    h1.orange.text-center Welcome home, fitness professionals
+    h3.orange.text-center.
+      Personal Training University sets the industry standard for online 
+      fitness certifications, health and fitness career advancement, 
+      and sports medicine resources for fitness professionals
+
+  .row.text-center
+    .col-sm-4.bg-orange-gradient
+      .welcome-img-container
+        a(href="/certifications#cpt-section")
+          img(src="images/trainer1.jpg").img-responsive
+        h1 CPT
+        h3 <strong>Certified Personal Trainer</strong>
+        p.text-left.
+          Give your clients and employers 100% confidence in your knowledge
+          of the fundamentals of exercise science and personal training principles.
+    .col-sm-4.bg-orange-gradient
+      .welcome-img-container
+        a(href="/certifications#cmt-section")
+          img(src="images/trainer2.jpg").img-responsive
+        h1 CMT
+        h3 <strong>Certified Master Trainer</strong>
+        p.text-left.
+          Attract more clients, receive more job offers, and show everyone
+          that you have mastered the art and science or personal training.
+    .col-sm-4.bg-orange-gradient
+      .welcome-img-container
+        a(href="/certifications#cns-section")
+          img(src="images/nutrition2.jpg").img-responsive
+        h1 CNS
+        h3 <strong>Certified Nutrition Specialist</strong>
+        p.text-left.
+          Clients are looking for nutrition advice more than ever. Guide
+          them down the right path with advanced knowledge of
+          metabolism, macronutrients, and calorie requirements.
+
+  .welcome-message
+    h1.orange.text-center Test Now, Pay Later
+    h3.orange.text-center.
+      Only pay if you pass your certification exam.
+
+  nav.cl-effect-21.text-center
+    a(href='/pricecompare').cta-link Compare Prices
+  
+  .width300
+    form(action="/signup", method="get")
+      .form-group
+          button.btn.btn-custom-home(type="submit")
+            | Signup for PT University
+
+  .welcome-message
+    h4.text-center.
+      #[a(href="/contact").link-green-hov.orange Contact us] with any questions.
+
+
+
+//.social-container
+  a.fa.fa-facebook-square(href='facebook.com')
+  a.fa.fa-twitter-square(href='twitter.com')
+  a.fa.fa-google-plus-square(href='google.com')
+  a.fa.fa-linkedin-square(href='linkedin.com')

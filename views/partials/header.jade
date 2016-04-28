@@ -25,12 +25,14 @@ if user
         li
           a(href='#', data-toggle='modal',
             data-target='#verifyModal') Verify Certification 
+        li(class=(title == 'Trainer Resources') ? 'active' : undefined)
+          a(href='/trainer-resources') Trainer Resources
       ul.nav.navbar-nav.navbar-right.cl-effect-1
         if !user
           li(class=(title == 'Login') ? 'active' : undefined)
             a(href='/login') Login
           li(class=(title == 'Signup') ? 'active' : undefined)
-            a(href='/signup') Signup 
+            a(href='/signup') Signup
         else
           li(class=(title == 'Account') ? 'active' : undefined)
             a(href='/account')

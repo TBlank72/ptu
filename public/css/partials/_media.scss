@@ -19,11 +19,19 @@ ul li.no-style a.green, {
   font-size: 0.7em !important;
 } 
 
+.carousel-inner {
+  margin-top: 10px;
+}
+.item.active {
+  padding: 10px;
+}
 .carousel-inner .item h1 {
-  font-size: 1.5em !important;
+  font-size: 2.5em !important;
+  text-align: center;
 }
 .carousel-inner .item h3 {
-  font-size: 1em !important;
+  font-size: 1.5em !important;
+  text-align: center;
 }
 .carousel-inner .item nav a {
   font-size: 1em !important;
@@ -32,7 +40,45 @@ ul li.no-style a.green, {
   font-size: 1.5em !important;
 }
 
+// move CertName and Verify_id down
+#nameOnCert {
+  bottom: 438px !important;
 }
+#verifyIdOnCert {
+  bottom: 23px !important;
+}
+}
+
+// drop max-height welcome-img-container
+@media (max-width: 540px) {
+.welcome-img-container {
+  min-height: 0px !important;
+}
+} 
+
+// Hide Home Page Sign-up Form
+@media (max-width: 767px) {
+.form-container-home {
+  display: none !important;
+}
+} 
+
+// Show Home Page Sign-up Button 
+@media (max-width: 767px) {
+.form-container-home-media {
+  display: block !important;
+}
+} 
+
+// Hide verified lables
+@media (max-width: 836px) {
+.form-container-verified {
+  max-width: 80% !important;
+  min-width: 80% !important;
+}
+
+} 
+
 
 @media (max-width: 700px) {
 ol.carousel-indicators li {

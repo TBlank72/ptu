@@ -8,12 +8,13 @@
 .navbar .navbar-custom .navbar-fixed-top {
   margin-bottom: 0 !important;
 }
-/* ---- uncomment to pull navbar brand left
-.navbar.navbar-custom.navbar-fixed-top .container {
-  padding-left: 20px !important;
-  margin-left: 20px !important;
+/* ---- uncomment to pull navbar brand left*/
+.navbar.navbar-custom .container{
+  //padding-left: 20px !important;
+  //margin-left: 20px !important;
+  width: 95% !important;
 }
-*/
+
 
 a.navbar-brand.logo-img {
   background: url(../images/ptulogo-comp.png) no-repeat center;
@@ -21,7 +22,7 @@ a.navbar-brand.logo-img {
   width: 200px;
 }
 
-body > div.navbar.navbar-custom.navbar-fixed-top > div > div.collapse.navbar-collapse > ul li a{
+body > div.navbar.navbar-custom > div > div.collapse.navbar-collapse > ul li a{
   padding-left: 2px !important;
   padding-right: 2px !important;
 }

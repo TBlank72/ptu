@@ -49,7 +49,7 @@ exports.postLogin = function(req, res, next) {
         return next(err);
       }
       req.flash('success', { msg: 'Success! You are logged in.' });
-      res.redirect(req.session.returnTo || '/');
+      res.redirect('/account' || req.session.returnTo );
     });
   })(req, res, next);
 };
@@ -69,7 +69,7 @@ exports.logout = function(req, res) {
  */
 exports.getSignup = function(req, res) {
   if (req.user) {
-    return res.redirect('/');
+    return res.redirect('/account');
   }
   res.render('account/signup', {
     title: 'Create Account | PT University',

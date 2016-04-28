@@ -21,7 +21,7 @@
       { "id": 0, "text": "True" },
       { "id": 1, "text": "False" }
       ],
-      "correct": 0
+      "correct": 1
   },
   {
     "question": "Which of the following is not part of the hamstrings",
