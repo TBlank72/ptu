@@ -16,7 +16,7 @@ exports.getLogin = function(req, res) {
   }
   res.render('account/login', {
     title: 'Login | PT University',
-    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
+    desc: "Online Personal Trainer Certifications from PT University; Login to your PT University account dashboard"
   });
 };
 
@@ -73,7 +73,7 @@ exports.getSignup = function(req, res) {
   }
   res.render('account/signup', {
     title: 'Create Account | PT University',
-    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Sign up and learn how to become a top rated personal trainer"
   });
 };
 
@@ -129,7 +129,7 @@ exports.getAccount = function(req, res) {
   res.render('account/profile', {
     title: 'My Account | PT University',
     publishableKey: process.env.STRIPE_PKEY,
-    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
+    desc: "Online Personal Trainer Certifications from PT University; Account dashboard; Access trainer resources, certifications, and more"
   });
 };
 
@@ -260,7 +260,7 @@ exports.getReset = function(req, res, next) {
       }
       res.render('account/reset', {
         title: 'Password Reset | PT University',
-        desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
+        desc: "Online Personal Trainer Certifications from PT University; Need to reset your password?"
       });
     });
 };
@@ -344,7 +344,7 @@ exports.getForgot = function(req, res) {
   }
   res.render('account/forgot', {
     title: 'Forgot Password | PT University',
-    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
+    desc: "Online Personal Trainer Certifications from PT University; Forgot your password?"
   });
 };
 

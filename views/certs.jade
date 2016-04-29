@@ -113,3 +113,34 @@ block content
 
       p.
         Need an account? #[a(href='/signup').link-green-hov.orange signup now].
+
+  // CPT json-ld product
+  script(type='application/ld+json').
+    {
+      "@context": "http://www.schema.org",
+      "@type": "product",
+      "brand": "PT University",
+      "name": "Certified Personal Trainer",
+      "image": "/images/cpt_cert_sample.png",
+      "description": "Online Personal Trainer Certification.  Test now, pay later. Don't pay unless you pass your exam."
+    }
+  // CMT json-ld product
+  script(type='application/ld+json').
+    {
+      "@context": "http://www.schema.org",
+      "@type": "product",
+      "brand": "PT University",
+      "name": "Certified Master Trainer",
+      "image": "/images/cmt_cert_sample.png",
+      "description": "Online Personal Trainer Certification.  Test now, pay later. Don't pay unless you pass your exam."
+    }
+  // CNS json-ld product
+  script(type='application/ld+json').
+    {
+      "@context": "http://www.schema.org",
+      "@type": "product",
+      "brand": "PT University",
+      "name": "Certified Nutrition Specialist",
+      "image": "/images/cns_cert_sample.png",
+      "description": "Online Nutrition Specialist Certification.  Test now, pay later. Don't pay unless you pass your exam."
+    }

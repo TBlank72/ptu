@@ -17,8 +17,8 @@ exports.index = function(req, res) {
  */
 exports.about = function(req, res) {
   res.render('about', {
-    title: 'PT University | Online Personal Trainer Certifications',
-    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
+    title: 'PT University | Learn About Online Personal Trainer Certifications',
+    desc: "Online Personal Trainer Certifications; Don't pay unless you pass. Learn how to become a top rated personal trainer with advanced credentials"
   });
 };
 
@@ -29,7 +29,7 @@ exports.about = function(req, res) {
 exports.faq = function(req, res) {
   res.render('faq', {
     title: 'PT University | Online Personal Trainer Certifications',
-    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
+    desc: "Online Personal Trainer Certifications from PT University; Frequently asked questions"
   });
 };
 
@@ -57,7 +57,19 @@ exports.study = function(req, res) {
 
 /**
  * GET /
- * Study page.
+ * Study Guide pdf.
+ */
+exports.studyGuidePdf = function(req, res) {
+  res.sendFile('PTU-HandBook.pdf', {
+    root: path.join(__dirname, '../views/study'),
+    title: 'PT University | Personal Trainers Handbook',
+    desc: 'PT University handbook and study guide'
+  });
+};
+
+/**
+ * GET /
+ * Article Guidlines page.
  */
 exports.articleGuidelines = function(req, res) {
   res.render('article-guidelines', {
@@ -68,24 +80,12 @@ exports.articleGuidelines = function(req, res) {
 
 /**
  * GET /
- * Study Guide pdf.
- */
-exports.studyGuidePdf = function(req, res) {
-  res.sendFile('PTU-HandBook.pdf', {
-    root: path.join(__dirname, '../views/study'),
-    title: 'PT University | Online Personal Trainer Certifications',
-    desc: 'study online personal training certifications exam material, exercise science books, nutrition books'
-  });
-};
-
-/**
- * GET /
  * Trainer Resources page.
  */
 exports.trainerResources = function(req, res) {
   res.render('trainer-resources-p', {
     title: 'PT University | Personal Trainer Resources',
-    desc: '1 Rep max conversion charts, Par-Q'
+    desc: 'Par-Q, 1 Rep max conversion charts, top 20 foods list, healthy foods list'
   });
 };
 
@@ -142,8 +142,8 @@ exports.blog = function(req, res) {
   var blog = req.params.blog;
   //res.send(req.params.blog);
   res.render('blog/' + blog, {
-    title: blog,
-    desc: blog
+    title: blog + ' | PT University',
+    desc: blog + ' | PT University'
 
   });
 };

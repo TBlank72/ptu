@@ -50,4 +50,10 @@ block content
               input.form-control.bg-navy-gradient(type='text',
               placeholder="{{score}} / {{totalQuestions}}", readonly)
               br
+
+  // SCRIPTS
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js')
+  script.
+    var app = angular.module("ptuApp", []);
+  script(src='js-dist/all-controllers-min.js')
             button.btn-quiz(type='submit') Back to Study Home 
