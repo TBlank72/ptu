@@ -231,7 +231,7 @@ button.navbar-toggle {
   margin: auto;
   padding: 5px; }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   body {
     line-height: 21px !important; }
 
@@ -275,20 +275,20 @@ button.navbar-toggle {
 
   #verifyIdOnCert {
     bottom: 23px !important; } }
-@media (max-width: 540px) {
+@media screen and (max-width: 540px) {
   .welcome-img-container {
     min-height: 0px !important; } }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .form-container-home {
     display: none !important; } }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .form-container-home-media {
     display: block !important; } }
-@media (max-width: 836px) {
+@media screen and (max-width: 836px) {
   .form-container-verified {
     max-width: 80% !important;
     min-width: 80% !important; } }
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   ol.carousel-indicators li {
     display: none !important; } }
 /*=============== navbar collapse threshold =================*/
@@ -1348,6 +1348,19 @@ span.lg {
   color: #FF851B;
   text-align: left;
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif; }
+
+/* ---------------- lightbox ----------------------------*/
+.lightbox-container {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh; }
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear; }
 
 /*----------------- verified.jade -----------------------*/
 .verified-container {

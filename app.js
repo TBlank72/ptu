@@ -3,6 +3,7 @@
  */
 require ('newrelic');
 var express = require('express');
+//const throng = require('throng');
 var compress = require('compression');
 var session = require('express-session');
 var bodyParser = require('body-parser');
@@ -20,6 +21,7 @@ var sass = require('node-sass-middleware');
 var multer = require('multer');
 var upload = multer({ dest: path.join(__dirname, 'uploads') });
 var compressor = require('node-minify');
+var WORKERS = process.env.WEB_CONCURRENCY || 1;
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -44,7 +46,19 @@ dotenv.config({silent: true});
 //  }
 //});
 
+/*
+throng({
+  workers: WORKERS,
+  lifetime: Infinity,
+  start: startFunction
+});
 
+// NODE CLUSTER - Uncomment to spawn workers
+// Wrap around processes for workers?
+function startFunction() {
+  // ...
+}
+*/
 /**
  * Controllers (route handlers).
  */
@@ -167,6 +181,7 @@ app.post('/account/password', passportConfig.isAuthenticated, userController.pos
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
 app.post('/account/payment', apiController.postStripe);
+app.get('/ptu-sitemap', homeController.sitemap);
 
 
 /**
@@ -232,6 +247,11 @@ app.use(errorHandler());
  */
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port %d in %s mode', app.get('port'), app.get('env'));
+});
+
+// 404 Page
+app.use(function(req, res, next) {
+  res.status(404).render('error404');
 });
 
 module.exports = app;

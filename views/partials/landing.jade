@@ -41,6 +41,7 @@
         //a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
           span.glyphicon.glyphicon-chevron-right
        // /.carousel
+
     .col-sm-5
       .form-container-home
         form.form-horizontal(id='signup-form', method='POST', action='signup')
@@ -73,32 +74,37 @@
     .col-sm-4.bg-orange-gradient
       .welcome-img-container
         a(href="/certifications#cpt-section")
-          img(src="images/trainer1.jpg").img-responsive
-        h1 CPT
-        h3 <strong>Certified Personal Trainer</strong>
-        p.text-left.
-          Give your clients and employers 100% confidence in your knowledge
-          of the fundamentals of exercise science and personal training principles.
+          img(alt="personal trainer certification", src="images/trainer1.jpg").img-responsive
+          h1 CPT
+          h3 <strong>Certified Personal Trainer</strong>
+          p.text-left.
+            Give your clients and employers 100% confidence in your knowledge
+            of the fundamentals of exercise science and personal training principles.
+      a(href='#', data-toggle='modal', data-target='#cptLightBox')
+        h4 Preview CPT Certification
     .col-sm-4.bg-orange-gradient
       .welcome-img-container
         a(href="/certifications#cmt-section")
-          img(src="images/trainer2.jpg").img-responsive
-        h1 CMT
-        h3 <strong>Certified Master Trainer</strong>
-        p.text-left.
-          Attract more clients, receive more job offers, and show everyone
-          that you have mastered the art and science or personal training.
+          img(alt="master trainer certification", src="images/trainer2.jpg").img-responsive
+          h1 CMT
+          h3 <strong>Certified Master Trainer</strong>
+          p.text-left.
+            Attract more clients, receive more job offers, and show everyone
+            that you have mastered the art and science or personal training.
+      a(href='#', data-toggle='modal', data-target='#cmtLightBox')
+        h4 Preview CMT Certification
     .col-sm-4.bg-orange-gradient
       .welcome-img-container
         a(href="/certifications#cns-section")
-          img(src="images/nutrition2.jpg").img-responsive
-        h1 CNS
-        h3 <strong>Certified Nutrition Specialist</strong>
-        p.text-left.
-          Clients are looking for nutrition advice more than ever. Guide
-          them down the right path with advanced knowledge of
-          metabolism, macronutrients, and calorie requirements.
-
+          img(alt="nutrition certification", src="images/nutrition2.jpg").img-responsive
+          h1 CNS
+          h3 <strong>Certified Nutrition Specialist</strong>
+          p.text-left.
+            Clients are looking for nutrition advice more than ever. Guide
+            them down the right path with advanced knowledge of
+            metabolism, macronutrients, and calorie requirements.
+      a(href='#', data-toggle='modal', data-target='#cnsLightBox')
+        h4 Preview CNS Certification
   .welcome-message
     h1.orange.text-center Test Now, Pay Later
     h3.orange.text-center.

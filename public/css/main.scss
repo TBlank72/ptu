@@ -739,6 +739,20 @@ span.lg {
   font-family: $fontF-std;
 }
 
+/* ---------------- lightbox ----------------------------*/
+
+.lightbox-container {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+}
+
 /*----------------- verified.jade -----------------------*/
 .verified-container {
   width: 1080px;

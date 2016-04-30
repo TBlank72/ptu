@@ -1,7 +1,10 @@
 User-agent: *
 
 Disallow: /images/
-
+Disallow: /cdn-cgi/
+Disallow: /m/
+Disallow: /mobile/
 Disallow: /*.png$
 Disallow: /*.jpg$
 
+Sitemap: http://www.ptuniversity.org/sitemap.xml

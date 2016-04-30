@@ -6,7 +6,7 @@ var path = require('path');
  */
 exports.index = function(req, res) {
   res.render('home', {
-    title: 'PT University | Online Personal Trainer Certifications',
+    title: 'Personal Trainer Certifications | PT University',
     desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
   });
 };
@@ -28,7 +28,7 @@ exports.about = function(req, res) {
  */
 exports.faq = function(req, res) {
   res.render('faq', {
-    title: 'PT University | Online Personal Trainer Certifications',
+    title: 'PT University | Frequently Asked Questions',
     desc: "Online Personal Trainer Certifications from PT University; Frequently asked questions"
   });
 };
@@ -39,7 +39,7 @@ exports.faq = function(req, res) {
  */
 exports.certs = function(req, res) {
   res.render('certs', {
-    title: 'PT University | Online Personal Trainer Certifications',
+    title: 'Online Personal Trainer Certifications | PT University',
     desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
   });
 };
@@ -50,7 +50,7 @@ exports.certs = function(req, res) {
  */
 exports.study = function(req, res) {
   res.render('study', {
-    title: 'PT University | Online Personal Trainer Certifications',
+    title: 'Study Personal Training Online | PT University',
     desc: 'study online personal training certifications exam material, exercise science books, nutrition books'
   });
 };
@@ -85,7 +85,7 @@ exports.articleGuidelines = function(req, res) {
 exports.trainerResources = function(req, res) {
   res.render('trainer-resources-p', {
     title: 'PT University | Personal Trainer Resources',
-    desc: 'Par-Q, 1 Rep max conversion charts, top 20 foods list, healthy foods list'
+    desc: "Personal trainer's toolbox. Tools that personal trainers use every day. Par-Q, 1 Rep max conversion charts, top 20 foods list, healthy foods list"
   });
 };
 
@@ -97,8 +97,8 @@ exports.tResource = function(req, res) {
   var resource = req.params.resource;
   res.sendFile(resource, {
     root: path.join(__dirname, '../views/trainer-resources'),
-    title: resource,
-    desc: resource
+    title: resource + ' | PT University',
+    desc: resource + ' | PT University trainer resources'
 
   });
 };
@@ -138,13 +138,24 @@ exports.getImage = function(req, res) {
  * GET /
  * blog.
  */
-exports.blog = function(req, res) {
+exports.blog = function(req, res, next) {
   var blog = req.params.blog;
   //res.send(req.params.blog);
   res.render('blog/' + blog, {
-    title: blog + ' | PT University',
-    desc: blog + ' | PT University'
+    title: metaFormatter(blog) + ' | PT University',
+    desc: metaFormatter(blog) + ' | PT University'
 
+  });
+};
+
+/**
+ * GET /
+ * User sitemap page.
+ */
+exports.sitemap = function(req, res) {
+  res.render('sitemap', {
+    title: 'PT University | Sitemap',
+    desc: 'PT University sitemap'
   });
 };
 
@@ -155,3 +166,9 @@ exports.blog = function(req, res) {
 exports.getMobile = function(req, res) {
   res.redirect(301, '/');
 };
+
+function metaFormatter(blob) {
+  var split = blob.split('-');
+  var joined = split.join(' ');
+  return joined;
+}

@@ -48,6 +48,7 @@
     "request": "2.69.0",
     "sendgrid": "2.0.0",
     "stripe": "4.4.0",
+    "throng": "4.0.0",
     "twit": "2.2.3",
     "validator": "5.1.0"
   },
