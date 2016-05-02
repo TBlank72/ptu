@@ -1,63 +1,85 @@
-extends layout
+doctype html
+html(ng-app="ptuApp", lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='csrf-token', content=_csrf)
+    //title= title
+    meta(name="robots", content="NOODP")
+    //meta(name='description', content=desc)
+    //meta(name="google-site-verification", content="qptPn2zuOYAMd4f4e-KcvZwy4eI_eDK7Vie9wo9EKAc")
+    //meta(name="msvalidate.01", content="FEB8D5185A3336D277A7638D434986BC") 
+    //meta(name='description', content="Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials")
+    meta(name='keywords', content="Online Personal Trainer Certification, Online Personal Training Certification, PT Certification, personal trainer salary, fitness career, personal trainer career, PTU, Personal Training University, personal trainer certifications, personal training certification")
+    link(rel='shortcut icon', href='/favicon.ico')
+    link(defer, href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Lato|Raleway', rel='stylesheet', type='text/css')
+    link(defer, href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet")
+    link(defer, href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css", rel="stylesheet")
+    link(defer, href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet")
+    link(defer, href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css", rel="stylesheet")
+    link(rel='stylesheet', href='/css/main.css')
+    //link(rel='stylesheet', href='/css/quiz.css')
+    //link(rel='stylesheet', href='/css/main-min.css')
+    //link(rel='stylesheet', href='/css/quiz-min.css')
+  body(style="overflow-x:auto;")
+    .container-fluid.bg-navy-gradient(style="width:2000px;height:1600px;")
+      .page-header
+        if (cert.paid == true)
+          h3.orange Certification Record: #[strong() #{username}]
 
-block content
-  .container-fluid.bg-navy-gradient
-    .page-header
-      if (cert.paid == true)
-        h3.orange Certification Record: #[strong() #{username}]
-
-        .form-container-verified
-          form.form-horizontal
-            .form-group
-              label.col-sm-3.control-label.orange Certification 
-              .col-sm-7
-                input.form-control.form-input-custom(type='text', value='#{cert.title}', readonly)
-            .form-group
-              label.col-sm-3.control-label.orange Verification ID
-              .col-sm-7
-                input.form-control.form-input-custom(type='text', value='#{cert.verify_id}', readonly)
-            if (cert.passed == true)
+          .form-container-verified
+            form.form-horizontal
               .form-group
-                label.col-sm-3.control-label.orange Score
+                label.col-sm-3.control-label.orange Certification 
                 .col-sm-7
-                  input.form-control.form-input-custom(type='text', value='#{cert.score}', readonly)
+                  input.form-control.form-input-custom(type='text', value='#{cert.title}', readonly)
               .form-group
-                label.col-sm-3.control-label.orange Exam Passed
+                label.col-sm-3.control-label.orange Verification ID
                 .col-sm-7
-                  input.form-control.form-input-custom(type='text', value='YES', readonly)
-              .form-group
-                label.col-sm-3.control-label.orange Date Passed
-                .col-sm-7
-                  input.form-control.form-input-custom(type='text', value='#{cert.passed_on}', readonly)
-            else
-              .form-group
-                label.col-sm-3.control-label.orange Score
-                .col-sm-7
-                  input.form-control.form-input-custom(type='text', value='#{cert.score}', readonly)
-              .form-group
-                label.col-sm-3.control-label.orange Exam Passed
-                .col-sm-7
-                  input.form-control.form-input-custom(type='text', value='NO', readonly)
-      else
-        h3.red #{username}'s account is not current.
-        h3 Please contact #[a(href='/contact', class='lime') support] for more information.
+                  input.form-control.form-input-custom(type='text', value='#{cert.verify_id}', readonly)
+              if (cert.passed == true)
+                .form-group
+                  label.col-sm-3.control-label.orange Score
+                  .col-sm-7
+                    input.form-control.form-input-custom(type='text', value='#{cert.score}', readonly)
+                .form-group
+                  label.col-sm-3.control-label.orange Exam Passed
+                  .col-sm-7
+                    input.form-control.form-input-custom(type='text', value='YES', readonly)
+                .form-group
+                  label.col-sm-3.control-label.orange Date Passed
+                  .col-sm-7
+                    input.form-control.form-input-custom(type='text', value='#{cert.passed_on}', readonly)
+              else
+                .form-group
+                  label.col-sm-3.control-label.orange Score
+                  .col-sm-7
+                    input.form-control.form-input-custom(type='text', value='#{cert.score}', readonly)
+                .form-group
+                  label.col-sm-3.control-label.orange Exam Passed
+                  .col-sm-7
+                    input.form-control.form-input-custom(type='text', value='NO', readonly)
+        else
+          h3.red #{username}'s account is not current.
+          h3 Please contact #[a(href='/contact', class='lime') support] for more information.
 
 
-    // Cert Images
-    if (cert.passed == true && cert.paid == true)
-      .cert-img-pad
-        if (certImg == 'cpt' && cert.passed == true && cert.paid == true)
-          .cert-img-container
-            img.cert-img(src='/images/cpt_cert.png', class='img-responsive')
-            #nameOnCert #{username}
-            #verifyIdOnCert #{cert.verify_id}
-        if (certImg == 'cmt' && cert.passed == true && cert.paid == true)
-          .cert-img-container
-            img.cert-img(src='/images/cmt_cert.png', class='img-responsive')
-            #nameOnCert #{username}
-            #verifyIdOnCert #{cert.verify_id}
-        if (certImg == 'cns' && cert.passed == true && cert.paid == true)
-          .cert-img-container
-            img.cert-img(src='/images/cns_cert.png', class='img-responsive')
-            #nameOnCert #{username}
-            #verifyIdOnCert #{cert.verify_id}
+      // Cert Images
+      if (cert.passed == true && cert.paid == true)
+        .cert-img-pad
+          if (certImg == 'cpt' && cert.passed == true && cert.paid == true)
+            .cert-img-container
+              img.cert-img(src='/images/cpt_cert.png', class='img-responsive')
+              #nameOnCert #{username}
+              #verifyIdOnCert #{cert.verify_id}
+          if (certImg == 'cmt' && cert.passed == true && cert.paid == true)
+            .cert-img-container
+              img.cert-img(src='/images/cmt_cert.png', class='img-responsive')
+              #nameOnCert #{username}
+              #verifyIdOnCert #{cert.verify_id}
+          if (certImg == 'cns' && cert.passed == true && cert.paid == true)
+            .cert-img-container
+              img.cert-img(src='/images/cns_cert.png', class='img-responsive')
+              #nameOnCert #{username}
+              #verifyIdOnCert #{cert.verify_id}
