@@ -182,6 +182,7 @@ app.post('/account/delete', passportConfig.isAuthenticated, userController.postD
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
 app.post('/account/payment', apiController.postStripe);
 app.get('/ptu-sitemap', homeController.sitemap);
+app.post('/account/download-cert', passportConfig.isAuthenticated, userController.downloadCert);
 
 
 /**

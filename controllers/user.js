@@ -411,3 +411,44 @@ exports.postForgot = function(req, res, next) {
     res.redirect('/forgot');
   });
 };
+
+/**
+ * GET /account/download-cert
+ * Download Cert page.
+ */
+exports.downloadCert = function(req, res) {
+  var name = req.body.certType.concat('.verify_id');
+  var value = req.body.req_verify_id;
+  var query = {};
+  query[name] = value;
+
+  var thisCert = req.body.certType;
+  var justCert = thisCert.slice(6);
+  var proj = {};
+  proj[thisCert] = 1;
+  proj['profile.name'] = 1;
+  proj['_id'] = 0;
+  User.findOne(query,
+               proj,
+               function (err, user_info) {
+      if (err) console.log(err);
+      if (user_info) {
+        res.render('account/download-cert',
+                   { username: user_info.profile.name,
+                     cert: user_info.certs[justCert],
+                     certImg: justCert
+                   });
+      }
+      else {
+        res.send('<h2>Certification Not Found</h2> <br />\
+                 Possible causes: <br />\
+                 1. The verification id was copied and pasted -- \
+                 pasting as plain text should fix this. <br />\
+                 2. The verification id was entered incorrectly -- \
+                 double check and make sure everything is correct.\
+                 <br />\
+                 <h4><a href="/">back to ptu home</a></h4>');
+      }
+    }
+  )
+};
