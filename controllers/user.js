@@ -3,6 +3,7 @@ var async = require('async');
 var crypto = require('crypto');
 var nodemailer = require('nodemailer');
 var passport = require('passport');
+var path = require('path');
 var User = require('../models/user');
 var contactController = require('./contact');
 
@@ -413,11 +414,12 @@ exports.postForgot = function(req, res, next) {
 };
 
 /**
- * GET /account/download-cert
- * Download Cert page.
+ * GET /account/download-cert/cpt
+ * Download CPT Cert page.
  */
-exports.downloadCert = function(req, res) {
+exports.downloadCPT = function(req, res) {
   var name = req.body.certType.concat('.verify_id');
+  console.log('path = ' + process.env.PATH);
   var value = req.body.req_verify_id;
   var query = {};
   query[name] = value;
@@ -433,7 +435,7 @@ exports.downloadCert = function(req, res) {
                function (err, user_info) {
       if (err) console.log(err);
       if (user_info) {
-        res.render('account/download-cert',
+        res.render('account/download-cpt',
                    { username: user_info.profile.name,
                      cert: user_info.certs[justCert],
                      certImg: justCert
@@ -441,14 +443,93 @@ exports.downloadCert = function(req, res) {
       }
       else {
         res.send('<h2>Certification Not Found</h2> <br />\
-                 Possible causes: <br />\
-                 1. The verification id was copied and pasted -- \
-                 pasting as plain text should fix this. <br />\
-                 2. The verification id was entered incorrectly -- \
-                 double check and make sure everything is correct.\
+                 Most likely your session timed out. <br />\
+                 Log back in and try again. If that does not \
+                 work, contact support. <br />\
                  <br />\
-                 <h4><a href="/">back to ptu home</a></h4>');
+                 <h4><a href="/contact">support</a></h4>');
       }
     }
   )
 };
+
+/**
+ * GET /account/download-cert/cmt
+ * Download CMT Cert page.
+ */
+exports.downloadCMT = function(req, res) {
+  var name = req.body.certType.concat('.verify_id');
+  console.log('path = ' + process.env.PATH);
+  var value = req.body.req_verify_id;
+  var query = {};
+  query[name] = value;
+
+  var thisCert = req.body.certType;
+  var justCert = thisCert.slice(6);
+  var proj = {};
+  proj[thisCert] = 1;
+  proj['profile.name'] = 1;
+  proj['_id'] = 0;
+  User.findOne(query,
+               proj,
+               function (err, user_info) {
+      if (err) console.log(err);
+      if (user_info) {
+        res.render('account/download-cmt',
+                   { username: user_info.profile.name,
+                     cert: user_info.certs[justCert],
+                     certImg: justCert
+                   });
+      }
+      else {
+        res.send('<h2>Certification Not Found</h2> <br />\
+                 Most likely your session timed out. <br />\
+                 Log back in and try again. If that does not \
+                 work, contact support. <br />\
+                 <br />\
+                 <h4><a href="/contact">support</a></h4>');
+      }
+    }
+  )
+};
+
+/**
+ * GET /account/download-cert/cns
+ * Download CNS Cert page.
+ */
+exports.downloadCNS = function(req, res) {
+  var name = req.body.certType.concat('.verify_id');
+  console.log('path = ' + process.env.PATH);
+  var value = req.body.req_verify_id;
+  var query = {};
+  query[name] = value;
+
+  var thisCert = req.body.certType;
+  var justCert = thisCert.slice(6);
+  var proj = {};
+  proj[thisCert] = 1;
+  proj['profile.name'] = 1;
+  proj['_id'] = 0;
+  User.findOne(query,
+               proj,
+               function (err, user_info) {
+      if (err) console.log(err);
+      if (user_info) {
+        res.render('account/download-cns',
+                   { username: user_info.profile.name,
+                     cert: user_info.certs[justCert],
+                     certImg: justCert
+                   });
+      }
+      else {
+        res.send('<h2>Certification Not Found</h2> <br />\
+                 Most likely your session timed out. <br />\
+                 Log back in and try again. If that does not \
+                 work, contact support. <br />\
+                 <br />\
+                 <h4><a href="/contact">support</a></h4>');
+      }
+    }
+  )
+};
+

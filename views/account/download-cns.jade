@@ -1,0 +1,49 @@
+doctype html
+html(ng-app="ptuApp", lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='csrf-token', content=_csrf)
+    title Download Certification
+    meta(name="robots", content="NOODP")
+    meta(name='description', content="download PTU certification")
+    meta(name='keywords', content="Online Personal Trainer Certification, Online Personal Training Certification, PT Certification, personal trainer salary, fitness career, personal trainer career, PTU, Personal Training University, personal trainer certifications, personal training certification")
+    link(rel='shortcut icon', href='/favicon.ico')
+    link(defer, href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Lato|Raleway', rel='stylesheet', type='text/css')
+    //-link(defer, href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet")
+    //-link(defer, href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css", rel="stylesheet")
+    //-link(defer, href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet")
+    //-link(defer, href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css", rel="stylesheet")
+    //-link(rel='stylesheet', href='/css/main.css')
+    //-link(rel='stylesheet', href='/css/main-min.css')
+  body(onload="drawCNS()", style="overflow-x:auto;")
+    .container(style="max-width:500px; margin-left:0px")
+      h3 How to download your certification?
+      ol
+        li <strong>Right click</strong> the certification
+        li click <strong>"save image as"</strong>
+        li <strong>choose filename;</strong> Don't change the '.png' file extension.
+        li click <strong>"save"</strong>
+      p.
+        Note: Chrome and Firefox browsers are supported. Internet Explorer
+        and Edge may not allow you to save the image file. Below the 
+        certifications are links
+        to download Chrome or Firefox if you need to.
+      
+
+    input(type="hidden", id="trainer-name", value="#{username}")
+    input(type="hidden", id="verify_id", value="#{cert.verify_id}")
+    .container-fluid(style="width:2000px;height:1600px;")
+      canvas#MyCertification(width="994", height="769")
+
+      .container(style="max-width:300px; margin-left:0px")
+        a(href="https://www.google.com/chrome", target="_blank")
+          p.
+            Download Google Chrome Browser
+            #[img(src="/images/Google_Chrome-C.png", height="40", width="40")]
+        a(href="https://www.mozilla.org/en-US/firefox/new", target="_blank")
+          p.
+            Download Firefox Browser
+            #[img(src="/images/firefox-C.png", height="40", width="40")]
+      script(src='/js/cert-image.js')

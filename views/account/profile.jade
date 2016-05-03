@@ -53,7 +53,7 @@ block content
             if (user.certs.cpt.paid == true)
               p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
               p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cpt.verify_id}
-              form(role="form", action='/account/download-cert', method="post")
+              form(role="form", action='/account/download-cert/cpt', method="post")
                 input(type='hidden', name='_csrf', value=_csrf)
                 input(type='hidden', name="certType", value='certs.cpt')
                 input(type='hidden', name="req_verify_id", value='#{user.certs.cpt.verify_id}')
@@ -91,7 +91,7 @@ block content
             if (user.certs.cmt.paid == true)
               p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
               p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cmt.verify_id}
-              form(role="form", action='/account/download-cert', method="post")
+              form(role="form", action='/account/download-cert/cmt', method="post")
                 input(type='hidden', name='_csrf', value=_csrf)
                 input(type='hidden', name="certType", value='certs.cmt')
                 input(type='hidden', name="req_verify_id", value='#{user.certs.cmt.verify_id}')
@@ -129,7 +129,7 @@ block content
             if (user.certs.cns.paid == true)
               p #[span(class='fa fa-credit-card-alt')] Payment Received: #[span(class='fa fa-check-circle-o green')]
               p #[span(class='fa fa-key')] Verification_ID: #{user.certs.cns.verify_id}
-              form(role="form", action='/account/download-cert', method="post")
+              form(role="form", action='/account/download-cert/cns', method="post")
                 input(type='hidden', name='_csrf', value=_csrf)
                 input(type='hidden', name="certType", value='certs.cns')
                 input(type='hidden', name="req_verify_id", value='#{user.certs.cns.verify_id}')
