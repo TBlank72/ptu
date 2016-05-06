@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>PT University</title>
+  
+  <link href="/blog/../../public/atom.xml" rel="self"/>
+  
+  <link href="https://ptuniversity.org/blog/"/>
+  <updated>2016-05-06T21:01:20.420Z</updated>
+  <id>https://ptuniversity.org/blog/</id>
+  
+  <author>
+    <name>ptuniversity.org</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduction to Biomechanical Levers for Personal Trainers</title>
+    <link href="https://ptuniversity.org/blog/2016/05/05/Introduction-to-Biomechanical-Levers-for-Personal-Trainers-1/"/>
+    <id>https://ptuniversity.org/blog/2016/05/05/Introduction-to-Biomechanical-Levers-for-Personal-Trainers-1/</id>
+    <published>2016-05-05T15:49:15.000Z</published>
+    <updated>2016-05-06T21:01:20.420Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://gdriv.es/ptu/arnold-triceps1.jpg&quot; alt=&quot;Arnold Loves Levers&quot;&gt;&lt;/p&gt;
+&lt;h5 id=&quot;Read-Time-5-minutes&quot;&gt;&lt;a href=&quot;#Read-Time-5-minutes&quot; class=&quot;headerlink&quot; title=&quot;Read Time (5 minutes)&quot;&gt;&lt;/a&gt;Read Time (5 minutes)&lt;/h5&gt;&lt;p&gt;Every movement we make as humans is a series of forces acting on many complex lever systems.  Levers help us generate more force, speed, or ROM.  In this article, we’ll discuss the basic principles of levers and how they relate to personal training.&lt;/p&gt;
+&lt;h2 id=&quot;What-will-I-learn&quot;&gt;&lt;a href=&quot;#What-will-I-learn&quot; class=&quot;headerlink&quot; title=&quot;What will I learn?&quot;&gt;&lt;/a&gt;What will I learn?&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;What are 1st, 2nd, and 3rd class levers?&lt;/li&gt;
+&lt;li&gt;Which levers are used during various biomechanical movement patters?&lt;/li&gt;
+&lt;li&gt;What are advantages and disadvantages of the different lever classes?&lt;/li&gt;
+&lt;li&gt;Why should you care?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;What-are-1st-2nd-and-3rd-class-levers&quot;&gt;&lt;a href=&quot;#What-are-1st-2nd-and-3rd-class-levers&quot; class=&quot;headerlink&quot; title=&quot;What are 1st, 2nd, and 3rd class levers?&quot;&gt;&lt;/a&gt;What are 1st, 2nd, and 3rd class levers?&lt;/h2&gt;&lt;p&gt;All levers have three distinct components that allow us to define different lever classes and characteristics.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fulcrum (or Axis)&lt;/strong&gt;: point, or pivot, that the lever rotates about. This is normally a joint in biomechanical levers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Load (or Resistance)&lt;/strong&gt;: external force (weight) applied by the lever system that the user is attempting to move.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Effort (or Force)&lt;/strong&gt;: force applied by the user (muscle) of the lever system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;1st-Class-Levers&quot;&gt;&lt;a href=&quot;#1st-Class-Levers&quot; class=&quot;headerlink&quot; title=&quot;1st Class Levers&quot;&gt;&lt;/a&gt;1st Class Levers&lt;/h3&gt;&lt;p&gt;In 1st class levers the fulcrum is located between the load and effort.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://gdriv.es/ptu/cl1lever.gif&quot; alt=&quot;First Class Lever&quot;&gt;&lt;/p&gt;
+&lt;p&gt;1st class levers can produce more force or speed and ROM depending on where the fulcrum is positioned.  If the fulcrum is positioned closer to the effort, more force is required, but more speed and ROM is transfered to the load. If the fulcrum is positioned closer to the load, more force is produced, but the load travels slower through a shorter ROM. &lt;/p&gt;
+&lt;div class=&quot;bs-callout bs-callout-info&quot;&gt;&lt;h4 id=&quot;1st-Class-Levers&quot;&gt;&lt;a href=&quot;#1st-Class-Levers&quot; class=&quot;headerlink&quot; title=&quot; 1st Class Levers&quot;&gt;&lt;/a&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; 1st Class Levers&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Catapult (fulcrum closer to effort)&lt;/li&gt;
+&lt;li&gt;Crowbaw (fulcrum closer to load)&lt;/li&gt;
+&lt;li&gt;Scissors (variable and depends on scissor design)&lt;/li&gt;
+&lt;li&gt;Seesaw (fulcrum equal distance between load and effort)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h4 id=&quot;1st-Class-Levers-in-the-Body&quot;&gt;&lt;a href=&quot;#1st-Class-Levers-in-the-Body&quot; class=&quot;headerlink&quot; title=&quot;1st Class Levers in the Body&quot;&gt;&lt;/a&gt;1st Class Levers in the Body&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://gdriv.es/ptu/tricep-kickback1.jpg&quot; alt=&quot;Triceps Kickbacks - 1st Class Lever&quot;&gt;&lt;/p&gt;
+&lt;p&gt;There are not many 1st class levers in the human body.  One example is elbow extensions where the triceps apply effort force, the elbow acts as the fulcrum, and the weight in your hand is applying the external load. &lt;/p&gt;
+&lt;p&gt;Another example is the balancing of your head with your neck muscles. Standing upright, your head will naturally fall forward without effort from your neck muscles. So, the weight of your head applies the load, the top of your cervical spine acts as the fulcrum, and your neck muscles apply effort to hold your head upright.  &lt;/p&gt;
+&lt;h3 id=&quot;2nd-Class-Levers&quot;&gt;&lt;a href=&quot;#2nd-Class-Levers&quot; class=&quot;headerlink&quot; title=&quot;2nd Class Levers&quot;&gt;&lt;/a&gt;2nd Class Levers&lt;/h3&gt;&lt;p&gt;In 2nd class levers the fulcrum is located at one end of the lever, and the load is located between the fulcrum and effort.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://gdriv.es/ptu/cl2lever.gif&quot; alt=&quot;Second Class Lever&quot;&gt;&lt;/p&gt;
+&lt;p&gt;2nd class levers allow more force production because the effort arm is longer than the resistance arm.&lt;/p&gt;
+&lt;div class=&quot;bs-callout bs-callout-info&quot;&gt;&lt;h4 id=&quot;2nd-Class-Levers&quot;&gt;&lt;a href=&quot;#2nd-Class-Levers&quot; class=&quot;headerlink&quot; title=&quot; 2nd Class Levers&quot;&gt;&lt;/a&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; 2nd Class Levers&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Wheelbarrow  &lt;/li&gt;
+&lt;li&gt;Nutcracker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h4 id=&quot;2nd-Class-Levers-in-the-Body&quot;&gt;&lt;a href=&quot;#2nd-Class-Levers-in-the-Body&quot; class=&quot;headerlink&quot; title=&quot;2nd Class Levers in the Body&quot;&gt;&lt;/a&gt;2nd Class Levers in the Body&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://gdriv.es/ptu/calf-raises1.jpg&quot; alt=&quot;Calf Raises - 2nd Class Lever&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Like 1st class levers, there are few 2nd class levers involved in the human anatomy. Your calves act on a 2nd class lever when lifting your bodyweight up onto your toes. During the calf raise (or heel lift) movement, your toes (or the balls of your feet) act as the fulcrum point, your bodyweight applies external load, and your calf muscle group applies effort to lift your bodyweight. &lt;/p&gt;
+&lt;p&gt;Another example is your body during a push-up. During the push-up your toes act as the fulcrum, your bodyweight supplies the external load through your center of gravity, and all of your upper body pushing muscles apply effort through your hands to the ground to lift your body off the ground.&lt;/p&gt;
+&lt;h3 id=&quot;3rd-Class-Levers&quot;&gt;&lt;a href=&quot;#3rd-Class-Levers&quot; class=&quot;headerlink&quot; title=&quot;3rd Class Levers&quot;&gt;&lt;/a&gt;3rd Class Levers&lt;/h3&gt;&lt;p&gt;In 3rd class levers the fulcrum is located at one end of the lever, and the effort is located between the fulcrum and load.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://gdriv.es/ptu/cl3lever.gif&quot; alt=&quot;Third Class Lever&quot;&gt;&lt;/p&gt;
+&lt;p&gt;3rd class levers require relatively greater force, but produce greater speed and ROM because the resistance (load) arm is longer than the effort arm.  &lt;/p&gt;
+&lt;div class=&quot;bs-callout bs-callout-info&quot;&gt;&lt;h4 id=&quot;3rd-Class-Levers&quot;&gt;&lt;a href=&quot;#3rd-Class-Levers&quot; class=&quot;headerlink&quot; title=&quot; 3rd Class Levers&quot;&gt;&lt;/a&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; 3rd Class Levers&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Shovel&lt;/li&gt;
+&lt;li&gt;Baseball bat&lt;/li&gt;
+&lt;li&gt;Golf club&lt;/li&gt;
+&lt;li&gt;Tennis racquet&lt;/li&gt;
+&lt;li&gt;Food tongs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h4 id=&quot;3rd-Class-Levers-in-the-Body&quot;&gt;&lt;a href=&quot;#3rd-Class-Levers-in-the-Body&quot; class=&quot;headerlink&quot; title=&quot;3rd Class Levers in the Body&quot;&gt;&lt;/a&gt;3rd Class Levers in the Body&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://gdriv.es/ptu/hamstring-curls1.jpg&quot; alt=&quot;Hamstring Curls - 3rd Class Lever&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Most levers in the human anatomy are 3rd class levers. During hamstring flexion any resistance applied between the knee joint and the ankle joint acts as the load, the knee joint acts as the fulcrum, and the hamstrings muscle group applies effort to move the load. Similarly, biceps curls are another example of a 3rd class lever.&lt;/p&gt;
+&lt;h2 id=&quot;Why-should-you-care&quot;&gt;&lt;a href=&quot;#Why-should-you-care&quot; class=&quot;headerlink&quot; title=&quot;Why should you care?&quot;&gt;&lt;/a&gt;Why should you care?&lt;/h2&gt;&lt;p&gt;While we don’t have control over our muscle insertion points (at least not without surgery), we can control positioning of the external load in relation to our joints (the fulcrum). &lt;strong&gt;Small changes in positioning of the external load can have a dramatic impact on both the success and safety of a lift&lt;/strong&gt;. Have you ever wondered why powerlifters wear tall socks when deadlifting?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://gdriv.es/ptu/bloody-shins.jpg&quot; alt=&quot;Protect your shins when deadlifting&quot;&gt;&lt;/p&gt;
+&lt;p&gt;There is a huge mechanical advantage gained by pulling the weight up as close to your body as possible, not to mention the fact that you reduce your risk for injuries by keeping the weight close.  Just think about how many pounds you strip off the bar when doing stiff-leg deadlifts (RDLs) compared to traditional deadlifts. It’s all about differences in the biomechanical lever systems and how they impact force generation. &lt;/p&gt;
+&lt;p&gt;The best example to demonstrate differences in the mechanical advantage (or disadvantage) of a lever is the abdominal roller. Force production varies greatly throughout the ROM of the exercise. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://gdriv.es/ptu/ab-wheel1.jpg&quot; alt=&quot;Variable force production throughout the ROM &quot;&gt;&lt;/p&gt;
+&lt;p&gt;For advanced clients, you may want to move the weight further from the fulcrum to force their muscles to produce more force. On the other hand, when training beginners you will likely want to bring the weight in closer to the fulcrum point to reduce muscular tension and increase the safety of their lifts.&lt;/p&gt;
+&lt;h3 id=&quot;Reference-List&quot;&gt;&lt;a href=&quot;#Reference-List&quot; class=&quot;headerlink&quot; title=&quot;Reference List&quot;&gt;&lt;/a&gt;Reference List&lt;/h3&gt;&lt;pre&gt;
+Mechanics in Exercise: Levers. (n.d.). 
+    Retrieved May 06, 2016, from 
+    (http://www.exrx.net/Kinesiology/Levers.html)
+
+Fairhurst, A. (2014, August 04). Biomechanics - LEVERS. 
+    Retrieved May 6, 2016, from 
+    https://prezi.com/q1fkeriecrit/biomechanics-levers/
+
+The Lever. (n.d.). Retrieved May 06, 2016, from 
+    http://www.ohio.edu/people/williar4/html/haped/nasa/simpmach/lever.htm
+
+Mackenzie, B. (2003). Levers. Retrieved May 06, 2016, from 
+    http://www.brianmac.co.uk/levers.htm
+&lt;/pre&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://gdriv.es/ptu/arnold-triceps1.jpg&quot; alt=&quot;Arnold Loves Levers&quot;&gt;&lt;/p&gt;
+&lt;h5 id=&quot;Read-Time-5-minutes&quot;&gt;&lt;a href=&quot;#Read-Time-5-minutes&quot; class=&quot;headerlink&quot; title=&quot;Read Time (5 minutes)&quot;&gt;&lt;/a&gt;Read Time (5 minutes)&lt;/h5&gt;&lt;p&gt;Every movement we make as humans is a series of forces acting on many complex lever systems.  Levers help us generate more force, speed, or ROM.  In this article, we’ll discuss the basic principles of levers and how they relate to personal training.&lt;/p&gt;
+&lt;h2 id=&quot;What-will-I-learn&quot;&gt;&lt;a href=&quot;#What-will-I-learn&quot; class=&quot;headerlink&quot; title=&quot;What will I learn?&quot;&gt;&lt;/a&gt;What will I learn?&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;What are 1st, 2nd, and 3rd class levers?&lt;/li&gt;
+&lt;li&gt;Which levers are used during various biomechanical movement patters?&lt;/li&gt;
+&lt;li&gt;What are advantages and disadvantages of the different lever classes?&lt;/li&gt;
+&lt;li&gt;Why should you care?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;What-are-1st-2nd-and-3rd-class-levers&quot;&gt;&lt;a href=&quot;#What-are-1st-2nd-and-3rd-class-levers&quot; class=&quot;headerlink&quot; title=&quot;What are 1st, 2nd, and 3rd class levers?&quot;&gt;&lt;/a&gt;What are 1st, 2nd, and 3rd class levers?&lt;/h2&gt;&lt;p&gt;All levers have three distinct components that allow us to define different lever classes and characteristics.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fulcrum (or Axis)&lt;/strong&gt;: point, or pivot, that the lever rotates about. This is normally a joint in biomechanical levers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Load (or Resistance)&lt;/strong&gt;: external force (weight) applied by the lever system that the user is attempting to move.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Effort (or Force)&lt;/strong&gt;: force applied by the user (muscle) of the lever system.&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="biomechanics" scheme="https://ptuniversity.org/blog/categories/biomechanics/"/>
+    
+    
+      <category term="levers" scheme="https://ptuniversity.org/blog/tags/levers/"/>
+    
+      <category term="biomechanics" scheme="https://ptuniversity.org/blog/tags/biomechanics/"/>
+    
+      <category term="strength training" scheme="https://ptuniversity.org/blog/tags/strength-training/"/>
+    
+  </entry>
+  
+</feed>

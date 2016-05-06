@@ -135,10 +135,22 @@ exports.getImage = function(req, res) {
 };
 
 /**
- * GET /
- * blog.
+ * GET /blog
+ * blog home page.
  */
 exports.blog = function(req, res, next) {
+  res.render('blog/blog-home', {
+    title: ' Blog | PT University',
+    desc: ' Blog | PT University; personal trainer articles, trainer resources, exercise and fitness tips'
+
+  });
+};
+
+/**
+ * GET /blog/:blog (article)
+ * blog article.
+ */
+exports.blogArticle = function(req, res, next) {
   var blog = req.params.blog;
   //res.send(req.params.blog);
   res.render('blog/' + blog, {

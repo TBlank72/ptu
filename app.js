@@ -135,6 +135,7 @@ app.use(function(req, res, next) {
   res.locals.user = req.user;
   next();
 });
+
 /*
 app.use(function(req, res, next) {
   // After successful login, redirect back to /api, /contact or /
@@ -144,7 +145,11 @@ app.use(function(req, res, next) {
   next();
 });
 */
+
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 604800000 }));
+app.use('/blog', express.static('hexo-blog/pub-hexo'));
+
+//app.disable('etag');
 
 /**
  * Primary app routes.
@@ -159,7 +164,8 @@ app.get('/link-to-ptu', homeController.linkToPtu);
 app.get('/article-guidelines', homeController.articleGuidelines);
 app.get('/trainer-resources', homeController.trainerResources);
 app.get('/trainer-resources/:resource', homeController.tResource);
-app.get('/blog/:blog', homeController.blog);
+//app.get('/blog', homeController.blog);
+//app.get('/blog/:blog', homeController.blogArticle);
 app.get('/pricecompare', homeController.priceCompare);
 app.get('/images/:img', homeController.getImage); 
 app.get('/mobile', homeController.getMobile); 

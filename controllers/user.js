@@ -419,7 +419,6 @@ exports.postForgot = function(req, res, next) {
  */
 exports.downloadCPT = function(req, res) {
   var name = req.body.certType.concat('.verify_id');
-  console.log('path = ' + process.env.PATH);
   var value = req.body.req_verify_id;
   var query = {};
   query[name] = value;

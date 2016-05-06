@@ -33,3 +33,8 @@ bower_components
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Hexo additions
+db.json
+#public/
+.deploy*/
