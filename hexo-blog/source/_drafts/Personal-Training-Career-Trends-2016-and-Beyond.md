@@ -4,7 +4,8 @@ date: 2016-05-06 17:10:17
 tags:
 categories:
 ---
-![Image Caption](http://gdriv.es/ptu/arnold-triceps1.jpg)
+![Image Caption](https://googledrive.com/host/0B_wpLFZ54MdKR3BNSHBHYlAwMHM/arnold-triceps1.jpg)
+
 ##### Read Time (5 minutes)
 
 
