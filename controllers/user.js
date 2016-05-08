@@ -17,7 +17,8 @@ exports.getLogin = function(req, res) {
   }
   res.render('account/login', {
     title: 'Login | PT University',
-    desc: "Online Personal Trainer Certifications from PT University; Login to your PT University account dashboard"
+    desc: "Online Personal Trainer Certifications from PT University; Login to your PT University account dashboard",
+    canon: "https://www.ptuniversity.org/login"
   });
 };
 
@@ -74,7 +75,8 @@ exports.getSignup = function(req, res) {
   }
   res.render('account/signup', {
     title: 'Create Account | PT University',
-    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Sign up and learn how to become a top rated personal trainer"
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Sign up and learn how to become a top rated personal trainer",
+    canon: "https://www.ptuniversity.org/signup"
   });
 };
 
@@ -130,7 +132,8 @@ exports.getAccount = function(req, res) {
   res.render('account/profile', {
     title: 'My Account | PT University',
     publishableKey: process.env.STRIPE_PKEY,
-    desc: "Online Personal Trainer Certifications from PT University; Account dashboard; Access trainer resources, certifications, and more"
+    desc: "Online Personal Trainer Certifications from PT University; Account dashboard; Access trainer resources, certifications, and more",
+    canon: "https://www.ptuniversity.org/account"
   });
 };
 
@@ -345,7 +348,8 @@ exports.getForgot = function(req, res) {
   }
   res.render('account/forgot', {
     title: 'Forgot Password | PT University',
-    desc: "Online Personal Trainer Certifications from PT University; Forgot your password?"
+    desc: "Online Personal Trainer Certifications from PT University; Forgot your password?",
+    canon: "https://www.ptuniversity.org/forgot"
   });
 };
 

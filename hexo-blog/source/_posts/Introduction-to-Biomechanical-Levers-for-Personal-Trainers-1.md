@@ -1,7 +1,6 @@
 ---
 title: Introduction to Biomechanical Levers for Personal Trainers
 date: 2016-05-05 10:49:15
-author: Jim Boe
 tags:
 - levers
 - biomechanics
@@ -110,7 +109,7 @@ For advanced clients, you may want to move the weight further from the fulcrum t
 <pre>
 Mechanics in Exercise: Levers. (n.d.). 
     Retrieved May 06, 2016, from 
-    (http://www.exrx.net/Kinesiology/Levers.html)
+    http://www.exrx.net/Kinesiology/Levers.html
 
 Fairhurst, A. (2014, August 04). Biomechanics - LEVERS. 
     Retrieved May 6, 2016, from 

@@ -35,6 +35,14 @@
   margin: auto;
   position: relative; }
 
+.float-right-img {
+  margin: 0px 10px 10px 20px;
+  float: right;
+  padding: 1px;
+  height: 208px;
+  width: 270px;
+  text-align: center; }
+
 #nameOnCert {
   font-size: 3.5em;
   font-weight: bold;
@@ -213,51 +221,38 @@ button.navbar-toggle {
 @media screen and (max-width: 600px) {
   body {
     line-height: 21px !important; }
-
   h2, h3, h4, h5 {
     font-size: 1.2em !important; }
-
   td {
     font-size: 0.9em !important; }
-
   p {
     font-size: 14px !important; }
-
   li {
     font-size: 14px !important; }
-
   ul li.no-style a.green {
     font-size: 0.7em !important; }
-
   .carousel-inner {
     margin-top: 10px; }
-
   .item.active {
     padding: 10px; }
-
   .carousel-inner .item h1 {
     font-size: 2.5em !important;
     text-align: center; }
-
   .carousel-inner .item h3 {
     font-size: 1.5em !important;
     text-align: center; }
-
   .carousel-inner .item nav a {
     font-size: 1em !important; }
-
   .cert-container h1 {
     font-size: 1.5em !important; }
-
   #nameOnCert {
     bottom: 438px !important; }
-
   #verifyIdOnCert {
     bottom: 23px !important; } }
+
 @media screen and (max-width: 540px) {
   .welcome-img-container {
     min-height: 0px !important; }
-
   .comp-table {
     width: 100%;
     margin: auto;
@@ -265,57 +260,53 @@ button.navbar-toggle {
     overflow-x: scroll;
     display: block;
     table-layout: fixed; }
-
   .comp-table-d {
     overflow-x: auto; } }
+
 @media screen and (max-width: 767px) {
   .form-container-home {
     display: none !important; } }
+
 @media screen and (max-width: 767px) {
   .form-container-home-media {
     display: block !important; } }
+
 @media screen and (max-width: 836px) {
   .form-container-verified {
     max-width: 80% !important;
     min-width: 80% !important; } }
+
 @media screen and (max-width: 700px) {
   ol.carousel-indicators li {
     display: none !important; } }
+
 /*=============== navbar collapse threshold =================*/
 @media (max-width: 1200px) {
   .navbar-header {
     float: none; }
-
   .navbar-left, .navbar-right {
     float: none !important; }
-
   .navbar-toggle {
     display: block; }
-
   .navbar-collapse {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
-
   .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px; }
-
   .navbar-collapse.collapse {
     display: none !important; }
-
   .navbar-nav {
     float: none !important;
     margin-top: 7.5px; }
-
   .navbar-nav > li {
     float: none; }
-
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px; }
-
   .collapse.in {
     display: block !important; } }
+
 /*==============End Navbar collapse threshold=============*/
 /* ------------------quiz.css-------------------------*/
 /*---------------myQuiz-----------------------*/
@@ -521,91 +512,71 @@ button.navbar-toggle {
   .container-fluid {
     padding: 0px;
     margin: 0px; }
-
   .myQuiz {
     width: 320px;
     background-size: 320px auto; }
-
   .myQuiz h1 {
     width: 300px;
     font-size: 1.2em;
     top: 25px;
     left: 25px; }
-
   .myQuiz h1 span {
     line-height: 43px; }
-
   .myQuiz h2 {
     margin: 0px; }
-
   .myQuiz h3 {
     font-size: 2.2em;
     margin-bottom: 15px; }
-
   .myQuiz p {
     max-width: 300px; }
-
   .btn-quiz {
     max-width: 90%; }
-
   .myQuiz .progress-quiz {
     width: 95%;
     top: 80px;
     left: 25px; }
-
   .myQuiz .progress-quiz div {
     width: 2px;
     height: 3px;
     margin-right: 0.5px; }
-
   .myQuiz .progress-quiz div::after {
     top: -30px;
     width: 53px;
     height: 33px; }
-
   .myQuiz .intro {
     width: 300px;
     top: 110px;
     left: 330px; }
-
   .myQuiz .question {
     width: 300px;
     top: 110px;
     left: 330px; }
-
   .myQuiz .question .txt {
     font-size: 1.4em;
     margin-bottom: 15px; }
-
   .myQuiz .question .ans {
     font-size: 1em;
     padding: 5px 10px;
     margin-bottom: 10px; }
-
   .myQuiz .question .ans.image {
     min-height: 45px;
     background-size: auto 45px; }
-
   .myQuiz .question .ans.image:hover {
     background-color: #000; }
-
   .myQuiz .results {
     width: 260px;
     top: 130px;
     left: 330px; }
-
   .myQuiz .results .share {
     margin-top: 20px; }
-
   .myQuiz .results .a.btn-quiz {
     margin-bottom: 20px; }
-
   .myQuiz .active {
     left: 25px; }
-
   .myQuiz .intro.inactive,
   .myQuiz .inactive.answered {
     left: -650px; } }
+
 /* end @media screen */
 body {
   font-family: "Raleway", "Roboto", "Lato", "Open Sans", sans-serif;

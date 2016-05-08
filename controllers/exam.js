@@ -6,37 +6,46 @@ var contactController = require('./contact');
 exports.getCpt = function(req, res) {
   res.render('exams/cpt_exam', {
     title: 'Certified Personal Trainer (CPT) Exam | PT University',
-    desc: "Online Certified Personal Trainer exam | Don't pay unless you pass"
+    desc: "Online Certified Personal Trainer exam | Don't pay unless you pass",
+    canon: "https://www.ptuniversity.org/cpt"
   });
 }
 exports.getPracticeCpt = function(req, res) {
+  var canonical = req.path;
   res.render('exams/practice_cpt_exam', {
     title: 'CPT Practice Exam | PT University',
-    desc: "Online Certified Personal Trainer practice exam"
+    desc: "Online Certified Personal Trainer practice exam",
+    canon: "https://www.ptuniversity.org" + canonical
   });
 }
 exports.getCmt = function(req, res) {
   res.render('exams/cmt_exam', {
     title: 'Certified Master Trainer (CMT) Exam | PT University',
-    desc: "Online Certified Master Trainer exam | Don't pay unless you pass"
+    desc: "Online Certified Master Trainer exam | Don't pay unless you pass",
+    canon: "https://www.ptuniversity.org/cmt"
   });
 }
 exports.getPracticeCmt = function(req, res) {
+  var canonical = req.path;
   res.render('exams/practice_cmt_exam', {
     title: 'CMT Practice Exam | PT University',
-    desc: "Online Certified Personal Trainer practice exam"
+    desc: "Online Certified Personal Trainer practice exam",
+    canon: "https://www.ptuniversity.org" + canonical
   });
 }
 exports.getCns = function(req, res) {
   res.render('exams/cns_exam', {
     title: 'Certified Nutrition Specialist (CNS) Exam | PT University',
-    desc: "Online Certified Nutrition Specialist exam | Don't pay unless you pass"
+    desc: "Online Certified Nutrition Specialist exam | Don't pay unless you pass",
+    canon: "https://www.ptuniversity.org/cns"
   });
 }
 exports.getPracticeCns = function(req, res) {
+  var canonical = req.path;
   res.render('exams/practice_cns_exam', {
     title: 'CNS Practice Exam | PT University',
-    desc: "Online Certified Personal Trainer practice exam"
+    desc: "Online Certified Personal Trainer practice exam",
+    canon: "https://www.ptuniversity.org" + canonical
   });
 }
 exports.getTest = function(req, res) {

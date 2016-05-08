@@ -7,7 +7,8 @@ var path = require('path');
 exports.index = function(req, res) {
   res.render('home', {
     title: 'Personal Trainer Certifications | PT University',
-    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials",
+    canon: "https://www.ptuniversity.org"
   });
 };
 
@@ -18,7 +19,8 @@ exports.index = function(req, res) {
 exports.about = function(req, res) {
   res.render('about', {
     title: 'PT University | Learn About Online Personal Trainer Certifications',
-    desc: "Online Personal Trainer Certifications; Don't pay unless you pass. Learn how to become a top rated personal trainer with advanced credentials"
+    desc: "Online Personal Trainer Certifications; Don't pay unless you pass. Learn how to become a top rated personal trainer with advanced credentials",
+    canon: "https://www.ptuniversity.org/about"
   });
 };
 
@@ -29,7 +31,8 @@ exports.about = function(req, res) {
 exports.faq = function(req, res) {
   res.render('faq', {
     title: 'PT University | Frequently Asked Questions',
-    desc: "Online Personal Trainer Certifications from PT University; Frequently asked questions"
+    desc: "Online Personal Trainer Certifications from PT University; Frequently asked questions",
+    canon: "https://www.ptuniversity.org/faq"
   });
 };
 
@@ -40,7 +43,8 @@ exports.faq = function(req, res) {
 exports.certs = function(req, res) {
   res.render('certs', {
     title: 'Online Personal Trainer Certifications | PT University',
-    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials"
+    desc: "Online Personal Trainer Certifications from PT University; Don't pay unless you pass. Become a top rated personal trainer with advanced credentials",
+    canon: "https://www.ptuniversity.org/certifications"
   });
 };
 
@@ -51,7 +55,8 @@ exports.certs = function(req, res) {
 exports.study = function(req, res) {
   res.render('study', {
     title: 'Study Personal Training Online | PT University',
-    desc: 'study online personal training certifications exam material, exercise science books, nutrition books'
+    desc: 'study online personal training certifications exam material, exercise science books, nutrition books',
+    canon: "https://www.ptuniversity.org/study"
   });
 };
 
@@ -63,7 +68,8 @@ exports.studyGuidePdf = function(req, res) {
   res.sendFile('PTU-HandBook.pdf', {
     root: path.join(__dirname, '../views/study'),
     title: 'PT University | Personal Trainers Handbook',
-    desc: 'PT University handbook and study guide'
+    desc: 'PT University handbook and study guide',
+    canon: "https://www.ptuniversity.org/study/PTU-study-guide-pdf"
   });
 };
 
@@ -74,7 +80,8 @@ exports.studyGuidePdf = function(req, res) {
 exports.articleGuidelines = function(req, res) {
   res.render('article-guidelines', {
     title: 'PT University | Article Submission Guidelines',
-    desc: "PT University Editorial Guidelines for article submission."
+    desc: "PT University Editorial Guidelines for article submission.",
+    canon: "https://www.ptuniversity.org/article-guidelines"
   });
 };
 
@@ -85,7 +92,8 @@ exports.articleGuidelines = function(req, res) {
 exports.trainerResources = function(req, res) {
   res.render('trainer-resources-p', {
     title: 'PT University | Personal Trainer Resources',
-    desc: "Personal trainer's toolbox. Tools that personal trainers use every day. Par-Q, 1 Rep max conversion charts, top 20 foods list, healthy foods list"
+    desc: "Personal trainer's toolbox. Tools that personal trainers use every day. Par-Q, 1 Rep max conversion charts, top 20 foods list, healthy foods list",
+    canon: "https://www.ptuniversity.org/trainer-resources"
   });
 };
 
@@ -98,7 +106,8 @@ exports.tResource = function(req, res) {
   res.sendFile(resource, {
     root: path.join(__dirname, '../views/trainer-resources'),
     title: resource + ' | PT University',
-    desc: resource + ' | PT University trainer resources'
+    desc: resource + ' | PT University trainer resources',
+    canon: "https://www.ptuniversity.org/trainer-resources/" + resource
 
   });
 };
@@ -110,7 +119,8 @@ exports.tResource = function(req, res) {
 exports.priceCompare = function(req, res) {
   res.render('price-compare', {
     title: 'PT University | Price Comparison Online Personal Trainer Certifications',
-    desc: 'Price comparison for top personal training certifications'
+    desc: 'Price comparison for top personal training certifications',
+    canon: "https://www.ptuniversity.org/pricecompare"
   });
 };
 
@@ -121,7 +131,8 @@ exports.priceCompare = function(req, res) {
 exports.linkToPtu = function(req, res) {
   res.render('link-to-ptu', {
     title: 'PT University | Online Personal Trainer Certifications',
-    desc: 'PT University welcomes links from our certified professionals'
+    desc: 'PT University welcomes links from our certified professionals',
+    canon: "https://www.ptuniversity.org/link-to-ptu"
   });
 };
 
@@ -137,7 +148,6 @@ exports.getImage = function(req, res) {
 /**
  * GET /blog
  * blog home page.
- */
 exports.blog = function(req, res, next) {
   res.render('blog/blog-home', {
     title: ' Blog | PT University',
@@ -145,11 +155,11 @@ exports.blog = function(req, res, next) {
 
   });
 };
+ */
 
 /**
  * GET /blog/:blog (article)
  * blog article.
- */
 exports.blogArticle = function(req, res, next) {
   var blog = req.params.blog;
   //res.send(req.params.blog);
@@ -159,6 +169,7 @@ exports.blogArticle = function(req, res, next) {
 
   });
 };
+ */
 
 /**
  * GET /
@@ -167,7 +178,8 @@ exports.blogArticle = function(req, res, next) {
 exports.sitemap = function(req, res) {
   res.render('sitemap', {
     title: 'PT University | Sitemap',
-    desc: 'PT University sitemap'
+    desc: 'PT University sitemap',
+    canon: "https://www.ptuniversity.org/ptu-sitemap"
   });
 };
 
@@ -179,8 +191,10 @@ exports.getMobile = function(req, res) {
   res.redirect(301, '/');
 };
 
+/*
 function metaFormatter(blob) {
   var split = blob.split('-');
   var joined = split.join(' ');
   return joined;
 }
+*/

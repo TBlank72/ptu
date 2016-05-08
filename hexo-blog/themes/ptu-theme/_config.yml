@@ -1,12 +1,12 @@
 # Header
 menu:
-  "Main Site": https://ptuniversity.org
+  "Main Site": https://www.ptuniversity.org
   "Blog Home": /
   Archives: /archives
 rss: /atom.xml
 
 # Content
-excerpt_link: Continue | Full Article 
+excerpt_link: Keep Reading...
 fancybox: true
 
 # Sidebar
@@ -29,7 +29,7 @@ archive_type: 'monthly'
 show_count: false
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-76194353-1
 favicon: /favicon.png
 twitter:
 google_plus:
