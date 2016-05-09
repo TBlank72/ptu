@@ -17,7 +17,7 @@ According to other data, we'll see why this is probably an underestimate.
 
 ## Consumer Interest in Fitness
 
-While, personal trainers see health and fitness as a top priority, the fact is that it doesn't matter how important we think it is. For an individual to pay for personal training services, they must see greater value in the personal training services they are receiving than they do in the money they are spending to receive the services. Anyone that has experience in a personal training management or sales position can tell you that the house payment, car payment, utility bills, and grocery bills always come before personal training. That doesn't mean that personal training is just for rich or wealthy people; personal training just tends be the last thing people add to their budget and the first thing they cut from the budget.
+While, personal trainers see health and fitness as a top priority, the fact is that it doesn't matter how important we think it is. For an individual to pay for personal training services, they must see greater value in the personal training services they are receiving than they do in the money they are spending to receive the services. Anyone that has experience in a personal training management or sales can tell you that the house payment, car payment, utility bills, and grocery bills always come before personal training. That doesn't mean that personal training is just for rich or wealthy people; personal training just tends be the last thing people add to their budget and the first thing they cut from the budget.
 
 We can get some idea of the status of the fitness job market by taking a look at what people are interested in on Google trends.  
 
@@ -38,7 +38,7 @@ In 2015 [Reviews.com][reviews] rated the top three job search engines:
 
 ![indeed.com job trends graph - percentage growth since 2012](https://googledrive.com/host/0B_wpLFZ54MdKR3BNSHBHYlAwMHM/pt-job-trend-graph.jpg)
 
-Keep in mind, the graph above is a relative comparison, not absolute.  Still, it shows that fitness jobs are increasing faster compared to the others.  Actually, the other markets are losing jobs.  Another thing to notice is that group exercise jobs are falling along with the others in the comparison, so tell your groupX instructors to get a PT cert as back-up insurance policy if they're relying on the income.  
+Keep in mind, the graph above is a relative comparison, not absolute.  Still, it shows that fitness jobs are increasing faster compared to the others.  Actually, the other markets are losing jobs.  Another thing to notice is that group exercise jobs are falling along with the others in the comparison, so tell your groupX instructors to get a PT cert a as back-up insurance policy if they're relying on the income.  
 
 ## Personal Training Job Security
 
@@ -54,11 +54,11 @@ You don't need to look at a lot of data to realize that Americans continue to ga
 | Overweight Adolescents | 16.6% | 12,580 |
 **That's 64.1% of all adults that are either overweight or obese.** What's even scarier is that 30.3% of children in the U.S. are considered overweight/obese.
 {% endcallout %}
-Based on the [CDC][CDC] data, we can safely assume, we will have a need for personal trainers, and fitness professionals in general, for foreseeable future.
+Based on the [CDC][CDC] data, we can safely assume, we will have a need for personal trainers, and fitness professionals in general, for the foreseeable future.
 
 ## More Job Security for the Future
 
-[Bariatric-surgury-source][bar] reported that childhood obesity had risen from 4.5% in 1963 to 17% in 2007-2008. And that doesn't include kids that were overweight, only those classified as obese. In fact, until recently there wasn't a classification system for overweight/obese children. 
+[Bariatric-surgury-source.com][bar] reported that childhood obesity had risen from 4.5% in 1963 to 17% in 2007-2008. And that doesn't include kids that were overweight, only those classified as obese. In fact, until recently there wasn't a classification system for overweight/obese children. 
 
 ![Childhood Obesity Trends, 1963-2008](https://googledrive.com/host/0B_wpLFZ54MdKR3BNSHBHYlAwMHM/child-obesity1.gif)
 
